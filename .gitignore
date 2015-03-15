@@ -1,2 +1,5 @@
 *.[oa]
 *~
+*.tar.gz
+*.rar
+*.zip
