@@ -18,6 +18,15 @@
 
 				this.map = new google.maps.Map(document.getElementById("googleMap"),this.options);	
 
+				this.image = 'map-icons/map-marker.png';
+
+				this.marker = new google.maps.Marker({
+		            title: 'Location',
+		            map: this.map,
+		            icon: this.image,
+		            draggable: true
+				});
+
 			},
 			controllerAs: 'gCtrl',
 			require: '?ngModel',
@@ -58,7 +67,7 @@
 
 		        	google.maps.event.addListener(scope.gCtrl.circle,'radius_changed', function(){
 
-							//se realiza el update hacia el controlador
+							//Angular no detecta los eventos javascript puros - update hacia el controlador
 
 							scope.$apply(function() {
 								ngModel.$setViewValue(scope.gCtrl.circle.getRadius());

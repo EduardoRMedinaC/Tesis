@@ -11,10 +11,10 @@
 
 				this.selectRow = function(newRow, coordenandas){
 					this.row = newRow;
-					console.log(coordenandas);
+					console.log("Podemos hacer uso de las coordenadas para solicitar informacion de un hogar");
 				};
 
-				this.isSelected = function(rowSelected){
+				this.info = function(rowSelected){
 					return this.row === rowSelected;
 				};
 
@@ -26,18 +26,9 @@
 					return medicion.consumo > 0.95*this.umbral;
 				};
 
-				this.image = 'map-icons/map-marker.png';
-
-				this.marker = new google.maps.Marker({
-		            title: 'Location',
-		            map: $scope.gCtrl.map,
-		            icon: this.image,
-		            draggable: true
-				});
-
 				this.markerOnMap = function(coordenandas){
 					var LatLng = new google.maps.LatLng(coordenandas.Lat, coordenandas.Lng);
-					this.marker.setPosition(LatLng);
+					$scope.gCtrl.marker.setPosition(LatLng);
 				};
 
 			},
