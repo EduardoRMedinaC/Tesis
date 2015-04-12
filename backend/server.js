@@ -28,6 +28,20 @@ mongoclient.connect(url, {server: {poolSize: 3}}, function(err, db){
 
 });
 
+var insertDocument = function(db, collection, data){
+	var collection = db.collection(collection),
+		indexOptions = {min: -500, max: 500, w: 1};
+	
+	collection.insert(data, {w:1}, function(err, success){
+		assert.equal(err, null, ['error al insertar los datos']);
+		assert.equal(1, success.result.n);
+	});
+
+	collection.ensureIndex({loc: "2d"}, indexOptions, function(err,success){
+			assert.equal(err, null);
+	});
+};
+
 server.listen(80, function(){
 	console.log("tu servidor está listo en " + this.address().port);
 });
