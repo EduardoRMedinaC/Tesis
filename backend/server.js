@@ -21,13 +21,11 @@ mongoclient.connect(url, {server: {poolSize: 3}}, function(err, db){
 		//se recibe el perfil de la casa
 		client.on('perfil', function(data){
 			insertDocument(db, 'hogares', data);
-		});
-
-		db.collection('hogares').find({}).toArray(function(err, docs){
-			console.log(docs);
 		}); 
 	});
-	
+
+	app.use(express.static('../public'));
+
 });
 
 server.listen(80, function(){
