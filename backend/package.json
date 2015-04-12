@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "app web de monitoreo de los parametros basicos de la red de suministro de energia electrica empleando geolocalizacion",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "bson": "^0.3.1",
+    "express": "^4.12.3",
+    "mongodb": "~2.0",
+    "socket.io": "^1.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:EduardoRMedinaC/Tesis.git"
+  },
+  "author": "marcelo arevalos, eduardo medina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduardoRMedinaC/Tesis/issues"
+  },
+  "homepage": "https://github.com/EduardoRMedinaC/Tesis"
+}
