@@ -26,6 +26,25 @@ mongoclient.connect(url, {server: {poolSize: 3}}, function(err, db){
 
 	app.use(express.static('../public'));
 
+	app.get('/zona', function(request, response){
+		//query ?radio=<radio>&lat=<lat>&lng=<lng>
+
+		var lng = request.query.centerLng,
+			lat = request.query.centerLat,
+			radio = request.query.radio;
+
+		db.collection('hogares').find({
+			loc:{
+				$near : [parseFloat(lng), parseFloat(lat)],
+				$maxDistance : 30 
+			}
+		})
+		.toArray(function(err, docs){
+				console.log("intente buscar la puta");
+				console.log(docs);
+		});
+	});
+
 });
 
 var insertDocument = function(db, collection, data){
