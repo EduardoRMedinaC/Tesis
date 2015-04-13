@@ -5,14 +5,13 @@ var express = require('express'),
 	mongoclient = require('mongodb').MongoClient,
 	assert = require('assert'),
 	bodyParser = require('body-parser'),
-	parseUrlencoded = bodyParser.urlencoded({ extended: false }),
+	parseUrlencoded = bodyParser.urlencoded({ extended: false });
 
 //mongodb url server
 var url = 'mongodb://localhost:27017/data';
 
 mongoclient.connect(url, {server: {poolSize: 3}}, function(err, db){
 	assert.equal(err, null, ['No pudo conectarse a la base de datos']);
-	console.log('correctamente conectado con la base de datos');
 
 	//conexion con el socket cliente
 	io.on('connection', function(client){
@@ -20,9 +19,7 @@ mongoclient.connect(url, {server: {poolSize: 3}}, function(err, db){
 
 		//se recibe el perfil de la casa
 		client.on('perfil', function(data){
-
-				insertDocument(db, 'hogares', data);
-
+			insertDocument(db, 'hogares', data);
 		});
 	});
 
