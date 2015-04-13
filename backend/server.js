@@ -5,7 +5,7 @@ var express = require('express'),
 	mongoclient = require('mongodb').MongoClient,
 	assert = require('assert'),
 	bodyParser = require('body-parser'),
-	parseUrlencoded = bodyParser.urlencoded({ extended: false });
+	parseUrlencoded = bodyParser.urlencoded({ extended: false }),
 
 //mongodb url server
 var url = 'mongodb://localhost:27017/data';
@@ -20,13 +20,16 @@ mongoclient.connect(url, {server: {poolSize: 3}}, function(err, db){
 
 		//se recibe el perfil de la casa
 		client.on('perfil', function(data){
-			insertDocument(db, 'hogares', data);
-		}); 
+
+				insertDocument(db, 'hogares', data);
+
+		});
 	});
 
 	app.use(express.static('../public'));
 
 	app.get('/zona', function(request, response){
+		
 		//query ?radio=<radio>&lat=<lat>&lng=<lng>
 
 		var lng = request.query.centerLng,
@@ -34,13 +37,17 @@ mongoclient.connect(url, {server: {poolSize: 3}}, function(err, db){
 			radio = request.query.radio;
 
 		db.collection('hogares').find({
-			loc:{
-				$near : [parseFloat(lng), parseFloat(lat)],
-				$maxDistance : 30 
+			localidad:{
+				$near: {
+					$geometry: {
+						type: "Point",
+						coordinates: [parseFloat(lng), parseFloat(lat)]
+					},
+					$maxDistance: parseFloat(radio)
+				}
 			}
 		})
 		.toArray(function(err, docs){
-				console.log("intente buscar la puta");
 				console.log(docs);
 		});
 	});
@@ -56,9 +63,10 @@ var insertDocument = function(db, collection, data){
 		assert.equal(1, success.result.n);
 	});
 
-	collection.ensureIndex({loc: "2d"}, indexOptions, function(err,success){
+	collection.ensureIndex({localidad: "2dsphere"}, indexOptions, function(err,success){
 			assert.equal(err, null);
 	});
+
 };
 
 server.listen(80, function(){
