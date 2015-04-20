@@ -11,14 +11,16 @@
 			controller: function(){
 
 				this.options = {
-			    center:new google.maps.LatLng(-25.25463261974944, -57.513427734375),
+			    center:new google.maps
+			    	.LatLng(-25.25463261974944, -57.513427734375),
 			    zoom:6,
 			    mapTypeId:google.maps.MapTypeId.ROADMAP
 				};
 
-				this.map = new google.maps.Map(document.getElementById("googleMap"),this.options);	
+				this.map = new google.maps
+					.Map(document.getElementById("googleMap"),this.options);	
 
-				this.image = 'map-icons/map-marker.png';
+				this.image = 'images/map-marker.png';
 
 				this.marker = new google.maps.Marker({
 		            title: 'Location',
@@ -32,60 +34,79 @@
 			require: '?ngModel',
 			link: function(scope, element, attrs, ngModel) {
 
-				var counter = counter || 0;
+				var counter = counter || 0,
+					gCtrl = scope.gCtrl;
 
-				google.maps.event.addListener(scope.gCtrl.map, 'click', function(event){
+				google.maps.event
+					.addListener(gCtrl.map, 'click', function(event){
 
-					counter++;
-					scope.gCtrl.latLngCMarker = new google.maps.LatLng(event.latLng.k, event.latLng.D);
+						counter++;
+						gCtrl.latLngCCircle = new google
+						.maps.LatLng(event.latLng.k, event.latLng.D);
 
-					if(counter <= 1){
-						ngModel.$render = function(){
-							var newValue = scope.gCtrl.circle.radius;
-							$timeout(function(){
-								scope.gCtrl.circle.setRadius(+newValue);
-							});
-						};
-				  
-			        	scope.gCtrl.circle = new google.maps.Circle({
-			        		center: scope.gCtrl.latLngCMarker,
-				            map:scope.gCtrl.map,
-				            clickable: false,
-				            // metres
-				            radius: 50000,
-				            fillColor: '#ffffff',
-				            fillOpacity: .6,
-				            strokeColor: '#1976d2',
-				            strokeOpacity: .5,
-				            strokeWeight: 2,
-				            editable: true,
-			        	});
-			        }
-			        else {
-			        	scope.gCtrl.circle.setCenter(scope.gCtrl.latLngCMarker);
-			        };
+						if(counter <= 1){
+							ngModel.$render = function(){
+								var newValue = gCtrl.circle.radius;
 
-		        	google.maps.event.addListener(scope.gCtrl.circle,'radius_changed', function(){
+								$timeout(function(){
+									gCtrl.circle.setRadius(+newValue);
+								});
+							};
+					  
+				        	gCtrl.circle = new google.maps.Circle({
+				        		center: gCtrl.latLngCCircle,
+					            map:gCtrl.map,
+					            clickable: false,
+					            // metres
+					            radius: 50000,
+					            fillColor: '#cfd8dc',
+					            fillOpacity: .6,
+					            strokeColor: '#3f51b5',
+					            strokeOpacity: .5,
+					            strokeWeight: 2,
+					            editable: true,
+				        	});
+				        }
+				        else {
+				        	gCtrl.circle.setCenter(
+				        		gCtrl.latLngCCircle
+				        	);
+				        };
 
-							//Angular no detecta los eventos javascript puros - update hacia el controlador
+			        	google.maps.event
+				        	.addListener(
+				        		gCtrl.circle, 'radius_changed', function(){
 
-							scope.$apply(function() {
-								ngModel.$setViewValue(scope.gCtrl.circle.getRadius());
-							});
-		        	});
+									//Angular no detecta los eventos js puros
+									//update hacia el controlador
 
-		        	google.maps.event.addListener(scope.gCtrl.circle,'center_changed', function(){
-		        		console.log(scope.appCtrl);
-		        		scope.$apply(function(){
-		        			scope.appCtrl.cambiarTabla();
-		        		});
-		        		
-		        	});
-		        	
-		        });
+									scope.$apply(function() {
+										ngModel.$setViewValue(
+											gCtrl.circle.getRadius()
+										);
+									});
 
+									console.log(gCtrl.circle.getCenter());
+									//resfull 
+									scope.appCtrl.resfull(
+										gCtrl.circle.getRadius(),
+										gCtrl.circle.getCenter().k,
+										gCtrl.circle.getCenter().D
+									);
+				        		}
+				        	);
+
+				        google.maps.event
+				        	.addListener(
+				        		gCtrl.circle,'center_changed', function(){
+				        			console.log("Ha cambiado el centro");
+					        		scope.$apply(function(){
+					        			null;
+					        		});
+				        		}
+				        	);
+			        });
 			}
 		};
 	});
-
 })();
