@@ -8,6 +8,7 @@
 	app.directive('googleMapView', function($timeout){
 		return {
 			restrict: 'E',
+			templateUrl: 'templates/maps.html',
 			controller: function(){
 
 				this.options = {
@@ -34,27 +35,33 @@
 			require: '?ngModel',
 			link: function(scope, element, attrs, ngModel) {
 
+				//renderiza el valor inroducido por el usuario
+
+				ngModel.$render = function(){
+					//actualizamos el modelo desde la vista
+					var newValue = gCtrl.circle.radius;
+
+					$timeout(function(){
+						gCtrl.circle.setRadius(+newValue);
+					});
+
+				};
+
 				var counter = counter || 0,
 					gCtrl = scope.gCtrl;
 
 				google.maps.event
 					.addListener(gCtrl.map, 'click', function(event){
-
 						counter++;
-						gCtrl.latLngCCircle = new google
+						gCtrl.centerCircle = new google
 						.maps.LatLng(event.latLng.k, event.latLng.D);
 
-						if(counter <= 1){
-							ngModel.$render = function(){
-								var newValue = gCtrl.circle.radius;
+						//permite graficar un circulo como máximo
 
-								$timeout(function(){
-									gCtrl.circle.setRadius(+newValue);
-								});
-							};
+						if(counter <= 1){
 					  
 				        	gCtrl.circle = new google.maps.Circle({
-				        		center: gCtrl.latLngCCircle,
+				        		center: gCtrl.centerCircle,
 					            map:gCtrl.map,
 					            clickable: false,
 					            // metres
@@ -66,27 +73,22 @@
 					            strokeWeight: 2,
 					            editable: true,
 				        	});
+
+				        	//actualizamos la vista desde el modelo
+				        	scope.$apply();
+
 				        }
 				        else {
 				        	gCtrl.circle.setCenter(
-				        		gCtrl.latLngCCircle
+				        		gCtrl.centerCircle
 				        	);
 				        };
 
 			        	google.maps.event
 				        	.addListener(
 				        		gCtrl.circle, 'radius_changed', function(){
+				        			scope.$apply();
 
-									//Angular no detecta los eventos js puros
-									//update hacia el controlador
-
-									scope.$apply(function() {
-										ngModel.$setViewValue(
-											gCtrl.circle.getRadius()
-										);
-									});
-
-									console.log(gCtrl.circle.getCenter());
 									//resfull 
 									scope.appCtrl.resfull(
 										gCtrl.circle.getRadius(),
@@ -99,10 +101,14 @@
 				        google.maps.event
 				        	.addListener(
 				        		gCtrl.circle,'center_changed', function(){
-				        			console.log("Ha cambiado el centro");
-					        		scope.$apply(function(){
-					        			null;
-					        		});
+					        		scope.$apply();
+
+					        		//resfull 
+									scope.appCtrl.resfull(
+										gCtrl.circle.getRadius(),
+										gCtrl.circle.getCenter().k,
+										gCtrl.circle.getCenter().D
+									);
 				        		}
 				        	);
 			        });
