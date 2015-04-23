@@ -1,38 +1,44 @@
 <div id="googleMap"></div>
-<form class="form-horizontal" method="post" accept-charset="utf-8">
+<form name="zonesForm" class="form-horizontal"
+ng-submit="appCtrl.POST(
+	gCtrl.form.name,
+	gCtrl.form.description,
+	gCtrl.circle.radius,
+	gCtrl.circle.center
+)">
 	<fieldset>
 		<legend>Perfil de la Zona</legend>
 		<div class="form-group">
-			<label class="col-md-1" for="name">Nombre</label>
+			<label class="col-md-1">Nombre</label>
 			<div class="col-md-11">
-				<input class="form-control" id="name" type="text" name="name" value="" placeholder="Ingrese un nombre para la zona">
+				<input class="form-control" type="text" name="name" ng-model="gCtrl.form.name" placeholder="Ingrese un nombre para la zona">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-md-1" for="description">Descripcion de la zona</label>
 			<div class="col-md-11">
-				<textarea class="form-control" id="description" name="description"></textarea>
+				<textarea class="form-control" ng-model="gCtrl.form.description" name="description"></textarea>
 				<span class="help-block">Puede identificar mas facilmente la zona, el area que cubre o el comportamiento, etc</span>
 			</div>
 		</div>
 		<div class="form-group">
 			<div>
-				<label class="col-md-1" for="radio">Radio</label>
+				<label class="col-md-1">Radio</label>
 				<div class="col-md-3">
-					<input class="form-control" type="text" id="radio" name="radio" value="" placeholder="longitud en metros" ng-model="gCtrl.circle.radius">
+					<input class="form-control" type="text" name="radio" placeholder="longitud en metros" ng-model="gCtrl.circle.radius">
 				</div>
 				<label class="col-md-1">Centro</label>
 				<div class="col-md-3">
-					<input class="form-control" type="text" name="" value="" placeholder="latitud" ng-model="gCtrl.circle.center.k" readonly>
+					<input class="form-control" type="text" placeholder="latitud" ng-model="gCtrl.circle.center.k" readonly>
 				</div>
 				<div class="col-md-4">
-					<input class="form-control" type="text" name="" value="" placeholder="longitud" ng-model="gCtrl.circle.center.D" readonly>
+					<input class="form-control" type="text" placeholder="longitud" ng-model="gCtrl.circle.center.D" readonly>
 				</div>
 			</div>
 		</div>
 		<div class="form-group">
             <div class="col-md-4 col-md-offset-8">
-                <button class="btn btn-default btn-flat">Cancel</button>
+                <button class="btn btn-default btn-flat">Ignorar</button>
                 <button type="submit" class="btn btn-primary btn-flat">Guardar</button>
             </div>
         </div>
