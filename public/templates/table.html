@@ -1,0 +1,65 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<i class="mdi-alert-warning indicators custom-warning"></i>
+			<h1 class="GREY">
+				Warning
+				<span class="custom-warning">
+					{{tableCtrl.Warning.total}}
+				</span>
+			</h1>
+		</div>
+		<div class="col-md-4">
+			<i class="mdi-alert-error indicators custom-danger"></i>
+			<h1 class="GREY">
+				Danger
+				<span class="custom-danger">
+					{{tableCtrl.Danger.total}}
+				</span>
+			</h1>
+		</div>
+		<div class="col-md-4">
+			<i class="mdi-action-home indicators custom-points"></i>
+			<h1 class="GREY">
+				Points 
+				<span class="custom-points">
+					{{tableCtrl.index}}
+				</span>
+			</h1>
+		</div>
+	</div>
+</div>
+
+<div class="table-responsive">
+	<table class="table table-hover ">
+		<caption>Parametros de importancia de la red electrica</caption>
+		<thead>
+			<tr>
+				<th>Consumo -Kwh-</th>
+				<th>Potencia Reactiva</th>
+				<th>Potencia Instantanea</th>
+				<th>Factor de Potencia</th>
+				<th>Fecha</th>
+				<th>Cargos -Gs-</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="medicion in totalDatos"
+
+			ng-class="{
+				warning:tableCtrl.warning($index, medicion),
+				danger:tableCtrl.danger($index, medicion),
+				info:tableCtrl.info($index)
+			}" 
+			ng-click="tableCtrl.selectRow($index, medicion)"
+			ng-mouseover="tableCtrl.markerOnMap(medicion)">
+				<td>{{medicion.consumo}}</td>
+				<td>{{medicion.potenciaReactiva}}</td>
+				<td>{{medicion.potenciaAparente}}</td>
+				<td>{{medicion.factorPotencia}}</td>
+				<td>{{medicion.date | date:'dd/MM/yyyy @ h:mma'}}</td>
+				<td>{{medicion.monto}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
