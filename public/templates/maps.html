@@ -1,8 +1,8 @@
 <div id="googleMap"></div>
 <form name="zonesForm" class="form-horizontal"
-ng-submit="appCtrl.POST(
-	gCtrl.form.name,
-	gCtrl.form.description,
+ng-submit="restCtrl.POST(
+	restCtrl.form.name,
+	restCtrl.form.description,
 	gCtrl.circle.radius,
 	gCtrl.circle.center
 )">
@@ -11,13 +11,13 @@ ng-submit="appCtrl.POST(
 		<div class="form-group">
 			<label class="col-md-1">Nombre</label>
 			<div class="col-md-11">
-				<input class="form-control" type="text" name="name" ng-model="gCtrl.form.name" placeholder="Ingrese un nombre para la zona">
+				<input class="form-control" type="text" name="name" ng-model="restCtrl.form.name" placeholder="Ingrese un nombre para la zona">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-md-1" for="description">Descripcion de la zona</label>
 			<div class="col-md-11">
-				<textarea class="form-control" ng-model="gCtrl.form.description" name="description"></textarea>
+				<textarea class="form-control" ng-model="restCtrl.form.description" name="description"></textarea>
 				<span class="help-block">Puede identificar mas facilmente la zona, el area que cubre o el comportamiento, etc</span>
 			</div>
 		</div>
