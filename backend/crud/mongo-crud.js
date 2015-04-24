@@ -12,11 +12,16 @@ var updateHomes = function(db, data, callback){
 		}
 	);
 	
-	collection.update({NIS: data.NIS}, data, {upsert: true, w:1}, function(err, success){
-		assert.equal(err, null, ['error al insertar los datos']);
-		assert.equal(1, success.result.n);
-		console.log('datos actualizados correctamente');
-	});
+	collection.update(
+		{NIS: data.NIS}, 
+		data, 
+		{upsert: true, w:1}, 
+		function(err, success){
+			assert.equal(err, null, ['error al insertar los datos']);
+			assert.equal(1, success.result.n);
+			console.log('datos actualizados correctamente');
+		}
+	);
 
 	callback(data.NIS);
 };
@@ -54,6 +59,20 @@ var findHomes = function(db, lat, lng, radio, callback){
 	});	
 };
 
+var insertZone = function(db, data, callback){
+	var collection = db.collection('zone');
+
+	collection.insert(data, function(err, success){
+		assert.equal(err, null, ['error al insertar los datos']);
+		assert.equal(success.result.n, 1);
+	});
+
+	collection.ensureIndex({name: 1}, function(err, success){
+		assert.equal(err, null, ['error al indexar los atributos']);
+	});
+};
+
 exports.insertDocuments = insertMeassure;
 exports.updateHomes = updateHomes;
 exports.findHomes = findHomes;
+exports.insertZone = insertZone;
