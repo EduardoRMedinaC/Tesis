@@ -1,7 +1,7 @@
 var express = require('express'),
 	router = express.Router(),
 	bodyParser = require('body-parser'),
-	parseUrlencoded = bodyParser.urlencoded({ extended: false }),
+	parseJSONencoded = bodyParser.json(), //parseUrlencoded to support url
 	mongoClient = require('mongodb').MongoClient,
 	assert = require('assert'),
 	crud = require('../crud/mongo-crud');
@@ -18,18 +18,19 @@ router.route('/')
 			radio = request.query.radio;
 
 		mongoClient.connect(url, {server: {poolSize: 1}}, function(err, db){
-			assert.equal(err, null, ['No pudo conectarse a la base de datos']);
+			assert.equal(err, null, ["can't connect to db"]);
 
 			crud.findHomes(db, lat, lng, radio, function(docs){
 				response.json(docs);
 			});
 		});
 	})
-	.post(parseUrlencoded, function(request, response){
+	.post(parseJSONencoded, function(request, response){
 		var zona = request.body;
-
+		response.status(201).json(zona.name);
+		
 		mongoClient.connect(url, {server: {poolSize: 1}}, function(err, db){
-			null;
+			//crud.insertZone(db, zona);
 		});
 	});
 
