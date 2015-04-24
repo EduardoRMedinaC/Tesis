@@ -4,7 +4,7 @@
 	app.directive('tablaMediciones',function($timeout){
 		return {
 			restrict: 'E',
-			templateUrl: 'table.html',
+			templateUrl: 'templates/table.html',
 			controller: function($scope){
 				this.umbral = 425;
 				this.Warning = {
@@ -48,7 +48,10 @@
 				};
 
 				this.danger = function(index, medicion){
+
+					//hallamos el total de puntos medidos
 					this.index = index + 1;
+					
 					var isDanger = medicion.consumo > 0.95*this.umbral;
 					
 					isDanger ? this.Danger.lot[index]=1
