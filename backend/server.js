@@ -19,8 +19,10 @@ mongoClient.connect(url, {server: {poolSize: 3}}, function(err, db){
 		//se recibe el perfil de la casa con la medicion
 		client.on('home', function(data){ 
 			crud.updateHomes(db, data, function(reference){
+
+				//creamos una referecia normalizada para la
+				//coleccion records
 				data.meassure.home_id = reference;
-				data.meassure.date = new Date();
 
 				crud.insertMeassure(db, data.meassure);
 			});
