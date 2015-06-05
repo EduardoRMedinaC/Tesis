@@ -13,8 +13,8 @@ var updateHomes = function(db, data, callback){
 	);
 	
 	collection.update(
-		{NIS: data.NIS}, 
-		data, 
+		{meterid: data.meterid}, 
+		{$set: {meassure: data.meassure}}, 
 		{upsert: true, w:1}, 
 		function(err, success){
 			assert.equal(err, null, ['error al insertar los datos']);
@@ -23,7 +23,7 @@ var updateHomes = function(db, data, callback){
 		}
 	);
 
-	callback(data.NIS);
+	callback(data.meterid);
 };
 
 var insertMeassure = function(db, data, callback){
@@ -34,7 +34,7 @@ var insertMeassure = function(db, data, callback){
 		assert.equal(success.result.n, 1);
 	});
 
-	collection.ensureIndex({date : -1, home_id: 1}, function(err, success){
+	collection.ensureIndex({time: -1, home_id: 1}, function(err, success){
 		assert.equal(err, null, ['error al indexar los atributos']);
 	});
 }
@@ -72,7 +72,7 @@ var insertZone = function(db, data, callback){
 	});
 };
 
-exports.insertDocuments = insertMeassure;
+exports.insertMeassure = insertMeassure;
 exports.updateHomes = updateHomes;
 exports.findHomes = findHomes;
 exports.insertZone = insertZone;
