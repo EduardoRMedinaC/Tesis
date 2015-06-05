@@ -1,3 +1,8 @@
+<h1>{{restCtrl.form.name || restCtrl.viewZone.name}}</h1>
+<blockquote>
+	<p>{{restCtrl.form.description || restCtrl.viewZone.description }}</p>
+</blockquote>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
@@ -44,21 +49,20 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="medicion in totalDatos"
+			<tr ng-repeat="data in restCtrl.data"
 
 			ng-class="{
-				warning:tableCtrl.warning($index, medicion),
-				danger:tableCtrl.danger($index, medicion),
+				warning:tableCtrl.warning($index, data),
+				danger:tableCtrl.danger($index, data),
 				info:tableCtrl.info($index)
 			}" 
-			ng-click="tableCtrl.selectRow($index, medicion)"
-			ng-mouseover="tableCtrl.markerOnMap(medicion)">
-				<td>{{medicion.consumo}}</td>
-				<td>{{medicion.potenciaReactiva}}</td>
-				<td>{{medicion.potenciaAparente}}</td>
-				<td>{{medicion.factorPotencia}}</td>
-				<td>{{medicion.date | date:'dd/MM/yyyy @ h:mma'}}</td>
-				<td>{{medicion.monto}}</td>
+			ng-click="tableCtrl.selectRow($index, data)"
+			ng-mouseover="tableCtrl.markerOnMap(data.localidad.coordinates)">
+				<td>{{data.meassure.activa}}</td>
+				<td>{{data.meassure.reactiva}}</td>
+				<td>{{data.meassure.aparente}}</td>
+				<td>{{data.meassure.fp}}</td>
+				<td>{{data.meassure.date | date:'dd/MM/yyyy @ h:mma'}}</td>
 			</tr>
 		</tbody>
 	</table>
