@@ -1,0 +1,34 @@
+<!-- Menu -->
+<ul>
+	<li>Registrar Abonados</li>
+	<li>Geomedicion</li>
+	<li>
+		Mis zonas
+		<div class="sub-menu">
+			<ul></ul>
+		</div>
+	</li>
+	<li>Estadisticas</li>
+	<li>
+		OBIS
+		<div class="sub-menu">
+			<form accept-charset="utf-8">
+				<label for="EAT">Energia Activa Total</label>
+				<input ng-model="restCtrl.OBISmap.EAT" id="EAT" type="checkbox" name="Energia Activa Total" value="">
+				<label for="ERT">Energia Reactiva Total (Inductiva)</label>
+				<input ng-model="restCtrl.OBISmap.ERT" id="ERT" type="checkbox" name="Energia Reactiva Total" value="">
+				<label for="DM">Demanda Maxima</label>
+				<input ng-model="restCtrl.OBISmap.DM" id="DM" type="checkbox" name="Demanda Máxima" value="">
+				<label for="CL1">Corriente en L1</label>
+				<input ng-model="restCtrl.OBISmap.CL1" id="CL1" type="checkbox" name="Corriente en L1" value="">
+				<label for="CL2">Corriente en L2</label>
+				<input ng-model="restCtrl.OBISmap.CL2" id="CL2" type="checkbox" name="Corriente en L2" value="">
+				<label for="CL3">Corriente en L3</label>
+				<input ng-model="restCtrl.OBISmap.CL3" id="CL3" type="checkbox" name="Corriente en L3" value="">
+				<label for="time">Tiempo</label>
+				<input ng-model="restCtrl.OBISmap.time" id="time" type="checkbox" name="" value="">
+			</form>
+		</div>
+	</li>
+</ul>
+<!-- End Menu -->
