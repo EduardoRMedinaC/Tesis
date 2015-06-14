@@ -40,12 +40,13 @@
 		<caption>Parametros de importancia de la red electrica</caption>
 		<thead>
 			<tr>
-				<th>Consumo -Kwh-</th>
-				<th>Potencia Reactiva</th>
-				<th>Potencia Instantanea</th>
-				<th>Factor de Potencia</th>
-				<th>Fecha</th>
-				<th>Cargos -Gs-</th>
+				<th ng-show="restCtrl.OBISmap.EAT">Energia Activa Total</th>
+				<th ng-show="restCtrl.OBISmap.ERT">Energia Reactiva Total</th>
+				<th ng-show="restCtrl.OBISmap.DM">Demanda Maxima</th>
+				<th ng-show="restCtrl.OBISmap.CL1">Corriente en L1</th>
+				<th ng-show="restCtrl.OBISmap.CL2">Corriente en L2</th>
+				<th ng-show="restCtrl.OBISmap.CL3">Corriente en L3</th>
+				<th ng-show="restCtrl.OBISmap.time">Tiempo</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -58,11 +59,13 @@
 			}" 
 			ng-click="tableCtrl.selectRow($index, data)"
 			ng-mouseover="tableCtrl.markerOnMap(data.localidad.coordinates)">
-				<td>{{data.meassure.activa}}</td>
-				<td>{{data.meassure.reactiva}}</td>
-				<td>{{data.meassure.aparente}}</td>
-				<td>{{data.meassure.fp}}</td>
-				<td>{{data.meassure.date | date:'dd/MM/yyyy @ h:mma'}}</td>
+				<td ng-show="restCtrl.OBISmap.EAT">{{data.meassure["Energia Activa Total"]}}</td>
+				<td ng-show="restCtrl.OBISmap.ERT">{{data.meassure["Energia Reactiva Total"]}}</td>
+				<td ng-show="restCtrl.OBISmap.DM">{{data.meassure["Demanda Maxima"]}}</td>
+				<td ng-show="restCtrl.OBISmap.CL1">{{data.meassure["Corriente en L1"]}}</td>
+				<td ng-show="restCtrl.OBISmap.CL2">{{data.meassure["Corriente en L2"]}}</td>
+				<td ng-show="restCtrl.OBISmap.CL3">{{data.meassure["Corriente en L3"]}}</td>
+				<td ng-show="restCtrl.OBISmap.time">{{data.meassure["time"]}}</td>
 			</tr>
 		</tbody>
 	</table>
