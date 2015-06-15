@@ -8,23 +8,38 @@ var express = require('express'),
 
 //mongodb url server
 var url = 'mongodb://localhost:27017/data';
+var records = {};
 
 mongoClient.connect(url, {server: {poolSize: 3}}, function(err, db){
 	assert.equal(err, null, ['No pudo conectarse a la base de datos']);
+
+	db.collection('home').remove();
+	db.collection('records').remove();
 
 	//conexion con el socket cliente
 	io.on('connection', function(client){
 		console.log("conexion establecido con el cliente");
 
 		//se recibe el perfil de la casa con la medicion
-		client.on('home', function(data){ 
+		client.on('home', function(data){
+			
+			crud.enrollHomes(db, data);
+
+			//verificcar el estado de la base de datos
+			db.collection('home').find({}).toArray(function(err, docs){console.log(docs)});
+			db.collection('records').find({}).toArray(function(err, docs){console.log(docs)});
+		});
+
+		client.on('data_update', function(data){
 			crud.updateHomes(db, data, function(reference){
 
 				//creamos una referecia normalizada para la
-				//coleccion records
-				data.meassure.home_id = reference;
-
-				crud.insertMeassure(db, data.meassure);
+				//coleccion records desde la coleccion home
+				
+				records.home_id = reference;
+				records.meassure = data.meassure;
+				
+				crud.insertMeassure(db, records);
 			});
 		});
 	});

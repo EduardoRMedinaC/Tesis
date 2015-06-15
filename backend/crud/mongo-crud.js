@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var updateHomes = function(db, data, callback){
+var enrollHomes = function(db, data){
 	var collection = db.collection('home'),
 		indexOptions = {min: -500, max: 500, w: 1};
 	
@@ -12,15 +12,21 @@ var updateHomes = function(db, data, callback){
 		}
 	);
 	
-	collection.update(
-		{meterid: data.meterid}, 
-		{$set: {meassure: data.meassure}}, 
-		{upsert: true, w:1}, 
+	collection.insert(data, 
 		function(err, success){
 			assert.equal(err, null, ['error al insertar los datos']);
 			assert.equal(1, success.result.n);
-			console.log('datos actualizados correctamente');
+			console.log('datos insertados correctamente');
 		}
+	);
+};
+
+var updateHomes = function(db, data, callback){
+	var collection = db.collection("home");
+
+	collection.update(	
+		{meterid: data.meterid},
+		{$set:{meassure: data.meassure}}
 	);
 
 	callback(data.meterid);
@@ -73,6 +79,7 @@ var insertZone = function(db, data, callback){
 };
 
 exports.insertMeassure = insertMeassure;
+exports.enrollHomes = enrollHomes;
 exports.updateHomes = updateHomes;
 exports.findHomes = findHomes;
 exports.insertZone = insertZone;
