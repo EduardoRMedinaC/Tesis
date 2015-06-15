@@ -1,7 +1,16 @@
-from socketIO_client import  SocketIO, LoggingNamespace
+from socketIO_client import SocketIO, LoggingNamespace
 
-coordenadas = [0,0]
-profile = {"NIS":"", "Usuario":"", "CI":"", "Direccion":"", "localidad":{"type":"Point", "coordinates":[0,0]}, "mail":"", "RUC":"", "telefono":"", "meter_id":"", "xbee_id":""}
+coordenadas = [0, 0]
+profile = {
+    "NIS": "",
+    "Usuario": "",
+    "CI": "", "Direccion": "",
+    "localidad": {"type": "Point", "coordinates": [0, 0]},
+    "mail": "",
+    "RUC": "",
+    "telefono": "",
+    "meterid": ""
+}
 print "Bienvenido!!! este es el asistente de enrolamiento del abonado "
 Nombre = raw_input("Ingrese su nombre y su apellido ")
 CI = raw_input("Ingrese su numero de cedula ")
@@ -21,16 +30,16 @@ band = True
 while band:
 
     print "\r\nLos datos ingresados fueron"
-    print "Nombre: %s" %(Nombre)
-    print "CI: %s" %(CI)
-    print "Domicilio: %s" %(Domicilio)
-    print "Telefono: %s" %(telefono)
-    print "E-mail: %s" %(mail)
-    print "RUC %s" %(RUC)
-    print "Longitud: %d" %(coordenadas[0])
-    print "Latitud: %d" %(coordenadas[1])
-    print "NIS: %s" %(NIS)
-    print "meter id: %s" %(meter_id)
+    print "Nombre: %s" % (Nombre)
+    print "CI: %s" % (CI)
+    print "Domicilio: %s" % (Domicilio)
+    print "Telefono: %s" % (telefono)
+    print "E-mail: %s" % (mail)
+    print "RUC %s" % (RUC)
+    print "Longitud: %d" % (coordenadas[0])
+    print "Latitud: %d" % (coordenadas[1])
+    print "NIS: %s" % (NIS)
+    print "meter id: %s" % (meter_id)
 
     confirmacion = raw_input("\r\nConfirmar los cambios? (Y/N)")
 
@@ -43,26 +52,26 @@ while band:
         seleccionados = seleccion.split(',')
         for indice in seleccionados:
             if indice == "1":
-                Nombre = raw_input ("Nombre: ")
+                Nombre = raw_input("Nombre: ")
 
             if indice == "2":
                 CI = raw_input("CI: ")
 
             if indice == "3":
-                Domicilio = raw_input ("Domicilio: ")
+                Domicilio = raw_input("Domicilio: ")
 
             if indice == "4":
-                telefono = raw_input ("Telefono: ")
+                telefono = raw_input("Telefono: ")
 
             if indice == "5":
-                mail = raw_input ("E-mail: ")
+                mail = raw_input("E-mail: ")
 
             if indice == "6":
-                RUC = raw_input ("RUC: ")
+                RUC = raw_input("RUC: ")
 
             if indice == "7":
-                coordenadas[0] = input ("Longitud: ")
-                coordenadas[1] = input ("Latitud: ")
+                coordenadas[0] = input("Longitud: ")
+                coordenadas[1] = input("Latitud: ")
 
             if indice == "8":
                 NIS = raw_input("NIS: ")
@@ -86,10 +95,11 @@ profile["meassure"] = {}
 
 print profile
 
-def message_callback():
-	print "Conexion establecida con el servidor"
-	socketIO.emit('home', profile)
 
-with SocketIO('ipdepacheco', 80, LoggingNamespace) as socketIO:
-	socketIO.on('connect',message_callback)
-	socketIO.wait(seconds=1)
+def message_callback():
+    print "Conexion establecida con el servidor"
+    socketIO.emit('home', profile)
+
+with SocketIO('localhost', 80, LoggingNamespace) as socketIO:
+    socketIO.on('connect', message_callback)
+    socketIO.wait(seconds=1)
