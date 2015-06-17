@@ -10,26 +10,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Twitter Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-switch.min.css">
 
 	 <!-- Material Design for Bootstrap -->
-    <link href="bootstrap/dist/css/roboto.min.css" rel="stylesheet">
-    <link href="bootstrap/dist/css/material-fullpalette.min.css" rel="stylesheet">
-    <link href="bootstrap/dist/css/ripples.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/roboto.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+
+    <!-- Eric Meyer’s reset-->
+    <!--<link rel="stylesheet" href="css/reset.css">-->
 
 	<!--own css-->
-	<link rel="stylesheet" href="custom.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- menu css -->
+	<link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
 	<div class="container" ng-controller="restController as restCtrl">
+		<header id="header" class="">
+			<custom-nav></custom-nav>	
+		</header><!-- /header -->
 
-		<google-map-view ng-model="gCtrl.circle.radius"></google-map-view>
+		<main class="clear">
+			<google-map-view ng-model="gCtrl.circle.radius"></google-map-view>
 
-		<tabla-mediciones></tabla-mediciones>
+			<tabla-mediciones></tabla-mediciones>
 
-		<div material-chart></div>
-
+			<div material-chart></div>
+		</main>
 	</div>
 
 	<!--libraries for line material chart-->
@@ -45,13 +55,14 @@
    	<script src="http://maps.googleapis.com/maps/api/js"></script>
 
    	<!--jquery necesary for boostrap must load first to angular-->
-    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!--angular-->
-	<script type="text/javascript" src="angular-1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
 
 	<!--own source-->
 	<script type="text/javascript" src="js/api-rest.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/google-maps-angular-api.js"></script>
 	<script type="text/javascript" src="js/table.js"></script>
 	<script type="text/javascript" src="js/materialChart.js"></script>
@@ -61,8 +72,8 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
 
 	<!-- Material Design for Bootstrap -->
-    <script src="bootstrap/dist/js/material.min.js"></script>
-    <script src="bootstrap/dist/js/ripples.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
     <script>
       $.material.init();
     </script>
