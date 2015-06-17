@@ -1,0 +1,14 @@
+{
+  "name": "public",
+  "version": "0.0.1",
+  "homepage": "https://github.com/EduardoRMedinaC/Tesis",
+  "authors": [
+    "marcelodavid <marcelo.arevalos@hotmail.com>"
+  ],
+  "description": "material design for booststrap",
+  "main": "index.html",
+  "license": "FP-UNA",
+  "dependencies": {
+    "bootstrap-material-design": "~0.3.0"
+  }
+}
