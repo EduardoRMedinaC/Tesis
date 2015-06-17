@@ -1,34 +1,67 @@
 <!-- Menu -->
-<ul>
-	<li>Registrar Abonados</li>
-	<li>Geomedicion</li>
-	<li>
-		Mis zonas
-		<div class="sub-menu">
-			<ul></ul>
-		</div>
-	</li>
-	<li>Estadisticas</li>
-	<li>
-		OBIS
-		<div class="sub-menu">
-			<form accept-charset="utf-8">
-				<label for="EAT">Energia Activa Total</label>
-				<input ng-model="restCtrl.OBISmap.EAT" id="EAT" type="checkbox" name="Energia Activa Total" value="">
-				<label for="ERT">Energia Reactiva Total (Inductiva)</label>
-				<input ng-model="restCtrl.OBISmap.ERT" id="ERT" type="checkbox" name="Energia Reactiva Total" value="">
-				<label for="DM">Demanda Maxima</label>
-				<input ng-model="restCtrl.OBISmap.DM" id="DM" type="checkbox" name="Demanda Máxima" value="">
-				<label for="CL1">Corriente en L1</label>
-				<input ng-model="restCtrl.OBISmap.CL1" id="CL1" type="checkbox" name="Corriente en L1" value="">
-				<label for="CL2">Corriente en L2</label>
-				<input ng-model="restCtrl.OBISmap.CL2" id="CL2" type="checkbox" name="Corriente en L2" value="">
-				<label for="CL3">Corriente en L3</label>
-				<input ng-model="restCtrl.OBISmap.CL3" id="CL3" type="checkbox" name="Corriente en L3" value="">
-				<label for="time">Tiempo</label>
-				<input ng-model="restCtrl.OBISmap.time" id="time" type="checkbox" name="" value="">
-			</form>
-		</div>
-	</li>
-</ul>
+<nav>
+	<ul class="primary-nav">
+		<!--Abonados-->
+		<li>
+			<a id="Abonados" href="#" title=""><span><i class="icon"></i>Abonados</span></a>
+			<ul class="secondary-nav">
+				<li>
+					<a href="#" title=""><span>Registrar</span></a>
+					<section class="menu-result">
+						
+					</section>
+
+				</li>
+				<li>
+					<form accept-charset="utf-8">
+						<label for="buscar_abonado"><span>Buscar</span></label>
+						<input id="search" type="search" name="" value="" placeholder="">
+					</form>
+					<section class="menu-result">
+						
+					</section>
+				</li>
+			</ul>
+		</li>
+
+		<!--Monitorear-->
+		<li>
+			<a id="Monitorear" href="#" title="">Monitorear</a>
+		</li>
+
+		<!--Zonas-->
+		<li>
+			<a id="Zonas" href="#" title="">Zonas</a>
+			<ul class="secondary-nav">
+				<li>
+					<form accept-charset="utf-8">
+						<label for="bucar_zona"></label>
+						<input id="buscar_zona" type="search" name="" value="" placeholder="buscar por nombre">
+					</form>
+					<section class="menu-result">
+					
+					</section>
+				</li>
+			</ul>
+		</li>
+
+		<!--Estadisticas-->
+		<li>
+			<a id="Estadisticas" href="#" title="">Estadisticas</a>
+		</li>
+
+		<!--Configuraciones-->
+		<li>
+			<a id="Configuraciones" href="#" title=""><span><i class="icon"></i>Configuraciones</span></a>
+			<ul class="secondary-nav">
+				<li>
+					<a href="#" title=""><span>OBIS</span></a>
+					<section>	
+						
+					</section>
+				</li>
+			</div>
+		</li>
+	</ul>
+</nav>
 <!-- End Menu -->
