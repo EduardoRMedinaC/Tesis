@@ -129,4 +129,32 @@ int main()
     }
 }
 
+static void BaudRate(char baudios)
+{   
+    switch(baudios)
+    {
+        case (BD_600):
+            UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_600, 0u);
+            break;
+        case (BD_1200):
+            UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_1200, 0u);
+            break;
+        case (BD_2400):
+            UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_2400, 0u);
+            break;
+        case (BD_4800):
+            UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_4800, 0u);
+            break;
+        case (BD_9600):
+            UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_9600, 0u);
+            break;
+        case (BD_19200):
+            UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_19200, 0u);
+            break;
+        default:
+            UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_300, 0u);
+            break;
+    }
+    
+}
 /* [] END OF FILE */
