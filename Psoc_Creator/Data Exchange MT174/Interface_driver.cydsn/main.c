@@ -116,6 +116,13 @@ const UART_1_UART_INIT_STRUCT configUart =
     DISABLED,                   /* rtsPolarity: disabled */
 };
 
+/*************************************************************
+* Especial characters
+**************************************************************/
+#define ACK     0x06
+#define STX     0x02
+#define ETX     0x03
+
 
 int main()
 {
@@ -231,7 +238,7 @@ static int read_datablock(char8 *data)
     UART_1_Start();
     // 1 ->
     CyDelay(tr);
-    send("/?!\r\n", tr);     //IEC 62056-21:202(E) 6.3.1
+    send("/?!\r\n", tr);     //IEC 62056-21:2002(E) 6.3.1
     //2 <-
     CyDelay(tr);
     readlineCR(identification_message, 1);      //IEC 62056-21:2002(E) 6.3.2
@@ -259,5 +266,17 @@ static int read_datablock(char8 *data)
         substr(identification, identification_message, 5, -2);
     }
     speed[0] = identification_message[4];
+    // 3 ->
+    // IEC 62056-21:2002(E) 6.3.3
+    ack[0] = ACK;
+    strcat(acknowledgement_message,ack);
+    strcat(acknowledgement_message,speed);
+    strcat(acknowledgement_message,"0\r\n");
+    send(acknowledgement_message, tr);
+    
+    UART_1_Stop();
+    BaudRate(speed[0]);
+    UART_1_Start();
+    CyDelay(tr);
 }
 /* [] END OF FILE */
