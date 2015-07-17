@@ -214,4 +214,23 @@ static void readlineCR(char8* line, int select)
         }
     }
 }
+
+static int read_datablock(char8 *data)
+{
+    uint tr = 200;
+    char8 identification_message[32] = "";
+    char8 manufactures_id[6] = "";
+    char8 identification[] = "";            // meassure id
+    char8 speed[]="";
+    char8 acknowledgement_message[]="";
+    char8 ack[]="";
+    char8 ch[]="";                          // received character
+    int bcc;                                // block character controller
+    
+    BaudRate(BD_300);
+    UART_1_Start();
+    // 1 ->
+    CyDelay(tr);
+    send("/?!\r\n", tr);     //IEC 62056-21:202(E) 6.3.1
+}
 /* [] END OF FILE */
