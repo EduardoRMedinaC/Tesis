@@ -196,4 +196,22 @@ static void substr(char8* substring , char8 *string, int start, int end)
         strcat(substring, c);
     }
 }
+
+static void readlineCR(char8* line, int select)
+{
+    char8 ch[] = "";
+    strcpy(line,"");
+    while (1)
+    {
+        if(select == 1)
+            ch[0] = UART_1_UartGetChar();
+        else if(select ==2)
+            ch[0] = UART_2_UartGetChar();
+        strcat(line, ch);
+        if ( strcmp(ch, "\r") || strcmp(ch,""))
+        {
+            break;
+        }
+    }
+}
 /* [] END OF FILE */
