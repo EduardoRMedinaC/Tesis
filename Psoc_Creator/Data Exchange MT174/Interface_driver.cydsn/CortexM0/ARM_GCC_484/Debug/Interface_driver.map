@@ -559,35 +559,35 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x212a
+.debug_info     0x00000000     0x2140
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x2ba .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_info    0x000002ba       0xfd .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_info    0x000003b7      0x386 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_info    0x0000073d      0x28c .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
- .debug_info    0x000009c9      0xa5f .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
- .debug_info    0x00001428      0xc42 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
- .debug_info    0x0000206a       0xc0 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyBootAsmGnu.o)
+ .debug_info    0x00000000      0x2d0 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_info    0x000002d0       0xfd .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_info    0x000003cd      0x386 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_info    0x00000753      0x28c .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
+ .debug_info    0x000009df      0xa5f .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
+ .debug_info    0x0000143e      0xc42 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
+ .debug_info    0x00002080       0xc0 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyBootAsmGnu.o)
 
-.debug_abbrev   0x00000000      0x8d5
+.debug_abbrev   0x00000000      0x8e6
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xab .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_abbrev  0x000000ab       0x5d .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_abbrev  0x00000108      0x1fc .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_abbrev  0x00000304      0x18a .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
- .debug_abbrev  0x0000048e      0x20d .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
- .debug_abbrev  0x0000069b      0x226 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
- .debug_abbrev  0x000008c1       0x14 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000000       0xbc .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_abbrev  0x000000bc       0x5d .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_abbrev  0x00000119      0x1fc .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_abbrev  0x00000315      0x18a .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
+ .debug_abbrev  0x0000049f      0x20d .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
+ .debug_abbrev  0x000006ac      0x226 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
+ .debug_abbrev  0x000008d2       0x14 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyBootAsmGnu.o)
 
-.debug_line     0x00000000      0xcc9
+.debug_line     0x00000000      0xd3c
  *(.debug_line)
- .debug_line    0x00000000       0x73 .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_line    0x00000073       0x53 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_line    0x000000c6      0x230 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_line    0x000002f6      0x141 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
- .debug_line    0x00000437      0x42f .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
- .debug_line    0x00000866      0x3fa .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
- .debug_line    0x00000c60       0x69 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyBootAsmGnu.o)
+ .debug_line    0x00000000       0xe6 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_line    0x000000e6       0x53 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_line    0x00000139      0x230 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_line    0x00000369      0x141 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
+ .debug_line    0x000004aa      0x42f .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
+ .debug_line    0x000008d9      0x3fa .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
+ .debug_line    0x00000cd3       0x69 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyBootAsmGnu.o)
 
 .debug_frame    0x00000000      0x920
  *(.debug_frame)
@@ -602,19 +602,19 @@ END GROUP
  .debug_frame   0x000008d4       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
  .debug_frame   0x00000900       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
 
-.debug_str      0x00000000      0xe7a
+.debug_str      0x00000000      0xe88
  *(.debug_str)
- .debug_str     0x00000000      0x344 .\CortexM0\ARM_GCC_484\Debug\main.o
-                                0x37d (size before relaxing)
- .debug_str     0x00000344       0x5b .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_str     0x00000000      0x352 .\CortexM0\ARM_GCC_484\Debug\main.o
+                                0x38b (size before relaxing)
+ .debug_str     0x00000352       0x5b .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
                                 0x1ec (size before relaxing)
- .debug_str     0x0000039f      0x163 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_str     0x000003ad      0x163 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
                                 0x313 (size before relaxing)
- .debug_str     0x00000502       0x9d .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
+ .debug_str     0x00000510       0x9d .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(cyfitter_cfg.o)
                                 0x269 (size before relaxing)
- .debug_str     0x0000059f      0x46a .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
+ .debug_str     0x000005ad      0x46a .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLib.o)
                                 0x667 (size before relaxing)
- .debug_str     0x00000a09      0x471 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
+ .debug_str     0x00000a17      0x471 .\CortexM0\ARM_GCC_484\Debug\Interface_driver.a(CyLFClk.o)
                                 0x671 (size before relaxing)
 
 .debug_loc      0x00000000      0xfdf

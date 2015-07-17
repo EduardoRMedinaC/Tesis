@@ -232,5 +232,32 @@ static int read_datablock(char8 *data)
     // 1 ->
     CyDelay(tr);
     send("/?!\r\n", tr);     //IEC 62056-21:202(E) 6.3.1
+    //2 <-
+    CyDelay(tr);
+    readlineCR(identification_message, 1);      //IEC 62056-21:2002(E) 6.3.2
+    if(strlen(identification_message) < 1 || identification_message[0] != '/')
+    {
+        UART_1_Stop();
+        return 4;       // No identification message
+    }
+    if(strlen(identification_message) < 7)
+    {
+        UART_1_Stop();
+        return 3;       // Identification Message too short
+    }
+    if(islower(identification_message[4]))
+    {
+        tr = 20;
+    }
+    substr(manufactures_id, identification_message, 1, 4);
+    if(identification_message[5] == '\\')
+    {
+        substr(identification, identification_message, 7, -2);
+    }
+    else
+    {
+        substr(identification, identification_message, 5, -2);
+    }
+    speed[0] = identification_message[4];
 }
 /* [] END OF FILE */

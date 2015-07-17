@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 1
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 1
   30:.\main.c      **** #define NON_APPLICABLE  (DISABLED)
   31:.\main.c      **** 
   32:.\main.c      **** /* RX and TX buffers UART operation */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 2
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 2
 
 
   33:.\main.c      **** #define COMMON_BUFFER_SIZE     (16u)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 1
   87:.\main.c      ****     UART_1_UART_PARITY_EVEN,    /* parity: EVEN */
   88:.\main.c      ****     UART_1_UART_STOP_BITS_1,    /* stopBits: 1 bit */
   89:.\main.c      ****     UART_OVERSAMPLING,          /* oversample: 16 */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 3
 
 
   90:.\main.c      ****     DISABLED,                   /* enableIrdaLowPower: disabled */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 1
   47 0004 03000000 		.word	3
   48 0008 07000000 		.word	7
   49 000c 00000000 		.word	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 4
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 4
 
 
   50 0010 02000000 		.word	2
@@ -213,840 +213,876 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 1
   79              	.Letext0:
   80              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
   81              		.file 3 "Generated_Source\\PSoC4/UART_1_SPI_UART.h"
-  82              		.section	.debug_info,"",%progbits
-  83              	.Ldebug_info0:
-  84 0000 B6020000 		.4byte	0x2b6
-  85 0004 0400     		.2byte	0x4
-  86 0006 00000000 		.4byte	.Ldebug_abbrev0
-  87 000a 04       		.byte	0x4
-  88 000b 01       		.uleb128 0x1
-  89 000c FC010000 		.4byte	.LASF50
-  90 0010 01       		.byte	0x1
-  91 0011 86010000 		.4byte	.LASF51
-  92 0015 10000000 		.4byte	.LASF52
-  93 0019 00000000 		.4byte	.Ldebug_ranges0+0
-  94 001d 00000000 		.4byte	0
-  95 0021 00000000 		.4byte	.Ldebug_line0
-  96 0025 02       		.uleb128 0x2
-  97 0026 01       		.byte	0x1
-  98 0027 06       		.byte	0x6
-  99 0028 2C030000 		.4byte	.LASF0
- 100 002c 02       		.uleb128 0x2
- 101 002d 01       		.byte	0x1
- 102 002e 08       		.byte	0x8
- 103 002f CF000000 		.4byte	.LASF1
- 104 0033 02       		.uleb128 0x2
- 105 0034 02       		.byte	0x2
- 106 0035 05       		.byte	0x5
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 5
+  82              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\3.2\\psoc creator\\import\\gnu\\arm\\4.8.
+  83              		.section	.debug_info,"",%progbits
+  84              	.Ldebug_info0:
+  85 0000 CC020000 		.4byte	0x2cc
+  86 0004 0400     		.2byte	0x4
+  87 0006 00000000 		.4byte	.Ldebug_abbrev0
+  88 000a 04       		.byte	0x4
+  89 000b 01       		.uleb128 0x1
+  90 000c 0A020000 		.4byte	.LASF51
+  91 0010 01       		.byte	0x1
+  92 0011 94010000 		.4byte	.LASF52
+  93 0015 10000000 		.4byte	.LASF53
+  94 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  95 001d 00000000 		.4byte	0
+  96 0021 00000000 		.4byte	.Ldebug_line0
+  97 0025 02       		.uleb128 0x2
+  98 0026 01       		.byte	0x1
+  99 0027 06       		.byte	0x6
+ 100 0028 3A030000 		.4byte	.LASF0
+ 101 002c 02       		.uleb128 0x2
+ 102 002d 01       		.byte	0x1
+ 103 002e 08       		.byte	0x8
+ 104 002f CF000000 		.4byte	.LASF1
+ 105 0033 02       		.uleb128 0x2
+ 106 0034 02       		.byte	0x2
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 5
 
 
- 107 0036 EF020000 		.4byte	.LASF2
- 108 003a 02       		.uleb128 0x2
- 109 003b 02       		.byte	0x2
- 110 003c 07       		.byte	0x7
- 111 003d 80000000 		.4byte	.LASF3
- 112 0041 02       		.uleb128 0x2
- 113 0042 04       		.byte	0x4
- 114 0043 05       		.byte	0x5
- 115 0044 23030000 		.4byte	.LASF4
- 116 0048 02       		.uleb128 0x2
- 117 0049 04       		.byte	0x4
- 118 004a 07       		.byte	0x7
- 119 004b ED000000 		.4byte	.LASF5
- 120 004f 02       		.uleb128 0x2
- 121 0050 08       		.byte	0x8
- 122 0051 05       		.byte	0x5
- 123 0052 99020000 		.4byte	.LASF6
- 124 0056 02       		.uleb128 0x2
- 125 0057 08       		.byte	0x8
- 126 0058 07       		.byte	0x7
- 127 0059 E5010000 		.4byte	.LASF7
- 128 005d 03       		.uleb128 0x3
- 129 005e 04       		.byte	0x4
- 130 005f 05       		.byte	0x5
- 131 0060 696E7400 		.ascii	"int\000"
- 132 0064 02       		.uleb128 0x2
- 133 0065 04       		.byte	0x4
- 134 0066 07       		.byte	0x7
- 135 0067 CC010000 		.4byte	.LASF8
- 136 006b 04       		.uleb128 0x4
- 137 006c FF000000 		.4byte	.LASF9
- 138 0070 02       		.byte	0x2
- 139 0071 B3       		.byte	0xb3
- 140 0072 2C000000 		.4byte	0x2c
- 141 0076 04       		.uleb128 0x4
- 142 0077 9F010000 		.4byte	.LASF10
- 143 007b 02       		.byte	0x2
- 144 007c B5       		.byte	0xb5
- 145 007d 48000000 		.4byte	0x48
- 146 0081 02       		.uleb128 0x2
- 147 0082 04       		.byte	0x4
- 148 0083 04       		.byte	0x4
- 149 0084 C9000000 		.4byte	.LASF11
- 150 0088 02       		.uleb128 0x2
- 151 0089 08       		.byte	0x8
- 152 008a 04       		.byte	0x4
- 153 008b 54010000 		.4byte	.LASF12
- 154 008f 02       		.uleb128 0x2
- 155 0090 01       		.byte	0x1
- 156 0091 08       		.byte	0x8
- 157 0092 A7020000 		.4byte	.LASF13
- 158 0096 02       		.uleb128 0x2
- 159 0097 04       		.byte	0x4
- 160 0098 07       		.byte	0x7
- 161 0099 81020000 		.4byte	.LASF14
- 162 009d 05       		.uleb128 0x5
- 163 009e 04       		.byte	0x4
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 6
+ 107 0035 05       		.byte	0x5
+ 108 0036 FD020000 		.4byte	.LASF2
+ 109 003a 02       		.uleb128 0x2
+ 110 003b 02       		.byte	0x2
+ 111 003c 07       		.byte	0x7
+ 112 003d 80000000 		.4byte	.LASF3
+ 113 0041 02       		.uleb128 0x2
+ 114 0042 04       		.byte	0x4
+ 115 0043 05       		.byte	0x5
+ 116 0044 31030000 		.4byte	.LASF4
+ 117 0048 02       		.uleb128 0x2
+ 118 0049 04       		.byte	0x4
+ 119 004a 07       		.byte	0x7
+ 120 004b ED000000 		.4byte	.LASF5
+ 121 004f 02       		.uleb128 0x2
+ 122 0050 08       		.byte	0x8
+ 123 0051 05       		.byte	0x5
+ 124 0052 A7020000 		.4byte	.LASF6
+ 125 0056 02       		.uleb128 0x2
+ 126 0057 08       		.byte	0x8
+ 127 0058 07       		.byte	0x7
+ 128 0059 F3010000 		.4byte	.LASF7
+ 129 005d 03       		.uleb128 0x3
+ 130 005e 04       		.byte	0x4
+ 131 005f 05       		.byte	0x5
+ 132 0060 696E7400 		.ascii	"int\000"
+ 133 0064 02       		.uleb128 0x2
+ 134 0065 04       		.byte	0x4
+ 135 0066 07       		.byte	0x7
+ 136 0067 DA010000 		.4byte	.LASF8
+ 137 006b 04       		.uleb128 0x4
+ 138 006c 0D010000 		.4byte	.LASF9
+ 139 0070 02       		.byte	0x2
+ 140 0071 B3       		.byte	0xb3
+ 141 0072 2C000000 		.4byte	0x2c
+ 142 0076 04       		.uleb128 0x4
+ 143 0077 AD010000 		.4byte	.LASF10
+ 144 007b 02       		.byte	0x2
+ 145 007c B5       		.byte	0xb5
+ 146 007d 48000000 		.4byte	0x48
+ 147 0081 02       		.uleb128 0x2
+ 148 0082 04       		.byte	0x4
+ 149 0083 04       		.byte	0x4
+ 150 0084 C9000000 		.4byte	.LASF11
+ 151 0088 02       		.uleb128 0x2
+ 152 0089 08       		.byte	0x8
+ 153 008a 04       		.byte	0x4
+ 154 008b 62010000 		.4byte	.LASF12
+ 155 008f 02       		.uleb128 0x2
+ 156 0090 01       		.byte	0x1
+ 157 0091 08       		.byte	0x8
+ 158 0092 B5020000 		.4byte	.LASF13
+ 159 0096 02       		.uleb128 0x2
+ 160 0097 04       		.byte	0x4
+ 161 0098 07       		.byte	0x7
+ 162 0099 8F020000 		.4byte	.LASF14
+ 163 009d 05       		.uleb128 0x5
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 6
 
 
- 164 009f 6B000000 		.4byte	0x6b
- 165 00a3 06       		.uleb128 0x6
- 166 00a4 70       		.byte	0x70
- 167 00a5 03       		.byte	0x3
- 168 00a6 2501     		.2byte	0x125
- 169 00a8 40020000 		.4byte	0x240
- 170 00ac 07       		.uleb128 0x7
- 171 00ad DC020000 		.4byte	.LASF15
- 172 00b1 03       		.byte	0x3
- 173 00b2 2701     		.2byte	0x127
- 174 00b4 76000000 		.4byte	0x76
- 175 00b8 00       		.byte	0
- 176 00b9 07       		.uleb128 0x7
- 177 00ba 9E000000 		.4byte	.LASF16
- 178 00be 03       		.byte	0x3
- 179 00bf 2801     		.2byte	0x128
- 180 00c1 76000000 		.4byte	0x76
- 181 00c5 04       		.byte	0x4
- 182 00c6 07       		.uleb128 0x7
- 183 00c7 64030000 		.4byte	.LASF17
- 184 00cb 03       		.byte	0x3
- 185 00cc 2901     		.2byte	0x129
- 186 00ce 76000000 		.4byte	0x76
- 187 00d2 08       		.byte	0x8
- 188 00d3 07       		.uleb128 0x7
- 189 00d4 41030000 		.4byte	.LASF18
- 190 00d8 03       		.byte	0x3
- 191 00d9 2A01     		.2byte	0x12a
- 192 00db 76000000 		.4byte	0x76
- 193 00df 0C       		.byte	0xc
- 194 00e0 07       		.uleb128 0x7
- 195 00e1 38030000 		.4byte	.LASF19
- 196 00e5 03       		.byte	0x3
- 197 00e6 2B01     		.2byte	0x12b
- 198 00e8 76000000 		.4byte	0x76
- 199 00ec 10       		.byte	0x10
- 200 00ed 07       		.uleb128 0x7
- 201 00ee 93000000 		.4byte	.LASF20
- 202 00f2 03       		.byte	0x3
- 203 00f3 2C01     		.2byte	0x12c
- 204 00f5 76000000 		.4byte	0x76
- 205 00f9 14       		.byte	0x14
- 206 00fa 07       		.uleb128 0x7
- 207 00fb AC020000 		.4byte	.LASF21
- 208 00ff 03       		.byte	0x3
- 209 0100 2D01     		.2byte	0x12d
- 210 0102 76000000 		.4byte	0x76
- 211 0106 18       		.byte	0x18
- 212 0107 07       		.uleb128 0x7
- 213 0108 66010000 		.4byte	.LASF22
- 214 010c 03       		.byte	0x3
- 215 010d 2E01     		.2byte	0x12e
- 216 010f 76000000 		.4byte	0x76
- 217 0113 1C       		.byte	0x1c
- 218 0114 07       		.uleb128 0x7
- 219 0115 8F010000 		.4byte	.LASF23
- 220 0119 03       		.byte	0x3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 7
+ 164 009e 04       		.byte	0x4
+ 165 009f A3000000 		.4byte	0xa3
+ 166 00a3 06       		.uleb128 0x6
+ 167 00a4 8F000000 		.4byte	0x8f
+ 168 00a8 05       		.uleb128 0x5
+ 169 00a9 04       		.byte	0x4
+ 170 00aa 6B000000 		.4byte	0x6b
+ 171 00ae 07       		.uleb128 0x7
+ 172 00af 70       		.byte	0x70
+ 173 00b0 03       		.byte	0x3
+ 174 00b1 2501     		.2byte	0x125
+ 175 00b3 4B020000 		.4byte	0x24b
+ 176 00b7 08       		.uleb128 0x8
+ 177 00b8 EA020000 		.4byte	.LASF15
+ 178 00bc 03       		.byte	0x3
+ 179 00bd 2701     		.2byte	0x127
+ 180 00bf 76000000 		.4byte	0x76
+ 181 00c3 00       		.byte	0
+ 182 00c4 08       		.uleb128 0x8
+ 183 00c5 9E000000 		.4byte	.LASF16
+ 184 00c9 03       		.byte	0x3
+ 185 00ca 2801     		.2byte	0x128
+ 186 00cc 76000000 		.4byte	0x76
+ 187 00d0 04       		.byte	0x4
+ 188 00d1 08       		.uleb128 0x8
+ 189 00d2 72030000 		.4byte	.LASF17
+ 190 00d6 03       		.byte	0x3
+ 191 00d7 2901     		.2byte	0x129
+ 192 00d9 76000000 		.4byte	0x76
+ 193 00dd 08       		.byte	0x8
+ 194 00de 08       		.uleb128 0x8
+ 195 00df 4F030000 		.4byte	.LASF18
+ 196 00e3 03       		.byte	0x3
+ 197 00e4 2A01     		.2byte	0x12a
+ 198 00e6 76000000 		.4byte	0x76
+ 199 00ea 0C       		.byte	0xc
+ 200 00eb 08       		.uleb128 0x8
+ 201 00ec 46030000 		.4byte	.LASF19
+ 202 00f0 03       		.byte	0x3
+ 203 00f1 2B01     		.2byte	0x12b
+ 204 00f3 76000000 		.4byte	0x76
+ 205 00f7 10       		.byte	0x10
+ 206 00f8 08       		.uleb128 0x8
+ 207 00f9 93000000 		.4byte	.LASF20
+ 208 00fd 03       		.byte	0x3
+ 209 00fe 2C01     		.2byte	0x12c
+ 210 0100 76000000 		.4byte	0x76
+ 211 0104 14       		.byte	0x14
+ 212 0105 08       		.uleb128 0x8
+ 213 0106 BA020000 		.4byte	.LASF21
+ 214 010a 03       		.byte	0x3
+ 215 010b 2D01     		.2byte	0x12d
+ 216 010d 76000000 		.4byte	0x76
+ 217 0111 18       		.byte	0x18
+ 218 0112 08       		.uleb128 0x8
+ 219 0113 74010000 		.4byte	.LASF22
+ 220 0117 03       		.byte	0x3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 7
 
 
- 221 011a 2F01     		.2byte	0x12f
- 222 011c 76000000 		.4byte	0x76
- 223 0120 20       		.byte	0x20
- 224 0121 07       		.uleb128 0x7
- 225 0122 53030000 		.4byte	.LASF24
- 226 0126 03       		.byte	0x3
- 227 0127 3001     		.2byte	0x130
- 228 0129 76000000 		.4byte	0x76
- 229 012d 24       		.byte	0x24
- 230 012e 07       		.uleb128 0x7
- 231 012f DD000000 		.4byte	.LASF25
- 232 0133 03       		.byte	0x3
- 233 0134 3101     		.2byte	0x131
- 234 0136 76000000 		.4byte	0x76
- 235 013a 28       		.byte	0x28
- 236 013b 07       		.uleb128 0x7
- 237 013c 8A020000 		.4byte	.LASF26
- 238 0140 03       		.byte	0x3
- 239 0141 3201     		.2byte	0x132
- 240 0143 76000000 		.4byte	0x76
- 241 0147 2C       		.byte	0x2c
- 242 0148 07       		.uleb128 0x7
- 243 0149 5B010000 		.4byte	.LASF27
- 244 014d 03       		.byte	0x3
- 245 014e 3301     		.2byte	0x133
- 246 0150 76000000 		.4byte	0x76
- 247 0154 30       		.byte	0x30
- 248 0155 07       		.uleb128 0x7
- 249 0156 79010000 		.4byte	.LASF28
- 250 015a 03       		.byte	0x3
- 251 015b 3401     		.2byte	0x134
- 252 015d 76000000 		.4byte	0x76
- 253 0161 34       		.byte	0x34
- 254 0162 07       		.uleb128 0x7
- 255 0163 A8000000 		.4byte	.LASF29
- 256 0167 03       		.byte	0x3
- 257 0168 3501     		.2byte	0x135
- 258 016a 9D000000 		.4byte	0x9d
- 259 016e 38       		.byte	0x38
- 260 016f 07       		.uleb128 0x7
- 261 0170 47010000 		.4byte	.LASF30
- 262 0174 03       		.byte	0x3
- 263 0175 3601     		.2byte	0x136
- 264 0177 76000000 		.4byte	0x76
- 265 017b 3C       		.byte	0x3c
- 266 017c 07       		.uleb128 0x7
- 267 017d BF020000 		.4byte	.LASF31
- 268 0181 03       		.byte	0x3
- 269 0182 3701     		.2byte	0x137
- 270 0184 9D000000 		.4byte	0x9d
- 271 0188 40       		.byte	0x40
- 272 0189 07       		.uleb128 0x7
- 273 018a 6D030000 		.4byte	.LASF32
- 274 018e 03       		.byte	0x3
- 275 018f 3801     		.2byte	0x138
- 276 0191 76000000 		.4byte	0x76
- 277 0195 44       		.byte	0x44
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 8
+ 221 0118 2E01     		.2byte	0x12e
+ 222 011a 76000000 		.4byte	0x76
+ 223 011e 1C       		.byte	0x1c
+ 224 011f 08       		.uleb128 0x8
+ 225 0120 9D010000 		.4byte	.LASF23
+ 226 0124 03       		.byte	0x3
+ 227 0125 2F01     		.2byte	0x12f
+ 228 0127 76000000 		.4byte	0x76
+ 229 012b 20       		.byte	0x20
+ 230 012c 08       		.uleb128 0x8
+ 231 012d 61030000 		.4byte	.LASF24
+ 232 0131 03       		.byte	0x3
+ 233 0132 3001     		.2byte	0x130
+ 234 0134 76000000 		.4byte	0x76
+ 235 0138 24       		.byte	0x24
+ 236 0139 08       		.uleb128 0x8
+ 237 013a DD000000 		.4byte	.LASF25
+ 238 013e 03       		.byte	0x3
+ 239 013f 3101     		.2byte	0x131
+ 240 0141 76000000 		.4byte	0x76
+ 241 0145 28       		.byte	0x28
+ 242 0146 08       		.uleb128 0x8
+ 243 0147 98020000 		.4byte	.LASF26
+ 244 014b 03       		.byte	0x3
+ 245 014c 3201     		.2byte	0x132
+ 246 014e 76000000 		.4byte	0x76
+ 247 0152 2C       		.byte	0x2c
+ 248 0153 08       		.uleb128 0x8
+ 249 0154 69010000 		.4byte	.LASF27
+ 250 0158 03       		.byte	0x3
+ 251 0159 3301     		.2byte	0x133
+ 252 015b 76000000 		.4byte	0x76
+ 253 015f 30       		.byte	0x30
+ 254 0160 08       		.uleb128 0x8
+ 255 0161 87010000 		.4byte	.LASF28
+ 256 0165 03       		.byte	0x3
+ 257 0166 3401     		.2byte	0x134
+ 258 0168 76000000 		.4byte	0x76
+ 259 016c 34       		.byte	0x34
+ 260 016d 08       		.uleb128 0x8
+ 261 016e A8000000 		.4byte	.LASF29
+ 262 0172 03       		.byte	0x3
+ 263 0173 3501     		.2byte	0x135
+ 264 0175 A8000000 		.4byte	0xa8
+ 265 0179 38       		.byte	0x38
+ 266 017a 08       		.uleb128 0x8
+ 267 017b 55010000 		.4byte	.LASF30
+ 268 017f 03       		.byte	0x3
+ 269 0180 3601     		.2byte	0x136
+ 270 0182 76000000 		.4byte	0x76
+ 271 0186 3C       		.byte	0x3c
+ 272 0187 08       		.uleb128 0x8
+ 273 0188 CD020000 		.4byte	.LASF31
+ 274 018c 03       		.byte	0x3
+ 275 018d 3701     		.2byte	0x137
+ 276 018f A8000000 		.4byte	0xa8
+ 277 0193 40       		.byte	0x40
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 8
 
 
- 278 0196 07       		.uleb128 0x7
- 279 0197 C8020000 		.4byte	.LASF33
- 280 019b 03       		.byte	0x3
- 281 019c 3901     		.2byte	0x139
- 282 019e 76000000 		.4byte	0x76
- 283 01a2 48       		.byte	0x48
- 284 01a3 07       		.uleb128 0x7
- 285 01a4 E1020000 		.4byte	.LASF34
- 286 01a8 03       		.byte	0x3
- 287 01a9 3A01     		.2byte	0x13a
- 288 01ab 76000000 		.4byte	0x76
- 289 01af 4C       		.byte	0x4c
- 290 01b0 07       		.uleb128 0x7
- 291 01b1 BA010000 		.4byte	.LASF35
- 292 01b5 03       		.byte	0x3
- 293 01b6 3B01     		.2byte	0x13b
- 294 01b8 76000000 		.4byte	0x76
- 295 01bc 50       		.byte	0x50
- 296 01bd 07       		.uleb128 0x7
- 297 01be 00000000 		.4byte	.LASF36
- 298 01c2 03       		.byte	0x3
- 299 01c3 3C01     		.2byte	0x13c
- 300 01c5 76000000 		.4byte	0x76
- 301 01c9 54       		.byte	0x54
- 302 01ca 07       		.uleb128 0x7
- 303 01cb F9020000 		.4byte	.LASF37
- 304 01cf 03       		.byte	0x3
- 305 01d0 3D01     		.2byte	0x13d
- 306 01d2 76000000 		.4byte	0x76
- 307 01d6 58       		.byte	0x58
- 308 01d7 07       		.uleb128 0x7
- 309 01d8 20010000 		.4byte	.LASF38
- 310 01dc 03       		.byte	0x3
- 311 01dd 3E01     		.2byte	0x13e
- 312 01df 76000000 		.4byte	0x76
- 313 01e3 5C       		.byte	0x5c
- 314 01e4 07       		.uleb128 0x7
- 315 01e5 13030000 		.4byte	.LASF39
- 316 01e9 03       		.byte	0x3
- 317 01ea 3F01     		.2byte	0x13f
- 318 01ec 76000000 		.4byte	0x76
- 319 01f0 60       		.byte	0x60
- 320 01f1 07       		.uleb128 0x7
- 321 01f2 AB010000 		.4byte	.LASF40
- 322 01f6 03       		.byte	0x3
- 323 01f7 4001     		.2byte	0x140
- 324 01f9 76000000 		.4byte	0x76
- 325 01fd 64       		.byte	0x64
- 326 01fe 07       		.uleb128 0x7
- 327 01ff 05010000 		.4byte	.LASF41
- 328 0203 03       		.byte	0x3
- 329 0204 4101     		.2byte	0x141
- 330 0206 6B000000 		.4byte	0x6b
- 331 020a 68       		.byte	0x68
- 332 020b 07       		.uleb128 0x7
- 333 020c 09030000 		.4byte	.LASF42
- 334 0210 03       		.byte	0x3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 9
+ 278 0194 08       		.uleb128 0x8
+ 279 0195 7B030000 		.4byte	.LASF32
+ 280 0199 03       		.byte	0x3
+ 281 019a 3801     		.2byte	0x138
+ 282 019c 76000000 		.4byte	0x76
+ 283 01a0 44       		.byte	0x44
+ 284 01a1 08       		.uleb128 0x8
+ 285 01a2 D6020000 		.4byte	.LASF33
+ 286 01a6 03       		.byte	0x3
+ 287 01a7 3901     		.2byte	0x139
+ 288 01a9 76000000 		.4byte	0x76
+ 289 01ad 48       		.byte	0x48
+ 290 01ae 08       		.uleb128 0x8
+ 291 01af EF020000 		.4byte	.LASF34
+ 292 01b3 03       		.byte	0x3
+ 293 01b4 3A01     		.2byte	0x13a
+ 294 01b6 76000000 		.4byte	0x76
+ 295 01ba 4C       		.byte	0x4c
+ 296 01bb 08       		.uleb128 0x8
+ 297 01bc C8010000 		.4byte	.LASF35
+ 298 01c0 03       		.byte	0x3
+ 299 01c1 3B01     		.2byte	0x13b
+ 300 01c3 76000000 		.4byte	0x76
+ 301 01c7 50       		.byte	0x50
+ 302 01c8 08       		.uleb128 0x8
+ 303 01c9 00000000 		.4byte	.LASF36
+ 304 01cd 03       		.byte	0x3
+ 305 01ce 3C01     		.2byte	0x13c
+ 306 01d0 76000000 		.4byte	0x76
+ 307 01d4 54       		.byte	0x54
+ 308 01d5 08       		.uleb128 0x8
+ 309 01d6 07030000 		.4byte	.LASF37
+ 310 01da 03       		.byte	0x3
+ 311 01db 3D01     		.2byte	0x13d
+ 312 01dd 76000000 		.4byte	0x76
+ 313 01e1 58       		.byte	0x58
+ 314 01e2 08       		.uleb128 0x8
+ 315 01e3 2E010000 		.4byte	.LASF38
+ 316 01e7 03       		.byte	0x3
+ 317 01e8 3E01     		.2byte	0x13e
+ 318 01ea 76000000 		.4byte	0x76
+ 319 01ee 5C       		.byte	0x5c
+ 320 01ef 08       		.uleb128 0x8
+ 321 01f0 21030000 		.4byte	.LASF39
+ 322 01f4 03       		.byte	0x3
+ 323 01f5 3F01     		.2byte	0x13f
+ 324 01f7 76000000 		.4byte	0x76
+ 325 01fb 60       		.byte	0x60
+ 326 01fc 08       		.uleb128 0x8
+ 327 01fd B9010000 		.4byte	.LASF40
+ 328 0201 03       		.byte	0x3
+ 329 0202 4001     		.2byte	0x140
+ 330 0204 76000000 		.4byte	0x76
+ 331 0208 64       		.byte	0x64
+ 332 0209 08       		.uleb128 0x8
+ 333 020a 13010000 		.4byte	.LASF41
+ 334 020e 03       		.byte	0x3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 9
 
 
- 335 0211 4201     		.2byte	0x142
- 336 0213 6B000000 		.4byte	0x6b
- 337 0217 69       		.byte	0x69
- 338 0218 07       		.uleb128 0x7
- 339 0219 14010000 		.4byte	.LASF43
- 340 021d 03       		.byte	0x3
- 341 021e 4301     		.2byte	0x143
- 342 0220 6B000000 		.4byte	0x6b
- 343 0224 6A       		.byte	0x6a
- 344 0225 07       		.uleb128 0x7
- 345 0226 B1000000 		.4byte	.LASF44
- 346 022a 03       		.byte	0x3
- 347 022b 4401     		.2byte	0x144
- 348 022d 6B000000 		.4byte	0x6b
- 349 0231 6B       		.byte	0x6b
- 350 0232 07       		.uleb128 0x7
- 351 0233 D9010000 		.4byte	.LASF45
- 352 0237 03       		.byte	0x3
- 353 0238 4501     		.2byte	0x145
- 354 023a 6B000000 		.4byte	0x6b
- 355 023e 6C       		.byte	0x6c
- 356 023f 00       		.byte	0
- 357 0240 08       		.uleb128 0x8
- 358 0241 2F010000 		.4byte	.LASF46
- 359 0245 03       		.byte	0x3
- 360 0246 4601     		.2byte	0x146
- 361 0248 A3000000 		.4byte	0xa3
- 362 024c 09       		.uleb128 0x9
- 363 024d A6010000 		.4byte	.LASF53
- 364 0251 01       		.byte	0x1
- 365 0252 78       		.byte	0x78
- 366 0253 5D000000 		.4byte	0x5d
- 367 0257 00000000 		.4byte	.LFB33
- 368 025b 04000000 		.4byte	.LFE33-.LFB33
- 369 025f 01       		.uleb128 0x1
- 370 0260 9C       		.byte	0x9c
- 371 0261 0A       		.uleb128 0xa
- 372 0262 6B000000 		.4byte	0x6b
- 373 0266 71020000 		.4byte	0x271
- 374 026a 0B       		.uleb128 0xb
- 375 026b 96000000 		.4byte	0x96
- 376 026f 0F       		.byte	0xf
- 377 0270 00       		.byte	0
- 378 0271 0C       		.uleb128 0xc
- 379 0272 C0000000 		.4byte	.LASF47
- 380 0276 01       		.byte	0x1
- 381 0277 22       		.byte	0x22
- 382 0278 61020000 		.4byte	0x261
- 383 027c 05       		.uleb128 0x5
- 384 027d 03       		.byte	0x3
- 385 027e 00000000 		.4byte	bufferTx
- 386 0282 0A       		.uleb128 0xa
- 387 0283 6B000000 		.4byte	0x6b
- 388 0287 92020000 		.4byte	0x292
- 389 028b 0B       		.uleb128 0xb
- 390 028c 96000000 		.4byte	0x96
- 391 0290 10       		.byte	0x10
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 10
+ 335 020f 4101     		.2byte	0x141
+ 336 0211 6B000000 		.4byte	0x6b
+ 337 0215 68       		.byte	0x68
+ 338 0216 08       		.uleb128 0x8
+ 339 0217 17030000 		.4byte	.LASF42
+ 340 021b 03       		.byte	0x3
+ 341 021c 4201     		.2byte	0x142
+ 342 021e 6B000000 		.4byte	0x6b
+ 343 0222 69       		.byte	0x69
+ 344 0223 08       		.uleb128 0x8
+ 345 0224 22010000 		.4byte	.LASF43
+ 346 0228 03       		.byte	0x3
+ 347 0229 4301     		.2byte	0x143
+ 348 022b 6B000000 		.4byte	0x6b
+ 349 022f 6A       		.byte	0x6a
+ 350 0230 08       		.uleb128 0x8
+ 351 0231 B1000000 		.4byte	.LASF44
+ 352 0235 03       		.byte	0x3
+ 353 0236 4401     		.2byte	0x144
+ 354 0238 6B000000 		.4byte	0x6b
+ 355 023c 6B       		.byte	0x6b
+ 356 023d 08       		.uleb128 0x8
+ 357 023e E7010000 		.4byte	.LASF45
+ 358 0242 03       		.byte	0x3
+ 359 0243 4501     		.2byte	0x145
+ 360 0245 6B000000 		.4byte	0x6b
+ 361 0249 6C       		.byte	0x6c
+ 362 024a 00       		.byte	0
+ 363 024b 09       		.uleb128 0x9
+ 364 024c 3D010000 		.4byte	.LASF46
+ 365 0250 03       		.byte	0x3
+ 366 0251 4601     		.2byte	0x146
+ 367 0253 AE000000 		.4byte	0xae
+ 368 0257 0A       		.uleb128 0xa
+ 369 0258 B4010000 		.4byte	.LASF54
+ 370 025c 01       		.byte	0x1
+ 371 025d 78       		.byte	0x78
+ 372 025e 5D000000 		.4byte	0x5d
+ 373 0262 00000000 		.4byte	.LFB33
+ 374 0266 04000000 		.4byte	.LFE33-.LFB33
+ 375 026a 01       		.uleb128 0x1
+ 376 026b 9C       		.byte	0x9c
+ 377 026c 0B       		.uleb128 0xb
+ 378 026d FF000000 		.4byte	.LASF47
+ 379 0271 04       		.byte	0x4
+ 380 0272 2D       		.byte	0x2d
+ 381 0273 9D000000 		.4byte	0x9d
+ 382 0277 0C       		.uleb128 0xc
+ 383 0278 6B000000 		.4byte	0x6b
+ 384 027c 87020000 		.4byte	0x287
+ 385 0280 0D       		.uleb128 0xd
+ 386 0281 96000000 		.4byte	0x96
+ 387 0285 0F       		.byte	0xf
+ 388 0286 00       		.byte	0
+ 389 0287 0E       		.uleb128 0xe
+ 390 0288 C0000000 		.4byte	.LASF48
+ 391 028c 01       		.byte	0x1
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 10
 
 
- 392 0291 00       		.byte	0
- 393 0292 0C       		.uleb128 0xc
- 394 0293 78020000 		.4byte	.LASF48
- 395 0297 01       		.byte	0x1
- 396 0298 23       		.byte	0x23
- 397 0299 82020000 		.4byte	0x282
- 398 029d 05       		.uleb128 0x5
- 399 029e 03       		.byte	0x3
- 400 029f 00000000 		.4byte	bufferRx
- 401 02a3 0C       		.uleb128 0xc
- 402 02a4 48030000 		.4byte	.LASF49
- 403 02a8 01       		.byte	0x1
- 404 02a9 52       		.byte	0x52
- 405 02aa B4020000 		.4byte	0x2b4
- 406 02ae 05       		.uleb128 0x5
- 407 02af 03       		.byte	0x3
- 408 02b0 00000000 		.4byte	configUart
- 409 02b4 0D       		.uleb128 0xd
- 410 02b5 40020000 		.4byte	0x240
- 411 02b9 00       		.byte	0
- 412              		.section	.debug_abbrev,"",%progbits
- 413              	.Ldebug_abbrev0:
- 414 0000 01       		.uleb128 0x1
- 415 0001 11       		.uleb128 0x11
- 416 0002 01       		.byte	0x1
- 417 0003 25       		.uleb128 0x25
- 418 0004 0E       		.uleb128 0xe
- 419 0005 13       		.uleb128 0x13
- 420 0006 0B       		.uleb128 0xb
- 421 0007 03       		.uleb128 0x3
- 422 0008 0E       		.uleb128 0xe
- 423 0009 1B       		.uleb128 0x1b
- 424 000a 0E       		.uleb128 0xe
- 425 000b 55       		.uleb128 0x55
- 426 000c 17       		.uleb128 0x17
- 427 000d 11       		.uleb128 0x11
- 428 000e 01       		.uleb128 0x1
- 429 000f 10       		.uleb128 0x10
- 430 0010 17       		.uleb128 0x17
- 431 0011 00       		.byte	0
- 432 0012 00       		.byte	0
- 433 0013 02       		.uleb128 0x2
- 434 0014 24       		.uleb128 0x24
- 435 0015 00       		.byte	0
- 436 0016 0B       		.uleb128 0xb
- 437 0017 0B       		.uleb128 0xb
- 438 0018 3E       		.uleb128 0x3e
- 439 0019 0B       		.uleb128 0xb
- 440 001a 03       		.uleb128 0x3
- 441 001b 0E       		.uleb128 0xe
- 442 001c 00       		.byte	0
- 443 001d 00       		.byte	0
- 444 001e 03       		.uleb128 0x3
- 445 001f 24       		.uleb128 0x24
- 446 0020 00       		.byte	0
- 447 0021 0B       		.uleb128 0xb
- 448 0022 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 11
+ 392 028d 22       		.byte	0x22
+ 393 028e 77020000 		.4byte	0x277
+ 394 0292 05       		.uleb128 0x5
+ 395 0293 03       		.byte	0x3
+ 396 0294 00000000 		.4byte	bufferTx
+ 397 0298 0C       		.uleb128 0xc
+ 398 0299 6B000000 		.4byte	0x6b
+ 399 029d A8020000 		.4byte	0x2a8
+ 400 02a1 0D       		.uleb128 0xd
+ 401 02a2 96000000 		.4byte	0x96
+ 402 02a6 10       		.byte	0x10
+ 403 02a7 00       		.byte	0
+ 404 02a8 0E       		.uleb128 0xe
+ 405 02a9 86020000 		.4byte	.LASF49
+ 406 02ad 01       		.byte	0x1
+ 407 02ae 23       		.byte	0x23
+ 408 02af 98020000 		.4byte	0x298
+ 409 02b3 05       		.uleb128 0x5
+ 410 02b4 03       		.byte	0x3
+ 411 02b5 00000000 		.4byte	bufferRx
+ 412 02b9 0E       		.uleb128 0xe
+ 413 02ba 56030000 		.4byte	.LASF50
+ 414 02be 01       		.byte	0x1
+ 415 02bf 52       		.byte	0x52
+ 416 02c0 CA020000 		.4byte	0x2ca
+ 417 02c4 05       		.uleb128 0x5
+ 418 02c5 03       		.byte	0x3
+ 419 02c6 00000000 		.4byte	configUart
+ 420 02ca 06       		.uleb128 0x6
+ 421 02cb 4B020000 		.4byte	0x24b
+ 422 02cf 00       		.byte	0
+ 423              		.section	.debug_abbrev,"",%progbits
+ 424              	.Ldebug_abbrev0:
+ 425 0000 01       		.uleb128 0x1
+ 426 0001 11       		.uleb128 0x11
+ 427 0002 01       		.byte	0x1
+ 428 0003 25       		.uleb128 0x25
+ 429 0004 0E       		.uleb128 0xe
+ 430 0005 13       		.uleb128 0x13
+ 431 0006 0B       		.uleb128 0xb
+ 432 0007 03       		.uleb128 0x3
+ 433 0008 0E       		.uleb128 0xe
+ 434 0009 1B       		.uleb128 0x1b
+ 435 000a 0E       		.uleb128 0xe
+ 436 000b 55       		.uleb128 0x55
+ 437 000c 17       		.uleb128 0x17
+ 438 000d 11       		.uleb128 0x11
+ 439 000e 01       		.uleb128 0x1
+ 440 000f 10       		.uleb128 0x10
+ 441 0010 17       		.uleb128 0x17
+ 442 0011 00       		.byte	0
+ 443 0012 00       		.byte	0
+ 444 0013 02       		.uleb128 0x2
+ 445 0014 24       		.uleb128 0x24
+ 446 0015 00       		.byte	0
+ 447 0016 0B       		.uleb128 0xb
+ 448 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 11
 
 
- 449 0023 3E       		.uleb128 0x3e
- 450 0024 0B       		.uleb128 0xb
- 451 0025 03       		.uleb128 0x3
- 452 0026 08       		.uleb128 0x8
- 453 0027 00       		.byte	0
- 454 0028 00       		.byte	0
- 455 0029 04       		.uleb128 0x4
- 456 002a 16       		.uleb128 0x16
- 457 002b 00       		.byte	0
- 458 002c 03       		.uleb128 0x3
- 459 002d 0E       		.uleb128 0xe
- 460 002e 3A       		.uleb128 0x3a
- 461 002f 0B       		.uleb128 0xb
- 462 0030 3B       		.uleb128 0x3b
- 463 0031 0B       		.uleb128 0xb
- 464 0032 49       		.uleb128 0x49
- 465 0033 13       		.uleb128 0x13
- 466 0034 00       		.byte	0
- 467 0035 00       		.byte	0
- 468 0036 05       		.uleb128 0x5
- 469 0037 0F       		.uleb128 0xf
- 470 0038 00       		.byte	0
- 471 0039 0B       		.uleb128 0xb
- 472 003a 0B       		.uleb128 0xb
- 473 003b 49       		.uleb128 0x49
- 474 003c 13       		.uleb128 0x13
- 475 003d 00       		.byte	0
- 476 003e 00       		.byte	0
- 477 003f 06       		.uleb128 0x6
- 478 0040 13       		.uleb128 0x13
- 479 0041 01       		.byte	0x1
- 480 0042 0B       		.uleb128 0xb
- 481 0043 0B       		.uleb128 0xb
- 482 0044 3A       		.uleb128 0x3a
- 483 0045 0B       		.uleb128 0xb
- 484 0046 3B       		.uleb128 0x3b
- 485 0047 05       		.uleb128 0x5
- 486 0048 01       		.uleb128 0x1
- 487 0049 13       		.uleb128 0x13
- 488 004a 00       		.byte	0
- 489 004b 00       		.byte	0
- 490 004c 07       		.uleb128 0x7
- 491 004d 0D       		.uleb128 0xd
- 492 004e 00       		.byte	0
- 493 004f 03       		.uleb128 0x3
- 494 0050 0E       		.uleb128 0xe
- 495 0051 3A       		.uleb128 0x3a
- 496 0052 0B       		.uleb128 0xb
- 497 0053 3B       		.uleb128 0x3b
- 498 0054 05       		.uleb128 0x5
- 499 0055 49       		.uleb128 0x49
- 500 0056 13       		.uleb128 0x13
- 501 0057 38       		.uleb128 0x38
- 502 0058 0B       		.uleb128 0xb
- 503 0059 00       		.byte	0
- 504 005a 00       		.byte	0
- 505 005b 08       		.uleb128 0x8
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 12
+ 449 0018 3E       		.uleb128 0x3e
+ 450 0019 0B       		.uleb128 0xb
+ 451 001a 03       		.uleb128 0x3
+ 452 001b 0E       		.uleb128 0xe
+ 453 001c 00       		.byte	0
+ 454 001d 00       		.byte	0
+ 455 001e 03       		.uleb128 0x3
+ 456 001f 24       		.uleb128 0x24
+ 457 0020 00       		.byte	0
+ 458 0021 0B       		.uleb128 0xb
+ 459 0022 0B       		.uleb128 0xb
+ 460 0023 3E       		.uleb128 0x3e
+ 461 0024 0B       		.uleb128 0xb
+ 462 0025 03       		.uleb128 0x3
+ 463 0026 08       		.uleb128 0x8
+ 464 0027 00       		.byte	0
+ 465 0028 00       		.byte	0
+ 466 0029 04       		.uleb128 0x4
+ 467 002a 16       		.uleb128 0x16
+ 468 002b 00       		.byte	0
+ 469 002c 03       		.uleb128 0x3
+ 470 002d 0E       		.uleb128 0xe
+ 471 002e 3A       		.uleb128 0x3a
+ 472 002f 0B       		.uleb128 0xb
+ 473 0030 3B       		.uleb128 0x3b
+ 474 0031 0B       		.uleb128 0xb
+ 475 0032 49       		.uleb128 0x49
+ 476 0033 13       		.uleb128 0x13
+ 477 0034 00       		.byte	0
+ 478 0035 00       		.byte	0
+ 479 0036 05       		.uleb128 0x5
+ 480 0037 0F       		.uleb128 0xf
+ 481 0038 00       		.byte	0
+ 482 0039 0B       		.uleb128 0xb
+ 483 003a 0B       		.uleb128 0xb
+ 484 003b 49       		.uleb128 0x49
+ 485 003c 13       		.uleb128 0x13
+ 486 003d 00       		.byte	0
+ 487 003e 00       		.byte	0
+ 488 003f 06       		.uleb128 0x6
+ 489 0040 26       		.uleb128 0x26
+ 490 0041 00       		.byte	0
+ 491 0042 49       		.uleb128 0x49
+ 492 0043 13       		.uleb128 0x13
+ 493 0044 00       		.byte	0
+ 494 0045 00       		.byte	0
+ 495 0046 07       		.uleb128 0x7
+ 496 0047 13       		.uleb128 0x13
+ 497 0048 01       		.byte	0x1
+ 498 0049 0B       		.uleb128 0xb
+ 499 004a 0B       		.uleb128 0xb
+ 500 004b 3A       		.uleb128 0x3a
+ 501 004c 0B       		.uleb128 0xb
+ 502 004d 3B       		.uleb128 0x3b
+ 503 004e 05       		.uleb128 0x5
+ 504 004f 01       		.uleb128 0x1
+ 505 0050 13       		.uleb128 0x13
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 12
 
 
- 506 005c 16       		.uleb128 0x16
- 507 005d 00       		.byte	0
- 508 005e 03       		.uleb128 0x3
- 509 005f 0E       		.uleb128 0xe
- 510 0060 3A       		.uleb128 0x3a
- 511 0061 0B       		.uleb128 0xb
- 512 0062 3B       		.uleb128 0x3b
- 513 0063 05       		.uleb128 0x5
- 514 0064 49       		.uleb128 0x49
- 515 0065 13       		.uleb128 0x13
- 516 0066 00       		.byte	0
- 517 0067 00       		.byte	0
- 518 0068 09       		.uleb128 0x9
- 519 0069 2E       		.uleb128 0x2e
- 520 006a 00       		.byte	0
- 521 006b 3F       		.uleb128 0x3f
- 522 006c 19       		.uleb128 0x19
- 523 006d 03       		.uleb128 0x3
- 524 006e 0E       		.uleb128 0xe
- 525 006f 3A       		.uleb128 0x3a
- 526 0070 0B       		.uleb128 0xb
- 527 0071 3B       		.uleb128 0x3b
- 528 0072 0B       		.uleb128 0xb
- 529 0073 49       		.uleb128 0x49
- 530 0074 13       		.uleb128 0x13
- 531 0075 11       		.uleb128 0x11
- 532 0076 01       		.uleb128 0x1
- 533 0077 12       		.uleb128 0x12
- 534 0078 06       		.uleb128 0x6
- 535 0079 40       		.uleb128 0x40
- 536 007a 18       		.uleb128 0x18
- 537 007b 9742     		.uleb128 0x2117
- 538 007d 19       		.uleb128 0x19
- 539 007e 00       		.byte	0
- 540 007f 00       		.byte	0
- 541 0080 0A       		.uleb128 0xa
- 542 0081 01       		.uleb128 0x1
- 543 0082 01       		.byte	0x1
- 544 0083 49       		.uleb128 0x49
- 545 0084 13       		.uleb128 0x13
- 546 0085 01       		.uleb128 0x1
- 547 0086 13       		.uleb128 0x13
- 548 0087 00       		.byte	0
- 549 0088 00       		.byte	0
- 550 0089 0B       		.uleb128 0xb
- 551 008a 21       		.uleb128 0x21
- 552 008b 00       		.byte	0
- 553 008c 49       		.uleb128 0x49
- 554 008d 13       		.uleb128 0x13
- 555 008e 2F       		.uleb128 0x2f
- 556 008f 0B       		.uleb128 0xb
- 557 0090 00       		.byte	0
- 558 0091 00       		.byte	0
- 559 0092 0C       		.uleb128 0xc
- 560 0093 34       		.uleb128 0x34
- 561 0094 00       		.byte	0
- 562 0095 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 13
+ 506 0051 00       		.byte	0
+ 507 0052 00       		.byte	0
+ 508 0053 08       		.uleb128 0x8
+ 509 0054 0D       		.uleb128 0xd
+ 510 0055 00       		.byte	0
+ 511 0056 03       		.uleb128 0x3
+ 512 0057 0E       		.uleb128 0xe
+ 513 0058 3A       		.uleb128 0x3a
+ 514 0059 0B       		.uleb128 0xb
+ 515 005a 3B       		.uleb128 0x3b
+ 516 005b 05       		.uleb128 0x5
+ 517 005c 49       		.uleb128 0x49
+ 518 005d 13       		.uleb128 0x13
+ 519 005e 38       		.uleb128 0x38
+ 520 005f 0B       		.uleb128 0xb
+ 521 0060 00       		.byte	0
+ 522 0061 00       		.byte	0
+ 523 0062 09       		.uleb128 0x9
+ 524 0063 16       		.uleb128 0x16
+ 525 0064 00       		.byte	0
+ 526 0065 03       		.uleb128 0x3
+ 527 0066 0E       		.uleb128 0xe
+ 528 0067 3A       		.uleb128 0x3a
+ 529 0068 0B       		.uleb128 0xb
+ 530 0069 3B       		.uleb128 0x3b
+ 531 006a 05       		.uleb128 0x5
+ 532 006b 49       		.uleb128 0x49
+ 533 006c 13       		.uleb128 0x13
+ 534 006d 00       		.byte	0
+ 535 006e 00       		.byte	0
+ 536 006f 0A       		.uleb128 0xa
+ 537 0070 2E       		.uleb128 0x2e
+ 538 0071 00       		.byte	0
+ 539 0072 3F       		.uleb128 0x3f
+ 540 0073 19       		.uleb128 0x19
+ 541 0074 03       		.uleb128 0x3
+ 542 0075 0E       		.uleb128 0xe
+ 543 0076 3A       		.uleb128 0x3a
+ 544 0077 0B       		.uleb128 0xb
+ 545 0078 3B       		.uleb128 0x3b
+ 546 0079 0B       		.uleb128 0xb
+ 547 007a 49       		.uleb128 0x49
+ 548 007b 13       		.uleb128 0x13
+ 549 007c 11       		.uleb128 0x11
+ 550 007d 01       		.uleb128 0x1
+ 551 007e 12       		.uleb128 0x12
+ 552 007f 06       		.uleb128 0x6
+ 553 0080 40       		.uleb128 0x40
+ 554 0081 18       		.uleb128 0x18
+ 555 0082 9742     		.uleb128 0x2117
+ 556 0084 19       		.uleb128 0x19
+ 557 0085 00       		.byte	0
+ 558 0086 00       		.byte	0
+ 559 0087 0B       		.uleb128 0xb
+ 560 0088 34       		.uleb128 0x34
+ 561 0089 00       		.byte	0
+ 562 008a 03       		.uleb128 0x3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 13
 
 
- 563 0096 0E       		.uleb128 0xe
- 564 0097 3A       		.uleb128 0x3a
- 565 0098 0B       		.uleb128 0xb
- 566 0099 3B       		.uleb128 0x3b
- 567 009a 0B       		.uleb128 0xb
- 568 009b 49       		.uleb128 0x49
- 569 009c 13       		.uleb128 0x13
- 570 009d 3F       		.uleb128 0x3f
- 571 009e 19       		.uleb128 0x19
- 572 009f 02       		.uleb128 0x2
- 573 00a0 18       		.uleb128 0x18
- 574 00a1 00       		.byte	0
- 575 00a2 00       		.byte	0
- 576 00a3 0D       		.uleb128 0xd
- 577 00a4 26       		.uleb128 0x26
- 578 00a5 00       		.byte	0
- 579 00a6 49       		.uleb128 0x49
- 580 00a7 13       		.uleb128 0x13
- 581 00a8 00       		.byte	0
- 582 00a9 00       		.byte	0
- 583 00aa 00       		.byte	0
- 584              		.section	.debug_aranges,"",%progbits
- 585 0000 1C000000 		.4byte	0x1c
- 586 0004 0200     		.2byte	0x2
- 587 0006 00000000 		.4byte	.Ldebug_info0
- 588 000a 04       		.byte	0x4
- 589 000b 00       		.byte	0
- 590 000c 0000     		.2byte	0
- 591 000e 0000     		.2byte	0
- 592 0010 00000000 		.4byte	.LFB33
- 593 0014 04000000 		.4byte	.LFE33-.LFB33
- 594 0018 00000000 		.4byte	0
- 595 001c 00000000 		.4byte	0
- 596              		.section	.debug_ranges,"",%progbits
- 597              	.Ldebug_ranges0:
- 598 0000 00000000 		.4byte	.LFB33
- 599 0004 04000000 		.4byte	.LFE33
- 600 0008 00000000 		.4byte	0
- 601 000c 00000000 		.4byte	0
- 602              		.section	.debug_line,"",%progbits
- 603              	.Ldebug_line0:
- 604 0000 6F000000 		.section	.debug_str,"MS",%progbits,1
- 604      02005800 
- 604      00000201 
- 604      FB0E0D00 
- 604      01010101 
- 605              	.LASF36:
- 606 0000 656E6162 		.ascii	"enableInterrupt\000"
- 606      6C65496E 
- 606      74657272 
- 606      75707400 
- 607              	.LASF52:
- 608 0010 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
- 608      73657273 
- 608      5C4D6172 
- 608      63656C6F 
- 608      5C446F63 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 14
+ 563 008b 0E       		.uleb128 0xe
+ 564 008c 3A       		.uleb128 0x3a
+ 565 008d 0B       		.uleb128 0xb
+ 566 008e 3B       		.uleb128 0x3b
+ 567 008f 0B       		.uleb128 0xb
+ 568 0090 49       		.uleb128 0x49
+ 569 0091 13       		.uleb128 0x13
+ 570 0092 3F       		.uleb128 0x3f
+ 571 0093 19       		.uleb128 0x19
+ 572 0094 3C       		.uleb128 0x3c
+ 573 0095 19       		.uleb128 0x19
+ 574 0096 00       		.byte	0
+ 575 0097 00       		.byte	0
+ 576 0098 0C       		.uleb128 0xc
+ 577 0099 01       		.uleb128 0x1
+ 578 009a 01       		.byte	0x1
+ 579 009b 49       		.uleb128 0x49
+ 580 009c 13       		.uleb128 0x13
+ 581 009d 01       		.uleb128 0x1
+ 582 009e 13       		.uleb128 0x13
+ 583 009f 00       		.byte	0
+ 584 00a0 00       		.byte	0
+ 585 00a1 0D       		.uleb128 0xd
+ 586 00a2 21       		.uleb128 0x21
+ 587 00a3 00       		.byte	0
+ 588 00a4 49       		.uleb128 0x49
+ 589 00a5 13       		.uleb128 0x13
+ 590 00a6 2F       		.uleb128 0x2f
+ 591 00a7 0B       		.uleb128 0xb
+ 592 00a8 00       		.byte	0
+ 593 00a9 00       		.byte	0
+ 594 00aa 0E       		.uleb128 0xe
+ 595 00ab 34       		.uleb128 0x34
+ 596 00ac 00       		.byte	0
+ 597 00ad 03       		.uleb128 0x3
+ 598 00ae 0E       		.uleb128 0xe
+ 599 00af 3A       		.uleb128 0x3a
+ 600 00b0 0B       		.uleb128 0xb
+ 601 00b1 3B       		.uleb128 0x3b
+ 602 00b2 0B       		.uleb128 0xb
+ 603 00b3 49       		.uleb128 0x49
+ 604 00b4 13       		.uleb128 0x13
+ 605 00b5 3F       		.uleb128 0x3f
+ 606 00b6 19       		.uleb128 0x19
+ 607 00b7 02       		.uleb128 0x2
+ 608 00b8 18       		.uleb128 0x18
+ 609 00b9 00       		.byte	0
+ 610 00ba 00       		.byte	0
+ 611 00bb 00       		.byte	0
+ 612              		.section	.debug_aranges,"",%progbits
+ 613 0000 1C000000 		.4byte	0x1c
+ 614 0004 0200     		.2byte	0x2
+ 615 0006 00000000 		.4byte	.Ldebug_info0
+ 616 000a 04       		.byte	0x4
+ 617 000b 00       		.byte	0
+ 618 000c 0000     		.2byte	0
+ 619 000e 0000     		.2byte	0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 14
 
 
- 609 003e 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
- 609      686F6761 
- 609      725C5073 
- 609      6F635F43 
- 609      72656174 
- 610 006e 66616365 		.ascii	"face_driver.cydsn\000"
- 610      5F647269 
- 610      7665722E 
- 610      63796473 
- 610      6E00
- 611              	.LASF3:
- 612 0080 73686F72 		.ascii	"short unsigned int\000"
- 612      7420756E 
- 612      7369676E 
- 612      65642069 
- 612      6E7400
- 613              	.LASF20:
- 614 0093 6F766572 		.ascii	"oversample\000"
- 614      73616D70 
- 614      6C6500
- 615              	.LASF16:
- 616 009e 64697265 		.ascii	"direction\000"
- 616      6374696F 
- 616      6E00
- 617              	.LASF29:
- 618 00a8 72784275 		.ascii	"rxBuffer\000"
- 618      66666572 
- 618      00
- 619              	.LASF44:
- 620 00b1 72747352 		.ascii	"rtsRxFifoLevel\000"
- 620      78466966 
- 620      6F4C6576 
- 620      656C00
- 621              	.LASF47:
- 622 00c0 62756666 		.ascii	"bufferTx\000"
- 622      65725478 
- 622      00
- 623              	.LASF11:
- 624 00c9 666C6F61 		.ascii	"float\000"
- 624      7400
- 625              	.LASF1:
- 626 00cf 756E7369 		.ascii	"unsigned char\000"
- 626      676E6564 
- 626      20636861 
- 626      7200
- 627              	.LASF25:
- 628 00dd 64726F70 		.ascii	"dropOnParityErr\000"
- 628      4F6E5061 
- 628      72697479 
- 628      45727200 
- 629              	.LASF5:
- 630 00ed 6C6F6E67 		.ascii	"long unsigned int\000"
- 630      20756E73 
- 630      69676E65 
- 630      6420696E 
- 630      7400
- 631              	.LASF9:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 15
+ 620 0010 00000000 		.4byte	.LFB33
+ 621 0014 04000000 		.4byte	.LFE33-.LFB33
+ 622 0018 00000000 		.4byte	0
+ 623 001c 00000000 		.4byte	0
+ 624              		.section	.debug_ranges,"",%progbits
+ 625              	.Ldebug_ranges0:
+ 626 0000 00000000 		.4byte	.LFB33
+ 627 0004 04000000 		.4byte	.LFE33
+ 628 0008 00000000 		.4byte	0
+ 629 000c 00000000 		.4byte	0
+ 630              		.section	.debug_line,"",%progbits
+ 631              	.Ldebug_line0:
+ 632 0000 E2000000 		.section	.debug_str,"MS",%progbits,1
+ 632      0200CB00 
+ 632      00000201 
+ 632      FB0E0D00 
+ 632      01010101 
+ 633              	.LASF36:
+ 634 0000 656E6162 		.ascii	"enableInterrupt\000"
+ 634      6C65496E 
+ 634      74657272 
+ 634      75707400 
+ 635              	.LASF53:
+ 636 0010 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
+ 636      73657273 
+ 636      5C4D6172 
+ 636      63656C6F 
+ 636      5C446F63 
+ 637 003e 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
+ 637      686F6761 
+ 637      725C5073 
+ 637      6F635F43 
+ 637      72656174 
+ 638 006e 66616365 		.ascii	"face_driver.cydsn\000"
+ 638      5F647269 
+ 638      7665722E 
+ 638      63796473 
+ 638      6E00
+ 639              	.LASF3:
+ 640 0080 73686F72 		.ascii	"short unsigned int\000"
+ 640      7420756E 
+ 640      7369676E 
+ 640      65642069 
+ 640      6E7400
+ 641              	.LASF20:
+ 642 0093 6F766572 		.ascii	"oversample\000"
+ 642      73616D70 
+ 642      6C6500
+ 643              	.LASF16:
+ 644 009e 64697265 		.ascii	"direction\000"
+ 644      6374696F 
+ 644      6E00
+ 645              	.LASF29:
+ 646 00a8 72784275 		.ascii	"rxBuffer\000"
+ 646      66666572 
+ 646      00
+ 647              	.LASF44:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 15
 
 
- 632 00ff 75696E74 		.ascii	"uint8\000"
- 632      3800
- 633              	.LASF41:
- 634 0105 656E6162 		.ascii	"enableByteMode\000"
- 634      6C654279 
- 634      74654D6F 
- 634      646500
- 635              	.LASF43:
- 636 0114 63747350 		.ascii	"ctsPolarity\000"
- 636      6F6C6172 
- 636      69747900 
- 637              	.LASF38:
- 638 0120 72785472 		.ascii	"rxTriggerLevel\000"
- 638      69676765 
- 638      724C6576 
- 638      656C00
- 639              	.LASF46:
- 640 012f 55415254 		.ascii	"UART_1_UART_INIT_STRUCT\000"
- 640      5F315F55 
- 640      4152545F 
- 640      494E4954 
- 640      5F535452 
- 641              	.LASF30:
- 642 0147 74784275 		.ascii	"txBufferSize\000"
- 642      66666572 
- 642      53697A65 
- 642      00
- 643              	.LASF12:
- 644 0154 646F7562 		.ascii	"double\000"
- 644      6C6500
- 645              	.LASF27:
- 646 015b 656E6162 		.ascii	"enableWake\000"
- 646      6C655761 
- 646      6B6500
- 647              	.LASF22:
- 648 0166 656E6162 		.ascii	"enableMedianFilter\000"
- 648      6C654D65 
- 648      6469616E 
- 648      46696C74 
- 648      657200
- 649              	.LASF28:
- 650 0179 72784275 		.ascii	"rxBufferSize\000"
- 650      66666572 
- 650      53697A65 
+ 648 00b1 72747352 		.ascii	"rtsRxFifoLevel\000"
+ 648      78466966 
+ 648      6F4C6576 
+ 648      656C00
+ 649              	.LASF48:
+ 650 00c0 62756666 		.ascii	"bufferTx\000"
+ 650      65725478 
  650      00
- 651              	.LASF51:
- 652 0186 2E5C6D61 		.ascii	".\\main.c\000"
- 652      696E2E63 
- 652      00
- 653              	.LASF23:
- 654 018f 656E6162 		.ascii	"enableRetryNack\000"
- 654      6C655265 
- 654      7472794E 
- 654      61636B00 
- 655              	.LASF10:
- 656 019f 75696E74 		.ascii	"uint32\000"
- 656      333200
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 16
-
-
- 657              	.LASF53:
- 658 01a6 6D61696E 		.ascii	"main\000"
- 658      00
- 659              	.LASF40:
- 660 01ab 74785472 		.ascii	"txTriggerLevel\000"
- 660      69676765 
- 660      724C6576 
- 660      656C00
- 661              	.LASF35:
- 662 01ba 6D756C74 		.ascii	"multiprocAddrMask\000"
- 662      6970726F 
- 662      63416464 
- 662      724D6173 
- 662      6B00
- 663              	.LASF8:
- 664 01cc 756E7369 		.ascii	"unsigned int\000"
- 664      676E6564 
- 664      20696E74 
- 664      00
- 665              	.LASF45:
- 666 01d9 72747350 		.ascii	"rtsPolarity\000"
+ 651              	.LASF11:
+ 652 00c9 666C6F61 		.ascii	"float\000"
+ 652      7400
+ 653              	.LASF1:
+ 654 00cf 756E7369 		.ascii	"unsigned char\000"
+ 654      676E6564 
+ 654      20636861 
+ 654      7200
+ 655              	.LASF25:
+ 656 00dd 64726F70 		.ascii	"dropOnParityErr\000"
+ 656      4F6E5061 
+ 656      72697479 
+ 656      45727200 
+ 657              	.LASF5:
+ 658 00ed 6C6F6E67 		.ascii	"long unsigned int\000"
+ 658      20756E73 
+ 658      69676E65 
+ 658      6420696E 
+ 658      7400
+ 659              	.LASF47:
+ 660 00ff 5F5F6374 		.ascii	"__ctype_ptr__\000"
+ 660      7970655F 
+ 660      7074725F 
+ 660      5F00
+ 661              	.LASF9:
+ 662 010d 75696E74 		.ascii	"uint8\000"
+ 662      3800
+ 663              	.LASF41:
+ 664 0113 656E6162 		.ascii	"enableByteMode\000"
+ 664      6C654279 
+ 664      74654D6F 
+ 664      646500
+ 665              	.LASF43:
+ 666 0122 63747350 		.ascii	"ctsPolarity\000"
  666      6F6C6172 
  666      69747900 
- 667              	.LASF7:
- 668 01e5 6C6F6E67 		.ascii	"long long unsigned int\000"
- 668      206C6F6E 
- 668      6720756E 
- 668      7369676E 
- 668      65642069 
- 669              	.LASF50:
- 670 01fc 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 670      4320342E 
- 670      382E3420 
- 670      32303134 
- 670      30353236 
- 671 022f 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 671      20726576 
- 671      6973696F 
- 671      6E203231 
- 671      31333538 
- 672 0262 67202D66 		.ascii	"g -ffunction-sections\000"
- 672      66756E63 
- 672      74696F6E 
- 672      2D736563 
- 672      74696F6E 
- 673              	.LASF48:
- 674 0278 62756666 		.ascii	"bufferRx\000"
- 674      65725278 
- 674      00
- 675              	.LASF14:
- 676 0281 73697A65 		.ascii	"sizetype\000"
- 676      74797065 
- 676      00
- 677              	.LASF26:
- 678 028a 64726F70 		.ascii	"dropOnFrameErr\000"
- 678      4F6E4672 
- 678      616D6545 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 17
+ 667              	.LASF38:
+ 668 012e 72785472 		.ascii	"rxTriggerLevel\000"
+ 668      69676765 
+ 668      724C6576 
+ 668      656C00
+ 669              	.LASF46:
+ 670 013d 55415254 		.ascii	"UART_1_UART_INIT_STRUCT\000"
+ 670      5F315F55 
+ 670      4152545F 
+ 670      494E4954 
+ 670      5F535452 
+ 671              	.LASF30:
+ 672 0155 74784275 		.ascii	"txBufferSize\000"
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 16
 
 
- 678      727200
- 679              	.LASF6:
- 680 0299 6C6F6E67 		.ascii	"long long int\000"
- 680      206C6F6E 
- 680      6720696E 
- 680      7400
- 681              	.LASF13:
- 682 02a7 63686172 		.ascii	"char\000"
+ 672      66666572 
+ 672      53697A65 
+ 672      00
+ 673              	.LASF12:
+ 674 0162 646F7562 		.ascii	"double\000"
+ 674      6C6500
+ 675              	.LASF27:
+ 676 0169 656E6162 		.ascii	"enableWake\000"
+ 676      6C655761 
+ 676      6B6500
+ 677              	.LASF22:
+ 678 0174 656E6162 		.ascii	"enableMedianFilter\000"
+ 678      6C654D65 
+ 678      6469616E 
+ 678      46696C74 
+ 678      657200
+ 679              	.LASF28:
+ 680 0187 72784275 		.ascii	"rxBufferSize\000"
+ 680      66666572 
+ 680      53697A65 
+ 680      00
+ 681              	.LASF52:
+ 682 0194 2E5C6D61 		.ascii	".\\main.c\000"
+ 682      696E2E63 
  682      00
- 683              	.LASF21:
- 684 02ac 656E6162 		.ascii	"enableIrdaLowPower\000"
- 684      6C654972 
- 684      64614C6F 
- 684      77506F77 
- 684      657200
- 685              	.LASF31:
- 686 02bf 74784275 		.ascii	"txBuffer\000"
- 686      66666572 
- 686      00
- 687              	.LASF33:
- 688 02c8 6D756C74 		.ascii	"multiprocAcceptAddr\000"
- 688      6970726F 
- 688      63416363 
- 688      65707441 
- 688      64647200 
- 689              	.LASF15:
- 690 02dc 6D6F6465 		.ascii	"mode\000"
- 690      00
- 691              	.LASF34:
- 692 02e1 6D756C74 		.ascii	"multiprocAddr\000"
+ 683              	.LASF23:
+ 684 019d 656E6162 		.ascii	"enableRetryNack\000"
+ 684      6C655265 
+ 684      7472794E 
+ 684      61636B00 
+ 685              	.LASF10:
+ 686 01ad 75696E74 		.ascii	"uint32\000"
+ 686      333200
+ 687              	.LASF54:
+ 688 01b4 6D61696E 		.ascii	"main\000"
+ 688      00
+ 689              	.LASF40:
+ 690 01b9 74785472 		.ascii	"txTriggerLevel\000"
+ 690      69676765 
+ 690      724C6576 
+ 690      656C00
+ 691              	.LASF35:
+ 692 01c8 6D756C74 		.ascii	"multiprocAddrMask\000"
  692      6970726F 
  692      63416464 
- 692      7200
- 693              	.LASF2:
- 694 02ef 73686F72 		.ascii	"short int\000"
- 694      7420696E 
- 694      7400
- 695              	.LASF37:
- 696 02f9 7278496E 		.ascii	"rxInterruptMask\000"
- 696      74657272 
- 696      7570744D 
- 696      61736B00 
- 697              	.LASF42:
- 698 0309 656E6162 		.ascii	"enableCts\000"
- 698      6C654374 
- 698      7300
- 699              	.LASF39:
- 700 0313 7478496E 		.ascii	"txInterruptMask\000"
- 700      74657272 
- 700      7570744D 
- 700      61736B00 
- 701              	.LASF4:
- 702 0323 6C6F6E67 		.ascii	"long int\000"
- 702      20696E74 
- 702      00
- 703              	.LASF0:
- 704 032c 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccOhbM5F.s 			page 18
+ 692      724D6173 
+ 692      6B00
+ 693              	.LASF8:
+ 694 01da 756E7369 		.ascii	"unsigned int\000"
+ 694      676E6564 
+ 694      20696E74 
+ 694      00
+ 695              	.LASF45:
+ 696 01e7 72747350 		.ascii	"rtsPolarity\000"
+ 696      6F6C6172 
+ 696      69747900 
+ 697              	.LASF7:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 17
 
 
- 704      65642063 
- 704      68617200 
- 705              	.LASF19:
- 706 0338 73746F70 		.ascii	"stopBits\000"
- 706      42697473 
+ 698 01f3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 698      206C6F6E 
+ 698      6720756E 
+ 698      7369676E 
+ 698      65642069 
+ 699              	.LASF51:
+ 700 020a 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 700      4320342E 
+ 700      382E3420 
+ 700      32303134 
+ 700      30353236 
+ 701 023d 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 701      20726576 
+ 701      6973696F 
+ 701      6E203231 
+ 701      31333538 
+ 702 0270 67202D66 		.ascii	"g -ffunction-sections\000"
+ 702      66756E63 
+ 702      74696F6E 
+ 702      2D736563 
+ 702      74696F6E 
+ 703              	.LASF49:
+ 704 0286 62756666 		.ascii	"bufferRx\000"
+ 704      65725278 
+ 704      00
+ 705              	.LASF14:
+ 706 028f 73697A65 		.ascii	"sizetype\000"
+ 706      74797065 
  706      00
- 707              	.LASF18:
- 708 0341 70617269 		.ascii	"parity\000"
- 708      747900
- 709              	.LASF49:
- 710 0348 636F6E66 		.ascii	"configUart\000"
- 710      69675561 
- 710      727400
- 711              	.LASF24:
- 712 0353 656E6162 		.ascii	"enableInvertedRx\000"
- 712      6C65496E 
- 712      76657274 
- 712      65645278 
+ 707              	.LASF26:
+ 708 0298 64726F70 		.ascii	"dropOnFrameErr\000"
+ 708      4F6E4672 
+ 708      616D6545 
+ 708      727200
+ 709              	.LASF6:
+ 710 02a7 6C6F6E67 		.ascii	"long long int\000"
+ 710      206C6F6E 
+ 710      6720696E 
+ 710      7400
+ 711              	.LASF13:
+ 712 02b5 63686172 		.ascii	"char\000"
  712      00
- 713              	.LASF17:
- 714 0364 64617461 		.ascii	"dataBits\000"
- 714      42697473 
- 714      00
- 715              	.LASF32:
- 716 036d 656E6162 		.ascii	"enableMultiproc\000"
- 716      6C654D75 
- 716      6C746970 
- 716      726F6300 
- 717              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 713              	.LASF21:
+ 714 02ba 656E6162 		.ascii	"enableIrdaLowPower\000"
+ 714      6C654972 
+ 714      64614C6F 
+ 714      77506F77 
+ 714      657200
+ 715              	.LASF31:
+ 716 02cd 74784275 		.ascii	"txBuffer\000"
+ 716      66666572 
+ 716      00
+ 717              	.LASF33:
+ 718 02d6 6D756C74 		.ascii	"multiprocAcceptAddr\000"
+ 718      6970726F 
+ 718      63416363 
+ 718      65707441 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 18
+
+
+ 718      64647200 
+ 719              	.LASF15:
+ 720 02ea 6D6F6465 		.ascii	"mode\000"
+ 720      00
+ 721              	.LASF34:
+ 722 02ef 6D756C74 		.ascii	"multiprocAddr\000"
+ 722      6970726F 
+ 722      63416464 
+ 722      7200
+ 723              	.LASF2:
+ 724 02fd 73686F72 		.ascii	"short int\000"
+ 724      7420696E 
+ 724      7400
+ 725              	.LASF37:
+ 726 0307 7278496E 		.ascii	"rxInterruptMask\000"
+ 726      74657272 
+ 726      7570744D 
+ 726      61736B00 
+ 727              	.LASF42:
+ 728 0317 656E6162 		.ascii	"enableCts\000"
+ 728      6C654374 
+ 728      7300
+ 729              	.LASF39:
+ 730 0321 7478496E 		.ascii	"txInterruptMask\000"
+ 730      74657272 
+ 730      7570744D 
+ 730      61736B00 
+ 731              	.LASF4:
+ 732 0331 6C6F6E67 		.ascii	"long int\000"
+ 732      20696E74 
+ 732      00
+ 733              	.LASF0:
+ 734 033a 7369676E 		.ascii	"signed char\000"
+ 734      65642063 
+ 734      68617200 
+ 735              	.LASF19:
+ 736 0346 73746F70 		.ascii	"stopBits\000"
+ 736      42697473 
+ 736      00
+ 737              	.LASF18:
+ 738 034f 70617269 		.ascii	"parity\000"
+ 738      747900
+ 739              	.LASF50:
+ 740 0356 636F6E66 		.ascii	"configUart\000"
+ 740      69675561 
+ 740      727400
+ 741              	.LASF24:
+ 742 0361 656E6162 		.ascii	"enableInvertedRx\000"
+ 742      6C65496E 
+ 742      76657274 
+ 742      65645278 
+ 742      00
+ 743              	.LASF17:
+ 744 0372 64617461 		.ascii	"dataBits\000"
+ 744      42697473 
+ 744      00
+ 745              	.LASF32:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc0Z4Yki.s 			page 19
+
+
+ 746 037b 656E6162 		.ascii	"enableMultiproc\000"
+ 746      6C654D75 
+ 746      6C746970 
+ 746      726F6300 
+ 747              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
