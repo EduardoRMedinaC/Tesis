@@ -1,4 +1,4 @@
---------------- Build Started: 07/17/2015 02:13:04 Project: Interface_driver, Configuration: ARM GCC 4.8.4 Debug ---------------
+--------------- Build Started: 07/17/2015 14:49:02 Project: Interface_driver, Configuration: ARM GCC 4.8.4 Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\main.c -o .\CortexM0\ARM_GCC_484\Debug\main.o
 .\main.c:19:13: warning: 'BaudRate' declared 'static' but never defined [-Wunused-function]
@@ -23,4 +23,4 @@ cyelftool.exe -C "C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_C
 cyelftool.exe -S "C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\CortexM0\ARM_GCC_484\Debug\Interface_driver.elf"
 Flash used: 1664 of 32768 bytes (5.1 %).
 SRAM used: 1428 of 4096 bytes (34.9 %). Stack: 1024 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 07/17/2015 02:13:06 ---------------
+--------------- Build Succeeded: 07/17/2015 14:49:05 ---------------
