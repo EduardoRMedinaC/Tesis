@@ -1,0 +1,1086 @@
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"UART_1_PM.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.UART_1_Sleep,"ax",%progbits
+  18              		.align	2
+  19              		.global	UART_1_Sleep
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	UART_1_Sleep, %function
+  23              	UART_1_Sleep:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\UART_1_PM.c"
+   1:.\Generated_Source\PSoC4/UART_1_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/UART_1_PM.c **** * File Name: UART_1_PM.c
+   3:.\Generated_Source\PSoC4/UART_1_PM.c **** * Version 3.0
+   4:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+   5:.\Generated_Source\PSoC4/UART_1_PM.c **** * Description:
+   6:.\Generated_Source\PSoC4/UART_1_PM.c **** *  This file provides the source code to the Power Management support for
+   7:.\Generated_Source\PSoC4/UART_1_PM.c **** *  the SCB Component.
+   8:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+   9:.\Generated_Source\PSoC4/UART_1_PM.c **** * Note:
+  10:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+  11:.\Generated_Source\PSoC4/UART_1_PM.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC4/UART_1_PM.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/UART_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/UART_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/UART_1_PM.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/UART_1_PM.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  18:.\Generated_Source\PSoC4/UART_1_PM.c **** #include "UART_1.h"
+  19:.\Generated_Source\PSoC4/UART_1_PM.c **** #include "UART_1_PVT.h"
+  20:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  21:.\Generated_Source\PSoC4/UART_1_PM.c **** #if(UART_1_SCB_MODE_I2C_INC)
+  22:.\Generated_Source\PSoC4/UART_1_PM.c ****     #include "UART_1_I2C_PVT.h"
+  23:.\Generated_Source\PSoC4/UART_1_PM.c **** #endif /* (UART_1_SCB_MODE_I2C_INC) */
+  24:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  25:.\Generated_Source\PSoC4/UART_1_PM.c **** #if(UART_1_SCB_MODE_EZI2C_INC)
+  26:.\Generated_Source\PSoC4/UART_1_PM.c ****     #include "UART_1_EZI2C_PVT.h"
+  27:.\Generated_Source\PSoC4/UART_1_PM.c **** #endif /* (UART_1_SCB_MODE_EZI2C_INC) */
+  28:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  29:.\Generated_Source\PSoC4/UART_1_PM.c **** #if(UART_1_SCB_MODE_SPI_INC || UART_1_SCB_MODE_UART_INC)
+  30:.\Generated_Source\PSoC4/UART_1_PM.c ****     #include "UART_1_SPI_UART_PVT.h"
+  31:.\Generated_Source\PSoC4/UART_1_PM.c **** #endif /* (UART_1_SCB_MODE_SPI_INC || UART_1_SCB_MODE_UART_INC) */
+  32:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  34:.\Generated_Source\PSoC4/UART_1_PM.c **** /***************************************
+  35:.\Generated_Source\PSoC4/UART_1_PM.c **** *   Backup Structure declaration
+  36:.\Generated_Source\PSoC4/UART_1_PM.c **** ***************************************/
+  37:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  38:.\Generated_Source\PSoC4/UART_1_PM.c **** #if(UART_1_SCB_MODE_UNCONFIG_CONST_CFG || \
+  39:.\Generated_Source\PSoC4/UART_1_PM.c ****    (UART_1_SCB_MODE_I2C_CONST_CFG   && (!UART_1_I2C_WAKE_ENABLE_CONST))   || \
+  40:.\Generated_Source\PSoC4/UART_1_PM.c ****    (UART_1_SCB_MODE_EZI2C_CONST_CFG && (!UART_1_EZI2C_WAKE_ENABLE_CONST)) || \
+  41:.\Generated_Source\PSoC4/UART_1_PM.c ****    (UART_1_SCB_MODE_SPI_CONST_CFG   && (!UART_1_SPI_WAKE_ENABLE_CONST))   || \
+  42:.\Generated_Source\PSoC4/UART_1_PM.c ****    (UART_1_SCB_MODE_UART_CONST_CFG  && (!UART_1_UART_WAKE_ENABLE_CONST)))
+  43:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  44:.\Generated_Source\PSoC4/UART_1_PM.c ****     UART_1_BACKUP_STRUCT UART_1_backup =
+  45:.\Generated_Source\PSoC4/UART_1_PM.c ****     {
+  46:.\Generated_Source\PSoC4/UART_1_PM.c ****         0u, /* enableState */
+  47:.\Generated_Source\PSoC4/UART_1_PM.c ****     };
+  48:.\Generated_Source\PSoC4/UART_1_PM.c **** #endif
+  49:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  50:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  51:.\Generated_Source\PSoC4/UART_1_PM.c **** /*******************************************************************************
+  52:.\Generated_Source\PSoC4/UART_1_PM.c **** * Function Name: UART_1_Sleep
+  53:.\Generated_Source\PSoC4/UART_1_PM.c **** ********************************************************************************
+  54:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+  55:.\Generated_Source\PSoC4/UART_1_PM.c **** * Summary:
+  56:.\Generated_Source\PSoC4/UART_1_PM.c **** *  Prepares the component to enter Deep Sleep.
+  57:.\Generated_Source\PSoC4/UART_1_PM.c **** *  The "Enable wakeup from Sleep Mode" selection has an influence on
+  58:.\Generated_Source\PSoC4/UART_1_PM.c **** *  this function implementation.
+  59:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+  60:.\Generated_Source\PSoC4/UART_1_PM.c **** * Parameters:
+  61:.\Generated_Source\PSoC4/UART_1_PM.c **** *  None
+  62:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+  63:.\Generated_Source\PSoC4/UART_1_PM.c **** * Return:
+  64:.\Generated_Source\PSoC4/UART_1_PM.c **** *  None
+  65:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+  66:.\Generated_Source\PSoC4/UART_1_PM.c **** *******************************************************************************/
+  67:.\Generated_Source\PSoC4/UART_1_PM.c **** void UART_1_Sleep(void)
+  68:.\Generated_Source\PSoC4/UART_1_PM.c **** {
+  26              		.loc 1 68 0
+  27              		.cfi_startproc
+  28 0000 08B5     		push	{r3, lr}
+  29              		.cfi_def_cfa_offset 8
+  30              		.cfi_offset 3, -8
+  31              		.cfi_offset 14, -4
+  69:.\Generated_Source\PSoC4/UART_1_PM.c **** #if(UART_1_SCB_MODE_UNCONFIG_CONST_CFG)
+  70:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+  71:.\Generated_Source\PSoC4/UART_1_PM.c ****     if(UART_1_SCB_WAKE_ENABLE_CHECK)
+  32              		.loc 1 71 0
+  33 0002 114B     		ldr	r3, .L7
+  34 0004 1B78     		ldrb	r3, [r3]
+  35 0006 002B     		cmp	r3, #0
+  36 0008 15D0     		beq	.L2
+  72:.\Generated_Source\PSoC4/UART_1_PM.c ****     {
+  73:.\Generated_Source\PSoC4/UART_1_PM.c ****         if(UART_1_SCB_MODE_I2C_RUNTM_CFG)
+  37              		.loc 1 73 0
+  38 000a 104B     		ldr	r3, .L7+4
+  39 000c 1B78     		ldrb	r3, [r3]
+  40 000e 012B     		cmp	r3, #1
+  41 0010 02D1     		bne	.L3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 3
+
+
+  74:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+  75:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_I2CSaveConfig();
+  42              		.loc 1 75 0
+  43 0012 FFF7FEFF 		bl	UART_1_I2CSaveConfig
+  44              	.LVL0:
+  45 0016 16E0     		b	.L1
+  46              	.L3:
+  76:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+  77:.\Generated_Source\PSoC4/UART_1_PM.c ****         else if(UART_1_SCB_MODE_EZI2C_RUNTM_CFG)
+  47              		.loc 1 77 0
+  48 0018 082B     		cmp	r3, #8
+  49 001a 02D1     		bne	.L5
+  78:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+  79:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_EzI2CSaveConfig();
+  50              		.loc 1 79 0
+  51 001c FFF7FEFF 		bl	UART_1_EzI2CSaveConfig
+  52              	.LVL1:
+  53 0020 11E0     		b	.L1
+  54              	.L5:
+  80:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+  81:.\Generated_Source\PSoC4/UART_1_PM.c ****     #if(!UART_1_CY_SCBIP_V1)
+  82:.\Generated_Source\PSoC4/UART_1_PM.c ****         else if(UART_1_SCB_MODE_SPI_RUNTM_CFG)
+  55              		.loc 1 82 0
+  56 0022 022B     		cmp	r3, #2
+  57 0024 02D1     		bne	.L6
+  83:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+  84:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_SpiSaveConfig();
+  58              		.loc 1 84 0
+  59 0026 FFF7FEFF 		bl	UART_1_SpiSaveConfig
+  60              	.LVL2:
+  61 002a 0CE0     		b	.L1
+  62              	.L6:
+  85:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+  86:.\Generated_Source\PSoC4/UART_1_PM.c ****         else if(UART_1_SCB_MODE_UART_RUNTM_CFG)
+  63              		.loc 1 86 0
+  64 002c 042B     		cmp	r3, #4
+  65 002e 0AD1     		bne	.L1
+  87:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+  88:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_UartSaveConfig();
+  66              		.loc 1 88 0
+  67 0030 FFF7FEFF 		bl	UART_1_UartSaveConfig
+  68              	.LVL3:
+  69 0034 07E0     		b	.L1
+  70              	.L2:
+  89:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+  90:.\Generated_Source\PSoC4/UART_1_PM.c ****     #endif /* (!UART_1_CY_SCBIP_V1) */
+  91:.\Generated_Source\PSoC4/UART_1_PM.c ****         else
+  92:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+  93:.\Generated_Source\PSoC4/UART_1_PM.c ****             /* Unknown mode */
+  94:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+  95:.\Generated_Source\PSoC4/UART_1_PM.c ****     }
+  96:.\Generated_Source\PSoC4/UART_1_PM.c ****     else
+  97:.\Generated_Source\PSoC4/UART_1_PM.c ****     {
+  98:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_backup.enableState = (uint8) UART_1_GET_CTRL_ENABLED;
+  71              		.loc 1 98 0
+  72 0036 064B     		ldr	r3, .L7+8
+  73 0038 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 4
+
+
+  74 003a DB0F     		lsr	r3, r3, #31
+  75 003c 054A     		ldr	r2, .L7+12
+  76 003e 1370     		strb	r3, [r2]
+  99:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 100:.\Generated_Source\PSoC4/UART_1_PM.c ****         if(0u != UART_1_backup.enableState)
+  77              		.loc 1 100 0
+  78 0040 01D0     		beq	.L1
+ 101:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 102:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_Stop();
+  79              		.loc 1 102 0
+  80 0042 FFF7FEFF 		bl	UART_1_Stop
+  81              	.LVL4:
+  82              	.L1:
+ 103:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 104:.\Generated_Source\PSoC4/UART_1_PM.c ****     }
+ 105:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 106:.\Generated_Source\PSoC4/UART_1_PM.c **** #else
+ 107:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 108:.\Generated_Source\PSoC4/UART_1_PM.c ****     #if (UART_1_SCB_MODE_I2C_CONST_CFG && UART_1_I2C_WAKE_ENABLE_CONST)
+ 109:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_I2CSaveConfig();
+ 110:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 111:.\Generated_Source\PSoC4/UART_1_PM.c ****     #elif (UART_1_SCB_MODE_EZI2C_CONST_CFG && UART_1_EZI2C_WAKE_ENABLE_CONST)
+ 112:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_EzI2CSaveConfig();
+ 113:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 114:.\Generated_Source\PSoC4/UART_1_PM.c ****     #elif (UART_1_SCB_MODE_SPI_CONST_CFG && UART_1_SPI_WAKE_ENABLE_CONST)
+ 115:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_SpiSaveConfig();
+ 116:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 117:.\Generated_Source\PSoC4/UART_1_PM.c ****     #elif (UART_1_SCB_MODE_UART_CONST_CFG && UART_1_UART_WAKE_ENABLE_CONST)
+ 118:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_UartSaveConfig();
+ 119:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 120:.\Generated_Source\PSoC4/UART_1_PM.c ****     #else
+ 121:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 122:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_backup.enableState = (uint8) UART_1_GET_CTRL_ENABLED;
+ 123:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 124:.\Generated_Source\PSoC4/UART_1_PM.c ****         if(0u != UART_1_backup.enableState)
+ 125:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 126:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_Stop();
+ 127:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 128:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 129:.\Generated_Source\PSoC4/UART_1_PM.c ****     #endif /* defined (UART_1_SCB_MODE_I2C_CONST_CFG) && (UART_1_I2C_WAKE_ENABLE_CONST) */
+ 130:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 131:.\Generated_Source\PSoC4/UART_1_PM.c **** #endif /* (UART_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 132:.\Generated_Source\PSoC4/UART_1_PM.c **** }
+  83              		.loc 1 132 0
+  84              		@ sp needed
+  85 0046 08BD     		pop	{r3, pc}
+  86              	.L8:
+  87              		.align	2
+  88              	.L7:
+  89 0048 00000000 		.word	UART_1_scbEnableWake
+  90 004c 00000000 		.word	UART_1_scbMode
+  91 0050 00000740 		.word	1074200576
+  92 0054 00000000 		.word	.LANCHOR0
+  93              		.cfi_endproc
+  94              	.LFE0:
+  95              		.size	UART_1_Sleep, .-UART_1_Sleep
+  96              		.section	.text.UART_1_Wakeup,"ax",%progbits
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 5
+
+
+  97              		.align	2
+  98              		.global	UART_1_Wakeup
+  99              		.code	16
+ 100              		.thumb_func
+ 101              		.type	UART_1_Wakeup, %function
+ 102              	UART_1_Wakeup:
+ 103              	.LFB1:
+ 133:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 134:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 135:.\Generated_Source\PSoC4/UART_1_PM.c **** /*******************************************************************************
+ 136:.\Generated_Source\PSoC4/UART_1_PM.c **** * Function Name: UART_1_Wakeup
+ 137:.\Generated_Source\PSoC4/UART_1_PM.c **** ********************************************************************************
+ 138:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+ 139:.\Generated_Source\PSoC4/UART_1_PM.c **** * Summary:
+ 140:.\Generated_Source\PSoC4/UART_1_PM.c **** *  Prepares the component for the Active mode operation after exiting
+ 141:.\Generated_Source\PSoC4/UART_1_PM.c **** *  Deep Sleep. The "Enable wakeup from Sleep Mode" option has an influence
+ 142:.\Generated_Source\PSoC4/UART_1_PM.c **** *  on this function implementation.
+ 143:.\Generated_Source\PSoC4/UART_1_PM.c **** *  This function should not be called after exiting Sleep.
+ 144:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+ 145:.\Generated_Source\PSoC4/UART_1_PM.c **** * Parameters:
+ 146:.\Generated_Source\PSoC4/UART_1_PM.c **** *  None
+ 147:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+ 148:.\Generated_Source\PSoC4/UART_1_PM.c **** * Return:
+ 149:.\Generated_Source\PSoC4/UART_1_PM.c **** *  None
+ 150:.\Generated_Source\PSoC4/UART_1_PM.c **** *
+ 151:.\Generated_Source\PSoC4/UART_1_PM.c **** *******************************************************************************/
+ 152:.\Generated_Source\PSoC4/UART_1_PM.c **** void UART_1_Wakeup(void)
+ 153:.\Generated_Source\PSoC4/UART_1_PM.c **** {
+ 104              		.loc 1 153 0
+ 105              		.cfi_startproc
+ 106 0000 08B5     		push	{r3, lr}
+ 107              		.cfi_def_cfa_offset 8
+ 108              		.cfi_offset 3, -8
+ 109              		.cfi_offset 14, -4
+ 154:.\Generated_Source\PSoC4/UART_1_PM.c **** #if(UART_1_SCB_MODE_UNCONFIG_CONST_CFG)
+ 155:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 156:.\Generated_Source\PSoC4/UART_1_PM.c ****     if(UART_1_SCB_WAKE_ENABLE_CHECK)
+ 110              		.loc 1 156 0
+ 111 0002 104B     		ldr	r3, .L15
+ 112 0004 1B78     		ldrb	r3, [r3]
+ 113 0006 002B     		cmp	r3, #0
+ 114 0008 15D0     		beq	.L10
+ 157:.\Generated_Source\PSoC4/UART_1_PM.c ****     {
+ 158:.\Generated_Source\PSoC4/UART_1_PM.c ****         if(UART_1_SCB_MODE_I2C_RUNTM_CFG)
+ 115              		.loc 1 158 0
+ 116 000a 0F4B     		ldr	r3, .L15+4
+ 117 000c 1B78     		ldrb	r3, [r3]
+ 118 000e 012B     		cmp	r3, #1
+ 119 0010 02D1     		bne	.L11
+ 159:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 160:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_I2CRestoreConfig();
+ 120              		.loc 1 160 0
+ 121 0012 FFF7FEFF 		bl	UART_1_I2CRestoreConfig
+ 122              	.LVL5:
+ 123 0016 14E0     		b	.L9
+ 124              	.L11:
+ 161:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 6
+
+
+ 162:.\Generated_Source\PSoC4/UART_1_PM.c ****         else if(UART_1_SCB_MODE_EZI2C_RUNTM_CFG)
+ 125              		.loc 1 162 0
+ 126 0018 082B     		cmp	r3, #8
+ 127 001a 02D1     		bne	.L13
+ 163:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 164:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_EzI2CRestoreConfig();
+ 128              		.loc 1 164 0
+ 129 001c FFF7FEFF 		bl	UART_1_EzI2CRestoreConfig
+ 130              	.LVL6:
+ 131 0020 0FE0     		b	.L9
+ 132              	.L13:
+ 165:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 166:.\Generated_Source\PSoC4/UART_1_PM.c ****     #if(!UART_1_CY_SCBIP_V1)
+ 167:.\Generated_Source\PSoC4/UART_1_PM.c ****         else if(UART_1_SCB_MODE_SPI_RUNTM_CFG)
+ 133              		.loc 1 167 0
+ 134 0022 022B     		cmp	r3, #2
+ 135 0024 02D1     		bne	.L14
+ 168:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 169:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_SpiRestoreConfig();
+ 136              		.loc 1 169 0
+ 137 0026 FFF7FEFF 		bl	UART_1_SpiRestoreConfig
+ 138              	.LVL7:
+ 139 002a 0AE0     		b	.L9
+ 140              	.L14:
+ 170:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 171:.\Generated_Source\PSoC4/UART_1_PM.c ****         else if(UART_1_SCB_MODE_UART_RUNTM_CFG)
+ 141              		.loc 1 171 0
+ 142 002c 042B     		cmp	r3, #4
+ 143 002e 08D1     		bne	.L9
+ 172:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 173:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_UartRestoreConfig();
+ 144              		.loc 1 173 0
+ 145 0030 FFF7FEFF 		bl	UART_1_UartRestoreConfig
+ 146              	.LVL8:
+ 147 0034 05E0     		b	.L9
+ 148              	.L10:
+ 174:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 175:.\Generated_Source\PSoC4/UART_1_PM.c ****     #endif /* (!UART_1_CY_SCBIP_V1) */
+ 176:.\Generated_Source\PSoC4/UART_1_PM.c ****         else
+ 177:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 178:.\Generated_Source\PSoC4/UART_1_PM.c ****             /* Unknown mode */
+ 179:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 180:.\Generated_Source\PSoC4/UART_1_PM.c ****     }
+ 181:.\Generated_Source\PSoC4/UART_1_PM.c ****     else
+ 182:.\Generated_Source\PSoC4/UART_1_PM.c ****     {
+ 183:.\Generated_Source\PSoC4/UART_1_PM.c ****         if(0u != UART_1_backup.enableState)
+ 149              		.loc 1 183 0
+ 150 0036 054B     		ldr	r3, .L15+8
+ 151 0038 1B78     		ldrb	r3, [r3]
+ 152 003a 002B     		cmp	r3, #0
+ 153 003c 01D0     		beq	.L9
+ 184:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 185:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_Enable();
+ 154              		.loc 1 185 0
+ 155 003e FFF7FEFF 		bl	UART_1_Enable
+ 156              	.LVL9:
+ 157              	.L9:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 7
+
+
+ 186:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 187:.\Generated_Source\PSoC4/UART_1_PM.c ****     }
+ 188:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 189:.\Generated_Source\PSoC4/UART_1_PM.c **** #else
+ 190:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 191:.\Generated_Source\PSoC4/UART_1_PM.c ****     #if (UART_1_SCB_MODE_I2C_CONST_CFG  && UART_1_I2C_WAKE_ENABLE_CONST)
+ 192:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_I2CRestoreConfig();
+ 193:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 194:.\Generated_Source\PSoC4/UART_1_PM.c ****     #elif (UART_1_SCB_MODE_EZI2C_CONST_CFG && UART_1_EZI2C_WAKE_ENABLE_CONST)
+ 195:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_EzI2CRestoreConfig();
+ 196:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 197:.\Generated_Source\PSoC4/UART_1_PM.c ****     #elif (UART_1_SCB_MODE_SPI_CONST_CFG && UART_1_SPI_WAKE_ENABLE_CONST)
+ 198:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_SpiRestoreConfig();
+ 199:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 200:.\Generated_Source\PSoC4/UART_1_PM.c ****     #elif (UART_1_SCB_MODE_UART_CONST_CFG && UART_1_UART_WAKE_ENABLE_CONST)
+ 201:.\Generated_Source\PSoC4/UART_1_PM.c ****         UART_1_UartRestoreConfig();
+ 202:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 203:.\Generated_Source\PSoC4/UART_1_PM.c ****     #else
+ 204:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 205:.\Generated_Source\PSoC4/UART_1_PM.c ****         if(0u != UART_1_backup.enableState)
+ 206:.\Generated_Source\PSoC4/UART_1_PM.c ****         {
+ 207:.\Generated_Source\PSoC4/UART_1_PM.c ****             UART_1_Enable();
+ 208:.\Generated_Source\PSoC4/UART_1_PM.c ****         }
+ 209:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 210:.\Generated_Source\PSoC4/UART_1_PM.c ****     #endif /* (UART_1_I2C_WAKE_ENABLE_CONST) */
+ 211:.\Generated_Source\PSoC4/UART_1_PM.c **** 
+ 212:.\Generated_Source\PSoC4/UART_1_PM.c **** #endif /* (UART_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 213:.\Generated_Source\PSoC4/UART_1_PM.c **** }
+ 158              		.loc 1 213 0
+ 159              		@ sp needed
+ 160 0042 08BD     		pop	{r3, pc}
+ 161              	.L16:
+ 162              		.align	2
+ 163              	.L15:
+ 164 0044 00000000 		.word	UART_1_scbEnableWake
+ 165 0048 00000000 		.word	UART_1_scbMode
+ 166 004c 00000000 		.word	.LANCHOR0
+ 167              		.cfi_endproc
+ 168              	.LFE1:
+ 169              		.size	UART_1_Wakeup, .-UART_1_Wakeup
+ 170              		.global	UART_1_backup
+ 171              		.bss
+ 172              		.align	2
+ 173              		.set	.LANCHOR0,. + 0
+ 174              		.type	UART_1_backup, %object
+ 175              		.size	UART_1_backup, 1
+ 176              	UART_1_backup:
+ 177 0000 00       		.space	1
+ 178 0001 000000   		.text
+ 179              	.Letext0:
+ 180              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 181              		.file 3 ".\\Generated_Source\\PSoC4\\UART_1.h"
+ 182              		.file 4 ".\\Generated_Source\\PSoC4\\UART_1_PVT.h"
+ 183              		.file 5 ".\\Generated_Source\\PSoC4\\UART_1_I2C_PVT.h"
+ 184              		.file 6 ".\\Generated_Source\\PSoC4\\UART_1_EZI2C_PVT.h"
+ 185              		.file 7 ".\\Generated_Source\\PSoC4\\UART_1_SPI_UART_PVT.h"
+ 186              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 8
+
+
+ 187              	.Ldebug_info0:
+ 188 0000 BE010000 		.4byte	0x1be
+ 189 0004 0400     		.2byte	0x4
+ 190 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 191 000a 04       		.byte	0x4
+ 192 000b 01       		.uleb128 0x1
+ 193 000c A6010000 		.4byte	.LASF32
+ 194 0010 01       		.byte	0x1
+ 195 0011 85020000 		.4byte	.LASF33
+ 196 0015 00000000 		.4byte	.LASF34
+ 197 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 198 001d 00000000 		.4byte	0
+ 199 0021 00000000 		.4byte	.Ldebug_line0
+ 200 0025 02       		.uleb128 0x2
+ 201 0026 01       		.byte	0x1
+ 202 0027 06       		.byte	0x6
+ 203 0028 CD020000 		.4byte	.LASF0
+ 204 002c 02       		.uleb128 0x2
+ 205 002d 01       		.byte	0x1
+ 206 002e 08       		.byte	0x8
+ 207 002f E2000000 		.4byte	.LASF1
+ 208 0033 02       		.uleb128 0x2
+ 209 0034 02       		.byte	0x2
+ 210 0035 05       		.byte	0x5
+ 211 0036 6E020000 		.4byte	.LASF2
+ 212 003a 02       		.uleb128 0x2
+ 213 003b 02       		.byte	0x2
+ 214 003c 07       		.byte	0x7
+ 215 003d BB000000 		.4byte	.LASF3
+ 216 0041 02       		.uleb128 0x2
+ 217 0042 04       		.byte	0x4
+ 218 0043 05       		.byte	0x5
+ 219 0044 AA020000 		.4byte	.LASF4
+ 220 0048 02       		.uleb128 0x2
+ 221 0049 04       		.byte	0x4
+ 222 004a 07       		.byte	0x7
+ 223 004b 11010000 		.4byte	.LASF5
+ 224 004f 02       		.uleb128 0x2
+ 225 0050 08       		.byte	0x8
+ 226 0051 05       		.byte	0x5
+ 227 0052 43020000 		.4byte	.LASF6
+ 228 0056 02       		.uleb128 0x2
+ 229 0057 08       		.byte	0x8
+ 230 0058 07       		.byte	0x7
+ 231 0059 8F010000 		.4byte	.LASF7
+ 232 005d 03       		.uleb128 0x3
+ 233 005e 04       		.byte	0x4
+ 234 005f 05       		.byte	0x5
+ 235 0060 696E7400 		.ascii	"int\000"
+ 236 0064 02       		.uleb128 0x2
+ 237 0065 04       		.byte	0x4
+ 238 0066 07       		.byte	0x7
+ 239 0067 82010000 		.4byte	.LASF8
+ 240 006b 04       		.uleb128 0x4
+ 241 006c 23010000 		.4byte	.LASF9
+ 242 0070 02       		.byte	0x2
+ 243 0071 B3       		.byte	0xb3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 9
+
+
+ 244 0072 2C000000 		.4byte	0x2c
+ 245 0076 04       		.uleb128 0x4
+ 246 0077 7B010000 		.4byte	.LASF10
+ 247 007b 02       		.byte	0x2
+ 248 007c B5       		.byte	0xb5
+ 249 007d 48000000 		.4byte	0x48
+ 250 0081 02       		.uleb128 0x2
+ 251 0082 04       		.byte	0x4
+ 252 0083 04       		.byte	0x4
+ 253 0084 DC000000 		.4byte	.LASF11
+ 254 0088 02       		.uleb128 0x2
+ 255 0089 08       		.byte	0x8
+ 256 008a 04       		.byte	0x4
+ 257 008b 29010000 		.4byte	.LASF12
+ 258 008f 02       		.uleb128 0x2
+ 259 0090 01       		.byte	0x1
+ 260 0091 08       		.byte	0x8
+ 261 0092 51020000 		.4byte	.LASF13
+ 262 0096 05       		.uleb128 0x5
+ 263 0097 70000000 		.4byte	.LASF14
+ 264 009b 02       		.byte	0x2
+ 265 009c 5F01     		.2byte	0x15f
+ 266 009e A2000000 		.4byte	0xa2
+ 267 00a2 06       		.uleb128 0x6
+ 268 00a3 76000000 		.4byte	0x76
+ 269 00a7 02       		.uleb128 0x2
+ 270 00a8 04       		.byte	0x4
+ 271 00a9 07       		.byte	0x7
+ 272 00aa 22020000 		.4byte	.LASF15
+ 273 00ae 07       		.uleb128 0x7
+ 274 00af 01       		.byte	0x1
+ 275 00b0 03       		.byte	0x3
+ 276 00b1 5B       		.byte	0x5b
+ 277 00b2 C3000000 		.4byte	0xc3
+ 278 00b6 08       		.uleb128 0x8
+ 279 00b7 B3020000 		.4byte	.LASF35
+ 280 00bb 03       		.byte	0x3
+ 281 00bc 5D       		.byte	0x5d
+ 282 00bd 6B000000 		.4byte	0x6b
+ 283 00c1 00       		.byte	0
+ 284 00c2 00       		.byte	0
+ 285 00c3 04       		.uleb128 0x4
+ 286 00c4 F0020000 		.4byte	.LASF16
+ 287 00c8 03       		.byte	0x3
+ 288 00c9 5E       		.byte	0x5e
+ 289 00ca AE000000 		.4byte	0xae
+ 290 00ce 09       		.uleb128 0x9
+ 291 00cf 78020000 		.4byte	.LASF17
+ 292 00d3 01       		.byte	0x1
+ 293 00d4 43       		.byte	0x43
+ 294 00d5 00000000 		.4byte	.LFB0
+ 295 00d9 58000000 		.4byte	.LFE0-.LFB0
+ 296 00dd 01       		.uleb128 0x1
+ 297 00de 9C       		.byte	0x9c
+ 298 00df 11010000 		.4byte	0x111
+ 299 00e3 0A       		.uleb128 0xa
+ 300 00e4 16000000 		.4byte	.LVL0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 10
+
+
+ 301 00e8 7B010000 		.4byte	0x17b
+ 302 00ec 0A       		.uleb128 0xa
+ 303 00ed 20000000 		.4byte	.LVL1
+ 304 00f1 82010000 		.4byte	0x182
+ 305 00f5 0A       		.uleb128 0xa
+ 306 00f6 2A000000 		.4byte	.LVL2
+ 307 00fa 89010000 		.4byte	0x189
+ 308 00fe 0A       		.uleb128 0xa
+ 309 00ff 34000000 		.4byte	.LVL3
+ 310 0103 90010000 		.4byte	0x190
+ 311 0107 0A       		.uleb128 0xa
+ 312 0108 46000000 		.4byte	.LVL4
+ 313 010c 97010000 		.4byte	0x197
+ 314 0110 00       		.byte	0
+ 315 0111 09       		.uleb128 0x9
+ 316 0112 30010000 		.4byte	.LASF18
+ 317 0116 01       		.byte	0x1
+ 318 0117 98       		.byte	0x98
+ 319 0118 00000000 		.4byte	.LFB1
+ 320 011c 50000000 		.4byte	.LFE1-.LFB1
+ 321 0120 01       		.uleb128 0x1
+ 322 0121 9C       		.byte	0x9c
+ 323 0122 54010000 		.4byte	0x154
+ 324 0126 0A       		.uleb128 0xa
+ 325 0127 16000000 		.4byte	.LVL5
+ 326 012b 9E010000 		.4byte	0x19e
+ 327 012f 0A       		.uleb128 0xa
+ 328 0130 20000000 		.4byte	.LVL6
+ 329 0134 A5010000 		.4byte	0x1a5
+ 330 0138 0A       		.uleb128 0xa
+ 331 0139 2A000000 		.4byte	.LVL7
+ 332 013d AC010000 		.4byte	0x1ac
+ 333 0141 0A       		.uleb128 0xa
+ 334 0142 34000000 		.4byte	.LVL8
+ 335 0146 B3010000 		.4byte	0x1b3
+ 336 014a 0A       		.uleb128 0xa
+ 337 014b 42000000 		.4byte	.LVL9
+ 338 014f BA010000 		.4byte	0x1ba
+ 339 0153 00       		.byte	0
+ 340 0154 0B       		.uleb128 0xb
+ 341 0155 CE000000 		.4byte	.LASF19
+ 342 0159 01       		.byte	0x1
+ 343 015a 2C       		.byte	0x2c
+ 344 015b C3000000 		.4byte	0xc3
+ 345 015f 05       		.uleb128 0x5
+ 346 0160 03       		.byte	0x3
+ 347 0161 00000000 		.4byte	UART_1_backup
+ 348 0165 0C       		.uleb128 0xc
+ 349 0166 3E010000 		.4byte	.LASF20
+ 350 016a 04       		.byte	0x4
+ 351 016b 42       		.byte	0x42
+ 352 016c 6B000000 		.4byte	0x6b
+ 353 0170 0C       		.uleb128 0xc
+ 354 0171 F0000000 		.4byte	.LASF21
+ 355 0175 04       		.byte	0x4
+ 356 0176 43       		.byte	0x43
+ 357 0177 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 11
+
+
+ 358 017b 0D       		.uleb128 0xd
+ 359 017c 4D010000 		.4byte	.LASF22
+ 360 0180 05       		.byte	0x5
+ 361 0181 4C       		.byte	0x4c
+ 362 0182 0D       		.uleb128 0xd
+ 363 0183 D9020000 		.4byte	.LASF23
+ 364 0187 06       		.byte	0x6
+ 365 0188 3E       		.byte	0x3e
+ 366 0189 0D       		.uleb128 0xd
+ 367 018a 8C000000 		.4byte	.LASF24
+ 368 018e 07       		.byte	0x7
+ 369 018f 3D       		.byte	0x3d
+ 370 0190 0D       		.uleb128 0xd
+ 371 0191 76000000 		.4byte	.LASF25
+ 372 0195 07       		.byte	0x7
+ 373 0196 49       		.byte	0x49
+ 374 0197 0D       		.uleb128 0xd
+ 375 0198 05010000 		.4byte	.LASF26
+ 376 019c 03       		.byte	0x3
+ 377 019d 69       		.byte	0x69
+ 378 019e 0D       		.uleb128 0xd
+ 379 019f 56020000 		.4byte	.LASF27
+ 380 01a3 05       		.byte	0x5
+ 381 01a4 4D       		.byte	0x4d
+ 382 01a5 0D       		.uleb128 0xd
+ 383 01a6 A1000000 		.4byte	.LASF28
+ 384 01aa 06       		.byte	0x6
+ 385 01ab 3F       		.byte	0x3f
+ 386 01ac 0D       		.uleb128 0xd
+ 387 01ad 2B020000 		.4byte	.LASF29
+ 388 01b1 07       		.byte	0x7
+ 389 01b2 3E       		.byte	0x3e
+ 390 01b3 0D       		.uleb128 0xd
+ 391 01b4 62010000 		.4byte	.LASF30
+ 392 01b8 07       		.byte	0x7
+ 393 01b9 4A       		.byte	0x4a
+ 394 01ba 0D       		.uleb128 0xd
+ 395 01bb BF020000 		.4byte	.LASF31
+ 396 01bf 03       		.byte	0x3
+ 397 01c0 67       		.byte	0x67
+ 398 01c1 00       		.byte	0
+ 399              		.section	.debug_abbrev,"",%progbits
+ 400              	.Ldebug_abbrev0:
+ 401 0000 01       		.uleb128 0x1
+ 402 0001 11       		.uleb128 0x11
+ 403 0002 01       		.byte	0x1
+ 404 0003 25       		.uleb128 0x25
+ 405 0004 0E       		.uleb128 0xe
+ 406 0005 13       		.uleb128 0x13
+ 407 0006 0B       		.uleb128 0xb
+ 408 0007 03       		.uleb128 0x3
+ 409 0008 0E       		.uleb128 0xe
+ 410 0009 1B       		.uleb128 0x1b
+ 411 000a 0E       		.uleb128 0xe
+ 412 000b 55       		.uleb128 0x55
+ 413 000c 17       		.uleb128 0x17
+ 414 000d 11       		.uleb128 0x11
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 12
+
+
+ 415 000e 01       		.uleb128 0x1
+ 416 000f 10       		.uleb128 0x10
+ 417 0010 17       		.uleb128 0x17
+ 418 0011 00       		.byte	0
+ 419 0012 00       		.byte	0
+ 420 0013 02       		.uleb128 0x2
+ 421 0014 24       		.uleb128 0x24
+ 422 0015 00       		.byte	0
+ 423 0016 0B       		.uleb128 0xb
+ 424 0017 0B       		.uleb128 0xb
+ 425 0018 3E       		.uleb128 0x3e
+ 426 0019 0B       		.uleb128 0xb
+ 427 001a 03       		.uleb128 0x3
+ 428 001b 0E       		.uleb128 0xe
+ 429 001c 00       		.byte	0
+ 430 001d 00       		.byte	0
+ 431 001e 03       		.uleb128 0x3
+ 432 001f 24       		.uleb128 0x24
+ 433 0020 00       		.byte	0
+ 434 0021 0B       		.uleb128 0xb
+ 435 0022 0B       		.uleb128 0xb
+ 436 0023 3E       		.uleb128 0x3e
+ 437 0024 0B       		.uleb128 0xb
+ 438 0025 03       		.uleb128 0x3
+ 439 0026 08       		.uleb128 0x8
+ 440 0027 00       		.byte	0
+ 441 0028 00       		.byte	0
+ 442 0029 04       		.uleb128 0x4
+ 443 002a 16       		.uleb128 0x16
+ 444 002b 00       		.byte	0
+ 445 002c 03       		.uleb128 0x3
+ 446 002d 0E       		.uleb128 0xe
+ 447 002e 3A       		.uleb128 0x3a
+ 448 002f 0B       		.uleb128 0xb
+ 449 0030 3B       		.uleb128 0x3b
+ 450 0031 0B       		.uleb128 0xb
+ 451 0032 49       		.uleb128 0x49
+ 452 0033 13       		.uleb128 0x13
+ 453 0034 00       		.byte	0
+ 454 0035 00       		.byte	0
+ 455 0036 05       		.uleb128 0x5
+ 456 0037 16       		.uleb128 0x16
+ 457 0038 00       		.byte	0
+ 458 0039 03       		.uleb128 0x3
+ 459 003a 0E       		.uleb128 0xe
+ 460 003b 3A       		.uleb128 0x3a
+ 461 003c 0B       		.uleb128 0xb
+ 462 003d 3B       		.uleb128 0x3b
+ 463 003e 05       		.uleb128 0x5
+ 464 003f 49       		.uleb128 0x49
+ 465 0040 13       		.uleb128 0x13
+ 466 0041 00       		.byte	0
+ 467 0042 00       		.byte	0
+ 468 0043 06       		.uleb128 0x6
+ 469 0044 35       		.uleb128 0x35
+ 470 0045 00       		.byte	0
+ 471 0046 49       		.uleb128 0x49
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 13
+
+
+ 472 0047 13       		.uleb128 0x13
+ 473 0048 00       		.byte	0
+ 474 0049 00       		.byte	0
+ 475 004a 07       		.uleb128 0x7
+ 476 004b 13       		.uleb128 0x13
+ 477 004c 01       		.byte	0x1
+ 478 004d 0B       		.uleb128 0xb
+ 479 004e 0B       		.uleb128 0xb
+ 480 004f 3A       		.uleb128 0x3a
+ 481 0050 0B       		.uleb128 0xb
+ 482 0051 3B       		.uleb128 0x3b
+ 483 0052 0B       		.uleb128 0xb
+ 484 0053 01       		.uleb128 0x1
+ 485 0054 13       		.uleb128 0x13
+ 486 0055 00       		.byte	0
+ 487 0056 00       		.byte	0
+ 488 0057 08       		.uleb128 0x8
+ 489 0058 0D       		.uleb128 0xd
+ 490 0059 00       		.byte	0
+ 491 005a 03       		.uleb128 0x3
+ 492 005b 0E       		.uleb128 0xe
+ 493 005c 3A       		.uleb128 0x3a
+ 494 005d 0B       		.uleb128 0xb
+ 495 005e 3B       		.uleb128 0x3b
+ 496 005f 0B       		.uleb128 0xb
+ 497 0060 49       		.uleb128 0x49
+ 498 0061 13       		.uleb128 0x13
+ 499 0062 38       		.uleb128 0x38
+ 500 0063 0B       		.uleb128 0xb
+ 501 0064 00       		.byte	0
+ 502 0065 00       		.byte	0
+ 503 0066 09       		.uleb128 0x9
+ 504 0067 2E       		.uleb128 0x2e
+ 505 0068 01       		.byte	0x1
+ 506 0069 3F       		.uleb128 0x3f
+ 507 006a 19       		.uleb128 0x19
+ 508 006b 03       		.uleb128 0x3
+ 509 006c 0E       		.uleb128 0xe
+ 510 006d 3A       		.uleb128 0x3a
+ 511 006e 0B       		.uleb128 0xb
+ 512 006f 3B       		.uleb128 0x3b
+ 513 0070 0B       		.uleb128 0xb
+ 514 0071 27       		.uleb128 0x27
+ 515 0072 19       		.uleb128 0x19
+ 516 0073 11       		.uleb128 0x11
+ 517 0074 01       		.uleb128 0x1
+ 518 0075 12       		.uleb128 0x12
+ 519 0076 06       		.uleb128 0x6
+ 520 0077 40       		.uleb128 0x40
+ 521 0078 18       		.uleb128 0x18
+ 522 0079 9742     		.uleb128 0x2117
+ 523 007b 19       		.uleb128 0x19
+ 524 007c 01       		.uleb128 0x1
+ 525 007d 13       		.uleb128 0x13
+ 526 007e 00       		.byte	0
+ 527 007f 00       		.byte	0
+ 528 0080 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 14
+
+
+ 529 0081 898201   		.uleb128 0x4109
+ 530 0084 00       		.byte	0
+ 531 0085 11       		.uleb128 0x11
+ 532 0086 01       		.uleb128 0x1
+ 533 0087 31       		.uleb128 0x31
+ 534 0088 13       		.uleb128 0x13
+ 535 0089 00       		.byte	0
+ 536 008a 00       		.byte	0
+ 537 008b 0B       		.uleb128 0xb
+ 538 008c 34       		.uleb128 0x34
+ 539 008d 00       		.byte	0
+ 540 008e 03       		.uleb128 0x3
+ 541 008f 0E       		.uleb128 0xe
+ 542 0090 3A       		.uleb128 0x3a
+ 543 0091 0B       		.uleb128 0xb
+ 544 0092 3B       		.uleb128 0x3b
+ 545 0093 0B       		.uleb128 0xb
+ 546 0094 49       		.uleb128 0x49
+ 547 0095 13       		.uleb128 0x13
+ 548 0096 3F       		.uleb128 0x3f
+ 549 0097 19       		.uleb128 0x19
+ 550 0098 02       		.uleb128 0x2
+ 551 0099 18       		.uleb128 0x18
+ 552 009a 00       		.byte	0
+ 553 009b 00       		.byte	0
+ 554 009c 0C       		.uleb128 0xc
+ 555 009d 34       		.uleb128 0x34
+ 556 009e 00       		.byte	0
+ 557 009f 03       		.uleb128 0x3
+ 558 00a0 0E       		.uleb128 0xe
+ 559 00a1 3A       		.uleb128 0x3a
+ 560 00a2 0B       		.uleb128 0xb
+ 561 00a3 3B       		.uleb128 0x3b
+ 562 00a4 0B       		.uleb128 0xb
+ 563 00a5 49       		.uleb128 0x49
+ 564 00a6 13       		.uleb128 0x13
+ 565 00a7 3F       		.uleb128 0x3f
+ 566 00a8 19       		.uleb128 0x19
+ 567 00a9 3C       		.uleb128 0x3c
+ 568 00aa 19       		.uleb128 0x19
+ 569 00ab 00       		.byte	0
+ 570 00ac 00       		.byte	0
+ 571 00ad 0D       		.uleb128 0xd
+ 572 00ae 2E       		.uleb128 0x2e
+ 573 00af 00       		.byte	0
+ 574 00b0 3F       		.uleb128 0x3f
+ 575 00b1 19       		.uleb128 0x19
+ 576 00b2 03       		.uleb128 0x3
+ 577 00b3 0E       		.uleb128 0xe
+ 578 00b4 3A       		.uleb128 0x3a
+ 579 00b5 0B       		.uleb128 0xb
+ 580 00b6 3B       		.uleb128 0x3b
+ 581 00b7 0B       		.uleb128 0xb
+ 582 00b8 27       		.uleb128 0x27
+ 583 00b9 19       		.uleb128 0x19
+ 584 00ba 3C       		.uleb128 0x3c
+ 585 00bb 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 15
+
+
+ 586 00bc 00       		.byte	0
+ 587 00bd 00       		.byte	0
+ 588 00be 00       		.byte	0
+ 589              		.section	.debug_aranges,"",%progbits
+ 590 0000 24000000 		.4byte	0x24
+ 591 0004 0200     		.2byte	0x2
+ 592 0006 00000000 		.4byte	.Ldebug_info0
+ 593 000a 04       		.byte	0x4
+ 594 000b 00       		.byte	0
+ 595 000c 0000     		.2byte	0
+ 596 000e 0000     		.2byte	0
+ 597 0010 00000000 		.4byte	.LFB0
+ 598 0014 58000000 		.4byte	.LFE0-.LFB0
+ 599 0018 00000000 		.4byte	.LFB1
+ 600 001c 50000000 		.4byte	.LFE1-.LFB1
+ 601 0020 00000000 		.4byte	0
+ 602 0024 00000000 		.4byte	0
+ 603              		.section	.debug_ranges,"",%progbits
+ 604              	.Ldebug_ranges0:
+ 605 0000 00000000 		.4byte	.LFB0
+ 606 0004 58000000 		.4byte	.LFE0
+ 607 0008 00000000 		.4byte	.LFB1
+ 608 000c 50000000 		.4byte	.LFE1
+ 609 0010 00000000 		.4byte	0
+ 610 0014 00000000 		.4byte	0
+ 611              		.section	.debug_line,"",%progbits
+ 612              	.Ldebug_line0:
+ 613 0000 05010000 		.section	.debug_str,"MS",%progbits,1
+ 613      0200BE00 
+ 613      00000201 
+ 613      FB0E0D00 
+ 613      01010101 
+ 614              	.LASF34:
+ 615 0000 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
+ 615      73657273 
+ 615      5C4D6172 
+ 615      63656C6F 
+ 615      5C446F63 
+ 616 002e 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
+ 616      686F6761 
+ 616      725C5073 
+ 616      6F635F43 
+ 616      72656174 
+ 617 005e 66616365 		.ascii	"face_driver.cydsn\000"
+ 617      5F647269 
+ 617      7665722E 
+ 617      63796473 
+ 617      6E00
+ 618              	.LASF14:
+ 619 0070 72656733 		.ascii	"reg32\000"
+ 619      3200
+ 620              	.LASF25:
+ 621 0076 55415254 		.ascii	"UART_1_UartSaveConfig\000"
+ 621      5F315F55 
+ 621      61727453 
+ 621      61766543 
+ 621      6F6E6669 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 16
+
+
+ 622              	.LASF24:
+ 623 008c 55415254 		.ascii	"UART_1_SpiSaveConfig\000"
+ 623      5F315F53 
+ 623      70695361 
+ 623      7665436F 
+ 623      6E666967 
+ 624              	.LASF28:
+ 625 00a1 55415254 		.ascii	"UART_1_EzI2CRestoreConfig\000"
+ 625      5F315F45 
+ 625      7A493243 
+ 625      52657374 
+ 625      6F726543 
+ 626              	.LASF3:
+ 627 00bb 73686F72 		.ascii	"short unsigned int\000"
+ 627      7420756E 
+ 627      7369676E 
+ 627      65642069 
+ 627      6E7400
+ 628              	.LASF19:
+ 629 00ce 55415254 		.ascii	"UART_1_backup\000"
+ 629      5F315F62 
+ 629      61636B75 
+ 629      7000
+ 630              	.LASF11:
+ 631 00dc 666C6F61 		.ascii	"float\000"
+ 631      7400
+ 632              	.LASF1:
+ 633 00e2 756E7369 		.ascii	"unsigned char\000"
+ 633      676E6564 
+ 633      20636861 
+ 633      7200
+ 634              	.LASF21:
+ 635 00f0 55415254 		.ascii	"UART_1_scbEnableWake\000"
+ 635      5F315F73 
+ 635      6362456E 
+ 635      61626C65 
+ 635      57616B65 
+ 636              	.LASF26:
+ 637 0105 55415254 		.ascii	"UART_1_Stop\000"
+ 637      5F315F53 
+ 637      746F7000 
+ 638              	.LASF5:
+ 639 0111 6C6F6E67 		.ascii	"long unsigned int\000"
+ 639      20756E73 
+ 639      69676E65 
+ 639      6420696E 
+ 639      7400
+ 640              	.LASF9:
+ 641 0123 75696E74 		.ascii	"uint8\000"
+ 641      3800
+ 642              	.LASF12:
+ 643 0129 646F7562 		.ascii	"double\000"
+ 643      6C6500
+ 644              	.LASF18:
+ 645 0130 55415254 		.ascii	"UART_1_Wakeup\000"
+ 645      5F315F57 
+ 645      616B6575 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 17
+
+
+ 645      7000
+ 646              	.LASF20:
+ 647 013e 55415254 		.ascii	"UART_1_scbMode\000"
+ 647      5F315F73 
+ 647      63624D6F 
+ 647      646500
+ 648              	.LASF22:
+ 649 014d 55415254 		.ascii	"UART_1_I2CSaveConfig\000"
+ 649      5F315F49 
+ 649      32435361 
+ 649      7665436F 
+ 649      6E666967 
+ 650              	.LASF30:
+ 651 0162 55415254 		.ascii	"UART_1_UartRestoreConfig\000"
+ 651      5F315F55 
+ 651      61727452 
+ 651      6573746F 
+ 651      7265436F 
+ 652              	.LASF10:
+ 653 017b 75696E74 		.ascii	"uint32\000"
+ 653      333200
+ 654              	.LASF8:
+ 655 0182 756E7369 		.ascii	"unsigned int\000"
+ 655      676E6564 
+ 655      20696E74 
+ 655      00
+ 656              	.LASF7:
+ 657 018f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 657      206C6F6E 
+ 657      6720756E 
+ 657      7369676E 
+ 657      65642069 
+ 658              	.LASF32:
+ 659 01a6 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 659      4320342E 
+ 659      382E3420 
+ 659      32303134 
+ 659      30353236 
+ 660 01d9 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 660      20726576 
+ 660      6973696F 
+ 660      6E203231 
+ 660      31333538 
+ 661 020c 67202D66 		.ascii	"g -ffunction-sections\000"
+ 661      66756E63 
+ 661      74696F6E 
+ 661      2D736563 
+ 661      74696F6E 
+ 662              	.LASF15:
+ 663 0222 73697A65 		.ascii	"sizetype\000"
+ 663      74797065 
+ 663      00
+ 664              	.LASF29:
+ 665 022b 55415254 		.ascii	"UART_1_SpiRestoreConfig\000"
+ 665      5F315F53 
+ 665      70695265 
+ 665      73746F72 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 18
+
+
+ 665      65436F6E 
+ 666              	.LASF6:
+ 667 0243 6C6F6E67 		.ascii	"long long int\000"
+ 667      206C6F6E 
+ 667      6720696E 
+ 667      7400
+ 668              	.LASF13:
+ 669 0251 63686172 		.ascii	"char\000"
+ 669      00
+ 670              	.LASF27:
+ 671 0256 55415254 		.ascii	"UART_1_I2CRestoreConfig\000"
+ 671      5F315F49 
+ 671      32435265 
+ 671      73746F72 
+ 671      65436F6E 
+ 672              	.LASF2:
+ 673 026e 73686F72 		.ascii	"short int\000"
+ 673      7420696E 
+ 673      7400
+ 674              	.LASF17:
+ 675 0278 55415254 		.ascii	"UART_1_Sleep\000"
+ 675      5F315F53 
+ 675      6C656570 
+ 675      00
+ 676              	.LASF33:
+ 677 0285 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_PM.c\000"
+ 677      6E657261 
+ 677      7465645F 
+ 677      536F7572 
+ 677      63655C50 
+ 678              	.LASF4:
+ 679 02aa 6C6F6E67 		.ascii	"long int\000"
+ 679      20696E74 
+ 679      00
+ 680              	.LASF35:
+ 681 02b3 656E6162 		.ascii	"enableState\000"
+ 681      6C655374 
+ 681      61746500 
+ 682              	.LASF31:
+ 683 02bf 55415254 		.ascii	"UART_1_Enable\000"
+ 683      5F315F45 
+ 683      6E61626C 
+ 683      6500
+ 684              	.LASF0:
+ 685 02cd 7369676E 		.ascii	"signed char\000"
+ 685      65642063 
+ 685      68617200 
+ 686              	.LASF23:
+ 687 02d9 55415254 		.ascii	"UART_1_EzI2CSaveConfig\000"
+ 687      5F315F45 
+ 687      7A493243 
+ 687      53617665 
+ 687      436F6E66 
+ 688              	.LASF16:
+ 689 02f0 55415254 		.ascii	"UART_1_BACKUP_STRUCT\000"
+ 689      5F315F42 
+ 689      41434B55 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc2lOBbU.s 			page 19
+
+
+ 689      505F5354 
+ 689      52554354 
+ 690              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

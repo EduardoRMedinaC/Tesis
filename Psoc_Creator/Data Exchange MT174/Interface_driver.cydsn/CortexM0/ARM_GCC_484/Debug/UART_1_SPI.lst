@@ -1,0 +1,2660 @@
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"UART_1_SPI.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.UART_1_SpiPostEnable,"ax",%progbits
+  18              		.align	2
+  19              		.global	UART_1_SpiPostEnable
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	UART_1_SpiPostEnable, %function
+  23              	UART_1_SpiPostEnable:
+  24              	.LFB1:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\UART_1_SPI.c"
+   1:.\Generated_Source\PSoC4/UART_1_SPI.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/UART_1_SPI.c **** * File Name: UART_1_SPI.c
+   3:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Version 3.0
+   4:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+   5:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Description:
+   6:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  This file provides the source code to the API for the SCB Component in
+   7:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  SPI mode.
+   8:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+   9:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Note:
+  10:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+  11:.\Generated_Source\PSoC4/UART_1_SPI.c **** *******************************************************************************
+  12:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/UART_1_SPI.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/UART_1_SPI.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/UART_1_SPI.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/UART_1_SPI.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  18:.\Generated_Source\PSoC4/UART_1_SPI.c **** #include "UART_1_PVT.h"
+  19:.\Generated_Source\PSoC4/UART_1_SPI.c **** #include "UART_1_SPI_UART_PVT.h"
+  20:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  21:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if(UART_1_SCB_MODE_UNCONFIG_CONST_CFG)
+  22:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  23:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /***************************************
+  24:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  Configuration Structure Initialization
+  25:.\Generated_Source\PSoC4/UART_1_SPI.c ****     ***************************************/
+  26:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  27:.\Generated_Source\PSoC4/UART_1_SPI.c ****     const UART_1_SPI_INIT_STRUCT UART_1_configSpi =
+  28:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+  29:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_MODE,
+  30:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_SUB_MODE,
+  31:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_CLOCK_MODE,
+  32:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_OVS_FACTOR,
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_MEDIAN_FILTER_ENABLE,
+  34:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_LATE_MISO_SAMPLE_ENABLE,
+  35:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_WAKE_ENABLE,
+  36:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_RX_DATA_BITS_NUM,
+  37:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_TX_DATA_BITS_NUM,
+  38:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_BITS_ORDER,
+  39:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_TRANSFER_SEPARATION,
+  40:.\Generated_Source\PSoC4/UART_1_SPI.c ****         0u,
+  41:.\Generated_Source\PSoC4/UART_1_SPI.c ****         NULL,
+  42:.\Generated_Source\PSoC4/UART_1_SPI.c ****         0u,
+  43:.\Generated_Source\PSoC4/UART_1_SPI.c ****         NULL,
+  44:.\Generated_Source\PSoC4/UART_1_SPI.c ****         (uint32) UART_1_SCB_IRQ_INTERNAL,
+  45:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_INTR_RX_MASK,
+  46:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_RX_TRIGGER_LEVEL,
+  47:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_INTR_TX_MASK,
+  48:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_TX_TRIGGER_LEVEL,
+  49:.\Generated_Source\PSoC4/UART_1_SPI.c ****         (uint8) UART_1_SPI_BYTE_MODE_ENABLE,
+  50:.\Generated_Source\PSoC4/UART_1_SPI.c ****         (uint8) UART_1_SPI_FREE_RUN_SCLK_ENABLE,
+  51:.\Generated_Source\PSoC4/UART_1_SPI.c ****         (uint8) UART_1_SPI_SS_POLARITY
+  52:.\Generated_Source\PSoC4/UART_1_SPI.c ****     };
+  53:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  54:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  55:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /*******************************************************************************
+  56:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Function Name: UART_1_SpiInit
+  57:.\Generated_Source\PSoC4/UART_1_SPI.c ****     ********************************************************************************
+  58:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+  59:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Summary:
+  60:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  Configures the SCB for the SPI operation.
+  61:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+  62:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Parameters:
+  63:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  config:  Pointer to a structure that contains the following ordered list of
+  64:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *           fields. These fields match the selections available in the
+  65:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *           customizer.
+  66:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+  67:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Return:
+  68:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+  69:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+  70:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *******************************************************************************/
+  71:.\Generated_Source\PSoC4/UART_1_SPI.c ****     void UART_1_SpiInit(const UART_1_SPI_INIT_STRUCT *config)
+  72:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+  73:.\Generated_Source\PSoC4/UART_1_SPI.c ****         if(NULL == config)
+  74:.\Generated_Source\PSoC4/UART_1_SPI.c ****         {
+  75:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+  76:.\Generated_Source\PSoC4/UART_1_SPI.c ****         }
+  77:.\Generated_Source\PSoC4/UART_1_SPI.c ****         else
+  78:.\Generated_Source\PSoC4/UART_1_SPI.c ****         {
+  79:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Configure pins */
+  80:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SetPins(UART_1_SCB_MODE_SPI, config->mode, UART_1_DUMMY_PARAM);
+  81:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  82:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Store internal configuration */
+  83:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_scbMode       = (uint8) UART_1_SCB_MODE_SPI;
+  84:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_scbEnableWake = (uint8) config->enableWake;
+  85:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_scbEnableIntr = (uint8) config->enableInterrupt;
+  86:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  87:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Set RX direction internal variables */
+  88:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBuffer      =         config->rxBuffer;
+  89:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxDataBits    = (uint8) config->rxDataBits;
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferSize  = (uint8) config->rxBufferSize;
+  91:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  92:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Set TX direction internal variables */
+  93:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBuffer      =         config->txBuffer;
+  94:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txDataBits    = (uint8) config->txDataBits;
+  95:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBufferSize  = (uint8) config->txBufferSize;
+  96:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+  97:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Configure SPI interface */
+  98:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_CTRL_REG     = UART_1_GET_CTRL_OVS(config->oversample)           |
+  99:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_CTRL_BYTE_MODE(config->enableByteMode) |
+ 100:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_CTRL_EC_AM_MODE(config->enableWake)    |
+ 101:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_CTRL_SPI;
+ 102:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 103:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SPI_CTRL_REG = UART_1_GET_SPI_CTRL_CONTINUOUS    (config->transferSeperation)  |
+ 104:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SELECT_PRECEDE(config->submode &
+ 105:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                                           UART_1_SPI_MODE_TI_PRECED
+ 106:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SCLK_MODE     (config->sclkMode)   
+ 107:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_LATE_MISO_SAMPLE(config->enableLate
+ 108:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SCLK_CONTINUOUS(config->enableFreeR
+ 109:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SSEL_POLARITY (config->polaritySs) 
+ 110:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SUB_MODE      (config->submode)    
+ 111:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_MASTER_MODE   (config->mode);
+ 112:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 113:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Configure RX direction */
+ 114:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_RX_CTRL_REG     =  UART_1_GET_RX_CTRL_DATA_WIDTH(config->rxDataBits)         |
+ 115:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_RX_CTRL_BIT_ORDER (config->bitOrder)    
+ 116:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_RX_CTRL_MEDIAN    (config->enableMedianF
+ 117:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_SPI_RX_CTRL;
+ 118:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 119:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_RX_FIFO_CTRL_REG = UART_1_GET_RX_FIFO_CTRL_TRIGGER_LEVEL(config->rxTriggerLevel)
+ 120:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 121:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Configure TX direction */
+ 122:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_TX_CTRL_REG      = UART_1_GET_TX_CTRL_DATA_WIDTH(config->txDataBits) |
+ 123:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_TX_CTRL_BIT_ORDER (config->bitOrder)   |
+ 124:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_SPI_TX_CTRL;
+ 125:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 126:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_TX_FIFO_CTRL_REG = UART_1_GET_TX_FIFO_CTRL_TRIGGER_LEVEL(config->txTriggerLevel)
+ 127:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 128:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Configure interrupt with SPI handler but do not enable it */
+ 129:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CyIntDisable    (UART_1_ISR_NUMBER);
+ 130:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CyIntSetPriority(UART_1_ISR_NUMBER, UART_1_ISR_PRIORITY);
+ 131:.\Generated_Source\PSoC4/UART_1_SPI.c ****             (void) CyIntSetVector(UART_1_ISR_NUMBER, &UART_1_SPI_UART_ISR);
+ 132:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 133:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Configure interrupt sources */
+ 134:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_I2C_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 135:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_SPI_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 136:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_SLAVE_MASK_REG  = UART_1_GET_SPI_INTR_SLAVE_MASK(config->rxInterruptMask);
+ 137:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_MASTER_MASK_REG = UART_1_GET_SPI_INTR_MASTER_MASK(config->txInterruptMask);
+ 138:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_RX_MASK_REG     = UART_1_GET_SPI_INTR_RX_MASK(config->rxInterruptMask);
+ 139:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_TX_MASK_REG     = UART_1_GET_SPI_INTR_TX_MASK(config->txInterruptMask);
+ 140:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 141:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Set active SS0 */
+ 142:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SpiSetActiveSlaveSelect(UART_1_SPI_SLAVE_SELECT0);
+ 143:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 144:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Clear RX buffer indexes */
+ 145:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferHead     = 0u;
+ 146:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferTail     = 0u;
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 4
+
+
+ 147:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferOverflow = 0u;
+ 148:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 149:.\Generated_Source\PSoC4/UART_1_SPI.c ****             /* Clear TX buffer indexes */
+ 150:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBufferHead = 0u;
+ 151:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBufferTail = 0u;
+ 152:.\Generated_Source\PSoC4/UART_1_SPI.c ****         }
+ 153:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 154:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 155:.\Generated_Source\PSoC4/UART_1_SPI.c **** #else
+ 156:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 157:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /*******************************************************************************
+ 158:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Function Name: UART_1_SpiInit
+ 159:.\Generated_Source\PSoC4/UART_1_SPI.c ****     ********************************************************************************
+ 160:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 161:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Summary:
+ 162:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  Configures the SCB for the SPI operation.
+ 163:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 164:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Parameters:
+ 165:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 166:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 167:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Return:
+ 168:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 169:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 170:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *******************************************************************************/
+ 171:.\Generated_Source\PSoC4/UART_1_SPI.c ****     void UART_1_SpiInit(void)
+ 172:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+ 173:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Configure SPI interface */
+ 174:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_CTRL_REG     = UART_1_SPI_DEFAULT_CTRL;
+ 175:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_CTRL_REG = UART_1_SPI_DEFAULT_SPI_CTRL;
+ 176:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 177:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Configure TX and RX direction */
+ 178:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_RX_CTRL_REG      = UART_1_SPI_DEFAULT_RX_CTRL;
+ 179:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_RX_FIFO_CTRL_REG = UART_1_SPI_DEFAULT_RX_FIFO_CTRL;
+ 180:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 181:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Configure TX and RX direction */
+ 182:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_TX_CTRL_REG      = UART_1_SPI_DEFAULT_TX_CTRL;
+ 183:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_TX_FIFO_CTRL_REG = UART_1_SPI_DEFAULT_TX_FIFO_CTRL;
+ 184:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 185:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Configure interrupt with SPI handler but do not enable it */
+ 186:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if(UART_1_SCB_IRQ_INTERNAL)
+ 187:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CyIntDisable    (UART_1_ISR_NUMBER);
+ 188:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CyIntSetPriority(UART_1_ISR_NUMBER, UART_1_ISR_PRIORITY);
+ 189:.\Generated_Source\PSoC4/UART_1_SPI.c ****             (void) CyIntSetVector(UART_1_ISR_NUMBER, &UART_1_SPI_UART_ISR);
+ 190:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SCB_IRQ_INTERNAL) */
+ 191:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 192:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Configure interrupt sources */
+ 193:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_INTR_I2C_EC_MASK_REG = UART_1_SPI_DEFAULT_INTR_I2C_EC_MASK;
+ 194:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_INTR_SPI_EC_MASK_REG = UART_1_SPI_DEFAULT_INTR_SPI_EC_MASK;
+ 195:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_INTR_SLAVE_MASK_REG  = UART_1_SPI_DEFAULT_INTR_SLAVE_MASK;
+ 196:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_INTR_MASTER_MASK_REG = UART_1_SPI_DEFAULT_INTR_MASTER_MASK;
+ 197:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_INTR_RX_MASK_REG     = UART_1_SPI_DEFAULT_INTR_RX_MASK;
+ 198:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_INTR_TX_MASK_REG     = UART_1_SPI_DEFAULT_INTR_TX_MASK;
+ 199:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 200:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set active SS0 for master */
+ 201:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SPI_MASTER_CONST)
+ 202:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SpiSetActiveSlaveSelect(UART_1_SPI_SLAVE_SELECT0);
+ 203:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SPI_MASTER_CONST) */
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 5
+
+
+ 204:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 205:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if(UART_1_INTERNAL_RX_SW_BUFFER_CONST)
+ 206:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_rxBufferHead     = 0u;
+ 207:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_rxBufferTail     = 0u;
+ 208:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_rxBufferOverflow = 0u;
+ 209:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_INTERNAL_RX_SW_BUFFER_CONST) */
+ 210:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 211:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if(UART_1_INTERNAL_TX_SW_BUFFER_CONST)
+ 212:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_txBufferHead = 0u;
+ 213:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_txBufferTail = 0u;
+ 214:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_INTERNAL_TX_SW_BUFFER_CONST) */
+ 215:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 216:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 217:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 218:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 219:.\Generated_Source\PSoC4/UART_1_SPI.c **** /*******************************************************************************
+ 220:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Function Name: UART_1_SpiPostEnable
+ 221:.\Generated_Source\PSoC4/UART_1_SPI.c **** ********************************************************************************
+ 222:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 223:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Summary:
+ 224:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  Restores HSIOM settings for the SPI master output pins (SCLK and/or SS0-SS3) 
+ 225:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  to be controlled by the SCB SPI.
+ 226:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 227:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Parameters:
+ 228:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  None
+ 229:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 230:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Return:
+ 231:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  None
+ 232:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 233:.\Generated_Source\PSoC4/UART_1_SPI.c **** *******************************************************************************/
+ 234:.\Generated_Source\PSoC4/UART_1_SPI.c **** void UART_1_SpiPostEnable(void)
+ 235:.\Generated_Source\PSoC4/UART_1_SPI.c **** {
+  26              		.loc 1 235 0
+  27              		.cfi_startproc
+ 236:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if(UART_1_SCB_MODE_UNCONFIG_CONST_CFG)
+ 237:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 238:.\Generated_Source\PSoC4/UART_1_SPI.c ****     if (UART_1_CHECK_SPI_MASTER)
+  28              		.loc 1 238 0
+  29 0000 014B     		ldr	r3, .L2
+  30 0002 1B68     		ldr	r3, [r3]
+ 239:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+ 240:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SCLK_PIN)
+ 241:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 242:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SCLK_HSIOM_REG, UART_1_SCLK_HSIOM_MASK,
+ 243:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SCLK_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 244:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SCLK_PIN) */
+ 245:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 246:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS0_PIN)
+ 247:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 248:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS0_HSIOM_REG, UART_1_SS0_HSIOM_MASK,
+ 249:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS0_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 250:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS0_PIN) */
+ 251:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 252:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS1_PIN)
+ 253:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 254:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS1_HSIOM_REG, UART_1_SS1_HSIOM_MASK,
+ 255:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS1_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 6
+
+
+ 256:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS1_PIN) */
+ 257:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 258:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS2_PIN)
+ 259:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 260:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS2_HSIOM_REG, UART_1_SS2_HSIOM_MASK,
+ 261:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS2_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 262:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS2_PIN) */
+ 263:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 264:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS3_PIN)
+ 265:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set SCB SPI to drive output pin */
+ 266:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS3_HSIOM_REG, UART_1_SS3_HSIOM_MASK,
+ 267:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS3_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 268:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS3_PIN) */
+ 269:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 270:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 271:.\Generated_Source\PSoC4/UART_1_SPI.c **** #else
+ 272:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 273:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SCLK_PIN)
+ 274:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set SCB SPI to drive output pin */
+ 275:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SCLK_M_HSIOM_REG, UART_1_SCLK_M_HSIOM_MASK,
+ 276:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SCLK_M_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 277:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_MISO_SDA_TX_PIN_PIN) */
+ 278:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 279:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS0_PIN)
+ 280:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set SCB SPI to drive output pin */
+ 281:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS0_M_HSIOM_REG, UART_1_SS0_M_HSIOM_MASK,
+ 282:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS0_M_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 283:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS0_PIN) */
+ 284:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 285:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS1_PIN)
+ 286:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set SCB SPI to drive output pin */
+ 287:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS1_M_HSIOM_REG, UART_1_SS1_M_HSIOM_MASK,
+ 288:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS1_M_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 289:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS1_PIN) */
+ 290:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 291:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS2_PIN)
+ 292:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set SCB SPI to drive output pin */
+ 293:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS2_M_HSIOM_REG, UART_1_SS2_M_HSIOM_MASK,
+ 294:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS2_M_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 295:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS2_PIN) */
+ 296:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 297:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS3_PIN)
+ 298:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set SCB SPI to drive output pin */
+ 299:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS3_M_HSIOM_REG, UART_1_SS3_M_HSIOM_MASK,
+ 300:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS3_M_HSIOM_POS, UART_1_HSIOM_SPI_SEL);
+ 301:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS3_PIN) */
+ 302:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 303:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 304:.\Generated_Source\PSoC4/UART_1_SPI.c **** }
+  31              		.loc 1 304 0
+  32              		@ sp needed
+  33 0004 7047     		bx	lr
+  34              	.L3:
+  35 0006 C046     		.align	2
+  36              	.L2:
+  37 0008 20000740 		.word	1074200608
+  38              		.cfi_endproc
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 7
+
+
+  39              	.LFE1:
+  40              		.size	UART_1_SpiPostEnable, .-UART_1_SpiPostEnable
+  41              		.section	.text.UART_1_SpiStop,"ax",%progbits
+  42              		.align	2
+  43              		.global	UART_1_SpiStop
+  44              		.code	16
+  45              		.thumb_func
+  46              		.type	UART_1_SpiStop, %function
+  47              	UART_1_SpiStop:
+  48              	.LFB2:
+ 305:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 306:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 307:.\Generated_Source\PSoC4/UART_1_SPI.c **** /*******************************************************************************
+ 308:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Function Name: UART_1_SpiStop
+ 309:.\Generated_Source\PSoC4/UART_1_SPI.c **** ********************************************************************************
+ 310:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 311:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Summary:
+ 312:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  Changes the HSIOM settings for the SPI master output pins (SCLK and/or SS0-SS3) to
+ 313:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  keep them inactive after the block is disabled. The output pins are
+ 314:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  controlled by the GPIO data register.
+ 315:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 316:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Parameters:
+ 317:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  None
+ 318:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 319:.\Generated_Source\PSoC4/UART_1_SPI.c **** * Return:
+ 320:.\Generated_Source\PSoC4/UART_1_SPI.c **** *  None
+ 321:.\Generated_Source\PSoC4/UART_1_SPI.c **** *
+ 322:.\Generated_Source\PSoC4/UART_1_SPI.c **** *******************************************************************************/
+ 323:.\Generated_Source\PSoC4/UART_1_SPI.c **** void UART_1_SpiStop(void)
+ 324:.\Generated_Source\PSoC4/UART_1_SPI.c **** {
+  49              		.loc 1 324 0
+  50              		.cfi_startproc
+ 325:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if(UART_1_SCB_MODE_UNCONFIG_CONST_CFG)
+ 326:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 327:.\Generated_Source\PSoC4/UART_1_SPI.c ****     if (UART_1_CHECK_SPI_MASTER)
+  51              		.loc 1 327 0
+  52 0000 014B     		ldr	r3, .L5
+  53 0002 1B68     		ldr	r3, [r3]
+ 328:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+ 329:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SCLK_PIN)
+ 330:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set output pin state after block is disabled */
+ 331:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_spi_sclk_Write(UART_1_GET_SPI_SCLK_INACTIVE);
+ 332:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 333:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set GPIO to drive output pin */
+ 334:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SCLK_HSIOM_REG, UART_1_SCLK_HSIOM_MASK,
+ 335:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SCLK_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 336:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_MISO_SDA_TX_PIN_PIN) */
+ 337:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 338:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS0_PIN)
+ 339:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set output pin state after block is disabled */
+ 340:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_spi_ss0_Write(UART_1_GET_SPI_SS0_INACTIVE);
+ 341:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 342:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set GPIO to drive output pin */
+ 343:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS0_HSIOM_REG, UART_1_SS0_HSIOM_MASK,
+ 344:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS0_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 345:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS0_PIN) */
+ 346:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 8
+
+
+ 347:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS1_PIN)
+ 348:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set output pin state after block is disabled */
+ 349:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_spi_ss1_Write(UART_1_GET_SPI_SS1_INACTIVE);
+ 350:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 351:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set GPIO to drive output pin */
+ 352:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS1_HSIOM_REG, UART_1_SS1_HSIOM_MASK,
+ 353:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS1_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 354:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS1_PIN) */
+ 355:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 356:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS2_PIN)
+ 357:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set output pin state after block is disabled */
+ 358:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_spi_ss2_Write(UART_1_GET_SPI_SS2_INACTIVE);
+ 359:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 360:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set GPIO to drive output pin */
+ 361:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS2_HSIOM_REG, UART_1_SS2_HSIOM_MASK,
+ 362:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS2_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 363:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS2_PIN) */
+ 364:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 365:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #if (UART_1_SS3_PIN)
+ 366:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set output pin state after block is disabled */
+ 367:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_spi_ss3_Write(UART_1_GET_SPI_SS3_INACTIVE);
+ 368:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 369:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Set GPIO to drive output pin */
+ 370:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SET_HSIOM_SEL(UART_1_SS3_HSIOM_REG, UART_1_SS3_HSIOM_MASK,
+ 371:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                        UART_1_SS3_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 372:.\Generated_Source\PSoC4/UART_1_SPI.c ****     #endif /* (UART_1_SS3_PIN) */
+ 373:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 374:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 375:.\Generated_Source\PSoC4/UART_1_SPI.c **** #else
+ 376:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 377:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SCLK_PIN)
+ 378:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set output pin state after block is disabled */
+ 379:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_sclk_m_Write(UART_1_GET_SPI_SCLK_INACTIVE);
+ 380:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 381:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set GPIO to drive output pin */
+ 382:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SCLK_M_HSIOM_REG, UART_1_SCLK_M_HSIOM_MASK,
+ 383:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SCLK_M_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 384:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_MISO_SDA_TX_PIN_PIN) */
+ 385:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 386:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS0_PIN)
+ 387:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set output pin state after block is disabled */
+ 388:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_ss0_m_Write(UART_1_GET_SPI_SS0_INACTIVE);
+ 389:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 390:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set GPIO to drive output pin */
+ 391:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS0_M_HSIOM_REG, UART_1_SS0_M_HSIOM_MASK,
+ 392:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS0_M_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 393:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS0_PIN) */
+ 394:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 395:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS1_PIN)
+ 396:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set output pin state after block is disabled */
+ 397:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_ss1_m_Write(UART_1_GET_SPI_SS1_INACTIVE);
+ 398:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 399:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set GPIO to drive output pin */
+ 400:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS1_M_HSIOM_REG, UART_1_SS1_M_HSIOM_MASK,
+ 401:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS1_M_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 402:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS1_PIN) */
+ 403:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 9
+
+
+ 404:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS2_PIN)
+ 405:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set output pin state after block is disabled */
+ 406:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_ss2_m_Write(UART_1_GET_SPI_SS2_INACTIVE);
+ 407:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 408:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set GPIO to drive output pin */
+ 409:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS2_M_HSIOM_REG, UART_1_SS2_M_HSIOM_MASK,
+ 410:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS2_M_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 411:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS2_PIN) */
+ 412:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 413:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_SS3_PIN)
+ 414:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set output pin state after block is disabled */
+ 415:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_ss3_m_Write(UART_1_GET_SPI_SS3_INACTIVE);
+ 416:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 417:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /* Set GPIO to drive output pin */
+ 418:.\Generated_Source\PSoC4/UART_1_SPI.c ****     UART_1_SET_HSIOM_SEL(UART_1_SS3_M_HSIOM_REG, UART_1_SS3_M_HSIOM_MASK,
+ 419:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                    UART_1_SS3_M_HSIOM_POS, UART_1_HSIOM_GPIO_SEL);
+ 420:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_SS3_PIN) */
+ 421:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 422:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 423:.\Generated_Source\PSoC4/UART_1_SPI.c **** }
+  54              		.loc 1 423 0
+  55              		@ sp needed
+  56 0004 7047     		bx	lr
+  57              	.L6:
+  58 0006 C046     		.align	2
+  59              	.L5:
+  60 0008 20000740 		.word	1074200608
+  61              		.cfi_endproc
+  62              	.LFE2:
+  63              		.size	UART_1_SpiStop, .-UART_1_SpiStop
+  64              		.section	.text.UART_1_SpiSetActiveSlaveSelect,"ax",%progbits
+  65              		.align	2
+  66              		.global	UART_1_SpiSetActiveSlaveSelect
+  67              		.code	16
+  68              		.thumb_func
+  69              		.type	UART_1_SpiSetActiveSlaveSelect, %function
+  70              	UART_1_SpiSetActiveSlaveSelect:
+  71              	.LFB3:
+ 424:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 425:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 426:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if (UART_1_SPI_MASTER_CONST)
+ 427:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /*******************************************************************************
+ 428:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Function Name: UART_1_SetActiveSlaveSelect
+ 429:.\Generated_Source\PSoC4/UART_1_SPI.c ****     ********************************************************************************
+ 430:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 431:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Summary:
+ 432:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  Selects one of the four slave select lines to be active during the transfer.
+ 433:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  After initialization the active slave select line is 0.
+ 434:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  The component should be in one of the following states to change the active
+ 435:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  slave select signal source correctly:
+ 436:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   - The component is disabled
+ 437:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   - The component has completed transfer (TX FIFO is empty and the
+ 438:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *     SCB_INTR_MASTER_SPI_DONE status is set)
+ 439:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  This function does not check that these conditions are met.
+ 440:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  This function is only applicable to SPI Master mode of operation.
+ 441:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 442:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Parameters:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 10
+
+
+ 443:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  slaveSelect: slave select line which will be active while the following
+ 444:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *               transfer.
+ 445:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT0 - Slave select 0
+ 446:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT1 - Slave select 1
+ 447:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT2 - Slave select 2
+ 448:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT3 - Slave select 3
+ 449:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 450:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Return:
+ 451:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 452:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 453:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *******************************************************************************/
+ 454:.\Generated_Source\PSoC4/UART_1_SPI.c ****     void UART_1_SpiSetActiveSlaveSelect(uint32 slaveSelect)
+ 455:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+  72              		.loc 1 455 0
+  73              		.cfi_startproc
+  74              	.LVL0:
+ 456:.\Generated_Source\PSoC4/UART_1_SPI.c ****         uint32 spiCtrl;
+ 457:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 458:.\Generated_Source\PSoC4/UART_1_SPI.c ****         spiCtrl = UART_1_SPI_CTRL_REG;
+  75              		.loc 1 458 0
+  76 0000 054B     		ldr	r3, .L8
+  77 0002 1968     		ldr	r1, [r3]
+  78              	.LVL1:
+ 459:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 460:.\Generated_Source\PSoC4/UART_1_SPI.c ****         spiCtrl &= (uint32) ~UART_1_SPI_CTRL_SLAVE_SELECT_MASK;
+  79              		.loc 1 460 0
+  80 0004 054A     		ldr	r2, .L8+4
+  81 0006 0A40     		and	r2, r1
+  82              	.LVL2:
+ 461:.\Generated_Source\PSoC4/UART_1_SPI.c ****         spiCtrl |= (uint32)  UART_1_GET_SPI_CTRL_SS(slaveSelect);
+  83              		.loc 1 461 0
+  84 0008 8006     		lsl	r0, r0, #26
+  85              	.LVL3:
+  86 000a C021     		mov	r1, #192
+  87 000c 0905     		lsl	r1, r1, #20
+  88 000e 0840     		and	r0, r1
+  89 0010 1043     		orr	r0, r2
+  90              	.LVL4:
+ 462:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 463:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SPI_CTRL_REG = spiCtrl;
+  91              		.loc 1 463 0
+  92 0012 1860     		str	r0, [r3]
+ 464:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+  93              		.loc 1 464 0
+  94              		@ sp needed
+  95 0014 7047     		bx	lr
+  96              	.L9:
+  97 0016 C046     		.align	2
+  98              	.L8:
+  99 0018 20000740 		.word	1074200608
+ 100 001c FFFFFFF3 		.word	-201326593
+ 101              		.cfi_endproc
+ 102              	.LFE3:
+ 103              		.size	UART_1_SpiSetActiveSlaveSelect, .-UART_1_SpiSetActiveSlaveSelect
+ 104              		.section	.text.UART_1_SpiInit,"ax",%progbits
+ 105              		.align	2
+ 106              		.global	UART_1_SpiInit
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 11
+
+
+ 107              		.code	16
+ 108              		.thumb_func
+ 109              		.type	UART_1_SpiInit, %function
+ 110              	UART_1_SpiInit:
+ 111              	.LFB0:
+  72:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+ 112              		.loc 1 72 0
+ 113              		.cfi_startproc
+ 114              	.LVL5:
+ 115 0000 38B5     		push	{r3, r4, r5, lr}
+ 116              		.cfi_def_cfa_offset 16
+ 117              		.cfi_offset 3, -16
+ 118              		.cfi_offset 4, -12
+ 119              		.cfi_offset 5, -8
+ 120              		.cfi_offset 14, -4
+ 121 0002 041E     		sub	r4, r0, #0
+  73:.\Generated_Source\PSoC4/UART_1_SPI.c ****         if(NULL == config)
+ 122              		.loc 1 73 0
+ 123 0004 03D1     		bne	.L11
+  75:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+ 124              		.loc 1 75 0 discriminator 1
+ 125 0006 0020     		mov	r0, #0
+ 126              	.LVL6:
+ 127 0008 FFF7FEFF 		bl	CyHalt
+ 128              	.LVL7:
+ 129 000c C1E0     		b	.L10
+ 130              	.LVL8:
+ 131              	.L11:
+  80:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SetPins(UART_1_SCB_MODE_SPI, config->mode, UART_1_DUMMY_PARAM);
+ 132              		.loc 1 80 0
+ 133 000e 0220     		mov	r0, #2
+ 134              	.LVL9:
+ 135 0010 2168     		ldr	r1, [r4]
+ 136 0012 0022     		mov	r2, #0
+ 137 0014 FFF7FEFF 		bl	UART_1_SetPins
+ 138              	.LVL10:
+  83:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_scbMode       = (uint8) UART_1_SCB_MODE_SPI;
+ 139              		.loc 1 83 0
+ 140 0018 0222     		mov	r2, #2
+ 141 001a 5E4B     		ldr	r3, .L29
+ 142 001c 1A70     		strb	r2, [r3]
+  84:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_scbEnableWake = (uint8) config->enableWake;
+ 143              		.loc 1 84 0
+ 144 001e A369     		ldr	r3, [r4, #24]
+ 145 0020 5D4A     		ldr	r2, .L29+4
+ 146 0022 1370     		strb	r3, [r2]
+  85:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_scbEnableIntr = (uint8) config->enableInterrupt;
+ 147              		.loc 1 85 0
+ 148 0024 5D4A     		ldr	r2, .L29+8
+ 149 0026 E06B     		ldr	r0, [r4, #60]
+ 150 0028 1070     		strb	r0, [r2]
+  88:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBuffer      =         config->rxBuffer;
+ 151              		.loc 1 88 0
+ 152 002a 5D4A     		ldr	r2, .L29+12
+ 153 002c 216B     		ldr	r1, [r4, #48]
+ 154 002e 1160     		str	r1, [r2]
+  89:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxDataBits    = (uint8) config->rxDataBits;
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 12
+
+
+ 155              		.loc 1 89 0
+ 156 0030 217F     		ldrb	r1, [r4, #28]
+ 157 0032 5C4A     		ldr	r2, .L29+16
+ 158 0034 1170     		strb	r1, [r2]
+  90:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferSize  = (uint8) config->rxBufferSize;
+ 159              		.loc 1 90 0
+ 160 0036 FF22     		mov	r2, #255
+ 161 0038 E06A     		ldr	r0, [r4, #44]
+ 162 003a 1040     		and	r0, r2
+ 163 003c 5A49     		ldr	r1, .L29+20
+ 164 003e 0860     		str	r0, [r1]
+  93:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBuffer      =         config->txBuffer;
+ 165              		.loc 1 93 0
+ 166 0040 5A49     		ldr	r1, .L29+24
+ 167 0042 A06B     		ldr	r0, [r4, #56]
+ 168 0044 0860     		str	r0, [r1]
+  94:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txDataBits    = (uint8) config->txDataBits;
+ 169              		.loc 1 94 0
+ 170 0046 5A49     		ldr	r1, .L29+28
+ 171 0048 206A     		ldr	r0, [r4, #32]
+ 172 004a 0870     		strb	r0, [r1]
+  95:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBufferSize  = (uint8) config->txBufferSize;
+ 173              		.loc 1 95 0
+ 174 004c 616B     		ldr	r1, [r4, #52]
+ 175 004e 0A40     		and	r2, r1
+ 176 0050 5849     		ldr	r1, .L29+32
+ 177 0052 0A60     		str	r2, [r1]
+  98:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_CTRL_REG     = UART_1_GET_CTRL_OVS(config->oversample)           |
+ 178              		.loc 1 98 0
+ 179 0054 E268     		ldr	r2, [r4, #12]
+ 180 0056 013A     		sub	r2, r2, #1
+ 181 0058 0F21     		mov	r1, #15
+ 182 005a 0A40     		and	r2, r1
+ 100:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_CTRL_EC_AM_MODE(config->enableWake)    |
+ 183              		.loc 1 100 0
+ 184 005c 002B     		cmp	r3, #0
+ 185 005e 02D0     		beq	.L21
+ 186 0060 8023     		mov	r3, #128
+ 187 0062 5B00     		lsl	r3, r3, #1
+ 188 0064 00E0     		b	.L13
+ 189              	.L21:
+ 190 0066 0023     		mov	r3, #0
+ 191              	.L13:
+  99:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_CTRL_BYTE_MODE(config->enableByteMode) |
+ 192              		.loc 1 99 0
+ 193 0068 1A43     		orr	r2, r3
+ 100:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_CTRL_EC_AM_MODE(config->enableWake)    |
+ 194              		.loc 1 100 0
+ 195 006a 8023     		mov	r3, #128
+ 196 006c 5B04     		lsl	r3, r3, #17
+ 197 006e 1A43     		orr	r2, r3
+  98:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_CTRL_REG     = UART_1_GET_CTRL_OVS(config->oversample)           |
+ 198              		.loc 1 98 0
+ 199 0070 514B     		ldr	r3, .L29+36
+ 200 0072 1A60     		str	r2, [r3]
+ 103:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SPI_CTRL_REG = UART_1_GET_SPI_CTRL_CONTINUOUS    (config->transferSeperation)  |
+ 201              		.loc 1 103 0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 13
+
+
+ 202 0074 A26A     		ldr	r2, [r4, #40]
+ 203 0076 002A     		cmp	r2, #0
+ 204 0078 01D0     		beq	.L22
+ 205 007a 0121     		mov	r1, #1
+ 206 007c 00E0     		b	.L14
+ 207              	.L22:
+ 208 007e 0021     		mov	r1, #0
+ 209              	.L14:
+ 104:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SELECT_PRECEDE(config->submode &
+ 210              		.loc 1 104 0
+ 211 0080 6368     		ldr	r3, [r4, #4]
+ 212 0082 D806     		lsl	r0, r3, #27
+ 213 0084 01D5     		bpl	.L23
+ 214 0086 0222     		mov	r2, #2
+ 215 0088 00E0     		b	.L15
+ 216              	.L23:
+ 217 008a 0022     		mov	r2, #0
+ 218              	.L15:
+ 103:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SPI_CTRL_REG = UART_1_GET_SPI_CTRL_CONTINUOUS    (config->transferSeperation)  |
+ 219              		.loc 1 103 0
+ 220 008c 1143     		orr	r1, r2
+ 106:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SCLK_MODE     (config->sclkMode)   
+ 221              		.loc 1 106 0
+ 222 008e A068     		ldr	r0, [r4, #8]
+ 223 0090 8200     		lsl	r2, r0, #2
+ 224 0092 0C20     		mov	r0, #12
+ 225 0094 0240     		and	r2, r0
+ 105:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                                           UART_1_SPI_MODE_TI_PRECED
+ 226              		.loc 1 105 0
+ 227 0096 0A43     		orr	r2, r1
+ 107:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_LATE_MISO_SAMPLE(config->enableLate
+ 228              		.loc 1 107 0
+ 229 0098 6169     		ldr	r1, [r4, #20]
+ 230 009a 0029     		cmp	r1, #0
+ 231 009c 01D0     		beq	.L24
+ 232 009e 1021     		mov	r1, #16
+ 233 00a0 00E0     		b	.L16
+ 234              	.L24:
+ 235 00a2 0021     		mov	r1, #0
+ 236              	.L16:
+ 108:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SCLK_CONTINUOUS(config->enableFreeR
+ 237              		.loc 1 108 0
+ 238 00a4 0A43     		orr	r2, r1
+ 110:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SUB_MODE      (config->submode)    
+ 239              		.loc 1 110 0
+ 240 00a6 1B06     		lsl	r3, r3, #24
+ 241 00a8 C021     		mov	r1, #192
+ 242 00aa 8904     		lsl	r1, r1, #18
+ 243 00ac 0B40     		and	r3, r1
+ 109:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SSEL_POLARITY (config->polaritySs) 
+ 244              		.loc 1 109 0
+ 245 00ae 1343     		orr	r3, r2
+ 111:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_MASTER_MODE   (config->mode);
+ 246              		.loc 1 111 0
+ 247 00b0 2268     		ldr	r2, [r4]
+ 248 00b2 002A     		cmp	r2, #0
+ 249 00b4 02D0     		beq	.L25
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 14
+
+
+ 250 00b6 8022     		mov	r2, #128
+ 251 00b8 1206     		lsl	r2, r2, #24
+ 252 00ba 00E0     		b	.L17
+ 253              	.L25:
+ 254 00bc 0022     		mov	r2, #0
+ 255              	.L17:
+ 110:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                             UART_1_GET_SPI_CTRL_SUB_MODE      (config->submode)    
+ 256              		.loc 1 110 0
+ 257 00be 1343     		orr	r3, r2
+ 103:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SPI_CTRL_REG = UART_1_GET_SPI_CTRL_CONTINUOUS    (config->transferSeperation)  |
+ 258              		.loc 1 103 0
+ 259 00c0 3E4A     		ldr	r2, .L29+40
+ 260 00c2 1360     		str	r3, [r2]
+ 114:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_RX_CTRL_REG     =  UART_1_GET_RX_CTRL_DATA_WIDTH(config->rxDataBits)         |
+ 261              		.loc 1 114 0
+ 262 00c4 E369     		ldr	r3, [r4, #28]
+ 263 00c6 013B     		sub	r3, r3, #1
+ 264 00c8 0F22     		mov	r2, #15
+ 265 00ca 1A40     		and	r2, r3
+ 115:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_RX_CTRL_BIT_ORDER (config->bitOrder)    
+ 266              		.loc 1 115 0
+ 267 00cc 636A     		ldr	r3, [r4, #36]
+ 268 00ce 002B     		cmp	r3, #0
+ 269 00d0 02D0     		beq	.L26
+ 270 00d2 8023     		mov	r3, #128
+ 271 00d4 5B00     		lsl	r3, r3, #1
+ 272 00d6 00E0     		b	.L18
+ 273              	.L26:
+ 274 00d8 0023     		mov	r3, #0
+ 275              	.L18:
+ 114:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_RX_CTRL_REG     =  UART_1_GET_RX_CTRL_DATA_WIDTH(config->rxDataBits)         |
+ 276              		.loc 1 114 0
+ 277 00da 1A43     		orr	r2, r3
+ 116:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_RX_CTRL_MEDIAN    (config->enableMedianF
+ 278              		.loc 1 116 0
+ 279 00dc 2069     		ldr	r0, [r4, #16]
+ 280 00de 0028     		cmp	r0, #0
+ 281 00e0 02D0     		beq	.L27
+ 282 00e2 8023     		mov	r3, #128
+ 283 00e4 9B00     		lsl	r3, r3, #2
+ 284 00e6 00E0     		b	.L19
+ 285              	.L27:
+ 286 00e8 0023     		mov	r3, #0
+ 287              	.L19:
+ 115:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_RX_CTRL_BIT_ORDER (config->bitOrder)    
+ 288              		.loc 1 115 0
+ 289 00ea 1A43     		orr	r2, r3
+ 116:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_RX_CTRL_MEDIAN    (config->enableMedianF
+ 290              		.loc 1 116 0
+ 291 00ec 8023     		mov	r3, #128
+ 292 00ee 1B06     		lsl	r3, r3, #24
+ 293 00f0 1A43     		orr	r2, r3
+ 114:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_RX_CTRL_REG     =  UART_1_GET_RX_CTRL_DATA_WIDTH(config->rxDataBits)         |
+ 294              		.loc 1 114 0
+ 295 00f2 334B     		ldr	r3, .L29+44
+ 296 00f4 1A60     		str	r2, [r3]
+ 119:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_RX_FIFO_CTRL_REG = UART_1_GET_RX_FIFO_CTRL_TRIGGER_LEVEL(config->rxTriggerLevel)
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 15
+
+
+ 297              		.loc 1 119 0
+ 298 00f6 0722     		mov	r2, #7
+ 299 00f8 616C     		ldr	r1, [r4, #68]
+ 300 00fa 0A40     		and	r2, r1
+ 301 00fc 314B     		ldr	r3, .L29+48
+ 302 00fe 1A60     		str	r2, [r3]
+ 122:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_TX_CTRL_REG      = UART_1_GET_TX_CTRL_DATA_WIDTH(config->txDataBits) |
+ 303              		.loc 1 122 0
+ 304 0100 236A     		ldr	r3, [r4, #32]
+ 305 0102 013B     		sub	r3, r3, #1
+ 306 0104 0F22     		mov	r2, #15
+ 307 0106 1A40     		and	r2, r3
+ 123:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_TX_CTRL_BIT_ORDER (config->bitOrder)   |
+ 308              		.loc 1 123 0
+ 309 0108 636A     		ldr	r3, [r4, #36]
+ 310 010a 002B     		cmp	r3, #0
+ 311 010c 02D0     		beq	.L28
+ 312 010e 8023     		mov	r3, #128
+ 313 0110 5B00     		lsl	r3, r3, #1
+ 314 0112 00E0     		b	.L20
+ 315              	.L28:
+ 316 0114 0023     		mov	r3, #0
+ 317              	.L20:
+ 122:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_TX_CTRL_REG      = UART_1_GET_TX_CTRL_DATA_WIDTH(config->txDataBits) |
+ 318              		.loc 1 122 0
+ 319 0116 1A43     		orr	r2, r3
+ 123:.\Generated_Source\PSoC4/UART_1_SPI.c ****                                                 UART_1_GET_TX_CTRL_BIT_ORDER (config->bitOrder)   |
+ 320              		.loc 1 123 0
+ 321 0118 8023     		mov	r3, #128
+ 322 011a 1B06     		lsl	r3, r3, #24
+ 323 011c 1A43     		orr	r2, r3
+ 122:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_TX_CTRL_REG      = UART_1_GET_TX_CTRL_DATA_WIDTH(config->txDataBits) |
+ 324              		.loc 1 122 0
+ 325 011e 2A4B     		ldr	r3, .L29+52
+ 326 0120 1A60     		str	r2, [r3]
+ 126:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_TX_FIFO_CTRL_REG = UART_1_GET_TX_FIFO_CTRL_TRIGGER_LEVEL(config->txTriggerLevel)
+ 327              		.loc 1 126 0
+ 328 0122 0722     		mov	r2, #7
+ 329 0124 E06C     		ldr	r0, [r4, #76]
+ 330 0126 0240     		and	r2, r0
+ 331 0128 284B     		ldr	r3, .L29+56
+ 332 012a 1A60     		str	r2, [r3]
+ 129:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CyIntDisable    (UART_1_ISR_NUMBER);
+ 333              		.loc 1 129 0
+ 334 012c 0B20     		mov	r0, #11
+ 335 012e FFF7FEFF 		bl	CyIntDisable
+ 336              	.LVL11:
+ 130:.\Generated_Source\PSoC4/UART_1_SPI.c ****             CyIntSetPriority(UART_1_ISR_NUMBER, UART_1_ISR_PRIORITY);
+ 337              		.loc 1 130 0
+ 338 0132 0B20     		mov	r0, #11
+ 339 0134 0321     		mov	r1, #3
+ 340 0136 FFF7FEFF 		bl	CyIntSetPriority
+ 341              	.LVL12:
+ 131:.\Generated_Source\PSoC4/UART_1_SPI.c ****             (void) CyIntSetVector(UART_1_ISR_NUMBER, &UART_1_SPI_UART_ISR);
+ 342              		.loc 1 131 0
+ 343 013a 0B20     		mov	r0, #11
+ 344 013c 2449     		ldr	r1, .L29+60
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 16
+
+
+ 345 013e FFF7FEFF 		bl	CyIntSetVector
+ 346              	.LVL13:
+ 134:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_I2C_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 347              		.loc 1 134 0
+ 348 0142 0025     		mov	r5, #0
+ 349 0144 234B     		ldr	r3, .L29+64
+ 350 0146 1D60     		str	r5, [r3]
+ 135:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_SPI_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 351              		.loc 1 135 0
+ 352 0148 234B     		ldr	r3, .L29+68
+ 353 014a 1D60     		str	r5, [r3]
+ 136:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_SLAVE_MASK_REG  = UART_1_GET_SPI_INTR_SLAVE_MASK(config->rxInterruptMask);
+ 354              		.loc 1 136 0
+ 355 014c 8022     		mov	r2, #128
+ 356 014e 1201     		lsl	r2, r2, #4
+ 357 0150 216C     		ldr	r1, [r4, #64]
+ 358 0152 0A40     		and	r2, r1
+ 359 0154 214B     		ldr	r3, .L29+72
+ 360 0156 1A60     		str	r2, [r3]
+ 137:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_MASTER_MASK_REG = UART_1_GET_SPI_INTR_MASTER_MASK(config->txInterruptMask);
+ 361              		.loc 1 137 0
+ 362 0158 8022     		mov	r2, #128
+ 363 015a 9200     		lsl	r2, r2, #2
+ 364 015c A36C     		ldr	r3, [r4, #72]
+ 365 015e 1A40     		and	r2, r3
+ 366 0160 1F4B     		ldr	r3, .L29+76
+ 367 0162 1A60     		str	r2, [r3]
+ 138:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_RX_MASK_REG     = UART_1_GET_SPI_INTR_RX_MASK(config->rxInterruptMask);
+ 368              		.loc 1 138 0
+ 369 0164 1F4A     		ldr	r2, .L29+80
+ 370 0166 206C     		ldr	r0, [r4, #64]
+ 371 0168 0240     		and	r2, r0
+ 372 016a 1F4B     		ldr	r3, .L29+84
+ 373 016c 1A60     		str	r2, [r3]
+ 139:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_INTR_TX_MASK_REG     = UART_1_GET_SPI_INTR_TX_MASK(config->txInterruptMask);
+ 374              		.loc 1 139 0
+ 375 016e A26C     		ldr	r2, [r4, #72]
+ 376 0170 1E4B     		ldr	r3, .L29+88
+ 377 0172 1A40     		and	r2, r3
+ 378 0174 1E4B     		ldr	r3, .L29+92
+ 379 0176 1A60     		str	r2, [r3]
+ 142:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SpiSetActiveSlaveSelect(UART_1_SPI_SLAVE_SELECT0);
+ 380              		.loc 1 142 0
+ 381 0178 0020     		mov	r0, #0
+ 382 017a FFF7FEFF 		bl	UART_1_SpiSetActiveSlaveSelect
+ 383              	.LVL14:
+ 145:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferHead     = 0u;
+ 384              		.loc 1 145 0
+ 385 017e 1D4B     		ldr	r3, .L29+96
+ 386 0180 1D60     		str	r5, [r3]
+ 146:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferTail     = 0u;
+ 387              		.loc 1 146 0
+ 388 0182 1D4B     		ldr	r3, .L29+100
+ 389 0184 1D60     		str	r5, [r3]
+ 147:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_rxBufferOverflow = 0u;
+ 390              		.loc 1 147 0
+ 391 0186 1D4B     		ldr	r3, .L29+104
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 17
+
+
+ 392 0188 1D70     		strb	r5, [r3]
+ 150:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBufferHead = 0u;
+ 393              		.loc 1 150 0
+ 394 018a 1D4B     		ldr	r3, .L29+108
+ 395 018c 1D60     		str	r5, [r3]
+ 151:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_txBufferTail = 0u;
+ 396              		.loc 1 151 0
+ 397 018e 1D4B     		ldr	r3, .L29+112
+ 398 0190 1D60     		str	r5, [r3]
+ 399              	.L10:
+ 153:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 400              		.loc 1 153 0
+ 401              		@ sp needed
+ 402              	.LVL15:
+ 403 0192 38BD     		pop	{r3, r4, r5, pc}
+ 404              	.L30:
+ 405              		.align	2
+ 406              	.L29:
+ 407 0194 00000000 		.word	UART_1_scbMode
+ 408 0198 00000000 		.word	UART_1_scbEnableWake
+ 409 019c 00000000 		.word	UART_1_scbEnableIntr
+ 410 01a0 00000000 		.word	UART_1_rxBuffer
+ 411 01a4 00000000 		.word	UART_1_rxDataBits
+ 412 01a8 00000000 		.word	UART_1_rxBufferSize
+ 413 01ac 00000000 		.word	UART_1_txBuffer
+ 414 01b0 00000000 		.word	UART_1_txDataBits
+ 415 01b4 00000000 		.word	UART_1_txBufferSize
+ 416 01b8 00000740 		.word	1074200576
+ 417 01bc 20000740 		.word	1074200608
+ 418 01c0 00030740 		.word	1074201344
+ 419 01c4 04030740 		.word	1074201348
+ 420 01c8 00020740 		.word	1074201088
+ 421 01cc 04020740 		.word	1074201092
+ 422 01d0 00000000 		.word	UART_1_SPI_UART_ISR
+ 423 01d4 880E0740 		.word	1074204296
+ 424 01d8 C80E0740 		.word	1074204360
+ 425 01dc 480F0740 		.word	1074204488
+ 426 01e0 080F0740 		.word	1074204424
+ 427 01e4 FFF7FFFF 		.word	-2049
+ 428 01e8 C80F0740 		.word	1074204616
+ 429 01ec FFFDFFFF 		.word	-513
+ 430 01f0 880F0740 		.word	1074204552
+ 431 01f4 00000000 		.word	UART_1_rxBufferHead
+ 432 01f8 00000000 		.word	UART_1_rxBufferTail
+ 433 01fc 00000000 		.word	UART_1_rxBufferOverflow
+ 434 0200 00000000 		.word	UART_1_txBufferHead
+ 435 0204 00000000 		.word	UART_1_txBufferTail
+ 436              		.cfi_endproc
+ 437              	.LFE0:
+ 438              		.size	UART_1_SpiInit, .-UART_1_SpiInit
+ 439              		.section	.text.UART_1_SpiSaveConfig,"ax",%progbits
+ 440              		.align	2
+ 441              		.global	UART_1_SpiSaveConfig
+ 442              		.code	16
+ 443              		.thumb_func
+ 444              		.type	UART_1_SpiSaveConfig, %function
+ 445              	UART_1_SpiSaveConfig:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 18
+
+
+ 446              	.LFB4:
+ 465:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* (UART_1_SPI_MASTER_CONST) */
+ 466:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 467:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 468:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if !(UART_1_CY_SCBIP_V0 || UART_1_CY_SCBIP_V1)
+ 469:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /*******************************************************************************
+ 470:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Function Name: UART_1_SpiSetSlaveSelectPolarity
+ 471:.\Generated_Source\PSoC4/UART_1_SPI.c ****     ********************************************************************************
+ 472:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 473:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Summary:
+ 474:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  Sets active polarity for slave select line.
+ 475:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  The component should be in one of the following states to change the active
+ 476:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  slave select signal source correctly:
+ 477:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   - The component is disabled.
+ 478:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   - The component has completed transfer.
+ 479:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  This function does not check that these conditions are met.
+ 480:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 481:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Parameters:
+ 482:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  slaveSelect: slave select line to change active polarity.
+ 483:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT0 - Slave select 0
+ 484:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT1 - Slave select 1
+ 485:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT2 - Slave select 2
+ 486:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SLAVE_SELECT3 - Slave select 3
+ 487:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 488:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  polarity: active polarity of slave select line.
+ 489:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SS_ACTIVE_LOW  - Slave select is active low
+ 490:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *   UART_1_SPI_SS_ACTIVE_HIGH - Slave select is active high
+ 491:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 492:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Return:
+ 493:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 494:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 495:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *******************************************************************************/
+ 496:.\Generated_Source\PSoC4/UART_1_SPI.c ****     void UART_1_SpiSetSlaveSelectPolarity(uint32 slaveSelect, uint32 polarity)
+ 497:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+ 498:.\Generated_Source\PSoC4/UART_1_SPI.c ****         uint32 ssPolarity;
+ 499:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 500:.\Generated_Source\PSoC4/UART_1_SPI.c ****         /* Get position of the polarity bit associated with slave select line */
+ 501:.\Generated_Source\PSoC4/UART_1_SPI.c ****         ssPolarity = UART_1_GET_SPI_CTRL_SSEL_POLARITY((uint32) 1u << slaveSelect);
+ 502:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 503:.\Generated_Source\PSoC4/UART_1_SPI.c ****         if (0u != polarity)
+ 504:.\Generated_Source\PSoC4/UART_1_SPI.c ****         {
+ 505:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SPI_CTRL_REG |= (uint32)  ssPolarity;
+ 506:.\Generated_Source\PSoC4/UART_1_SPI.c ****         }
+ 507:.\Generated_Source\PSoC4/UART_1_SPI.c ****         else
+ 508:.\Generated_Source\PSoC4/UART_1_SPI.c ****         {
+ 509:.\Generated_Source\PSoC4/UART_1_SPI.c ****             UART_1_SPI_CTRL_REG &= (uint32) ~ssPolarity;
+ 510:.\Generated_Source\PSoC4/UART_1_SPI.c ****         }
+ 511:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 512:.\Generated_Source\PSoC4/UART_1_SPI.c **** #endif /* !(UART_1_CY_SCBIP_V0 || UART_1_CY_SCBIP_V1) */
+ 513:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 514:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 515:.\Generated_Source\PSoC4/UART_1_SPI.c **** #if(UART_1_SPI_WAKE_ENABLE_CONST)
+ 516:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /*******************************************************************************
+ 517:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Function Name: UART_1_SpiSaveConfig
+ 518:.\Generated_Source\PSoC4/UART_1_SPI.c ****     ********************************************************************************
+ 519:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 520:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Summary:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 19
+
+
+ 521:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  Clears INTR_SPI_EC.WAKE_UP and enables it. This interrupt
+ 522:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  source triggers when the master assigns the SS line and wakes up the device.
+ 523:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 524:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Parameters:
+ 525:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 526:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 527:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Return:
+ 528:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 529:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 530:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *******************************************************************************/
+ 531:.\Generated_Source\PSoC4/UART_1_SPI.c ****     void UART_1_SpiSaveConfig(void)
+ 532:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+ 447              		.loc 1 532 0
+ 448              		.cfi_startproc
+ 533:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_ClearSpiExtClkInterruptSource(UART_1_INTR_SPI_EC_WAKE_UP);
+ 449              		.loc 1 533 0
+ 450 0000 0123     		mov	r3, #1
+ 451 0002 024A     		ldr	r2, .L32
+ 452 0004 1360     		str	r3, [r2]
+ 534:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SetSpiExtClkInterruptMode(UART_1_INTR_SPI_EC_WAKE_UP);
+ 453              		.loc 1 534 0
+ 454 0006 024A     		ldr	r2, .L32+4
+ 455 0008 1360     		str	r3, [r2]
+ 535:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 456              		.loc 1 535 0
+ 457              		@ sp needed
+ 458 000a 7047     		bx	lr
+ 459              	.L33:
+ 460              		.align	2
+ 461              	.L32:
+ 462 000c C00E0740 		.word	1074204352
+ 463 0010 C80E0740 		.word	1074204360
+ 464              		.cfi_endproc
+ 465              	.LFE4:
+ 466              		.size	UART_1_SpiSaveConfig, .-UART_1_SpiSaveConfig
+ 467              		.section	.text.UART_1_SpiRestoreConfig,"ax",%progbits
+ 468              		.align	2
+ 469              		.global	UART_1_SpiRestoreConfig
+ 470              		.code	16
+ 471              		.thumb_func
+ 472              		.type	UART_1_SpiRestoreConfig, %function
+ 473              	UART_1_SpiRestoreConfig:
+ 474              	.LFB5:
+ 536:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 537:.\Generated_Source\PSoC4/UART_1_SPI.c **** 
+ 538:.\Generated_Source\PSoC4/UART_1_SPI.c ****     /*******************************************************************************
+ 539:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Function Name: UART_1_SpiRestoreConfig
+ 540:.\Generated_Source\PSoC4/UART_1_SPI.c ****     ********************************************************************************
+ 541:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 542:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Summary:
+ 543:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  Disables the INTR_SPI_EC.WAKE_UP interrupt source. After wakeup
+ 544:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  slave does not drive the MISO line and the master receives 0xFF.
+ 545:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 546:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Parameters:
+ 547:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 548:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 549:.\Generated_Source\PSoC4/UART_1_SPI.c ****     * Return:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 20
+
+
+ 550:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *  None
+ 551:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *
+ 552:.\Generated_Source\PSoC4/UART_1_SPI.c ****     *******************************************************************************/
+ 553:.\Generated_Source\PSoC4/UART_1_SPI.c ****     void UART_1_SpiRestoreConfig(void)
+ 554:.\Generated_Source\PSoC4/UART_1_SPI.c ****     {
+ 475              		.loc 1 554 0
+ 476              		.cfi_startproc
+ 555:.\Generated_Source\PSoC4/UART_1_SPI.c ****         UART_1_SetSpiExtClkInterruptMode(UART_1_NO_INTR_SOURCES);
+ 477              		.loc 1 555 0
+ 478 0000 0022     		mov	r2, #0
+ 479 0002 014B     		ldr	r3, .L35
+ 480 0004 1A60     		str	r2, [r3]
+ 556:.\Generated_Source\PSoC4/UART_1_SPI.c ****     }
+ 481              		.loc 1 556 0
+ 482              		@ sp needed
+ 483 0006 7047     		bx	lr
+ 484              	.L36:
+ 485              		.align	2
+ 486              	.L35:
+ 487 0008 C80E0740 		.word	1074204360
+ 488              		.cfi_endproc
+ 489              	.LFE5:
+ 490              		.size	UART_1_SpiRestoreConfig, .-UART_1_SpiRestoreConfig
+ 491              		.global	UART_1_configSpi
+ 492              		.section	.rodata
+ 493              		.align	2
+ 494              		.type	UART_1_configSpi, %object
+ 495              		.size	UART_1_configSpi, 84
+ 496              	UART_1_configSpi:
+ 497 0000 00000000 		.word	0
+ 498 0004 00000000 		.word	0
+ 499 0008 00000000 		.word	0
+ 500 000c 10000000 		.word	16
+ 501 0010 00000000 		.word	0
+ 502 0014 00000000 		.word	0
+ 503 0018 00000000 		.word	0
+ 504 001c 08000000 		.word	8
+ 505 0020 08000000 		.word	8
+ 506 0024 01000000 		.word	1
+ 507 0028 01000000 		.word	1
+ 508 002c 00000000 		.word	0
+ 509 0030 00000000 		.word	0
+ 510 0034 00000000 		.word	0
+ 511 0038 00000000 		.word	0
+ 512 003c 01000000 		.word	1
+ 513 0040 00000000 		.word	0
+ 514 0044 07000000 		.word	7
+ 515 0048 00000000 		.word	0
+ 516 004c 00000000 		.word	0
+ 517 0050 00       		.byte	0
+ 518 0051 00       		.byte	0
+ 519 0052 00       		.byte	0
+ 520 0053 00       		.space	1
+ 521              		.text
+ 522              	.Letext0:
+ 523              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 524              		.file 3 ".\\Generated_Source\\PSoC4\\UART_1_SPI_UART.h"
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 21
+
+
+ 525              		.file 4 ".\\Generated_Source\\PSoC4\\UART_1_PVT.h"
+ 526              		.file 5 ".\\Generated_Source\\PSoC4\\UART_1_SPI_UART_PVT.h"
+ 527              		.file 6 "Generated_Source\\PSoC4/CyLib.h"
+ 528              		.section	.debug_info,"",%progbits
+ 529              	.Ldebug_info0:
+ 530 0000 4B040000 		.4byte	0x44b
+ 531 0004 0400     		.2byte	0x4
+ 532 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 533 000a 04       		.byte	0x4
+ 534 000b 01       		.uleb128 0x1
+ 535 000c 50000000 		.4byte	.LASF69
+ 536 0010 01       		.byte	0x1
+ 537 0011 9D020000 		.4byte	.LASF70
+ 538 0015 E6030000 		.4byte	.LASF71
+ 539 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 540 001d 00000000 		.4byte	0
+ 541 0021 00000000 		.4byte	.Ldebug_line0
+ 542 0025 02       		.uleb128 0x2
+ 543 0026 01       		.byte	0x1
+ 544 0027 06       		.byte	0x6
+ 545 0028 41010000 		.4byte	.LASF0
+ 546 002c 02       		.uleb128 0x2
+ 547 002d 01       		.byte	0x1
+ 548 002e 08       		.byte	0x8
+ 549 002f 23030000 		.4byte	.LASF1
+ 550 0033 02       		.uleb128 0x2
+ 551 0034 02       		.byte	0x2
+ 552 0035 05       		.byte	0x5
+ 553 0036 3E030000 		.4byte	.LASF2
+ 554 003a 02       		.uleb128 0x2
+ 555 003b 02       		.byte	0x2
+ 556 003c 07       		.byte	0x7
+ 557 003d 17020000 		.4byte	.LASF3
+ 558 0041 02       		.uleb128 0x2
+ 559 0042 04       		.byte	0x4
+ 560 0043 05       		.byte	0x5
+ 561 0044 65010000 		.4byte	.LASF4
+ 562 0048 02       		.uleb128 0x2
+ 563 0049 04       		.byte	0x4
+ 564 004a 07       		.byte	0x7
+ 565 004b F0010000 		.4byte	.LASF5
+ 566 004f 02       		.uleb128 0x2
+ 567 0050 08       		.byte	0x8
+ 568 0051 05       		.byte	0x5
+ 569 0052 33010000 		.4byte	.LASF6
+ 570 0056 02       		.uleb128 0x2
+ 571 0057 08       		.byte	0x8
+ 572 0058 07       		.byte	0x7
+ 573 0059 CC000000 		.4byte	.LASF7
+ 574 005d 03       		.uleb128 0x3
+ 575 005e 04       		.byte	0x4
+ 576 005f 05       		.byte	0x5
+ 577 0060 696E7400 		.ascii	"int\000"
+ 578 0064 02       		.uleb128 0x2
+ 579 0065 04       		.byte	0x4
+ 580 0066 07       		.byte	0x7
+ 581 0067 E3010000 		.4byte	.LASF8
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 22
+
+
+ 582 006b 04       		.uleb128 0x4
+ 583 006c A0010000 		.4byte	.LASF9
+ 584 0070 02       		.byte	0x2
+ 585 0071 B3       		.byte	0xb3
+ 586 0072 2C000000 		.4byte	0x2c
+ 587 0076 04       		.uleb128 0x4
+ 588 0077 DC010000 		.4byte	.LASF10
+ 589 007b 02       		.byte	0x2
+ 590 007c B5       		.byte	0xb5
+ 591 007d 48000000 		.4byte	0x48
+ 592 0081 02       		.uleb128 0x2
+ 593 0082 04       		.byte	0x4
+ 594 0083 04       		.byte	0x4
+ 595 0084 F3020000 		.4byte	.LASF11
+ 596 0088 02       		.uleb128 0x2
+ 597 0089 08       		.byte	0x8
+ 598 008a 04       		.byte	0x4
+ 599 008b C6010000 		.4byte	.LASF12
+ 600 008f 02       		.uleb128 0x2
+ 601 0090 01       		.byte	0x1
+ 602 0091 08       		.byte	0x8
+ 603 0092 B8030000 		.4byte	.LASF13
+ 604 0096 05       		.uleb128 0x5
+ 605 0097 6B000000 		.4byte	0x6b
+ 606 009b 06       		.uleb128 0x6
+ 607 009c 71020000 		.4byte	.LASF14
+ 608 00a0 02       		.byte	0x2
+ 609 00a1 5F01     		.2byte	0x15f
+ 610 00a3 A7000000 		.4byte	0xa7
+ 611 00a7 05       		.uleb128 0x5
+ 612 00a8 76000000 		.4byte	0x76
+ 613 00ac 06       		.uleb128 0x6
+ 614 00ad C2030000 		.4byte	.LASF15
+ 615 00b1 02       		.byte	0x2
+ 616 00b2 6F01     		.2byte	0x16f
+ 617 00b4 B8000000 		.4byte	0xb8
+ 618 00b8 07       		.uleb128 0x7
+ 619 00b9 04       		.byte	0x4
+ 620 00ba BE000000 		.4byte	0xbe
+ 621 00be 08       		.uleb128 0x8
+ 622 00bf 02       		.uleb128 0x2
+ 623 00c0 04       		.byte	0x4
+ 624 00c1 07       		.byte	0x7
+ 625 00c2 94020000 		.4byte	.LASF16
+ 626 00c6 09       		.uleb128 0x9
+ 627 00c7 54       		.byte	0x54
+ 628 00c8 03       		.byte	0x3
+ 629 00c9 0901     		.2byte	0x109
+ 630 00cb FB010000 		.4byte	0x1fb
+ 631 00cf 0A       		.uleb128 0xa
+ 632 00d0 BD030000 		.4byte	.LASF17
+ 633 00d4 03       		.byte	0x3
+ 634 00d5 0B01     		.2byte	0x10b
+ 635 00d7 76000000 		.4byte	0x76
+ 636 00db 00       		.byte	0
+ 637 00dc 0A       		.uleb128 0xa
+ 638 00dd 60020000 		.4byte	.LASF18
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 23
+
+
+ 639 00e1 03       		.byte	0x3
+ 640 00e2 0C01     		.2byte	0x10c
+ 641 00e4 76000000 		.4byte	0x76
+ 642 00e8 04       		.byte	0x4
+ 643 00e9 0A       		.uleb128 0xa
+ 644 00ea 8B020000 		.4byte	.LASF19
+ 645 00ee 03       		.byte	0x3
+ 646 00ef 0D01     		.2byte	0x10d
+ 647 00f1 76000000 		.4byte	0x76
+ 648 00f5 08       		.byte	0x8
+ 649 00f6 0A       		.uleb128 0xa
+ 650 00f7 72030000 		.4byte	.LASF20
+ 651 00fb 03       		.byte	0x3
+ 652 00fc 0E01     		.2byte	0x10e
+ 653 00fe 76000000 		.4byte	0x76
+ 654 0102 0C       		.byte	0xc
+ 655 0103 0A       		.uleb128 0xa
+ 656 0104 48030000 		.4byte	.LASF21
+ 657 0108 03       		.byte	0x3
+ 658 0109 0F01     		.2byte	0x10f
+ 659 010b 76000000 		.4byte	0x76
+ 660 010f 10       		.byte	0x10
+ 661 0110 0A       		.uleb128 0xa
+ 662 0111 BE040000 		.4byte	.LASF22
+ 663 0115 03       		.byte	0x3
+ 664 0116 1001     		.2byte	0x110
+ 665 0118 76000000 		.4byte	0x76
+ 666 011c 14       		.byte	0x14
+ 667 011d 0A       		.uleb128 0xa
+ 668 011e 7B010000 		.4byte	.LASF23
+ 669 0122 03       		.byte	0x3
+ 670 0123 1101     		.2byte	0x111
+ 671 0125 76000000 		.4byte	0x76
+ 672 0129 18       		.byte	0x18
+ 673 012a 0A       		.uleb128 0xa
+ 674 012b A8040000 		.4byte	.LASF24
+ 675 012f 03       		.byte	0x3
+ 676 0130 1201     		.2byte	0x112
+ 677 0132 76000000 		.4byte	0x76
+ 678 0136 1C       		.byte	0x1c
+ 679 0137 0A       		.uleb128 0xa
+ 680 0138 B3040000 		.4byte	.LASF25
+ 681 013c 03       		.byte	0x3
+ 682 013d 1301     		.2byte	0x113
+ 683 013f 76000000 		.4byte	0x76
+ 684 0143 20       		.byte	0x20
+ 685 0144 0A       		.uleb128 0xa
+ 686 0145 68020000 		.4byte	.LASF26
+ 687 0149 03       		.byte	0x3
+ 688 014a 1401     		.2byte	0x114
+ 689 014c 76000000 		.4byte	0x76
+ 690 0150 24       		.byte	0x24
+ 691 0151 0A       		.uleb128 0xa
+ 692 0152 4D020000 		.4byte	.LASF27
+ 693 0156 03       		.byte	0x3
+ 694 0157 1501     		.2byte	0x115
+ 695 0159 76000000 		.4byte	0x76
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 24
+
+
+ 696 015d 28       		.byte	0x28
+ 697 015e 0A       		.uleb128 0xa
+ 698 015f 31030000 		.4byte	.LASF28
+ 699 0163 03       		.byte	0x3
+ 700 0164 1601     		.2byte	0x116
+ 701 0166 76000000 		.4byte	0x76
+ 702 016a 2C       		.byte	0x2c
+ 703 016b 0A       		.uleb128 0xa
+ 704 016c 5C010000 		.4byte	.LASF29
+ 705 0170 03       		.byte	0x3
+ 706 0171 1701     		.2byte	0x117
+ 707 0173 FB010000 		.4byte	0x1fb
+ 708 0177 30       		.byte	0x30
+ 709 0178 0A       		.uleb128 0xa
+ 710 0179 43000000 		.4byte	.LASF30
+ 711 017d 03       		.byte	0x3
+ 712 017e 1801     		.2byte	0x118
+ 713 0180 76000000 		.4byte	0x76
+ 714 0184 34       		.byte	0x34
+ 715 0185 0A       		.uleb128 0xa
+ 716 0186 8F040000 		.4byte	.LASF31
+ 717 018a 03       		.byte	0x3
+ 718 018b 1901     		.2byte	0x119
+ 719 018d FB010000 		.4byte	0x1fb
+ 720 0191 38       		.byte	0x38
+ 721 0192 0A       		.uleb128 0xa
+ 722 0193 D6030000 		.4byte	.LASF32
+ 723 0197 03       		.byte	0x3
+ 724 0198 1A01     		.2byte	0x11a
+ 725 019a 76000000 		.4byte	0x76
+ 726 019e 3C       		.byte	0x3c
+ 727 019f 0A       		.uleb128 0xa
+ 728 01a0 D2020000 		.4byte	.LASF33
+ 729 01a4 03       		.byte	0x3
+ 730 01a5 1B01     		.2byte	0x11b
+ 731 01a7 76000000 		.4byte	0x76
+ 732 01ab 40       		.byte	0x40
+ 733 01ac 0A       		.uleb128 0xa
+ 734 01ad C3020000 		.4byte	.LASF34
+ 735 01b1 03       		.byte	0x3
+ 736 01b2 1C01     		.2byte	0x11c
+ 737 01b4 76000000 		.4byte	0x76
+ 738 01b8 44       		.byte	0x44
+ 739 01b9 0A       		.uleb128 0xa
+ 740 01ba 56040000 		.4byte	.LASF35
+ 741 01be 03       		.byte	0x3
+ 742 01bf 1D01     		.2byte	0x11d
+ 743 01c1 76000000 		.4byte	0x76
+ 744 01c5 48       		.byte	0x48
+ 745 01c6 0A       		.uleb128 0xa
+ 746 01c7 D1040000 		.4byte	.LASF36
+ 747 01cb 03       		.byte	0x3
+ 748 01cc 1E01     		.2byte	0x11e
+ 749 01ce 76000000 		.4byte	0x76
+ 750 01d2 4C       		.byte	0x4c
+ 751 01d3 0A       		.uleb128 0xa
+ 752 01d4 CD010000 		.4byte	.LASF37
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 25
+
+
+ 753 01d8 03       		.byte	0x3
+ 754 01d9 1F01     		.2byte	0x11f
+ 755 01db 6B000000 		.4byte	0x6b
+ 756 01df 50       		.byte	0x50
+ 757 01e0 0A       		.uleb128 0xa
+ 758 01e1 86010000 		.4byte	.LASF38
+ 759 01e5 03       		.byte	0x3
+ 760 01e6 2001     		.2byte	0x120
+ 761 01e8 6B000000 		.4byte	0x6b
+ 762 01ec 51       		.byte	0x51
+ 763 01ed 0A       		.uleb128 0xa
+ 764 01ee 8D030000 		.4byte	.LASF39
+ 765 01f2 03       		.byte	0x3
+ 766 01f3 2101     		.2byte	0x121
+ 767 01f5 6B000000 		.4byte	0x6b
+ 768 01f9 52       		.byte	0x52
+ 769 01fa 00       		.byte	0
+ 770 01fb 07       		.uleb128 0x7
+ 771 01fc 04       		.byte	0x4
+ 772 01fd 6B000000 		.4byte	0x6b
+ 773 0201 06       		.uleb128 0x6
+ 774 0202 5B030000 		.4byte	.LASF40
+ 775 0206 03       		.byte	0x3
+ 776 0207 2201     		.2byte	0x122
+ 777 0209 C6000000 		.4byte	0xc6
+ 778 020d 0B       		.uleb128 0xb
+ 779 020e 00000000 		.4byte	.LASF41
+ 780 0212 01       		.byte	0x1
+ 781 0213 EA       		.byte	0xea
+ 782 0214 00000000 		.4byte	.LFB1
+ 783 0218 0C000000 		.4byte	.LFE1-.LFB1
+ 784 021c 01       		.uleb128 0x1
+ 785 021d 9C       		.byte	0x9c
+ 786 021e 0C       		.uleb128 0xc
+ 787 021f 4D010000 		.4byte	.LASF42
+ 788 0223 01       		.byte	0x1
+ 789 0224 4301     		.2byte	0x143
+ 790 0226 00000000 		.4byte	.LFB2
+ 791 022a 0C000000 		.4byte	.LFE2-.LFB2
+ 792 022e 01       		.uleb128 0x1
+ 793 022f 9C       		.byte	0x9c
+ 794 0230 0D       		.uleb128 0xd
+ 795 0231 15000000 		.4byte	.LASF43
+ 796 0235 01       		.byte	0x1
+ 797 0236 C601     		.2byte	0x1c6
+ 798 0238 00000000 		.4byte	.LFB3
+ 799 023c 20000000 		.4byte	.LFE3-.LFB3
+ 800 0240 01       		.uleb128 0x1
+ 801 0241 9C       		.byte	0x9c
+ 802 0242 67020000 		.4byte	0x267
+ 803 0246 0E       		.uleb128 0xe
+ 804 0247 AC030000 		.4byte	.LASF45
+ 805 024b 01       		.byte	0x1
+ 806 024c C601     		.2byte	0x1c6
+ 807 024e 76000000 		.4byte	0x76
+ 808 0252 00000000 		.4byte	.LLST0
+ 809 0256 0F       		.uleb128 0xf
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 26
+
+
+ 810 0257 98010000 		.4byte	.LASF72
+ 811 025b 01       		.byte	0x1
+ 812 025c C801     		.2byte	0x1c8
+ 813 025e 76000000 		.4byte	0x76
+ 814 0262 21000000 		.4byte	.LLST1
+ 815 0266 00       		.byte	0
+ 816 0267 10       		.uleb128 0x10
+ 817 0268 34000000 		.4byte	.LASF44
+ 818 026c 01       		.byte	0x1
+ 819 026d 47       		.byte	0x47
+ 820 026e 00000000 		.4byte	.LFB0
+ 821 0272 08020000 		.4byte	.LFE0-.LFB0
+ 822 0276 01       		.uleb128 0x1
+ 823 0277 9C       		.byte	0x9c
+ 824 0278 05030000 		.4byte	0x305
+ 825 027c 11       		.uleb128 0x11
+ 826 027d CF030000 		.4byte	.LASF46
+ 827 0281 01       		.byte	0x1
+ 828 0282 47       		.byte	0x47
+ 829 0283 05030000 		.4byte	0x305
+ 830 0287 4A000000 		.4byte	.LLST2
+ 831 028b 12       		.uleb128 0x12
+ 832 028c 0C000000 		.4byte	.LVL7
+ 833 0290 E5030000 		.4byte	0x3e5
+ 834 0294 9E020000 		.4byte	0x29e
+ 835 0298 13       		.uleb128 0x13
+ 836 0299 01       		.uleb128 0x1
+ 837 029a 50       		.byte	0x50
+ 838 029b 01       		.uleb128 0x1
+ 839 029c 30       		.byte	0x30
+ 840 029d 00       		.byte	0
+ 841 029e 12       		.uleb128 0x12
+ 842 029f 18000000 		.4byte	.LVL10
+ 843 02a3 F6030000 		.4byte	0x3f6
+ 844 02a7 B6020000 		.4byte	0x2b6
+ 845 02ab 13       		.uleb128 0x13
+ 846 02ac 01       		.uleb128 0x1
+ 847 02ad 52       		.byte	0x52
+ 848 02ae 01       		.uleb128 0x1
+ 849 02af 30       		.byte	0x30
+ 850 02b0 13       		.uleb128 0x13
+ 851 02b1 01       		.uleb128 0x1
+ 852 02b2 50       		.byte	0x50
+ 853 02b3 01       		.uleb128 0x1
+ 854 02b4 32       		.byte	0x32
+ 855 02b5 00       		.byte	0
+ 856 02b6 12       		.uleb128 0x12
+ 857 02b7 32010000 		.4byte	.LVL11
+ 858 02bb 11040000 		.4byte	0x411
+ 859 02bf C9020000 		.4byte	0x2c9
+ 860 02c3 13       		.uleb128 0x13
+ 861 02c4 01       		.uleb128 0x1
+ 862 02c5 50       		.byte	0x50
+ 863 02c6 01       		.uleb128 0x1
+ 864 02c7 3B       		.byte	0x3b
+ 865 02c8 00       		.byte	0
+ 866 02c9 12       		.uleb128 0x12
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 27
+
+
+ 867 02ca 3A010000 		.4byte	.LVL12
+ 868 02ce 22040000 		.4byte	0x422
+ 869 02d2 E1020000 		.4byte	0x2e1
+ 870 02d6 13       		.uleb128 0x13
+ 871 02d7 01       		.uleb128 0x1
+ 872 02d8 51       		.byte	0x51
+ 873 02d9 01       		.uleb128 0x1
+ 874 02da 33       		.byte	0x33
+ 875 02db 13       		.uleb128 0x13
+ 876 02dc 01       		.uleb128 0x1
+ 877 02dd 50       		.byte	0x50
+ 878 02de 01       		.uleb128 0x1
+ 879 02df 3B       		.byte	0x3b
+ 880 02e0 00       		.byte	0
+ 881 02e1 12       		.uleb128 0x12
+ 882 02e2 42010000 		.4byte	.LVL13
+ 883 02e6 38040000 		.4byte	0x438
+ 884 02ea F4020000 		.4byte	0x2f4
+ 885 02ee 13       		.uleb128 0x13
+ 886 02ef 01       		.uleb128 0x1
+ 887 02f0 50       		.byte	0x50
+ 888 02f1 01       		.uleb128 0x1
+ 889 02f2 3B       		.byte	0x3b
+ 890 02f3 00       		.byte	0
+ 891 02f4 14       		.uleb128 0x14
+ 892 02f5 7E010000 		.4byte	.LVL14
+ 893 02f9 30020000 		.4byte	0x230
+ 894 02fd 13       		.uleb128 0x13
+ 895 02fe 01       		.uleb128 0x1
+ 896 02ff 50       		.byte	0x50
+ 897 0300 02       		.uleb128 0x2
+ 898 0301 75       		.byte	0x75
+ 899 0302 00       		.sleb128 0
+ 900 0303 00       		.byte	0
+ 901 0304 00       		.byte	0
+ 902 0305 07       		.uleb128 0x7
+ 903 0306 04       		.byte	0x4
+ 904 0307 0B030000 		.4byte	0x30b
+ 905 030b 15       		.uleb128 0x15
+ 906 030c 01020000 		.4byte	0x201
+ 907 0310 0C       		.uleb128 0xc
+ 908 0311 7A040000 		.4byte	.LASF47
+ 909 0315 01       		.byte	0x1
+ 910 0316 1302     		.2byte	0x213
+ 911 0318 00000000 		.4byte	.LFB4
+ 912 031c 14000000 		.4byte	.LFE4-.LFB4
+ 913 0320 01       		.uleb128 0x1
+ 914 0321 9C       		.byte	0x9c
+ 915 0322 0C       		.uleb128 0xc
+ 916 0323 E0040000 		.4byte	.LASF48
+ 917 0327 01       		.byte	0x1
+ 918 0328 2902     		.2byte	0x229
+ 919 032a 00000000 		.4byte	.LFB5
+ 920 032e 0C000000 		.4byte	.LFE5-.LFB5
+ 921 0332 01       		.uleb128 0x1
+ 922 0333 9C       		.byte	0x9c
+ 923 0334 16       		.uleb128 0x16
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 28
+
+
+ 924 0335 14030000 		.4byte	.LASF49
+ 925 0339 04       		.byte	0x4
+ 926 033a 42       		.byte	0x42
+ 927 033b 6B000000 		.4byte	0x6b
+ 928 033f 16       		.uleb128 0x16
+ 929 0340 F8040000 		.4byte	.LASF50
+ 930 0344 04       		.byte	0x4
+ 931 0345 43       		.byte	0x43
+ 932 0346 6B000000 		.4byte	0x6b
+ 933 034a 16       		.uleb128 0x16
+ 934 034b 02020000 		.4byte	.LASF51
+ 935 034f 04       		.byte	0x4
+ 936 0350 44       		.byte	0x44
+ 937 0351 6B000000 		.4byte	0x6b
+ 938 0355 16       		.uleb128 0x16
+ 939 0356 7D030000 		.4byte	.LASF52
+ 940 035a 04       		.byte	0x4
+ 941 035b 4B       		.byte	0x4b
+ 942 035c 60030000 		.4byte	0x360
+ 943 0360 07       		.uleb128 0x7
+ 944 0361 04       		.byte	0x4
+ 945 0362 96000000 		.4byte	0x96
+ 946 0366 16       		.uleb128 0x16
+ 947 0367 FB000000 		.4byte	.LASF53
+ 948 036b 04       		.byte	0x4
+ 949 036c 4C       		.byte	0x4c
+ 950 036d 6B000000 		.4byte	0x6b
+ 951 0371 16       		.uleb128 0x16
+ 952 0372 98030000 		.4byte	.LASF54
+ 953 0376 04       		.byte	0x4
+ 954 0377 4D       		.byte	0x4d
+ 955 0378 76000000 		.4byte	0x76
+ 956 037c 16       		.uleb128 0x16
+ 957 037d 98040000 		.4byte	.LASF55
+ 958 0381 04       		.byte	0x4
+ 959 0382 4F       		.byte	0x4f
+ 960 0383 60030000 		.4byte	0x360
+ 961 0387 16       		.uleb128 0x16
+ 962 0388 0D010000 		.4byte	.LASF56
+ 963 038c 04       		.byte	0x4
+ 964 038d 50       		.byte	0x50
+ 965 038e 6B000000 		.4byte	0x6b
+ 966 0392 16       		.uleb128 0x16
+ 967 0393 77020000 		.4byte	.LASF57
+ 968 0397 04       		.byte	0x4
+ 969 0398 51       		.byte	0x51
+ 970 0399 76000000 		.4byte	0x76
+ 971 039d 17       		.uleb128 0x17
+ 972 039e B5010000 		.4byte	.LASF58
+ 973 03a2 01       		.byte	0x1
+ 974 03a3 1B       		.byte	0x1b
+ 975 03a4 0B030000 		.4byte	0x30b
+ 976 03a8 05       		.uleb128 0x5
+ 977 03a9 03       		.byte	0x3
+ 978 03aa 00000000 		.4byte	UART_1_configSpi
+ 979 03ae 16       		.uleb128 0x16
+ 980 03af 2A020000 		.4byte	.LASF59
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 29
+
+
+ 981 03b3 05       		.byte	0x5
+ 982 03b4 1E       		.byte	0x1e
+ 983 03b5 A7000000 		.4byte	0xa7
+ 984 03b9 16       		.uleb128 0x16
+ 985 03ba 66040000 		.4byte	.LASF60
+ 986 03be 05       		.byte	0x5
+ 987 03bf 1F       		.byte	0x1f
+ 988 03c0 A7000000 		.4byte	0xa7
+ 989 03c4 16       		.uleb128 0x16
+ 990 03c5 E3000000 		.4byte	.LASF61
+ 991 03c9 05       		.byte	0x5
+ 992 03ca 20       		.byte	0x20
+ 993 03cb 96000000 		.4byte	0x96
+ 994 03cf 16       		.uleb128 0x16
+ 995 03d0 1F010000 		.4byte	.LASF62
+ 996 03d4 05       		.byte	0x5
+ 997 03d5 24       		.byte	0x24
+ 998 03d6 A7000000 		.4byte	0xa7
+ 999 03da 16       		.uleb128 0x16
+ 1000 03db F9020000 		.4byte	.LASF63
+ 1001 03df 05       		.byte	0x5
+ 1002 03e0 25       		.byte	0x25
+ 1003 03e1 A7000000 		.4byte	0xa7
+ 1004 03e5 18       		.uleb128 0x18
+ 1005 03e6 0D030000 		.4byte	.LASF64
+ 1006 03ea 06       		.byte	0x6
+ 1007 03eb 60       		.byte	0x60
+ 1008 03ec F6030000 		.4byte	0x3f6
+ 1009 03f0 19       		.uleb128 0x19
+ 1010 03f1 6B000000 		.4byte	0x6b
+ 1011 03f5 00       		.byte	0
+ 1012 03f6 18       		.uleb128 0x18
+ 1013 03f7 A6010000 		.4byte	.LASF65
+ 1014 03fb 04       		.byte	0x4
+ 1015 03fc 30       		.byte	0x30
+ 1016 03fd 11040000 		.4byte	0x411
+ 1017 0401 19       		.uleb128 0x19
+ 1018 0402 76000000 		.4byte	0x76
+ 1019 0406 19       		.uleb128 0x19
+ 1020 0407 76000000 		.4byte	0x76
+ 1021 040b 19       		.uleb128 0x19
+ 1022 040c 76000000 		.4byte	0x76
+ 1023 0410 00       		.byte	0
+ 1024 0411 18       		.uleb128 0x18
+ 1025 0412 6E010000 		.4byte	.LASF66
+ 1026 0416 06       		.byte	0x6
+ 1027 0417 4E       		.byte	0x4e
+ 1028 0418 22040000 		.4byte	0x422
+ 1029 041c 19       		.uleb128 0x19
+ 1030 041d 6B000000 		.4byte	0x6b
+ 1031 0421 00       		.byte	0
+ 1032 0422 18       		.uleb128 0x18
+ 1033 0423 E2020000 		.4byte	.LASF67
+ 1034 0427 06       		.byte	0x6
+ 1035 0428 49       		.byte	0x49
+ 1036 0429 38040000 		.4byte	0x438
+ 1037 042d 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 30
+
+
+ 1038 042e 6B000000 		.4byte	0x6b
+ 1039 0432 19       		.uleb128 0x19
+ 1040 0433 6B000000 		.4byte	0x6b
+ 1041 0437 00       		.byte	0
+ 1042 0438 1A       		.uleb128 0x1a
+ 1043 0439 3E020000 		.4byte	.LASF68
+ 1044 043d 06       		.byte	0x6
+ 1045 043e 46       		.byte	0x46
+ 1046 043f AC000000 		.4byte	0xac
+ 1047 0443 19       		.uleb128 0x19
+ 1048 0444 6B000000 		.4byte	0x6b
+ 1049 0448 19       		.uleb128 0x19
+ 1050 0449 AC000000 		.4byte	0xac
+ 1051 044d 00       		.byte	0
+ 1052 044e 00       		.byte	0
+ 1053              		.section	.debug_abbrev,"",%progbits
+ 1054              	.Ldebug_abbrev0:
+ 1055 0000 01       		.uleb128 0x1
+ 1056 0001 11       		.uleb128 0x11
+ 1057 0002 01       		.byte	0x1
+ 1058 0003 25       		.uleb128 0x25
+ 1059 0004 0E       		.uleb128 0xe
+ 1060 0005 13       		.uleb128 0x13
+ 1061 0006 0B       		.uleb128 0xb
+ 1062 0007 03       		.uleb128 0x3
+ 1063 0008 0E       		.uleb128 0xe
+ 1064 0009 1B       		.uleb128 0x1b
+ 1065 000a 0E       		.uleb128 0xe
+ 1066 000b 55       		.uleb128 0x55
+ 1067 000c 17       		.uleb128 0x17
+ 1068 000d 11       		.uleb128 0x11
+ 1069 000e 01       		.uleb128 0x1
+ 1070 000f 10       		.uleb128 0x10
+ 1071 0010 17       		.uleb128 0x17
+ 1072 0011 00       		.byte	0
+ 1073 0012 00       		.byte	0
+ 1074 0013 02       		.uleb128 0x2
+ 1075 0014 24       		.uleb128 0x24
+ 1076 0015 00       		.byte	0
+ 1077 0016 0B       		.uleb128 0xb
+ 1078 0017 0B       		.uleb128 0xb
+ 1079 0018 3E       		.uleb128 0x3e
+ 1080 0019 0B       		.uleb128 0xb
+ 1081 001a 03       		.uleb128 0x3
+ 1082 001b 0E       		.uleb128 0xe
+ 1083 001c 00       		.byte	0
+ 1084 001d 00       		.byte	0
+ 1085 001e 03       		.uleb128 0x3
+ 1086 001f 24       		.uleb128 0x24
+ 1087 0020 00       		.byte	0
+ 1088 0021 0B       		.uleb128 0xb
+ 1089 0022 0B       		.uleb128 0xb
+ 1090 0023 3E       		.uleb128 0x3e
+ 1091 0024 0B       		.uleb128 0xb
+ 1092 0025 03       		.uleb128 0x3
+ 1093 0026 08       		.uleb128 0x8
+ 1094 0027 00       		.byte	0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 31
+
+
+ 1095 0028 00       		.byte	0
+ 1096 0029 04       		.uleb128 0x4
+ 1097 002a 16       		.uleb128 0x16
+ 1098 002b 00       		.byte	0
+ 1099 002c 03       		.uleb128 0x3
+ 1100 002d 0E       		.uleb128 0xe
+ 1101 002e 3A       		.uleb128 0x3a
+ 1102 002f 0B       		.uleb128 0xb
+ 1103 0030 3B       		.uleb128 0x3b
+ 1104 0031 0B       		.uleb128 0xb
+ 1105 0032 49       		.uleb128 0x49
+ 1106 0033 13       		.uleb128 0x13
+ 1107 0034 00       		.byte	0
+ 1108 0035 00       		.byte	0
+ 1109 0036 05       		.uleb128 0x5
+ 1110 0037 35       		.uleb128 0x35
+ 1111 0038 00       		.byte	0
+ 1112 0039 49       		.uleb128 0x49
+ 1113 003a 13       		.uleb128 0x13
+ 1114 003b 00       		.byte	0
+ 1115 003c 00       		.byte	0
+ 1116 003d 06       		.uleb128 0x6
+ 1117 003e 16       		.uleb128 0x16
+ 1118 003f 00       		.byte	0
+ 1119 0040 03       		.uleb128 0x3
+ 1120 0041 0E       		.uleb128 0xe
+ 1121 0042 3A       		.uleb128 0x3a
+ 1122 0043 0B       		.uleb128 0xb
+ 1123 0044 3B       		.uleb128 0x3b
+ 1124 0045 05       		.uleb128 0x5
+ 1125 0046 49       		.uleb128 0x49
+ 1126 0047 13       		.uleb128 0x13
+ 1127 0048 00       		.byte	0
+ 1128 0049 00       		.byte	0
+ 1129 004a 07       		.uleb128 0x7
+ 1130 004b 0F       		.uleb128 0xf
+ 1131 004c 00       		.byte	0
+ 1132 004d 0B       		.uleb128 0xb
+ 1133 004e 0B       		.uleb128 0xb
+ 1134 004f 49       		.uleb128 0x49
+ 1135 0050 13       		.uleb128 0x13
+ 1136 0051 00       		.byte	0
+ 1137 0052 00       		.byte	0
+ 1138 0053 08       		.uleb128 0x8
+ 1139 0054 15       		.uleb128 0x15
+ 1140 0055 00       		.byte	0
+ 1141 0056 27       		.uleb128 0x27
+ 1142 0057 19       		.uleb128 0x19
+ 1143 0058 00       		.byte	0
+ 1144 0059 00       		.byte	0
+ 1145 005a 09       		.uleb128 0x9
+ 1146 005b 13       		.uleb128 0x13
+ 1147 005c 01       		.byte	0x1
+ 1148 005d 0B       		.uleb128 0xb
+ 1149 005e 0B       		.uleb128 0xb
+ 1150 005f 3A       		.uleb128 0x3a
+ 1151 0060 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 32
+
+
+ 1152 0061 3B       		.uleb128 0x3b
+ 1153 0062 05       		.uleb128 0x5
+ 1154 0063 01       		.uleb128 0x1
+ 1155 0064 13       		.uleb128 0x13
+ 1156 0065 00       		.byte	0
+ 1157 0066 00       		.byte	0
+ 1158 0067 0A       		.uleb128 0xa
+ 1159 0068 0D       		.uleb128 0xd
+ 1160 0069 00       		.byte	0
+ 1161 006a 03       		.uleb128 0x3
+ 1162 006b 0E       		.uleb128 0xe
+ 1163 006c 3A       		.uleb128 0x3a
+ 1164 006d 0B       		.uleb128 0xb
+ 1165 006e 3B       		.uleb128 0x3b
+ 1166 006f 05       		.uleb128 0x5
+ 1167 0070 49       		.uleb128 0x49
+ 1168 0071 13       		.uleb128 0x13
+ 1169 0072 38       		.uleb128 0x38
+ 1170 0073 0B       		.uleb128 0xb
+ 1171 0074 00       		.byte	0
+ 1172 0075 00       		.byte	0
+ 1173 0076 0B       		.uleb128 0xb
+ 1174 0077 2E       		.uleb128 0x2e
+ 1175 0078 00       		.byte	0
+ 1176 0079 3F       		.uleb128 0x3f
+ 1177 007a 19       		.uleb128 0x19
+ 1178 007b 03       		.uleb128 0x3
+ 1179 007c 0E       		.uleb128 0xe
+ 1180 007d 3A       		.uleb128 0x3a
+ 1181 007e 0B       		.uleb128 0xb
+ 1182 007f 3B       		.uleb128 0x3b
+ 1183 0080 0B       		.uleb128 0xb
+ 1184 0081 27       		.uleb128 0x27
+ 1185 0082 19       		.uleb128 0x19
+ 1186 0083 11       		.uleb128 0x11
+ 1187 0084 01       		.uleb128 0x1
+ 1188 0085 12       		.uleb128 0x12
+ 1189 0086 06       		.uleb128 0x6
+ 1190 0087 40       		.uleb128 0x40
+ 1191 0088 18       		.uleb128 0x18
+ 1192 0089 9742     		.uleb128 0x2117
+ 1193 008b 19       		.uleb128 0x19
+ 1194 008c 00       		.byte	0
+ 1195 008d 00       		.byte	0
+ 1196 008e 0C       		.uleb128 0xc
+ 1197 008f 2E       		.uleb128 0x2e
+ 1198 0090 00       		.byte	0
+ 1199 0091 3F       		.uleb128 0x3f
+ 1200 0092 19       		.uleb128 0x19
+ 1201 0093 03       		.uleb128 0x3
+ 1202 0094 0E       		.uleb128 0xe
+ 1203 0095 3A       		.uleb128 0x3a
+ 1204 0096 0B       		.uleb128 0xb
+ 1205 0097 3B       		.uleb128 0x3b
+ 1206 0098 05       		.uleb128 0x5
+ 1207 0099 27       		.uleb128 0x27
+ 1208 009a 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 33
+
+
+ 1209 009b 11       		.uleb128 0x11
+ 1210 009c 01       		.uleb128 0x1
+ 1211 009d 12       		.uleb128 0x12
+ 1212 009e 06       		.uleb128 0x6
+ 1213 009f 40       		.uleb128 0x40
+ 1214 00a0 18       		.uleb128 0x18
+ 1215 00a1 9742     		.uleb128 0x2117
+ 1216 00a3 19       		.uleb128 0x19
+ 1217 00a4 00       		.byte	0
+ 1218 00a5 00       		.byte	0
+ 1219 00a6 0D       		.uleb128 0xd
+ 1220 00a7 2E       		.uleb128 0x2e
+ 1221 00a8 01       		.byte	0x1
+ 1222 00a9 3F       		.uleb128 0x3f
+ 1223 00aa 19       		.uleb128 0x19
+ 1224 00ab 03       		.uleb128 0x3
+ 1225 00ac 0E       		.uleb128 0xe
+ 1226 00ad 3A       		.uleb128 0x3a
+ 1227 00ae 0B       		.uleb128 0xb
+ 1228 00af 3B       		.uleb128 0x3b
+ 1229 00b0 05       		.uleb128 0x5
+ 1230 00b1 27       		.uleb128 0x27
+ 1231 00b2 19       		.uleb128 0x19
+ 1232 00b3 11       		.uleb128 0x11
+ 1233 00b4 01       		.uleb128 0x1
+ 1234 00b5 12       		.uleb128 0x12
+ 1235 00b6 06       		.uleb128 0x6
+ 1236 00b7 40       		.uleb128 0x40
+ 1237 00b8 18       		.uleb128 0x18
+ 1238 00b9 9742     		.uleb128 0x2117
+ 1239 00bb 19       		.uleb128 0x19
+ 1240 00bc 01       		.uleb128 0x1
+ 1241 00bd 13       		.uleb128 0x13
+ 1242 00be 00       		.byte	0
+ 1243 00bf 00       		.byte	0
+ 1244 00c0 0E       		.uleb128 0xe
+ 1245 00c1 05       		.uleb128 0x5
+ 1246 00c2 00       		.byte	0
+ 1247 00c3 03       		.uleb128 0x3
+ 1248 00c4 0E       		.uleb128 0xe
+ 1249 00c5 3A       		.uleb128 0x3a
+ 1250 00c6 0B       		.uleb128 0xb
+ 1251 00c7 3B       		.uleb128 0x3b
+ 1252 00c8 05       		.uleb128 0x5
+ 1253 00c9 49       		.uleb128 0x49
+ 1254 00ca 13       		.uleb128 0x13
+ 1255 00cb 02       		.uleb128 0x2
+ 1256 00cc 17       		.uleb128 0x17
+ 1257 00cd 00       		.byte	0
+ 1258 00ce 00       		.byte	0
+ 1259 00cf 0F       		.uleb128 0xf
+ 1260 00d0 34       		.uleb128 0x34
+ 1261 00d1 00       		.byte	0
+ 1262 00d2 03       		.uleb128 0x3
+ 1263 00d3 0E       		.uleb128 0xe
+ 1264 00d4 3A       		.uleb128 0x3a
+ 1265 00d5 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 34
+
+
+ 1266 00d6 3B       		.uleb128 0x3b
+ 1267 00d7 05       		.uleb128 0x5
+ 1268 00d8 49       		.uleb128 0x49
+ 1269 00d9 13       		.uleb128 0x13
+ 1270 00da 02       		.uleb128 0x2
+ 1271 00db 17       		.uleb128 0x17
+ 1272 00dc 00       		.byte	0
+ 1273 00dd 00       		.byte	0
+ 1274 00de 10       		.uleb128 0x10
+ 1275 00df 2E       		.uleb128 0x2e
+ 1276 00e0 01       		.byte	0x1
+ 1277 00e1 3F       		.uleb128 0x3f
+ 1278 00e2 19       		.uleb128 0x19
+ 1279 00e3 03       		.uleb128 0x3
+ 1280 00e4 0E       		.uleb128 0xe
+ 1281 00e5 3A       		.uleb128 0x3a
+ 1282 00e6 0B       		.uleb128 0xb
+ 1283 00e7 3B       		.uleb128 0x3b
+ 1284 00e8 0B       		.uleb128 0xb
+ 1285 00e9 27       		.uleb128 0x27
+ 1286 00ea 19       		.uleb128 0x19
+ 1287 00eb 11       		.uleb128 0x11
+ 1288 00ec 01       		.uleb128 0x1
+ 1289 00ed 12       		.uleb128 0x12
+ 1290 00ee 06       		.uleb128 0x6
+ 1291 00ef 40       		.uleb128 0x40
+ 1292 00f0 18       		.uleb128 0x18
+ 1293 00f1 9742     		.uleb128 0x2117
+ 1294 00f3 19       		.uleb128 0x19
+ 1295 00f4 01       		.uleb128 0x1
+ 1296 00f5 13       		.uleb128 0x13
+ 1297 00f6 00       		.byte	0
+ 1298 00f7 00       		.byte	0
+ 1299 00f8 11       		.uleb128 0x11
+ 1300 00f9 05       		.uleb128 0x5
+ 1301 00fa 00       		.byte	0
+ 1302 00fb 03       		.uleb128 0x3
+ 1303 00fc 0E       		.uleb128 0xe
+ 1304 00fd 3A       		.uleb128 0x3a
+ 1305 00fe 0B       		.uleb128 0xb
+ 1306 00ff 3B       		.uleb128 0x3b
+ 1307 0100 0B       		.uleb128 0xb
+ 1308 0101 49       		.uleb128 0x49
+ 1309 0102 13       		.uleb128 0x13
+ 1310 0103 02       		.uleb128 0x2
+ 1311 0104 17       		.uleb128 0x17
+ 1312 0105 00       		.byte	0
+ 1313 0106 00       		.byte	0
+ 1314 0107 12       		.uleb128 0x12
+ 1315 0108 898201   		.uleb128 0x4109
+ 1316 010b 01       		.byte	0x1
+ 1317 010c 11       		.uleb128 0x11
+ 1318 010d 01       		.uleb128 0x1
+ 1319 010e 31       		.uleb128 0x31
+ 1320 010f 13       		.uleb128 0x13
+ 1321 0110 01       		.uleb128 0x1
+ 1322 0111 13       		.uleb128 0x13
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 35
+
+
+ 1323 0112 00       		.byte	0
+ 1324 0113 00       		.byte	0
+ 1325 0114 13       		.uleb128 0x13
+ 1326 0115 8A8201   		.uleb128 0x410a
+ 1327 0118 00       		.byte	0
+ 1328 0119 02       		.uleb128 0x2
+ 1329 011a 18       		.uleb128 0x18
+ 1330 011b 9142     		.uleb128 0x2111
+ 1331 011d 18       		.uleb128 0x18
+ 1332 011e 00       		.byte	0
+ 1333 011f 00       		.byte	0
+ 1334 0120 14       		.uleb128 0x14
+ 1335 0121 898201   		.uleb128 0x4109
+ 1336 0124 01       		.byte	0x1
+ 1337 0125 11       		.uleb128 0x11
+ 1338 0126 01       		.uleb128 0x1
+ 1339 0127 31       		.uleb128 0x31
+ 1340 0128 13       		.uleb128 0x13
+ 1341 0129 00       		.byte	0
+ 1342 012a 00       		.byte	0
+ 1343 012b 15       		.uleb128 0x15
+ 1344 012c 26       		.uleb128 0x26
+ 1345 012d 00       		.byte	0
+ 1346 012e 49       		.uleb128 0x49
+ 1347 012f 13       		.uleb128 0x13
+ 1348 0130 00       		.byte	0
+ 1349 0131 00       		.byte	0
+ 1350 0132 16       		.uleb128 0x16
+ 1351 0133 34       		.uleb128 0x34
+ 1352 0134 00       		.byte	0
+ 1353 0135 03       		.uleb128 0x3
+ 1354 0136 0E       		.uleb128 0xe
+ 1355 0137 3A       		.uleb128 0x3a
+ 1356 0138 0B       		.uleb128 0xb
+ 1357 0139 3B       		.uleb128 0x3b
+ 1358 013a 0B       		.uleb128 0xb
+ 1359 013b 49       		.uleb128 0x49
+ 1360 013c 13       		.uleb128 0x13
+ 1361 013d 3F       		.uleb128 0x3f
+ 1362 013e 19       		.uleb128 0x19
+ 1363 013f 3C       		.uleb128 0x3c
+ 1364 0140 19       		.uleb128 0x19
+ 1365 0141 00       		.byte	0
+ 1366 0142 00       		.byte	0
+ 1367 0143 17       		.uleb128 0x17
+ 1368 0144 34       		.uleb128 0x34
+ 1369 0145 00       		.byte	0
+ 1370 0146 03       		.uleb128 0x3
+ 1371 0147 0E       		.uleb128 0xe
+ 1372 0148 3A       		.uleb128 0x3a
+ 1373 0149 0B       		.uleb128 0xb
+ 1374 014a 3B       		.uleb128 0x3b
+ 1375 014b 0B       		.uleb128 0xb
+ 1376 014c 49       		.uleb128 0x49
+ 1377 014d 13       		.uleb128 0x13
+ 1378 014e 3F       		.uleb128 0x3f
+ 1379 014f 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 36
+
+
+ 1380 0150 02       		.uleb128 0x2
+ 1381 0151 18       		.uleb128 0x18
+ 1382 0152 00       		.byte	0
+ 1383 0153 00       		.byte	0
+ 1384 0154 18       		.uleb128 0x18
+ 1385 0155 2E       		.uleb128 0x2e
+ 1386 0156 01       		.byte	0x1
+ 1387 0157 3F       		.uleb128 0x3f
+ 1388 0158 19       		.uleb128 0x19
+ 1389 0159 03       		.uleb128 0x3
+ 1390 015a 0E       		.uleb128 0xe
+ 1391 015b 3A       		.uleb128 0x3a
+ 1392 015c 0B       		.uleb128 0xb
+ 1393 015d 3B       		.uleb128 0x3b
+ 1394 015e 0B       		.uleb128 0xb
+ 1395 015f 27       		.uleb128 0x27
+ 1396 0160 19       		.uleb128 0x19
+ 1397 0161 3C       		.uleb128 0x3c
+ 1398 0162 19       		.uleb128 0x19
+ 1399 0163 01       		.uleb128 0x1
+ 1400 0164 13       		.uleb128 0x13
+ 1401 0165 00       		.byte	0
+ 1402 0166 00       		.byte	0
+ 1403 0167 19       		.uleb128 0x19
+ 1404 0168 05       		.uleb128 0x5
+ 1405 0169 00       		.byte	0
+ 1406 016a 49       		.uleb128 0x49
+ 1407 016b 13       		.uleb128 0x13
+ 1408 016c 00       		.byte	0
+ 1409 016d 00       		.byte	0
+ 1410 016e 1A       		.uleb128 0x1a
+ 1411 016f 2E       		.uleb128 0x2e
+ 1412 0170 01       		.byte	0x1
+ 1413 0171 3F       		.uleb128 0x3f
+ 1414 0172 19       		.uleb128 0x19
+ 1415 0173 03       		.uleb128 0x3
+ 1416 0174 0E       		.uleb128 0xe
+ 1417 0175 3A       		.uleb128 0x3a
+ 1418 0176 0B       		.uleb128 0xb
+ 1419 0177 3B       		.uleb128 0x3b
+ 1420 0178 0B       		.uleb128 0xb
+ 1421 0179 27       		.uleb128 0x27
+ 1422 017a 19       		.uleb128 0x19
+ 1423 017b 49       		.uleb128 0x49
+ 1424 017c 13       		.uleb128 0x13
+ 1425 017d 3C       		.uleb128 0x3c
+ 1426 017e 19       		.uleb128 0x19
+ 1427 017f 00       		.byte	0
+ 1428 0180 00       		.byte	0
+ 1429 0181 00       		.byte	0
+ 1430              		.section	.debug_loc,"",%progbits
+ 1431              	.Ldebug_loc0:
+ 1432              	.LLST0:
+ 1433 0000 00000000 		.4byte	.LVL0
+ 1434 0004 0A000000 		.4byte	.LVL3
+ 1435 0008 0100     		.2byte	0x1
+ 1436 000a 50       		.byte	0x50
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 37
+
+
+ 1437 000b 0A000000 		.4byte	.LVL3
+ 1438 000f 20000000 		.4byte	.LFE3
+ 1439 0013 0400     		.2byte	0x4
+ 1440 0015 F3       		.byte	0xf3
+ 1441 0016 01       		.uleb128 0x1
+ 1442 0017 50       		.byte	0x50
+ 1443 0018 9F       		.byte	0x9f
+ 1444 0019 00000000 		.4byte	0
+ 1445 001d 00000000 		.4byte	0
+ 1446              	.LLST1:
+ 1447 0021 04000000 		.4byte	.LVL1
+ 1448 0025 08000000 		.4byte	.LVL2
+ 1449 0029 0100     		.2byte	0x1
+ 1450 002b 51       		.byte	0x51
+ 1451 002c 08000000 		.4byte	.LVL2
+ 1452 0030 12000000 		.4byte	.LVL4
+ 1453 0034 0100     		.2byte	0x1
+ 1454 0036 52       		.byte	0x52
+ 1455 0037 12000000 		.4byte	.LVL4
+ 1456 003b 20000000 		.4byte	.LFE3
+ 1457 003f 0100     		.2byte	0x1
+ 1458 0041 50       		.byte	0x50
+ 1459 0042 00000000 		.4byte	0
+ 1460 0046 00000000 		.4byte	0
+ 1461              	.LLST2:
+ 1462 004a 00000000 		.4byte	.LVL5
+ 1463 004e 08000000 		.4byte	.LVL6
+ 1464 0052 0100     		.2byte	0x1
+ 1465 0054 50       		.byte	0x50
+ 1466 0055 08000000 		.4byte	.LVL6
+ 1467 0059 0E000000 		.4byte	.LVL8
+ 1468 005d 0100     		.2byte	0x1
+ 1469 005f 54       		.byte	0x54
+ 1470 0060 0E000000 		.4byte	.LVL8
+ 1471 0064 10000000 		.4byte	.LVL9
+ 1472 0068 0100     		.2byte	0x1
+ 1473 006a 50       		.byte	0x50
+ 1474 006b 10000000 		.4byte	.LVL9
+ 1475 006f 92010000 		.4byte	.LVL15
+ 1476 0073 0100     		.2byte	0x1
+ 1477 0075 54       		.byte	0x54
+ 1478 0076 92010000 		.4byte	.LVL15
+ 1479 007a 08020000 		.4byte	.LFE0
+ 1480 007e 0400     		.2byte	0x4
+ 1481 0080 F3       		.byte	0xf3
+ 1482 0081 01       		.uleb128 0x1
+ 1483 0082 50       		.byte	0x50
+ 1484 0083 9F       		.byte	0x9f
+ 1485 0084 00000000 		.4byte	0
+ 1486 0088 00000000 		.4byte	0
+ 1487              		.section	.debug_aranges,"",%progbits
+ 1488 0000 44000000 		.4byte	0x44
+ 1489 0004 0200     		.2byte	0x2
+ 1490 0006 00000000 		.4byte	.Ldebug_info0
+ 1491 000a 04       		.byte	0x4
+ 1492 000b 00       		.byte	0
+ 1493 000c 0000     		.2byte	0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 38
+
+
+ 1494 000e 0000     		.2byte	0
+ 1495 0010 00000000 		.4byte	.LFB1
+ 1496 0014 0C000000 		.4byte	.LFE1-.LFB1
+ 1497 0018 00000000 		.4byte	.LFB2
+ 1498 001c 0C000000 		.4byte	.LFE2-.LFB2
+ 1499 0020 00000000 		.4byte	.LFB3
+ 1500 0024 20000000 		.4byte	.LFE3-.LFB3
+ 1501 0028 00000000 		.4byte	.LFB0
+ 1502 002c 08020000 		.4byte	.LFE0-.LFB0
+ 1503 0030 00000000 		.4byte	.LFB4
+ 1504 0034 14000000 		.4byte	.LFE4-.LFB4
+ 1505 0038 00000000 		.4byte	.LFB5
+ 1506 003c 0C000000 		.4byte	.LFE5-.LFB5
+ 1507 0040 00000000 		.4byte	0
+ 1508 0044 00000000 		.4byte	0
+ 1509              		.section	.debug_ranges,"",%progbits
+ 1510              	.Ldebug_ranges0:
+ 1511 0000 00000000 		.4byte	.LFB1
+ 1512 0004 0C000000 		.4byte	.LFE1
+ 1513 0008 00000000 		.4byte	.LFB2
+ 1514 000c 0C000000 		.4byte	.LFE2
+ 1515 0010 00000000 		.4byte	.LFB3
+ 1516 0014 20000000 		.4byte	.LFE3
+ 1517 0018 00000000 		.4byte	.LFB0
+ 1518 001c 08020000 		.4byte	.LFE0
+ 1519 0020 00000000 		.4byte	.LFB4
+ 1520 0024 14000000 		.4byte	.LFE4
+ 1521 0028 00000000 		.4byte	.LFB5
+ 1522 002c 0C000000 		.4byte	.LFE5
+ 1523 0030 00000000 		.4byte	0
+ 1524 0034 00000000 		.4byte	0
+ 1525              		.section	.debug_line,"",%progbits
+ 1526              	.Ldebug_line0:
+ 1527 0000 66010000 		.section	.debug_str,"MS",%progbits,1
+ 1527      0200A900 
+ 1527      00000201 
+ 1527      FB0E0D00 
+ 1527      01010101 
+ 1528              	.LASF41:
+ 1529 0000 55415254 		.ascii	"UART_1_SpiPostEnable\000"
+ 1529      5F315F53 
+ 1529      7069506F 
+ 1529      7374456E 
+ 1529      61626C65 
+ 1530              	.LASF43:
+ 1531 0015 55415254 		.ascii	"UART_1_SpiSetActiveSlaveSelect\000"
+ 1531      5F315F53 
+ 1531      70695365 
+ 1531      74416374 
+ 1531      69766553 
+ 1532              	.LASF44:
+ 1533 0034 55415254 		.ascii	"UART_1_SpiInit\000"
+ 1533      5F315F53 
+ 1533      7069496E 
+ 1533      697400
+ 1534              	.LASF30:
+ 1535 0043 74784275 		.ascii	"txBufferSize\000"
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 39
+
+
+ 1535      66666572 
+ 1535      53697A65 
+ 1535      00
+ 1536              	.LASF69:
+ 1537 0050 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1537      4320342E 
+ 1537      382E3420 
+ 1537      32303134 
+ 1537      30353236 
+ 1538 0083 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1538      20726576 
+ 1538      6973696F 
+ 1538      6E203231 
+ 1538      31333538 
+ 1539 00b6 67202D66 		.ascii	"g -ffunction-sections\000"
+ 1539      66756E63 
+ 1539      74696F6E 
+ 1539      2D736563 
+ 1539      74696F6E 
+ 1540              	.LASF7:
+ 1541 00cc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1541      206C6F6E 
+ 1541      6720756E 
+ 1541      7369676E 
+ 1541      65642069 
+ 1542              	.LASF61:
+ 1543 00e3 55415254 		.ascii	"UART_1_rxBufferOverflow\000"
+ 1543      5F315F72 
+ 1543      78427566 
+ 1543      6665724F 
+ 1543      76657266 
+ 1544              	.LASF53:
+ 1545 00fb 55415254 		.ascii	"UART_1_rxDataBits\000"
+ 1545      5F315F72 
+ 1545      78446174 
+ 1545      61426974 
+ 1545      7300
+ 1546              	.LASF56:
+ 1547 010d 55415254 		.ascii	"UART_1_txDataBits\000"
+ 1547      5F315F74 
+ 1547      78446174 
+ 1547      61426974 
+ 1547      7300
+ 1548              	.LASF62:
+ 1549 011f 55415254 		.ascii	"UART_1_txBufferHead\000"
+ 1549      5F315F74 
+ 1549      78427566 
+ 1549      66657248 
+ 1549      65616400 
+ 1550              	.LASF6:
+ 1551 0133 6C6F6E67 		.ascii	"long long int\000"
+ 1551      206C6F6E 
+ 1551      6720696E 
+ 1551      7400
+ 1552              	.LASF0:
+ 1553 0141 7369676E 		.ascii	"signed char\000"
+ 1553      65642063 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 40
+
+
+ 1553      68617200 
+ 1554              	.LASF42:
+ 1555 014d 55415254 		.ascii	"UART_1_SpiStop\000"
+ 1555      5F315F53 
+ 1555      70695374 
+ 1555      6F7000
+ 1556              	.LASF29:
+ 1557 015c 72784275 		.ascii	"rxBuffer\000"
+ 1557      66666572 
+ 1557      00
+ 1558              	.LASF4:
+ 1559 0165 6C6F6E67 		.ascii	"long int\000"
+ 1559      20696E74 
+ 1559      00
+ 1560              	.LASF66:
+ 1561 016e 4379496E 		.ascii	"CyIntDisable\000"
+ 1561      74446973 
+ 1561      61626C65 
+ 1561      00
+ 1562              	.LASF23:
+ 1563 017b 656E6162 		.ascii	"enableWake\000"
+ 1563      6C655761 
+ 1563      6B6500
+ 1564              	.LASF38:
+ 1565 0186 656E6162 		.ascii	"enableFreeRunSclk\000"
+ 1565      6C654672 
+ 1565      65655275 
+ 1565      6E53636C 
+ 1565      6B00
+ 1566              	.LASF72:
+ 1567 0198 73706943 		.ascii	"spiCtrl\000"
+ 1567      74726C00 
+ 1568              	.LASF9:
+ 1569 01a0 75696E74 		.ascii	"uint8\000"
+ 1569      3800
+ 1570              	.LASF65:
+ 1571 01a6 55415254 		.ascii	"UART_1_SetPins\000"
+ 1571      5F315F53 
+ 1571      65745069 
+ 1571      6E7300
+ 1572              	.LASF58:
+ 1573 01b5 55415254 		.ascii	"UART_1_configSpi\000"
+ 1573      5F315F63 
+ 1573      6F6E6669 
+ 1573      67537069 
+ 1573      00
+ 1574              	.LASF12:
+ 1575 01c6 646F7562 		.ascii	"double\000"
+ 1575      6C6500
+ 1576              	.LASF37:
+ 1577 01cd 656E6162 		.ascii	"enableByteMode\000"
+ 1577      6C654279 
+ 1577      74654D6F 
+ 1577      646500
+ 1578              	.LASF10:
+ 1579 01dc 75696E74 		.ascii	"uint32\000"
+ 1579      333200
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 41
+
+
+ 1580              	.LASF8:
+ 1581 01e3 756E7369 		.ascii	"unsigned int\000"
+ 1581      676E6564 
+ 1581      20696E74 
+ 1581      00
+ 1582              	.LASF5:
+ 1583 01f0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1583      20756E73 
+ 1583      69676E65 
+ 1583      6420696E 
+ 1583      7400
+ 1584              	.LASF51:
+ 1585 0202 55415254 		.ascii	"UART_1_scbEnableIntr\000"
+ 1585      5F315F73 
+ 1585      6362456E 
+ 1585      61626C65 
+ 1585      496E7472 
+ 1586              	.LASF3:
+ 1587 0217 73686F72 		.ascii	"short unsigned int\000"
+ 1587      7420756E 
+ 1587      7369676E 
+ 1587      65642069 
+ 1587      6E7400
+ 1588              	.LASF59:
+ 1589 022a 55415254 		.ascii	"UART_1_rxBufferHead\000"
+ 1589      5F315F72 
+ 1589      78427566 
+ 1589      66657248 
+ 1589      65616400 
+ 1590              	.LASF68:
+ 1591 023e 4379496E 		.ascii	"CyIntSetVector\000"
+ 1591      74536574 
+ 1591      56656374 
+ 1591      6F7200
+ 1592              	.LASF27:
+ 1593 024d 7472616E 		.ascii	"transferSeperation\000"
+ 1593      73666572 
+ 1593      53657065 
+ 1593      72617469 
+ 1593      6F6E00
+ 1594              	.LASF18:
+ 1595 0260 7375626D 		.ascii	"submode\000"
+ 1595      6F646500 
+ 1596              	.LASF26:
+ 1597 0268 6269744F 		.ascii	"bitOrder\000"
+ 1597      72646572 
+ 1597      00
+ 1598              	.LASF14:
+ 1599 0271 72656733 		.ascii	"reg32\000"
+ 1599      3200
+ 1600              	.LASF57:
+ 1601 0277 55415254 		.ascii	"UART_1_txBufferSize\000"
+ 1601      5F315F74 
+ 1601      78427566 
+ 1601      66657253 
+ 1601      697A6500 
+ 1602              	.LASF19:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 42
+
+
+ 1603 028b 73636C6B 		.ascii	"sclkMode\000"
+ 1603      4D6F6465 
+ 1603      00
+ 1604              	.LASF16:
+ 1605 0294 73697A65 		.ascii	"sizetype\000"
+ 1605      74797065 
+ 1605      00
+ 1606              	.LASF70:
+ 1607 029d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_SPI.c\000"
+ 1607      6E657261 
+ 1607      7465645F 
+ 1607      536F7572 
+ 1607      63655C50 
+ 1608              	.LASF34:
+ 1609 02c3 72785472 		.ascii	"rxTriggerLevel\000"
+ 1609      69676765 
+ 1609      724C6576 
+ 1609      656C00
+ 1610              	.LASF33:
+ 1611 02d2 7278496E 		.ascii	"rxInterruptMask\000"
+ 1611      74657272 
+ 1611      7570744D 
+ 1611      61736B00 
+ 1612              	.LASF67:
+ 1613 02e2 4379496E 		.ascii	"CyIntSetPriority\000"
+ 1613      74536574 
+ 1613      5072696F 
+ 1613      72697479 
+ 1613      00
+ 1614              	.LASF11:
+ 1615 02f3 666C6F61 		.ascii	"float\000"
+ 1615      7400
+ 1616              	.LASF63:
+ 1617 02f9 55415254 		.ascii	"UART_1_txBufferTail\000"
+ 1617      5F315F74 
+ 1617      78427566 
+ 1617      66657254 
+ 1617      61696C00 
+ 1618              	.LASF64:
+ 1619 030d 43794861 		.ascii	"CyHalt\000"
+ 1619      6C7400
+ 1620              	.LASF49:
+ 1621 0314 55415254 		.ascii	"UART_1_scbMode\000"
+ 1621      5F315F73 
+ 1621      63624D6F 
+ 1621      646500
+ 1622              	.LASF1:
+ 1623 0323 756E7369 		.ascii	"unsigned char\000"
+ 1623      676E6564 
+ 1623      20636861 
+ 1623      7200
+ 1624              	.LASF28:
+ 1625 0331 72784275 		.ascii	"rxBufferSize\000"
+ 1625      66666572 
+ 1625      53697A65 
+ 1625      00
+ 1626              	.LASF2:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 43
+
+
+ 1627 033e 73686F72 		.ascii	"short int\000"
+ 1627      7420696E 
+ 1627      7400
+ 1628              	.LASF21:
+ 1629 0348 656E6162 		.ascii	"enableMedianFilter\000"
+ 1629      6C654D65 
+ 1629      6469616E 
+ 1629      46696C74 
+ 1629      657200
+ 1630              	.LASF40:
+ 1631 035b 55415254 		.ascii	"UART_1_SPI_INIT_STRUCT\000"
+ 1631      5F315F53 
+ 1631      50495F49 
+ 1631      4E49545F 
+ 1631      53545255 
+ 1632              	.LASF20:
+ 1633 0372 6F766572 		.ascii	"oversample\000"
+ 1633      73616D70 
+ 1633      6C6500
+ 1634              	.LASF52:
+ 1635 037d 55415254 		.ascii	"UART_1_rxBuffer\000"
+ 1635      5F315F72 
+ 1635      78427566 
+ 1635      66657200 
+ 1636              	.LASF39:
+ 1637 038d 706F6C61 		.ascii	"polaritySs\000"
+ 1637      72697479 
+ 1637      537300
+ 1638              	.LASF54:
+ 1639 0398 55415254 		.ascii	"UART_1_rxBufferSize\000"
+ 1639      5F315F72 
+ 1639      78427566 
+ 1639      66657253 
+ 1639      697A6500 
+ 1640              	.LASF45:
+ 1641 03ac 736C6176 		.ascii	"slaveSelect\000"
+ 1641      6553656C 
+ 1641      65637400 
+ 1642              	.LASF13:
+ 1643 03b8 63686172 		.ascii	"char\000"
+ 1643      00
+ 1644              	.LASF17:
+ 1645 03bd 6D6F6465 		.ascii	"mode\000"
+ 1645      00
+ 1646              	.LASF15:
+ 1647 03c2 63796973 		.ascii	"cyisraddress\000"
+ 1647      72616464 
+ 1647      72657373 
+ 1647      00
+ 1648              	.LASF46:
+ 1649 03cf 636F6E66 		.ascii	"config\000"
+ 1649      696700
+ 1650              	.LASF32:
+ 1651 03d6 656E6162 		.ascii	"enableInterrupt\000"
+ 1651      6C65496E 
+ 1651      74657272 
+ 1651      75707400 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 44
+
+
+ 1652              	.LASF71:
+ 1653 03e6 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
+ 1653      73657273 
+ 1653      5C4D6172 
+ 1653      63656C6F 
+ 1653      5C446F63 
+ 1654 0414 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
+ 1654      686F6761 
+ 1654      725C5073 
+ 1654      6F635F43 
+ 1654      72656174 
+ 1655 0444 66616365 		.ascii	"face_driver.cydsn\000"
+ 1655      5F647269 
+ 1655      7665722E 
+ 1655      63796473 
+ 1655      6E00
+ 1656              	.LASF35:
+ 1657 0456 7478496E 		.ascii	"txInterruptMask\000"
+ 1657      74657272 
+ 1657      7570744D 
+ 1657      61736B00 
+ 1658              	.LASF60:
+ 1659 0466 55415254 		.ascii	"UART_1_rxBufferTail\000"
+ 1659      5F315F72 
+ 1659      78427566 
+ 1659      66657254 
+ 1659      61696C00 
+ 1660              	.LASF47:
+ 1661 047a 55415254 		.ascii	"UART_1_SpiSaveConfig\000"
+ 1661      5F315F53 
+ 1661      70695361 
+ 1661      7665436F 
+ 1661      6E666967 
+ 1662              	.LASF31:
+ 1663 048f 74784275 		.ascii	"txBuffer\000"
+ 1663      66666572 
+ 1663      00
+ 1664              	.LASF55:
+ 1665 0498 55415254 		.ascii	"UART_1_txBuffer\000"
+ 1665      5F315F74 
+ 1665      78427566 
+ 1665      66657200 
+ 1666              	.LASF24:
+ 1667 04a8 72784461 		.ascii	"rxDataBits\000"
+ 1667      74614269 
+ 1667      747300
+ 1668              	.LASF25:
+ 1669 04b3 74784461 		.ascii	"txDataBits\000"
+ 1669      74614269 
+ 1669      747300
+ 1670              	.LASF22:
+ 1671 04be 656E6162 		.ascii	"enableLateSampling\000"
+ 1671      6C654C61 
+ 1671      74655361 
+ 1671      6D706C69 
+ 1671      6E6700
+ 1672              	.LASF36:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc65jsY1.s 			page 45
+
+
+ 1673 04d1 74785472 		.ascii	"txTriggerLevel\000"
+ 1673      69676765 
+ 1673      724C6576 
+ 1673      656C00
+ 1674              	.LASF48:
+ 1675 04e0 55415254 		.ascii	"UART_1_SpiRestoreConfig\000"
+ 1675      5F315F53 
+ 1675      70695265 
+ 1675      73746F72 
+ 1675      65436F6E 
+ 1676              	.LASF50:
+ 1677 04f8 55415254 		.ascii	"UART_1_scbEnableWake\000"
+ 1677      5F315F73 
+ 1677      6362456E 
+ 1677      61626C65 
+ 1677      57616B65 
+ 1678              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

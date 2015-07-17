@@ -1,0 +1,3975 @@
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"UART_1_EZI2C.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.UART_1_EzI2CUpdateRxMatchReg,"ax",%progbits
+  18              		.align	2
+  19              		.code	16
+  20              		.thumb_func
+  21              		.type	UART_1_EzI2CUpdateRxMatchReg, %function
+  22              	UART_1_EzI2CUpdateRxMatchReg:
+  23              	.LFB7:
+  24              		.file 1 ".\\Generated_Source\\PSoC4\\UART_1_EZI2C.c"
+   1:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * File Name: UART_1_EZI2C.c
+   3:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Version 3.0
+   4:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+   5:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Description:
+   6:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  This file provides the source code to the API for the SCB Component in
+   7:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  EZI2C mode.
+   8:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+   9:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Note:
+  10:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+  11:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************
+  12:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  18:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #include "UART_1_PVT.h"
+  19:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #include "UART_1_EZI2C_PVT.h"
+  20:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  21:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  22:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /***************************************
+  23:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *      EZI2C Private Vars
+  24:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ***************************************/
+  25:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  26:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** volatile uint8 UART_1_curStatus; /* Status byte */
+  27:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint8 UART_1_fsmState;           /* FSM state   */
+  28:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  29:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /* Variables intended to be used with Buffer 1: Primary slave address */
+  30:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** volatile uint8 * UART_1_dataBuffer1; /* Pointer to data buffer 1 */
+  31:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_bufSizeBuf1; /* Size of buffer 1 in bytes      */
+  32:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_protectBuf1; /* Start index of write protected area buffer 1 */
+  33:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_offsetBuf1; /* Current offset within buffer 1 */
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 2
+
+
+  34:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_indexBuf1;  /* Current index within buffer 1  */
+  35:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  36:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #if(UART_1_SECONDARY_ADDRESS_ENABLE_CONST)
+  37:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint8 UART_1_addrBuf1; /* Primary slave address. Used for software comparison   */
+  38:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint8 UART_1_addrBuf2; /* Secondary slave address. Used for software comparison */
+  39:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  40:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /* Variables intended to be used with Buffer 2: Primary slave address */
+  41:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     volatile uint8 * UART_1_dataBuffer2; /* Pointer to data buffer 2 */
+  42:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint16 UART_1_bufSizeBuf2; /* Size of buffer 2 in bytes      */
+  43:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint16 UART_1_protectBuf2; /* Start index of write protected area buffer 2 */
+  44:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint16 UART_1_offsetBuf2; /* Current offset within buffer 2 */
+  45:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint16 UART_1_indexBuf2;  /* Current index within buffer 2  */
+  46:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #endif /* (UART_1_SECONDARY_ADDRESS_ENABLE_CONST) */
+  47:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  48:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  49:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /***************************************
+  50:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *      EZI2C Private Functions
+  51:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ***************************************/
+  52:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  53:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #if(UART_1_SECONDARY_ADDRESS_ENABLE_CONST)
+  54:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     static uint32 UART_1_EzI2CUpdateRxMatchReg(uint32 addr1, uint32 addr2);
+  55:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #endif /* (UART_1_SECONDARY_ADDRESS_ENABLE_CONST) */
+  56:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  57:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #if(UART_1_SCB_MODE_UNCONFIG_CONST_CFG)
+  58:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  59:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /***************************************
+  60:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Configuration Structure Initialization
+  61:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ***************************************/
+  62:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  63:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /* Constant configuration of EZI2C */
+  64:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     const UART_1_EZI2C_INIT_STRUCT UART_1_configEzI2C =
+  65:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+  66:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_CLOCK_STRETCHING,
+  67:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_MEDIAN_FILTER_ENABLE,
+  68:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_NUMBER_OF_ADDRESSES,
+  69:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_PRIMARY_SLAVE_ADDRESS,
+  70:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_SECONDARY_SLAVE_ADDRESS,
+  71:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_SUB_ADDRESS_SIZE,
+  72:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_WAKE_ENABLE,
+  73:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EZI2C_BYTE_MODE_ENABLE
+  74:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     };
+  75:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+  76:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+  77:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CInit
+  78:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+  79:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+  80:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+  81:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Configures the SCB for the EZI2C operation.
+  82:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+  83:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+  84:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  config:  Pointer to a structure that contains the following ordered list of
+  85:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *           fields. These fields match the selections available in the
+  86:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *           customizer.
+  87:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+  88:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+  89:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+  90:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 3
+
+
+  91:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+  92:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     void UART_1_EzI2CInit(const UART_1_EZI2C_INIT_STRUCT *config)
+  93:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+  94:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(NULL == config)
+  95:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+  96:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+  97:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+  98:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         else
+  99:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 100:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure pins */
+ 101:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetPins(UART_1_SCB_MODE_EZI2C, UART_1_DUMMY_PARAM,
+ 102:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                       UART_1_DUMMY_PARAM);
+ 103:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 104:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Store internal configuration */
+ 105:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_scbMode       = (uint8) UART_1_SCB_MODE_EZI2C;
+ 106:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_scbEnableWake = (uint8) config->enableWake;
+ 107:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_scbEnableIntr = (uint8) UART_1_SCB_IRQ_INTERNAL;
+ 108:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 109:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_numberOfAddr  = (uint8) config->numberOfAddresses;
+ 110:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_subAddrSize   = (uint8) config->subAddrSize;
+ 111:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 112:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #if (UART_1_CY_SCBIP_V0)
+ 113:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Adjust SDA filter settings. Ticket ID#150521 */
+ 114:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SET_I2C_CFG_SDA_FILT_TRIM(UART_1_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+ 115:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #endif /* (UART_1_CY_SCBIP_V0) */
+ 116:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 117:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Adjust AF and DF filter settings, AF = 1, DF = 0. Ticket ID#176179 */
+ 118:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_I2C_CFG_ANALOG_FITER_ENABLE;
+ 119:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 120:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure I2C interface */
+ 121:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_CTRL_REG     = UART_1_GET_CTRL_BYTE_MODE  (config->enableByteMode)    |
+ 122:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                             UART_1_GET_CTRL_ADDR_ACCEPT(config->numberOfAddresses) 
+ 123:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                             UART_1_GET_CTRL_EC_AM_MODE (config->enableWake);
+ 124:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 125:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_I2C_CTRL_REG = UART_1_EZI2C_CTRL;
+ 126:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 127:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure RX direction */
+ 128:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_RX_CTRL_REG = UART_1_EZI2C_RX_CTRL |
+ 129:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                         UART_1_GET_RX_CTRL_MEDIAN(UART_1_DIGITAL_FILTER_DISABLE);
+ 130:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                 ;
+ 131:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_RX_FIFO_CTRL_REG = UART_1_CLEAR_REG;
+ 132:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 133:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Set default address and mask */
+ 134:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             if(UART_1_EZI2C_PRIMARY_ADDRESS == config->numberOfAddresses)
+ 135:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             {
+ 136:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_RX_MATCH_REG = UART_1_EzI2CUpdateRxMatchReg(config->primarySlaveAddr,
+ 137:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                                        config->prim
+ 138:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             }
+ 139:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             else
+ 140:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             {
+ 141:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_RX_MATCH_REG = UART_1_EzI2CUpdateRxMatchReg(config->primarySlaveAddr,
+ 142:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                                        config->seco
+ 143:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             }
+ 144:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 145:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure TX direction */
+ 146:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_TX_CTRL_REG      = UART_1_EZI2C_TX_CTRL;
+ 147:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_TX_FIFO_CTRL_REG = ((0u != (config->enableClockStretch)) ?
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 4
+
+
+ 148:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                  UART_1_CLEAR_REG : UART_1_EZI2C_TX_FIFO_CTRL);
+ 149:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 150:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure interrupt sources */
+ 151:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #if (!UART_1_CY_SCBIP_V1)
+ 152:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****            UART_1_INTR_SPI_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 153:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #endif /* (!UART_1_CY_SCBIP_V1) */
+ 154:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 155:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_I2C_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 156:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_MASTER_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 157:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_SLAVE_MASK_REG  = UART_1_EZI2C_INTR_SLAVE_MASK;
+ 158:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_TX_MASK_REG     = UART_1_NO_INTR_SOURCES;
+ 159:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 160:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure interrupt with EZI2C handler but do not enable it */
+ 161:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             CyIntDisable    (UART_1_ISR_NUMBER);
+ 162:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             CyIntSetPriority(UART_1_ISR_NUMBER, UART_1_ISR_PRIORITY);
+ 163:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             (void) CyIntSetVector(UART_1_ISR_NUMBER, (0u != (config->enableClockStretch)) ?
+ 164:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                       (&UART_1_EZI2C_STRETCH_ISR) :
+ 165:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                       (&UART_1_EZI2C_NO_STRETCH_ISR
+ 166:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 167:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             if(0u != (config->enableClockStretch))
+ 168:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             {
+ 169:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 /* Configure interrupt sources */
+ 170:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_SLAVE_MASK_REG |= UART_1_INTR_SLAVE_I2C_ADDR_MATCH;
+ 171:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_RX_MASK_REG     = UART_1_NO_INTR_SOURCES;
+ 172:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             }
+ 173:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             else
+ 174:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             {
+ 175:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 /* Enable Auto ACK/NACK features */
+ 176:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_I2C_CTRL_REG |= UART_1_EZI2C_CTRL_AUTO;
+ 177:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 178:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 /* Configure RX interrupt source */
+ 179:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_SLAVE_MASK_REG |= UART_1_INTR_SLAVE_I2C_START;
+ 180:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_RX_MASK_REG     = UART_1_INTR_RX_NOT_EMPTY;
+ 181:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             }
+ 182:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 183:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure global variables */
+ 184:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
+ 185:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 186:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_curStatus  = 0u;
+ 187:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_indexBuf1  = 0u;
+ 188:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_offsetBuf1 = 0u;
+ 189:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_indexBuf2  = 0u;
+ 190:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_offsetBuf2 = 0u;
+ 191:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 192:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_addrBuf1 = (uint8) config->primarySlaveAddr;
+ 193:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_addrBuf2 = (uint8) config->secondarySlaveAddr;
+ 194:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 195:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 196:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 197:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #else
+ 198:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 199:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 200:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CInit
+ 201:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 202:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 203:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 204:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Configures the SCB for the EZI2C operation.
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 5
+
+
+ 205:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 206:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 207:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 208:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 209:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ 210:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 211:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 212:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 213:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     void UART_1_EzI2CInit(void)
+ 214:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 215:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Configure I2C interface */
+ 216:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_CTRL_REG     = UART_1_EZI2C_DEFAULT_CTRL;
+ 217:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_I2C_CTRL_REG = UART_1_EZI2C_DEFAULT_I2C_CTRL;
+ 218:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 219:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #if (UART_1_CY_SCBIP_V0)
+ 220:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Adjust SDA filter settings. Ticket ID#150521 */
+ 221:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_SET_I2C_CFG_SDA_FILT_TRIM(UART_1_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+ 222:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #endif /* (UART_1_CY_SCBIP_V0) */
+ 223:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 224:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Configure RX direction */
+ 225:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_CTRL_REG      = UART_1_EZI2C_DEFAULT_RX_CTRL;
+ 226:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_FIFO_CTRL_REG = UART_1_EZI2C_DEFAULT_RX_FIFO_CTRL;
+ 227:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 228:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Set default address and mask */
+ 229:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_MATCH_REG     = UART_1_EZI2C_DEFAULT_RX_MATCH;
+ 230:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 231:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Configure TX direction */
+ 232:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_TX_CTRL_REG      = UART_1_EZI2C_DEFAULT_TX_CTRL;
+ 233:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_TX_FIFO_CTRL_REG = UART_1_EZI2C_DEFAULT_TX_FIFO_CTRL;
+ 234:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 235:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Configure interrupt with EZI2C handler but do not enable it */
+ 236:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #if !defined (CY_EXTERNAL_INTERRUPT_CONFIG)
+ 237:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         CyIntDisable    (UART_1_ISR_NUMBER);
+ 238:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         CyIntSetPriority(UART_1_ISR_NUMBER, UART_1_ISR_PRIORITY);
+ 239:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 240:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #if (UART_1_EZI2C_SCL_STRETCH_ENABLE_CONST)
+ 241:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         (void) CyIntSetVector(UART_1_ISR_NUMBER, &UART_1_EZI2C_STRETCH_ISR);
+ 242:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #else
+ 243:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         (void) CyIntSetVector(UART_1_ISR_NUMBER, &UART_1_EZI2C_NO_STRETCH_ISR);
+ 244:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #endif /* (UART_1_EZI2C_SCL_STRETCH_ENABLE_CONST) */
+ 245:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 246:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #endif /* !defined (CY_EXTERNAL_INTERRUPT_CONFIG) */
+ 247:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 248:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Configure interrupt sources */
+ 249:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #if (!UART_1_CY_SCBIP_V1)
+ 250:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_INTR_SPI_EC_MASK_REG = UART_1_EZI2C_DEFAULT_INTR_SPI_EC_MASK;
+ 251:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #endif /* (!UART_1_CY_SCBIP_V1) */
+ 252:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 253:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_INTR_I2C_EC_MASK_REG = UART_1_EZI2C_DEFAULT_INTR_I2C_EC_MASK;
+ 254:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_INTR_SLAVE_MASK_REG  = UART_1_EZI2C_DEFAULT_INTR_SLAVE_MASK;
+ 255:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_INTR_MASTER_MASK_REG = UART_1_EZI2C_DEFAULT_INTR_MASTER_MASK;
+ 256:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_INTR_RX_MASK_REG     = UART_1_EZI2C_DEFAULT_INTR_RX_MASK;
+ 257:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_INTR_TX_MASK_REG     = UART_1_EZI2C_DEFAULT_INTR_TX_MASK;
+ 258:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 259:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Configure global variables */
+ 260:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
+ 261:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 6
+
+
+ 262:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_curStatus  = 0u;
+ 263:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_indexBuf1  = 0u;
+ 264:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_offsetBuf1 = 0u;
+ 265:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 266:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #if(UART_1_SECONDARY_ADDRESS_ENABLE_CONST)
+ 267:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_indexBuf2  = 0u;
+ 268:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_offsetBuf2 = 0u;
+ 269:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 270:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_addrBuf1 = UART_1_EZI2C_PRIMARY_SLAVE_ADDRESS;
+ 271:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_addrBuf2 = UART_1_EZI2C_SECONDARY_SLAVE_ADDRESS;
+ 272:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #endif /* (UART_1_SECONDARY_ADDRESS_ENABLE_CONST) */
+ 273:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 274:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #endif /* (UART_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 275:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 276:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 277:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /*******************************************************************************
+ 278:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Function Name: UART_1_EzI2CStop
+ 279:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ********************************************************************************
+ 280:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 281:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Summary:
+ 282:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Resets the EZI2C FSM into the default state.
+ 283:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 284:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Parameters:
+ 285:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  None
+ 286:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 287:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Return:
+ 288:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  None
+ 289:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 290:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************/
+ 291:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** void UART_1_EzI2CStop(void)
+ 292:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 293:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
+ 294:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 295:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 296:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 297:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /*******************************************************************************
+ 298:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Function Name: UART_1_EzI2CGetActivity
+ 299:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ********************************************************************************
+ 300:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 301:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Summary:
+ 302:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Returns the EZI2C slave status.
+ 303:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  The read, write and error status flags reset to zero after this function
+ 304:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  call. The busy status flag is cleared when the transaction intended for
+ 305:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  the EZI2C slave completes.
+ 306:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 307:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Parameters:
+ 308:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  None
+ 309:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 310:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Return:
+ 311:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Returns the status of the EZI2C Slave activity.
+ 312:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 313:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************/
+ 314:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint32 UART_1_EzI2CGetActivity(void)
+ 315:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 316:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint32 status;
+ 317:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 318:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_DisableInt();  /* Lock from interruption */
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 7
+
+
+ 319:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 320:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     status = UART_1_curStatus;
+ 321:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 322:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /* Relay on address match event from HW as bus busy status */
+ 323:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if(UART_1_EZI2C_SCL_STRETCH_DISABLE)
+ 324:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 325:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* For UART_1_CY_SCBIP_V0 the wake is prohibited by customizer */
+ 326:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(UART_1_EZI2C_EC_AM_ENABLE)
+ 327:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 328:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             status |= UART_1_CHECK_INTR_I2C_EC(UART_1_INTR_I2C_EC_WAKE_UP) ?
+ 329:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         UART_1_EZI2C_STATUS_BUSY : 0u;
+ 330:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 331:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         else
+ 332:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 333:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             status |= UART_1_CHECK_INTR_SLAVE(UART_1_INTR_SLAVE_I2C_ADDR_MATCH) ?
+ 334:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         UART_1_EZI2C_STATUS_BUSY : 0u;
+ 335:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 336:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         
+ 337:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 338:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     
+ 339:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 340:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_curStatus &= ((uint8) ~UART_1_EZI2C_CLEAR_STATUS);
+ 341:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 342:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_EnableInt();   /* Release lock */
+ 343:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 344:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     return(status);
+ 345:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 346:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 347:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 348:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /*******************************************************************************
+ 349:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Function Name: UART_1_EzI2CSetAddress1
+ 350:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ********************************************************************************
+ 351:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 352:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Summary:
+ 353:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Sets the primary I2C slave address.
+ 354:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 355:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Parameters:
+ 356:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  address: I2C slave address for the secondary device.
+ 357:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *           This address is the 7-bit right-justified slave address and does
+ 358:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *           not include the R/W bit.
+ 359:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *           This value may be any address between 0 and 127 (0x00 to 0x7F).
+ 360:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 361:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Return:
+ 362:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  None
+ 363:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 364:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************/
+ 365:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** void UART_1_EzI2CSetAddress1(uint32 address)
+ 366:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 367:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if(UART_1_SECONDARY_ADDRESS_ENABLE)
+ 368:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 369:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_addrBuf1 = (uint8) address;
+ 370:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 371:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_MATCH_REG = UART_1_EzI2CUpdateRxMatchReg(address,
+ 372:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                                (uint32) UART_1_addr
+ 373:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 374:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     else
+ 375:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 8
+
+
+ 376:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         uint32 matchReg;
+ 377:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 378:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg = UART_1_RX_MATCH_REG;
+ 379:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 380:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg &= ((uint32) ~UART_1_RX_MATCH_ADDR_MASK);            /* Clear address bits */
+ 381:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg |= ((uint32)  UART_1_GET_I2C_8BIT_ADDRESS(address)); /* Set mask */
+ 382:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 383:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_MATCH_REG = matchReg;
+ 384:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 385:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     
+ 386:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 387:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 388:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 389:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /*******************************************************************************
+ 390:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Function Name: UART_1_EzI2CGetAddress1
+ 391:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ********************************************************************************
+ 392:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 393:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Summary:
+ 394:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Gets the primary I2C slave 7-bit address.
+ 395:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 396:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Parameters:
+ 397:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  None
+ 398:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 399:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Return:
+ 400:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Returns I2C slave address for the primary device.
+ 401:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  This address is the 7-bit right-justified slave address and does not
+ 402:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  include the R/W bit.
+ 403:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  This value may be any address between 0 and 127 (0x00 to 0x7F).
+ 404:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 405:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************/
+ 406:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint32 UART_1_EzI2CGetAddress1(void)
+ 407:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 408:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint32 address;
+ 409:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 410:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if(UART_1_SECONDARY_ADDRESS_ENABLE)
+ 411:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 412:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         address = (uint32) UART_1_addrBuf1;
+ 413:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 414:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     else
+ 415:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 416:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         address = (UART_1_GET_RX_MATCH_ADDR(UART_1_RX_MATCH_REG) >>
+ 417:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                    UART_1_I2C_SLAVE_ADDR_POS);
+ 418:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 419:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     
+ 420:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 421:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     return(address);
+ 422:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 423:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 424:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 425:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /*******************************************************************************
+ 426:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Function Name: UART_1_EzI2CSetBuffer1
+ 427:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ********************************************************************************
+ 428:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 429:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Summary:
+ 430:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Sets up the data buffer to be exposed to the I2C master on a primary slave
+ 431:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  address request.
+ 432:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 9
+
+
+ 433:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Parameters:
+ 434:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  bufSize: Size of the buffer in bytes.
+ 435:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  rwBoundary: Sets how many bytes are writeable in the beginning of the buffer.
+ 436:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *              This value must be less than or equal to the buffer size.
+ 437:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *              Data located at offset rwBoundry and greater are read only.
+ 438:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  buffer: Pointer to the data buffer.
+ 439:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 440:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Return:
+ 441:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  None
+ 442:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 443:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************/
+ 444:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** void UART_1_EzI2CSetBuffer1(uint32 bufSize, uint32 rwBoundary, volatile uint8 * buffer)
+ 445:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 446:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if (NULL != buffer)
+ 447:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 448:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_DisableInt();  /* Lock from interruption */
+ 449:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 450:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_dataBuffer1 =  buffer;
+ 451:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_bufSizeBuf1 = (uint16) bufSize;
+ 452:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_protectBuf1 = (uint16) rwBoundary;
+ 453:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 454:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EnableInt();   /* Release lock */
+ 455:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 456:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 457:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 458:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 459:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** /*******************************************************************************
+ 460:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Function Name: UART_1_EzI2CSetReadBoundaryBuffer1
+ 461:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** ********************************************************************************
+ 462:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 463:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Summary:
+ 464:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Sets the read only boundary in the data buffer to be exposed to the I2C
+ 465:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  master on a primary slave address request.
+ 466:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 467:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Parameters:
+ 468:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  rwBoundry: Sets how many bytes are writeable in the beginning of the buffer.
+ 469:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *             This value must be less than or equal to the buffer size.
+ 470:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *             Data located at offset rwBoundry and greater are read only.
+ 471:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 472:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Return:
+ 473:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  None
+ 474:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
+ 475:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *******************************************************************************/
+ 476:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** void UART_1_EzI2CSetReadBoundaryBuffer1(uint32 rwBoundary)
+ 477:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 478:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_protectBuf1 = (uint16) rwBoundary;
+ 479:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 480:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 481:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 482:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #if(UART_1_SECONDARY_ADDRESS_ENABLE_CONST)
+ 483:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 484:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CUpdateRxMatchReg
+ 485:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 486:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 487:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 488:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Returns the value of the RX MATCH register for addr1 and addr2. The addr1 is
+ 489:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  accepted as the primary address and it is written to RX_MATCH.ADDRESS
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 10
+
+
+ 490:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  (addr1 << 0x01).
+ 491:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  The RX_MATCH.MASK is set as follow: addr1 and addr2 equal bits set to 1
+ 492:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  otherwise 0.
+ 493:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 494:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 495:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  addr1: I2C slave address for the primary device.
+ 496:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  addr2: I2C slave address for the secondary device.
+ 497:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *         This address is the 7-bit right-justified slave address and does
+ 498:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *         not include the R/W bit.
+ 499:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *         This value may be any address between 0 and 127 (0x00 to 0x7F).
+ 500:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 501:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ 502:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Value of RX MATCH register.
+ 503:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 504:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 505:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     static uint32 UART_1_EzI2CUpdateRxMatchReg(uint32 addr1, uint32 addr2)
+ 506:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+  25              		.loc 1 506 0
+  26              		.cfi_startproc
+  27              	.LVL0:
+ 507:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         uint32 matchReg;
+ 508:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 509:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg  = ~(addr1 ^ addr2); /* If (addr1 and addr2) bit matches - mask bit equals 1, in o
+  28              		.loc 1 509 0
+  29 0000 021C     		mov	r2, r0
+  30 0002 4A40     		eor	r2, r1
+  31 0004 D243     		mvn	r2, r2
+  32              	.LVL1:
+ 510:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 511:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg  = (uint32) (UART_1_GET_I2C_8BIT_ADDRESS(matchReg) << UART_1_RX_MATCH_MASK_POS);
+  33              		.loc 1 511 0
+  34 0006 5200     		lsl	r2, r2, #1
+  35              	.LVL2:
+  36 0008 FF23     		mov	r3, #255
+  37 000a 1A40     		and	r2, r3
+  38 000c 1204     		lsl	r2, r2, #16
+  39              	.LVL3:
+ 512:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg |= UART_1_GET_I2C_8BIT_ADDRESS(addr1);
+  40              		.loc 1 512 0
+  41 000e 4000     		lsl	r0, r0, #1
+  42              	.LVL4:
+  43 0010 1840     		and	r0, r3
+  44 0012 1043     		orr	r0, r2
+  45              	.LVL5:
+ 513:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 514:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         return(matchReg);
+ 515:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+  46              		.loc 1 515 0
+  47              		@ sp needed
+  48 0014 7047     		bx	lr
+  49              		.cfi_endproc
+  50              	.LFE7:
+  51              		.size	UART_1_EzI2CUpdateRxMatchReg, .-UART_1_EzI2CUpdateRxMatchReg
+  52 0016 C046     		.section	.text.UART_1_EzI2CInit,"ax",%progbits
+  53              		.align	2
+  54              		.global	UART_1_EzI2CInit
+  55              		.code	16
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 11
+
+
+  56              		.thumb_func
+  57              		.type	UART_1_EzI2CInit, %function
+  58              	UART_1_EzI2CInit:
+  59              	.LFB0:
+  93:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+  60              		.loc 1 93 0
+  61              		.cfi_startproc
+  62              	.LVL6:
+  63 0000 10B5     		push	{r4, lr}
+  64              		.cfi_def_cfa_offset 8
+  65              		.cfi_offset 4, -8
+  66              		.cfi_offset 14, -4
+  67 0002 041E     		sub	r4, r0, #0
+  94:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(NULL == config)
+  68              		.loc 1 94 0
+  69 0004 03D1     		bne	.L3
+  96:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+  70              		.loc 1 96 0 discriminator 1
+  71 0006 0020     		mov	r0, #0
+  72              	.LVL7:
+  73 0008 FFF7FEFF 		bl	CyHalt
+  74              	.LVL8:
+  75 000c A2E0     		b	.L2
+  76              	.LVL9:
+  77              	.L3:
+ 101:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetPins(UART_1_SCB_MODE_EZI2C, UART_1_DUMMY_PARAM,
+  78              		.loc 1 101 0
+  79 000e 0820     		mov	r0, #8
+  80              	.LVL10:
+  81 0010 0021     		mov	r1, #0
+  82 0012 0022     		mov	r2, #0
+  83 0014 FFF7FEFF 		bl	UART_1_SetPins
+  84              	.LVL11:
+ 105:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_scbMode       = (uint8) UART_1_SCB_MODE_EZI2C;
+  85              		.loc 1 105 0
+  86 0018 0822     		mov	r2, #8
+  87 001a 4F4B     		ldr	r3, .L19
+  88 001c 1A70     		strb	r2, [r3]
+ 106:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_scbEnableWake = (uint8) config->enableWake;
+  89              		.loc 1 106 0
+  90 001e 227E     		ldrb	r2, [r4, #24]
+  91 0020 4E4B     		ldr	r3, .L19+4
+  92 0022 1A70     		strb	r2, [r3]
+ 107:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_scbEnableIntr = (uint8) UART_1_SCB_IRQ_INTERNAL;
+  93              		.loc 1 107 0
+  94 0024 0122     		mov	r2, #1
+  95 0026 4E4B     		ldr	r3, .L19+8
+  96 0028 1A70     		strb	r2, [r3]
+ 109:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_numberOfAddr  = (uint8) config->numberOfAddresses;
+  97              		.loc 1 109 0
+  98 002a 227A     		ldrb	r2, [r4, #8]
+  99 002c 4D4B     		ldr	r3, .L19+12
+ 100 002e 1A70     		strb	r2, [r3]
+ 110:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_subAddrSize   = (uint8) config->subAddrSize;
+ 101              		.loc 1 110 0
+ 102 0030 227D     		ldrb	r2, [r4, #20]
+ 103 0032 4D4B     		ldr	r3, .L19+16
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 12
+
+
+ 104 0034 1A70     		strb	r2, [r3]
+ 114:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SET_I2C_CFG_SDA_FILT_TRIM(UART_1_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+ 105              		.loc 1 114 0
+ 106 0036 4D4B     		ldr	r3, .L19+20
+ 107 0038 1968     		ldr	r1, [r3]
+ 108 003a 0C22     		mov	r2, #12
+ 109 003c 0A43     		orr	r2, r1
+ 110 003e 1A60     		str	r2, [r3]
+ 118:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_I2C_CFG_ANALOG_FITER_ENABLE;
+ 111              		.loc 1 118 0
+ 112 0040 1A68     		ldr	r2, [r3]
+ 113 0042 4B49     		ldr	r1, .L19+24
+ 114 0044 0A43     		orr	r2, r1
+ 115 0046 1A60     		str	r2, [r3]
+ 121:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_CTRL_REG     = UART_1_GET_CTRL_BYTE_MODE  (config->enableByteMode)    |
+ 116              		.loc 1 121 0
+ 117 0048 A368     		ldr	r3, [r4, #8]
+ 118 004a 002B     		cmp	r3, #0
+ 119 004c 02D0     		beq	.L14
+ 120 004e 8022     		mov	r2, #128
+ 121 0050 5202     		lsl	r2, r2, #9
+ 122 0052 00E0     		b	.L5
+ 123              	.L14:
+ 124 0054 0022     		mov	r2, #0
+ 125              	.L5:
+ 123:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                             UART_1_GET_CTRL_EC_AM_MODE (config->enableWake);
+ 126              		.loc 1 123 0
+ 127 0056 A369     		ldr	r3, [r4, #24]
+ 128 0058 002B     		cmp	r3, #0
+ 129 005a 02D0     		beq	.L15
+ 130 005c 8023     		mov	r3, #128
+ 131 005e 5B00     		lsl	r3, r3, #1
+ 132 0060 00E0     		b	.L6
+ 133              	.L15:
+ 134 0062 0023     		mov	r3, #0
+ 135              	.L6:
+ 122:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                             UART_1_GET_CTRL_ADDR_ACCEPT(config->numberOfAddresses) 
+ 136              		.loc 1 122 0
+ 137 0064 1A43     		orr	r2, r3
+ 121:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_CTRL_REG     = UART_1_GET_CTRL_BYTE_MODE  (config->enableByteMode)    |
+ 138              		.loc 1 121 0
+ 139 0066 434B     		ldr	r3, .L19+28
+ 140 0068 1A60     		str	r2, [r3]
+ 125:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_I2C_CTRL_REG = UART_1_EZI2C_CTRL;
+ 141              		.loc 1 125 0
+ 142 006a 434A     		ldr	r2, .L19+32
+ 143 006c 434B     		ldr	r3, .L19+36
+ 144 006e 1A60     		str	r2, [r3]
+ 128:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_RX_CTRL_REG = UART_1_EZI2C_RX_CTRL |
+ 145              		.loc 1 128 0
+ 146 0070 434A     		ldr	r2, .L19+40
+ 147 0072 444B     		ldr	r3, .L19+44
+ 148 0074 1A60     		str	r2, [r3]
+ 131:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_RX_FIFO_CTRL_REG = UART_1_CLEAR_REG;
+ 149              		.loc 1 131 0
+ 150 0076 0022     		mov	r2, #0
+ 151 0078 434B     		ldr	r3, .L19+48
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 13
+
+
+ 152 007a 1A60     		str	r2, [r3]
+ 134:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             if(UART_1_EZI2C_PRIMARY_ADDRESS == config->numberOfAddresses)
+ 153              		.loc 1 134 0
+ 154 007c A368     		ldr	r3, [r4, #8]
+ 155 007e 002B     		cmp	r3, #0
+ 156 0080 06D1     		bne	.L7
+ 136:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_RX_MATCH_REG = UART_1_EzI2CUpdateRxMatchReg(config->primarySlaveAddr,
+ 157              		.loc 1 136 0
+ 158 0082 E168     		ldr	r1, [r4, #12]
+ 159 0084 081C     		mov	r0, r1
+ 160 0086 FFF7FEFF 		bl	UART_1_EzI2CUpdateRxMatchReg
+ 161              	.LVL12:
+ 162 008a 404B     		ldr	r3, .L19+52
+ 163 008c 1860     		str	r0, [r3]
+ 164 008e 05E0     		b	.L8
+ 165              	.L7:
+ 141:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_RX_MATCH_REG = UART_1_EzI2CUpdateRxMatchReg(config->primarySlaveAddr,
+ 166              		.loc 1 141 0
+ 167 0090 E068     		ldr	r0, [r4, #12]
+ 168 0092 2169     		ldr	r1, [r4, #16]
+ 169 0094 FFF7FEFF 		bl	UART_1_EzI2CUpdateRxMatchReg
+ 170              	.LVL13:
+ 171 0098 3C4B     		ldr	r3, .L19+52
+ 172 009a 1860     		str	r0, [r3]
+ 173              	.L8:
+ 146:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_TX_CTRL_REG      = UART_1_EZI2C_TX_CTRL;
+ 174              		.loc 1 146 0
+ 175 009c 384A     		ldr	r2, .L19+40
+ 176 009e 3C4B     		ldr	r3, .L19+56
+ 177 00a0 1A60     		str	r2, [r3]
+ 148:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                  UART_1_CLEAR_REG : UART_1_EZI2C_TX_FIFO_CTRL);
+ 178              		.loc 1 148 0
+ 179 00a2 2368     		ldr	r3, [r4]
+ 180 00a4 002B     		cmp	r3, #0
+ 181 00a6 01D0     		beq	.L16
+ 182 00a8 0022     		mov	r2, #0
+ 183 00aa 00E0     		b	.L9
+ 184              	.L16:
+ 185 00ac 0222     		mov	r2, #2
+ 186              	.L9:
+ 147:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_TX_FIFO_CTRL_REG = ((0u != (config->enableClockStretch)) ?
+ 187              		.loc 1 147 0
+ 188 00ae 394B     		ldr	r3, .L19+60
+ 189 00b0 1A60     		str	r2, [r3]
+ 152:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****            UART_1_INTR_SPI_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 190              		.loc 1 152 0
+ 191 00b2 0023     		mov	r3, #0
+ 192 00b4 384A     		ldr	r2, .L19+64
+ 193 00b6 1360     		str	r3, [r2]
+ 155:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_I2C_EC_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 194              		.loc 1 155 0
+ 195 00b8 384A     		ldr	r2, .L19+68
+ 196 00ba 1360     		str	r3, [r2]
+ 156:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_MASTER_MASK_REG = UART_1_NO_INTR_SOURCES;
+ 197              		.loc 1 156 0
+ 198 00bc 384A     		ldr	r2, .L19+72
+ 199 00be 1360     		str	r3, [r2]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 14
+
+
+ 157:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_SLAVE_MASK_REG  = UART_1_EZI2C_INTR_SLAVE_MASK;
+ 200              		.loc 1 157 0
+ 201 00c0 1221     		mov	r1, #18
+ 202 00c2 FF31     		add	r1, r1, #255
+ 203 00c4 374A     		ldr	r2, .L19+76
+ 204 00c6 1160     		str	r1, [r2]
+ 158:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_TX_MASK_REG     = UART_1_NO_INTR_SOURCES;
+ 205              		.loc 1 158 0
+ 206 00c8 374A     		ldr	r2, .L19+80
+ 207 00ca 1360     		str	r3, [r2]
+ 161:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             CyIntDisable    (UART_1_ISR_NUMBER);
+ 208              		.loc 1 161 0
+ 209 00cc 0B20     		mov	r0, #11
+ 210 00ce FFF7FEFF 		bl	CyIntDisable
+ 211              	.LVL14:
+ 162:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             CyIntSetPriority(UART_1_ISR_NUMBER, UART_1_ISR_PRIORITY);
+ 212              		.loc 1 162 0
+ 213 00d2 0B20     		mov	r0, #11
+ 214 00d4 0321     		mov	r1, #3
+ 215 00d6 FFF7FEFF 		bl	CyIntSetPriority
+ 216              	.LVL15:
+ 163:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             (void) CyIntSetVector(UART_1_ISR_NUMBER, (0u != (config->enableClockStretch)) ?
+ 217              		.loc 1 163 0
+ 218 00da 2368     		ldr	r3, [r4]
+ 219 00dc 002B     		cmp	r3, #0
+ 220 00de 01D0     		beq	.L17
+ 221 00e0 3249     		ldr	r1, .L19+84
+ 222 00e2 00E0     		b	.L10
+ 223              	.L17:
+ 224 00e4 3249     		ldr	r1, .L19+88
+ 225              	.L10:
+ 163:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             (void) CyIntSetVector(UART_1_ISR_NUMBER, (0u != (config->enableClockStretch)) ?
+ 226              		.loc 1 163 0 is_stmt 0 discriminator 3
+ 227 00e6 0B20     		mov	r0, #11
+ 228 00e8 FFF7FEFF 		bl	CyIntSetVector
+ 229              	.LVL16:
+ 167:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             if(0u != (config->enableClockStretch))
+ 230              		.loc 1 167 0 is_stmt 1 discriminator 3
+ 231 00ec 2368     		ldr	r3, [r4]
+ 232 00ee 002B     		cmp	r3, #0
+ 233 00f0 08D0     		beq	.L11
+ 170:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_SLAVE_MASK_REG |= UART_1_INTR_SLAVE_I2C_ADDR_MATCH;
+ 234              		.loc 1 170 0
+ 235 00f2 2C4B     		ldr	r3, .L19+76
+ 236 00f4 1968     		ldr	r1, [r3]
+ 237 00f6 4022     		mov	r2, #64
+ 238 00f8 0A43     		orr	r2, r1
+ 239 00fa 1A60     		str	r2, [r3]
+ 171:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_RX_MASK_REG     = UART_1_NO_INTR_SOURCES;
+ 240              		.loc 1 171 0
+ 241 00fc 0022     		mov	r2, #0
+ 242 00fe 2D4B     		ldr	r3, .L19+92
+ 243 0100 1A60     		str	r2, [r3]
+ 244 0102 0DE0     		b	.L12
+ 245              	.L11:
+ 176:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_I2C_CTRL_REG |= UART_1_EZI2C_CTRL_AUTO;
+ 246              		.loc 1 176 0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 15
+
+
+ 247 0104 1D4B     		ldr	r3, .L19+36
+ 248 0106 1968     		ldr	r1, [r3]
+ 249 0108 F022     		mov	r2, #240
+ 250 010a 1202     		lsl	r2, r2, #8
+ 251 010c 0A43     		orr	r2, r1
+ 252 010e 1A60     		str	r2, [r3]
+ 179:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_SLAVE_MASK_REG |= UART_1_INTR_SLAVE_I2C_START;
+ 253              		.loc 1 179 0
+ 254 0110 244B     		ldr	r3, .L19+76
+ 255 0112 1968     		ldr	r1, [r3]
+ 256 0114 2022     		mov	r2, #32
+ 257 0116 0A43     		orr	r2, r1
+ 258 0118 1A60     		str	r2, [r3]
+ 180:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_INTR_RX_MASK_REG     = UART_1_INTR_RX_NOT_EMPTY;
+ 259              		.loc 1 180 0
+ 260 011a 0422     		mov	r2, #4
+ 261 011c 254B     		ldr	r3, .L19+92
+ 262 011e 1A60     		str	r2, [r3]
+ 263              	.L12:
+ 184:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
+ 264              		.loc 1 184 0
+ 265 0120 114B     		ldr	r3, .L19+16
+ 266 0122 1B78     		ldrb	r3, [r3]
+ 267 0124 002B     		cmp	r3, #0
+ 268 0126 01D0     		beq	.L18
+ 269 0128 0222     		mov	r2, #2
+ 270 012a 00E0     		b	.L13
+ 271              	.L18:
+ 272 012c 0022     		mov	r2, #0
+ 273              	.L13:
+ 184:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
+ 274              		.loc 1 184 0 is_stmt 0 discriminator 3
+ 275 012e 224B     		ldr	r3, .L19+96
+ 276 0130 1A70     		strb	r2, [r3]
+ 186:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_curStatus  = 0u;
+ 277              		.loc 1 186 0 is_stmt 1 discriminator 3
+ 278 0132 0023     		mov	r3, #0
+ 279 0134 214A     		ldr	r2, .L19+100
+ 280 0136 1370     		strb	r3, [r2]
+ 187:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_indexBuf1  = 0u;
+ 281              		.loc 1 187 0 discriminator 3
+ 282 0138 214A     		ldr	r2, .L19+104
+ 283 013a 1380     		strh	r3, [r2]
+ 188:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_offsetBuf1 = 0u;
+ 284              		.loc 1 188 0 discriminator 3
+ 285 013c 214A     		ldr	r2, .L19+108
+ 286 013e 1380     		strh	r3, [r2]
+ 189:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_indexBuf2  = 0u;
+ 287              		.loc 1 189 0 discriminator 3
+ 288 0140 214A     		ldr	r2, .L19+112
+ 289 0142 1380     		strh	r3, [r2]
+ 190:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_offsetBuf2 = 0u;
+ 290              		.loc 1 190 0 discriminator 3
+ 291 0144 214A     		ldr	r2, .L19+116
+ 292 0146 1380     		strh	r3, [r2]
+ 192:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_addrBuf1 = (uint8) config->primarySlaveAddr;
+ 293              		.loc 1 192 0 discriminator 3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 16
+
+
+ 294 0148 227B     		ldrb	r2, [r4, #12]
+ 295 014a 214B     		ldr	r3, .L19+120
+ 296 014c 1A70     		strb	r2, [r3]
+ 193:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_addrBuf2 = (uint8) config->secondarySlaveAddr;
+ 297              		.loc 1 193 0 discriminator 3
+ 298 014e 227C     		ldrb	r2, [r4, #16]
+ 299 0150 204B     		ldr	r3, .L19+124
+ 300 0152 1A70     		strb	r2, [r3]
+ 301              	.L2:
+ 195:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 302              		.loc 1 195 0
+ 303              		@ sp needed
+ 304              	.LVL17:
+ 305 0154 10BD     		pop	{r4, pc}
+ 306              	.L20:
+ 307 0156 C046     		.align	2
+ 308              	.L19:
+ 309 0158 00000000 		.word	UART_1_scbMode
+ 310 015c 00000000 		.word	UART_1_scbEnableWake
+ 311 0160 00000000 		.word	UART_1_scbEnableIntr
+ 312 0164 00000000 		.word	UART_1_numberOfAddr
+ 313 0168 00000000 		.word	UART_1_subAddrSize
+ 314 016c 70000740 		.word	1074200688
+ 315 0170 00000202 		.word	33685504
+ 316 0174 00000740 		.word	1074200576
+ 317 0178 00080040 		.word	1073743872
+ 318 017c 60000740 		.word	1074200672
+ 319 0180 07010080 		.word	-2147483385
+ 320 0184 00030740 		.word	1074201344
+ 321 0188 04030740 		.word	1074201348
+ 322 018c 10030740 		.word	1074201360
+ 323 0190 00020740 		.word	1074201088
+ 324 0194 04020740 		.word	1074201092
+ 325 0198 C80E0740 		.word	1074204360
+ 326 019c 880E0740 		.word	1074204296
+ 327 01a0 080F0740 		.word	1074204424
+ 328 01a4 480F0740 		.word	1074204488
+ 329 01a8 880F0740 		.word	1074204552
+ 330 01ac 00000000 		.word	UART_1_EZI2C_STRETCH_ISR
+ 331 01b0 00000000 		.word	UART_1_EZI2C_NO_STRETCH_ISR
+ 332 01b4 C80F0740 		.word	1074204616
+ 333 01b8 00000000 		.word	UART_1_fsmState
+ 334 01bc 00000000 		.word	UART_1_curStatus
+ 335 01c0 00000000 		.word	UART_1_indexBuf1
+ 336 01c4 00000000 		.word	UART_1_offsetBuf1
+ 337 01c8 00000000 		.word	UART_1_indexBuf2
+ 338 01cc 00000000 		.word	UART_1_offsetBuf2
+ 339 01d0 00000000 		.word	UART_1_addrBuf1
+ 340 01d4 00000000 		.word	UART_1_addrBuf2
+ 341              		.cfi_endproc
+ 342              	.LFE0:
+ 343              		.size	UART_1_EzI2CInit, .-UART_1_EzI2CInit
+ 344              		.section	.text.UART_1_EzI2CStop,"ax",%progbits
+ 345              		.align	2
+ 346              		.global	UART_1_EzI2CStop
+ 347              		.code	16
+ 348              		.thumb_func
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 17
+
+
+ 349              		.type	UART_1_EzI2CStop, %function
+ 350              	UART_1_EzI2CStop:
+ 351              	.LFB1:
+ 292:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 352              		.loc 1 292 0
+ 353              		.cfi_startproc
+ 293:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
+ 354              		.loc 1 293 0
+ 355 0000 044B     		ldr	r3, .L24
+ 356 0002 1B78     		ldrb	r3, [r3]
+ 357 0004 002B     		cmp	r3, #0
+ 358 0006 01D0     		beq	.L23
+ 359 0008 0222     		mov	r2, #2
+ 360 000a 00E0     		b	.L22
+ 361              	.L23:
+ 362 000c 0022     		mov	r2, #0
+ 363              	.L22:
+ 293:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
+ 364              		.loc 1 293 0 is_stmt 0 discriminator 3
+ 365 000e 024B     		ldr	r3, .L24+4
+ 366 0010 1A70     		strb	r2, [r3]
+ 294:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 367              		.loc 1 294 0 is_stmt 1 discriminator 3
+ 368              		@ sp needed
+ 369 0012 7047     		bx	lr
+ 370              	.L25:
+ 371              		.align	2
+ 372              	.L24:
+ 373 0014 00000000 		.word	UART_1_subAddrSize
+ 374 0018 00000000 		.word	UART_1_fsmState
+ 375              		.cfi_endproc
+ 376              	.LFE1:
+ 377              		.size	UART_1_EzI2CStop, .-UART_1_EzI2CStop
+ 378              		.section	.text.UART_1_EzI2CGetActivity,"ax",%progbits
+ 379              		.align	2
+ 380              		.global	UART_1_EzI2CGetActivity
+ 381              		.code	16
+ 382              		.thumb_func
+ 383              		.type	UART_1_EzI2CGetActivity, %function
+ 384              	UART_1_EzI2CGetActivity:
+ 385              	.LFB2:
+ 315:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 386              		.loc 1 315 0
+ 387              		.cfi_startproc
+ 388 0000 10B5     		push	{r4, lr}
+ 389              		.cfi_def_cfa_offset 8
+ 390              		.cfi_offset 4, -8
+ 391              		.cfi_offset 14, -4
+ 318:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_DisableInt();  /* Lock from interruption */
+ 392              		.loc 1 318 0
+ 393 0002 0B20     		mov	r0, #11
+ 394 0004 FFF7FEFF 		bl	CyIntDisable
+ 395              	.LVL18:
+ 320:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     status = UART_1_curStatus;
+ 396              		.loc 1 320 0
+ 397 0008 124B     		ldr	r3, .L33
+ 398 000a 1C78     		ldrb	r4, [r3]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 18
+
+
+ 399 000c E4B2     		uxtb	r4, r4
+ 400              	.LVL19:
+ 323:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if(UART_1_EZI2C_SCL_STRETCH_DISABLE)
+ 401              		.loc 1 323 0
+ 402 000e 124B     		ldr	r3, .L33+4
+ 403 0010 1B68     		ldr	r3, [r3]
+ 404 0012 5A06     		lsl	r2, r3, #25
+ 405 0014 14D4     		bmi	.L27
+ 326:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(UART_1_EZI2C_EC_AM_ENABLE)
+ 406              		.loc 1 326 0
+ 407 0016 114B     		ldr	r3, .L33+8
+ 408 0018 1B68     		ldr	r3, [r3]
+ 409 001a DA05     		lsl	r2, r3, #23
+ 410 001c 08D5     		bpl	.L28
+ 328:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             status |= UART_1_CHECK_INTR_I2C_EC(UART_1_INTR_I2C_EC_WAKE_UP) ?
+ 411              		.loc 1 328 0
+ 412 001e 104B     		ldr	r3, .L33+12
+ 413 0020 1B68     		ldr	r3, [r3]
+ 329:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         UART_1_EZI2C_STATUS_BUSY : 0u;
+ 414              		.loc 1 329 0
+ 415 0022 DA07     		lsl	r2, r3, #31
+ 416 0024 01D5     		bpl	.L31
+ 417 0026 2023     		mov	r3, #32
+ 418 0028 00E0     		b	.L29
+ 419              	.L31:
+ 420 002a 0023     		mov	r3, #0
+ 421              	.L29:
+ 328:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             status |= UART_1_CHECK_INTR_I2C_EC(UART_1_INTR_I2C_EC_WAKE_UP) ?
+ 422              		.loc 1 328 0 discriminator 1
+ 423 002c 1C43     		orr	r4, r3
+ 424              	.LVL20:
+ 425 002e 07E0     		b	.L27
+ 426              	.L28:
+ 333:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             status |= UART_1_CHECK_INTR_SLAVE(UART_1_INTR_SLAVE_I2C_ADDR_MATCH) ?
+ 427              		.loc 1 333 0
+ 428 0030 0C4B     		ldr	r3, .L33+16
+ 429 0032 1B68     		ldr	r3, [r3]
+ 334:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         UART_1_EZI2C_STATUS_BUSY : 0u;
+ 430              		.loc 1 334 0
+ 431 0034 5A06     		lsl	r2, r3, #25
+ 432 0036 01D5     		bpl	.L32
+ 433 0038 2023     		mov	r3, #32
+ 434 003a 00E0     		b	.L30
+ 435              	.L32:
+ 436 003c 0023     		mov	r3, #0
+ 437              	.L30:
+ 333:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             status |= UART_1_CHECK_INTR_SLAVE(UART_1_INTR_SLAVE_I2C_ADDR_MATCH) ?
+ 438              		.loc 1 333 0
+ 439 003e 1C43     		orr	r4, r3
+ 440              	.LVL21:
+ 441              	.L27:
+ 340:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_curStatus &= ((uint8) ~UART_1_EZI2C_CLEAR_STATUS);
+ 442              		.loc 1 340 0
+ 443 0040 044B     		ldr	r3, .L33
+ 444 0042 1A78     		ldrb	r2, [r3]
+ 445 0044 1F21     		mov	r1, #31
+ 446 0046 8A43     		bic	r2, r1
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 19
+
+
+ 447 0048 1A70     		strb	r2, [r3]
+ 342:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_EnableInt();   /* Release lock */
+ 448              		.loc 1 342 0
+ 449 004a 0B20     		mov	r0, #11
+ 450 004c FFF7FEFF 		bl	CyIntEnable
+ 451              	.LVL22:
+ 345:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 452              		.loc 1 345 0
+ 453 0050 201C     		mov	r0, r4
+ 454              		@ sp needed
+ 455              	.LVL23:
+ 456 0052 10BD     		pop	{r4, pc}
+ 457              	.L34:
+ 458              		.align	2
+ 459              	.L33:
+ 460 0054 00000000 		.word	UART_1_curStatus
+ 461 0058 480F0740 		.word	1074204488
+ 462 005c 00000740 		.word	1074200576
+ 463 0060 800E0740 		.word	1074204288
+ 464 0064 400F0740 		.word	1074204480
+ 465              		.cfi_endproc
+ 466              	.LFE2:
+ 467              		.size	UART_1_EzI2CGetActivity, .-UART_1_EzI2CGetActivity
+ 468              		.section	.text.UART_1_EzI2CSetAddress1,"ax",%progbits
+ 469              		.align	2
+ 470              		.global	UART_1_EzI2CSetAddress1
+ 471              		.code	16
+ 472              		.thumb_func
+ 473              		.type	UART_1_EzI2CSetAddress1, %function
+ 474              	UART_1_EzI2CSetAddress1:
+ 475              	.LFB3:
+ 366:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 476              		.loc 1 366 0
+ 477              		.cfi_startproc
+ 478              	.LVL24:
+ 479 0000 08B5     		push	{r3, lr}
+ 480              		.cfi_def_cfa_offset 8
+ 481              		.cfi_offset 3, -8
+ 482              		.cfi_offset 14, -4
+ 367:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if(UART_1_SECONDARY_ADDRESS_ENABLE)
+ 483              		.loc 1 367 0
+ 484 0002 0B4B     		ldr	r3, .L38
+ 485 0004 1B78     		ldrb	r3, [r3]
+ 486 0006 002B     		cmp	r3, #0
+ 487 0008 08D0     		beq	.L36
+ 369:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_addrBuf1 = (uint8) address;
+ 488              		.loc 1 369 0
+ 489 000a 0A4B     		ldr	r3, .L38+4
+ 490 000c 1870     		strb	r0, [r3]
+ 371:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_MATCH_REG = UART_1_EzI2CUpdateRxMatchReg(address,
+ 491              		.loc 1 371 0
+ 492 000e 0A4B     		ldr	r3, .L38+8
+ 493 0010 1978     		ldrb	r1, [r3]
+ 494 0012 FFF7FEFF 		bl	UART_1_EzI2CUpdateRxMatchReg
+ 495              	.LVL25:
+ 496 0016 094B     		ldr	r3, .L38+12
+ 497 0018 1860     		str	r0, [r3]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 20
+
+
+ 498 001a 07E0     		b	.L35
+ 499              	.LVL26:
+ 500              	.L36:
+ 501              	.LBB2:
+ 378:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg = UART_1_RX_MATCH_REG;
+ 502              		.loc 1 378 0
+ 503 001c 074B     		ldr	r3, .L38+12
+ 504 001e 1968     		ldr	r1, [r3]
+ 505              	.LVL27:
+ 380:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg &= ((uint32) ~UART_1_RX_MATCH_ADDR_MASK);            /* Clear address bits */
+ 506              		.loc 1 380 0
+ 507 0020 FF22     		mov	r2, #255
+ 508 0022 9143     		bic	r1, r2
+ 509              	.LVL28:
+ 381:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         matchReg |= ((uint32)  UART_1_GET_I2C_8BIT_ADDRESS(address)); /* Set mask */
+ 510              		.loc 1 381 0
+ 511 0024 4000     		lsl	r0, r0, #1
+ 512              	.LVL29:
+ 513 0026 0240     		and	r2, r0
+ 514 0028 0A43     		orr	r2, r1
+ 515              	.LVL30:
+ 383:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_MATCH_REG = matchReg;
+ 516              		.loc 1 383 0
+ 517 002a 1A60     		str	r2, [r3]
+ 518              	.LVL31:
+ 519              	.L35:
+ 520              	.LBE2:
+ 386:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 521              		.loc 1 386 0
+ 522              		@ sp needed
+ 523 002c 08BD     		pop	{r3, pc}
+ 524              	.L39:
+ 525 002e C046     		.align	2
+ 526              	.L38:
+ 527 0030 00000000 		.word	UART_1_numberOfAddr
+ 528 0034 00000000 		.word	UART_1_addrBuf1
+ 529 0038 00000000 		.word	UART_1_addrBuf2
+ 530 003c 10030740 		.word	1074201360
+ 531              		.cfi_endproc
+ 532              	.LFE3:
+ 533              		.size	UART_1_EzI2CSetAddress1, .-UART_1_EzI2CSetAddress1
+ 534              		.section	.text.UART_1_EzI2CGetAddress1,"ax",%progbits
+ 535              		.align	2
+ 536              		.global	UART_1_EzI2CGetAddress1
+ 537              		.code	16
+ 538              		.thumb_func
+ 539              		.type	UART_1_EzI2CGetAddress1, %function
+ 540              	UART_1_EzI2CGetAddress1:
+ 541              	.LFB4:
+ 407:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 542              		.loc 1 407 0
+ 543              		.cfi_startproc
+ 410:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if(UART_1_SECONDARY_ADDRESS_ENABLE)
+ 544              		.loc 1 410 0
+ 545 0000 054B     		ldr	r3, .L43
+ 546 0002 1B78     		ldrb	r3, [r3]
+ 547 0004 002B     		cmp	r3, #0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 21
+
+
+ 548 0006 02D0     		beq	.L41
+ 412:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         address = (uint32) UART_1_addrBuf1;
+ 549              		.loc 1 412 0
+ 550 0008 044B     		ldr	r3, .L43+4
+ 551 000a 1878     		ldrb	r0, [r3]
+ 552              	.LVL32:
+ 553 000c 03E0     		b	.L42
+ 554              	.LVL33:
+ 555              	.L41:
+ 416:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         address = (UART_1_GET_RX_MATCH_ADDR(UART_1_RX_MATCH_REG) >>
+ 556              		.loc 1 416 0
+ 557 000e 044B     		ldr	r3, .L43+8
+ 558 0010 1868     		ldr	r0, [r3]
+ 559 0012 0006     		lsl	r0, r0, #24
+ 560 0014 400E     		lsr	r0, r0, #25
+ 561              	.LVL34:
+ 562              	.L42:
+ 422:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 563              		.loc 1 422 0
+ 564              		@ sp needed
+ 565 0016 7047     		bx	lr
+ 566              	.L44:
+ 567              		.align	2
+ 568              	.L43:
+ 569 0018 00000000 		.word	UART_1_numberOfAddr
+ 570 001c 00000000 		.word	UART_1_addrBuf1
+ 571 0020 10030740 		.word	1074201360
+ 572              		.cfi_endproc
+ 573              	.LFE4:
+ 574              		.size	UART_1_EzI2CGetAddress1, .-UART_1_EzI2CGetAddress1
+ 575              		.section	.text.UART_1_EzI2CSetBuffer1,"ax",%progbits
+ 576              		.align	2
+ 577              		.global	UART_1_EzI2CSetBuffer1
+ 578              		.code	16
+ 579              		.thumb_func
+ 580              		.type	UART_1_EzI2CSetBuffer1, %function
+ 581              	UART_1_EzI2CSetBuffer1:
+ 582              	.LFB5:
+ 445:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 583              		.loc 1 445 0
+ 584              		.cfi_startproc
+ 585              	.LVL35:
+ 586 0000 70B5     		push	{r4, r5, r6, lr}
+ 587              		.cfi_def_cfa_offset 16
+ 588              		.cfi_offset 4, -16
+ 589              		.cfi_offset 5, -12
+ 590              		.cfi_offset 6, -8
+ 591              		.cfi_offset 14, -4
+ 592 0002 061C     		mov	r6, r0
+ 593 0004 0D1C     		mov	r5, r1
+ 594 0006 141E     		sub	r4, r2, #0
+ 446:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     if (NULL != buffer)
+ 595              		.loc 1 446 0
+ 596 0008 0BD0     		beq	.L45
+ 448:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_DisableInt();  /* Lock from interruption */
+ 597              		.loc 1 448 0
+ 598 000a 0B20     		mov	r0, #11
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 22
+
+
+ 599              	.LVL36:
+ 600 000c FFF7FEFF 		bl	CyIntDisable
+ 601              	.LVL37:
+ 450:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_dataBuffer1 =  buffer;
+ 602              		.loc 1 450 0
+ 603 0010 044B     		ldr	r3, .L47
+ 604 0012 1C60     		str	r4, [r3]
+ 451:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_bufSizeBuf1 = (uint16) bufSize;
+ 605              		.loc 1 451 0
+ 606 0014 044B     		ldr	r3, .L47+4
+ 607 0016 1E80     		strh	r6, [r3]
+ 452:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_protectBuf1 = (uint16) rwBoundary;
+ 608              		.loc 1 452 0
+ 609 0018 044B     		ldr	r3, .L47+8
+ 610 001a 1D80     		strh	r5, [r3]
+ 454:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_EnableInt();   /* Release lock */
+ 611              		.loc 1 454 0
+ 612 001c 0B20     		mov	r0, #11
+ 613 001e FFF7FEFF 		bl	CyIntEnable
+ 614              	.LVL38:
+ 615              	.L45:
+ 456:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 616              		.loc 1 456 0
+ 617              		@ sp needed
+ 618              	.LVL39:
+ 619              	.LVL40:
+ 620              	.LVL41:
+ 621 0022 70BD     		pop	{r4, r5, r6, pc}
+ 622              	.L48:
+ 623              		.align	2
+ 624              	.L47:
+ 625 0024 00000000 		.word	UART_1_dataBuffer1
+ 626 0028 00000000 		.word	UART_1_bufSizeBuf1
+ 627 002c 00000000 		.word	UART_1_protectBuf1
+ 628              		.cfi_endproc
+ 629              	.LFE5:
+ 630              		.size	UART_1_EzI2CSetBuffer1, .-UART_1_EzI2CSetBuffer1
+ 631              		.section	.text.UART_1_EzI2CSetReadBoundaryBuffer1,"ax",%progbits
+ 632              		.align	2
+ 633              		.global	UART_1_EzI2CSetReadBoundaryBuffer1
+ 634              		.code	16
+ 635              		.thumb_func
+ 636              		.type	UART_1_EzI2CSetReadBoundaryBuffer1, %function
+ 637              	UART_1_EzI2CSetReadBoundaryBuffer1:
+ 638              	.LFB6:
+ 477:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** {
+ 639              		.loc 1 477 0
+ 640              		.cfi_startproc
+ 641              	.LVL42:
+ 478:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_protectBuf1 = (uint16) rwBoundary;
+ 642              		.loc 1 478 0
+ 643 0000 014B     		ldr	r3, .L50
+ 644 0002 1880     		strh	r0, [r3]
+ 479:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** }
+ 645              		.loc 1 479 0
+ 646              		@ sp needed
+ 647 0004 7047     		bx	lr
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 23
+
+
+ 648              	.L51:
+ 649 0006 C046     		.align	2
+ 650              	.L50:
+ 651 0008 00000000 		.word	UART_1_protectBuf1
+ 652              		.cfi_endproc
+ 653              	.LFE6:
+ 654              		.size	UART_1_EzI2CSetReadBoundaryBuffer1, .-UART_1_EzI2CSetReadBoundaryBuffer1
+ 655              		.section	.text.UART_1_EzI2CSetAddress2,"ax",%progbits
+ 656              		.align	2
+ 657              		.global	UART_1_EzI2CSetAddress2
+ 658              		.code	16
+ 659              		.thumb_func
+ 660              		.type	UART_1_EzI2CSetAddress2, %function
+ 661              	UART_1_EzI2CSetAddress2:
+ 662              	.LFB8:
+ 516:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 517:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 518:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CSetAddress2
+ 519:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 520:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 521:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 522:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Sets the secondary I2C slave address.
+ 523:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 524:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 525:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  address: I2C slave address for the secondary device.
+ 526:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *           This address is the 7-bit right-justified slave address and does
+ 527:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *           not include the R/W bit.
+ 528:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *           This value may be any address between 0 and 127 (0x00 to 0x7F).
+ 529:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 530:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ 531:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 532:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 533:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 534:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     void UART_1_EzI2CSetAddress2(uint32 address)
+ 535:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 663              		.loc 1 535 0
+ 664              		.cfi_startproc
+ 665              	.LVL43:
+ 666 0000 08B5     		push	{r3, lr}
+ 667              		.cfi_def_cfa_offset 8
+ 668              		.cfi_offset 3, -8
+ 669              		.cfi_offset 14, -4
+ 670 0002 011C     		mov	r1, r0
+ 536:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_addrBuf2 = (uint8) address;
+ 671              		.loc 1 536 0
+ 672 0004 044B     		ldr	r3, .L53
+ 673 0006 1870     		strb	r0, [r3]
+ 537:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 538:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_RX_MATCH_REG = UART_1_EzI2CUpdateRxMatchReg((uint32) UART_1_addrBuf1,
+ 674              		.loc 1 538 0
+ 675 0008 044B     		ldr	r3, .L53+4
+ 676 000a 1878     		ldrb	r0, [r3]
+ 677              	.LVL44:
+ 678 000c FFF7FEFF 		bl	UART_1_EzI2CUpdateRxMatchReg
+ 679              	.LVL45:
+ 680 0010 034B     		ldr	r3, .L53+8
+ 681 0012 1860     		str	r0, [r3]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 24
+
+
+ 539:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                                address);
+ 540:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 682              		.loc 1 540 0
+ 683              		@ sp needed
+ 684 0014 08BD     		pop	{r3, pc}
+ 685              	.L54:
+ 686 0016 C046     		.align	2
+ 687              	.L53:
+ 688 0018 00000000 		.word	UART_1_addrBuf2
+ 689 001c 00000000 		.word	UART_1_addrBuf1
+ 690 0020 10030740 		.word	1074201360
+ 691              		.cfi_endproc
+ 692              	.LFE8:
+ 693              		.size	UART_1_EzI2CSetAddress2, .-UART_1_EzI2CSetAddress2
+ 694              		.section	.text.UART_1_EzI2CGetAddress2,"ax",%progbits
+ 695              		.align	2
+ 696              		.global	UART_1_EzI2CGetAddress2
+ 697              		.code	16
+ 698              		.thumb_func
+ 699              		.type	UART_1_EzI2CGetAddress2, %function
+ 700              	UART_1_EzI2CGetAddress2:
+ 701              	.LFB9:
+ 541:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 542:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 543:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 544:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CGetAddress2
+ 545:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 546:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 547:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 548:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Gets secondary the I2C slave 7-bit address.
+ 549:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 550:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 551:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 552:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 553:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ 554:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Returns the I2C slave address for the secondary device.
+ 555:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  This address is a 7-bit right-justified slave address and does not
+ 556:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  include the R/W bit.
+ 557:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  This value may be any address between 0 and 127 (0x00 to 0x7F).
+ 558:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 559:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 560:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint32 UART_1_EzI2CGetAddress2(void)
+ 561:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 702              		.loc 1 561 0
+ 703              		.cfi_startproc
+ 562:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         return((uint32) UART_1_addrBuf2);
+ 704              		.loc 1 562 0
+ 705 0000 014B     		ldr	r3, .L56
+ 706 0002 1878     		ldrb	r0, [r3]
+ 563:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 707              		.loc 1 563 0
+ 708              		@ sp needed
+ 709 0004 7047     		bx	lr
+ 710              	.L57:
+ 711 0006 C046     		.align	2
+ 712              	.L56:
+ 713 0008 00000000 		.word	UART_1_addrBuf2
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 25
+
+
+ 714              		.cfi_endproc
+ 715              	.LFE9:
+ 716              		.size	UART_1_EzI2CGetAddress2, .-UART_1_EzI2CGetAddress2
+ 717              		.section	.text.UART_1_EzI2CSetBuffer2,"ax",%progbits
+ 718              		.align	2
+ 719              		.global	UART_1_EzI2CSetBuffer2
+ 720              		.code	16
+ 721              		.thumb_func
+ 722              		.type	UART_1_EzI2CSetBuffer2, %function
+ 723              	UART_1_EzI2CSetBuffer2:
+ 724              	.LFB10:
+ 564:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 565:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 566:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 567:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CSetBuffer2
+ 568:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 569:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 570:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 571:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Sets up the data buffer to be exposed to the I2C master on a secondary slave
+ 572:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  address request.
+ 573:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 574:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 575:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  bufSize: Size of the buffer in bytes.
+ 576:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  rwBoundary: Sets how many bytes are writeable in the beginning of the buffer.
+ 577:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *              This value must be less than or equal to the buffer size.
+ 578:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *              Data located at offset rwBoundry and greater are read only.
+ 579:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  buffer: Pointer to the data buffer.
+ 580:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 581:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ 582:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 583:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 584:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 585:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     void UART_1_EzI2CSetBuffer2(uint32 bufSize, uint32 rwBoundary, volatile uint8 * buffer)
+ 586:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 725              		.loc 1 586 0
+ 726              		.cfi_startproc
+ 727              	.LVL46:
+ 728 0000 70B5     		push	{r4, r5, r6, lr}
+ 729              		.cfi_def_cfa_offset 16
+ 730              		.cfi_offset 4, -16
+ 731              		.cfi_offset 5, -12
+ 732              		.cfi_offset 6, -8
+ 733              		.cfi_offset 14, -4
+ 734 0002 061C     		mov	r6, r0
+ 735 0004 0D1C     		mov	r5, r1
+ 736 0006 141E     		sub	r4, r2, #0
+ 587:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if (NULL != buffer)
+ 737              		.loc 1 587 0
+ 738 0008 0BD0     		beq	.L58
+ 588:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 589:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_DisableInt();  /* Lock from interruption */
+ 739              		.loc 1 589 0
+ 740 000a 0B20     		mov	r0, #11
+ 741              	.LVL47:
+ 742 000c FFF7FEFF 		bl	CyIntDisable
+ 743              	.LVL48:
+ 590:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 26
+
+
+ 591:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_dataBuffer2 =  buffer;
+ 744              		.loc 1 591 0
+ 745 0010 044B     		ldr	r3, .L60
+ 746 0012 1C60     		str	r4, [r3]
+ 592:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_bufSizeBuf2 = (uint16) bufSize;
+ 747              		.loc 1 592 0
+ 748 0014 044B     		ldr	r3, .L60+4
+ 749 0016 1E80     		strh	r6, [r3]
+ 593:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_protectBuf2 = (uint16) rwBoundary;
+ 750              		.loc 1 593 0
+ 751 0018 044B     		ldr	r3, .L60+8
+ 752 001a 1D80     		strh	r5, [r3]
+ 594:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 595:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_EnableInt();   /* Release lock */
+ 753              		.loc 1 595 0
+ 754 001c 0B20     		mov	r0, #11
+ 755 001e FFF7FEFF 		bl	CyIntEnable
+ 756              	.LVL49:
+ 757              	.L58:
+ 596:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 597:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 758              		.loc 1 597 0
+ 759              		@ sp needed
+ 760              	.LVL50:
+ 761              	.LVL51:
+ 762              	.LVL52:
+ 763 0022 70BD     		pop	{r4, r5, r6, pc}
+ 764              	.L61:
+ 765              		.align	2
+ 766              	.L60:
+ 767 0024 00000000 		.word	UART_1_dataBuffer2
+ 768 0028 00000000 		.word	UART_1_bufSizeBuf2
+ 769 002c 00000000 		.word	UART_1_protectBuf2
+ 770              		.cfi_endproc
+ 771              	.LFE10:
+ 772              		.size	UART_1_EzI2CSetBuffer2, .-UART_1_EzI2CSetBuffer2
+ 773              		.section	.text.UART_1_EzI2CSetReadBoundaryBuffer2,"ax",%progbits
+ 774              		.align	2
+ 775              		.global	UART_1_EzI2CSetReadBoundaryBuffer2
+ 776              		.code	16
+ 777              		.thumb_func
+ 778              		.type	UART_1_EzI2CSetReadBoundaryBuffer2, %function
+ 779              	UART_1_EzI2CSetReadBoundaryBuffer2:
+ 780              	.LFB11:
+ 598:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 599:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 600:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 601:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CSetReadBoundaryBuffer2
+ 602:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 603:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 604:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 605:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Sets the read only boundary in the data buffer to be exposed to the I2C
+ 606:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  master on a secondary address request.
+ 607:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 608:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 609:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  rwBoundary: Sets how many bytes are writeable at the beginning of the buffer.
+ 610:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *              This value must be less than or equal to the buffer size.
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 27
+
+
+ 611:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *              Data located at offset rwBoundry and greater are read only.
+ 612:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 613:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ 614:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 615:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 616:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 617:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     void UART_1_EzI2CSetReadBoundaryBuffer2(uint32 rwBoundary)
+ 618:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 781              		.loc 1 618 0
+ 782              		.cfi_startproc
+ 783              	.LVL53:
+ 619:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_protectBuf2 = (uint16) rwBoundary;
+ 784              		.loc 1 619 0
+ 785 0000 014B     		ldr	r3, .L63
+ 786 0002 1880     		strh	r0, [r3]
+ 620:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 787              		.loc 1 620 0
+ 788              		@ sp needed
+ 789 0004 7047     		bx	lr
+ 790              	.L64:
+ 791 0006 C046     		.align	2
+ 792              	.L63:
+ 793 0008 00000000 		.word	UART_1_protectBuf2
+ 794              		.cfi_endproc
+ 795              	.LFE11:
+ 796              		.size	UART_1_EzI2CSetReadBoundaryBuffer2, .-UART_1_EzI2CSetReadBoundaryBuffer2
+ 797              		.section	.text.UART_1_EzI2CSaveConfig,"ax",%progbits
+ 798              		.align	2
+ 799              		.global	UART_1_EzI2CSaveConfig
+ 800              		.code	16
+ 801              		.thumb_func
+ 802              		.type	UART_1_EzI2CSaveConfig, %function
+ 803              	UART_1_EzI2CSaveConfig:
+ 804              	.LFB12:
+ 621:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 622:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #endif /* (UART_1_SECONDARY_ADDRESS_ENABLE_CONST) */
+ 623:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 624:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 625:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** #if(UART_1_EZI2C_WAKE_ENABLE_CONST)
+ 626:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 627:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CSaveConfig
+ 628:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 629:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 630:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 631:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Clock stretching is  enabled: Enables INTR_I2C_EC.WAKE_UP interrupt source.
+ 632:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  It triggers on the slave address match.
+ 633:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Clock stretching is disabled: Waits until the I2C slave becomes free and
+ 634:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  disables the block to perform reconfiguration from the active mode operation
+ 635:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  to deep sleep with wake up on the address match: enables INTR_I2C_EC.WAKE_UP
+ 636:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  interrupt source and disables the INTR_S and INTR_TX interrupt sources.
+ 637:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  The block is disabled before reconfiguration and enabled when
+ 638:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  it is completed.
+ 639:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 640:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 641:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 642:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 643:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 28
+
+
+ 644:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 645:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 646:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 647:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     void UART_1_EzI2CSaveConfig(void)
+ 648:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 805              		.loc 1 648 0
+ 806              		.cfi_startproc
+ 649:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #if(UART_1_CY_SCBIP_V0)
+ 650:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 651:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(UART_1_EZI2C_SCL_STRETCH_ENABLE)
+ 807              		.loc 1 651 0
+ 808 0000 034B     		ldr	r3, .L67
+ 809 0002 1B68     		ldr	r3, [r3]
+ 810 0004 5A06     		lsl	r2, r3, #25
+ 811 0006 02D5     		bpl	.L65
+ 652:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 653:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Enable wakeup interrupt source on address match */
+ 654:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetI2CExtClkInterruptMode(UART_1_INTR_I2C_EC_WAKE_UP);
+ 812              		.loc 1 654 0
+ 813 0008 0122     		mov	r2, #1
+ 814 000a 024B     		ldr	r3, .L67+4
+ 815 000c 1A60     		str	r2, [r3]
+ 816              	.L65:
+ 655:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 656:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         
+ 657:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 658:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #else
+ 659:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         uint8 enableInt;
+ 660:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 661:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         enableInt = (uint8) UART_1_INTR_I2C_EC_WAKE_UP;
+ 662:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 663:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(UART_1_EZI2C_SCL_STRETCH_ENABLE)
+ 664:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 665:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #if (UART_1_SCB_CLK_INTERNAL)
+ 666:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Disable clock to internal address match logic. Ticket ID #187931 */
+ 667:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SCBCLK_Stop();
+ 668:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #endif /* (UART_1_SCB_CLK_INTERNAL) */
+ 669:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 670:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Enable interrupt source to wakeup device */
+ 671:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetI2CExtClkInterruptMode(enableInt);
+ 672:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 673:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         else
+ 674:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 675:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             for(;;) /* Wait for end of transaction intended to slave */
+ 676:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             {
+ 677:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 if(0u == (UART_1_GetI2CExtClkInterruptSource() & UART_1_INTR_I2C_EC_WAKE_UP))
+ 678:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 {
+ 679:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                     enableInt = CyEnterCriticalSection();
+ 680:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 681:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                     if(0u == (UART_1_GetI2CExtClkInterruptSource() & UART_1_INTR_I2C_EC_WAKE_UP))
+ 682:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                     {
+ 683:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         /* Attempts to set NACK command before disable block */
+ 684:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         UART_1_I2C_SLAVE_GENERATE_NACK;
+ 685:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 686:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         if(0u == (UART_1_GetI2CExtClkInterruptSource() & UART_1_INTR_I2C_EC_WAKE_UP
+ 687:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         {
+ 688:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             /* NACK command was set before. It is safe to disable block */
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 29
+
+
+ 689:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             UART_1_CTRL_REG &= (uint32) ~UART_1_CTRL_ENABLED;
+ 690:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             UART_1_DisableInt();
+ 691:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 692:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             CyExitCriticalSection(enableInt);
+ 693:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             break;
+ 694:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         }
+ 695:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         else
+ 696:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         {
+ 697:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             /* Clear NACK command to prevent data NACK */
+ 698:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             UART_1_I2C_SLAVE_CLEAR_NACK;
+ 699:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         }
+ 700:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                     }
+ 701:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 702:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                     CyExitCriticalSection(enableInt);
+ 703:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 }
+ 704:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             }
+ 705:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 706:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Disable all active mode interrupt sources */
+ 707:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetTxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 708:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetSlaveInterruptMode(UART_1_NO_INTR_SOURCES);
+ 709:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_ClearPendingInt();
+ 710:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_EnableInt();
+ 711:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 712:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Enable wakeup interrupt on address match */
+ 713:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetI2CExtClkInterruptMode(UART_1_INTR_I2C_EC_WAKE_UP);
+ 714:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 715:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             enableInt = CyEnterCriticalSection();
+ 716:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 717:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_CTRL_REG |= (uint32) UART_1_CTRL_ENABLED;
+ 718:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_I2C_SLAVE_GENERATE_NACK;
+ 719:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 720:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             CyExitCriticalSection(enableInt);
+ 721:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 722:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         
+ 723:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #endif /* (UART_1_CY_SCBIP_V0) */
+ 724:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 817              		.loc 1 724 0
+ 818              		@ sp needed
+ 819 000e 7047     		bx	lr
+ 820              	.L68:
+ 821              		.align	2
+ 822              	.L67:
+ 823 0010 480F0740 		.word	1074204488
+ 824 0014 880E0740 		.word	1074204296
+ 825              		.cfi_endproc
+ 826              	.LFE12:
+ 827              		.size	UART_1_EzI2CSaveConfig, .-UART_1_EzI2CSaveConfig
+ 828              		.section	.text.UART_1_EzI2CRestoreConfig,"ax",%progbits
+ 829              		.align	2
+ 830              		.global	UART_1_EzI2CRestoreConfig
+ 831              		.code	16
+ 832              		.thumb_func
+ 833              		.type	UART_1_EzI2CRestoreConfig, %function
+ 834              	UART_1_EzI2CRestoreConfig:
+ 835              	.LFB13:
+ 725:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 726:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 30
+
+
+ 727:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
+ 728:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Function Name: UART_1_EzI2CRestoreConfig
+ 729:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     ********************************************************************************
+ 730:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 731:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
+ 732:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Clock stretching is  enabled: Disables the INTR_I2C_EC.WAKE_UP interrupt
+ 733:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  source.
+ 734:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Clock stretching is disabled: Reconfigures the EZI2C component from
+ 735:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Deep Sleep (wake up on the address match) to active operation: disables
+ 736:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  the INTR_I2C_EC.WAKE_UP interrupt source and restores the INTR_S
+ 737:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  interrupt sources to operate in the active mode.
+ 738:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  The block is disabled before reconfiguration and enabled when
+ 739:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  it is completed.
+ 740:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 741:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
+ 742:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 743:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 744:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
+ 745:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
+ 746:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
+ 747:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
+ 748:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     void UART_1_EzI2CRestoreConfig(void)
+ 749:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
+ 836              		.loc 1 749 0
+ 837              		.cfi_startproc
+ 750:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #if(UART_1_CY_SCBIP_V0)
+ 751:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 752:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(UART_1_EZI2C_SCL_STRETCH_ENABLE)
+ 838              		.loc 1 752 0
+ 839 0000 034B     		ldr	r3, .L71
+ 840 0002 1B68     		ldr	r3, [r3]
+ 841 0004 5A06     		lsl	r2, r3, #25
+ 842 0006 02D5     		bpl	.L69
+ 753:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 754:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Disable wakeup interrupt on address match */
+ 755:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetI2CExtClkInterruptMode(UART_1_NO_INTR_SOURCES);
+ 843              		.loc 1 755 0
+ 844 0008 0022     		mov	r2, #0
+ 845 000a 024B     		ldr	r3, .L71+4
+ 846 000c 1A60     		str	r2, [r3]
+ 847              	.L69:
+ 756:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 757:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         
+ 758:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 759:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #else
+ 760:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 761:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         if(UART_1_EZI2C_SCL_STRETCH_ENABLE)
+ 762:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 763:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Disable wakeup interrupt source on address match */
+ 764:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetI2CExtClkInterruptMode(UART_1_NO_INTR_SOURCES);
+ 765:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 766:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #if (UART_1_SCB_CLK_INTERNAL)
+ 767:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Enable clock to internal address match logic. Ticket ID #187931 */
+ 768:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SCBCLK_Start();
+ 769:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #endif /* (UART_1_SCB_CLK_INTERNAL) */
+ 770:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 771:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         else
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 31
+
+
+ 772:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
+ 773:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* NACK will be driven on the bus by wakeup or NACK command.
+ 774:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             * It is safe to disable block to restore active mode configuration.
+ 775:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             */
+ 776:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_CTRL_REG &= (uint32) ~UART_1_CTRL_ENABLED;
+ 777:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 778:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Restore active mode interrupt sources */
+ 779:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetI2CExtClkInterruptMode(UART_1_NO_INTR_SOURCES);
+ 780:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_SetSlaveInterruptMode(UART_1_EZI2C_INTR_SLAVE_MASK |
+ 781:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                    UART_1_INTR_SLAVE_I2C_START);
+ 782:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_ClearPendingInt();
+ 783:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 784:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_CTRL_REG |= (uint32) UART_1_CTRL_ENABLED;
+ 785:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
+ 786:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         
+ 787:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
+ 788:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     #endif /* (UART_1_CY_SCBIP_V0) */
+ 789:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
+ 848              		.loc 1 789 0
+ 849              		@ sp needed
+ 850 000e 7047     		bx	lr
+ 851              	.L72:
+ 852              		.align	2
+ 853              	.L71:
+ 854 0010 480F0740 		.word	1074204488
+ 855 0014 880E0740 		.word	1074204296
+ 856              		.cfi_endproc
+ 857              	.LFE13:
+ 858              		.size	UART_1_EzI2CRestoreConfig, .-UART_1_EzI2CRestoreConfig
+ 859              		.global	UART_1_configEzI2C
+ 860              		.comm	UART_1_indexBuf2,2,2
+ 861              		.comm	UART_1_offsetBuf2,2,2
+ 862              		.comm	UART_1_protectBuf2,2,2
+ 863              		.comm	UART_1_bufSizeBuf2,2,2
+ 864              		.comm	UART_1_dataBuffer2,4,4
+ 865              		.comm	UART_1_addrBuf2,1,1
+ 866              		.comm	UART_1_addrBuf1,1,1
+ 867              		.comm	UART_1_indexBuf1,2,2
+ 868              		.comm	UART_1_offsetBuf1,2,2
+ 869              		.comm	UART_1_protectBuf1,2,2
+ 870              		.comm	UART_1_bufSizeBuf1,2,2
+ 871              		.comm	UART_1_dataBuffer1,4,4
+ 872              		.comm	UART_1_fsmState,1,1
+ 873              		.comm	UART_1_curStatus,1,1
+ 874              		.section	.rodata
+ 875              		.align	2
+ 876              		.type	UART_1_configEzI2C, %object
+ 877              		.size	UART_1_configEzI2C, 32
+ 878              	UART_1_configEzI2C:
+ 879 0000 01000000 		.word	1
+ 880 0004 01000000 		.word	1
+ 881 0008 00000000 		.word	0
+ 882 000c 08000000 		.word	8
+ 883 0010 09000000 		.word	9
+ 884 0014 00000000 		.word	0
+ 885 0018 00000000 		.word	0
+ 886 001c 00       		.byte	0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 32
+
+
+ 887 001d 000000   		.space	3
+ 888              		.text
+ 889              	.Letext0:
+ 890              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 891              		.file 3 ".\\Generated_Source\\PSoC4\\UART_1_EZI2C.h"
+ 892              		.file 4 ".\\Generated_Source\\PSoC4\\UART_1_PVT.h"
+ 893              		.file 5 "Generated_Source\\PSoC4/CyLib.h"
+ 894              		.section	.debug_info,"",%progbits
+ 895              	.Ldebug_info0:
+ 896 0000 5B060000 		.4byte	0x65b
+ 897 0004 0400     		.2byte	0x4
+ 898 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 899 000a 04       		.byte	0x4
+ 900 000b 01       		.uleb128 0x1
+ 901 000c 84000000 		.4byte	.LASF72
+ 902 0010 01       		.byte	0x1
+ 903 0011 FA010000 		.4byte	.LASF73
+ 904 0015 DB040000 		.4byte	.LASF74
+ 905 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 906 001d 00000000 		.4byte	0
+ 907 0021 00000000 		.4byte	.Ldebug_line0
+ 908 0025 02       		.uleb128 0x2
+ 909 0026 01       		.byte	0x1
+ 910 0027 06       		.byte	0x6
+ 911 0028 5A010000 		.4byte	.LASF0
+ 912 002c 02       		.uleb128 0x2
+ 913 002d 01       		.byte	0x1
+ 914 002e 08       		.byte	0x8
+ 915 002f 80030000 		.4byte	.LASF1
+ 916 0033 02       		.uleb128 0x2
+ 917 0034 02       		.byte	0x2
+ 918 0035 05       		.byte	0x5
+ 919 0036 B1030000 		.4byte	.LASF2
+ 920 003a 02       		.uleb128 0x2
+ 921 003b 02       		.byte	0x2
+ 922 003c 07       		.byte	0x7
+ 923 003d 56020000 		.4byte	.LASF3
+ 924 0041 02       		.uleb128 0x2
+ 925 0042 04       		.byte	0x4
+ 926 0043 05       		.byte	0x5
+ 927 0044 66010000 		.4byte	.LASF4
+ 928 0048 02       		.uleb128 0x2
+ 929 0049 04       		.byte	0x4
+ 930 004a 07       		.byte	0x7
+ 931 004b 2F020000 		.4byte	.LASF5
+ 932 004f 02       		.uleb128 0x2
+ 933 0050 08       		.byte	0x8
+ 934 0051 05       		.byte	0x5
+ 935 0052 4C010000 		.4byte	.LASF6
+ 936 0056 02       		.uleb128 0x2
+ 937 0057 08       		.byte	0x8
+ 938 0058 07       		.byte	0x7
+ 939 0059 00010000 		.4byte	.LASF7
+ 940 005d 03       		.uleb128 0x3
+ 941 005e 04       		.byte	0x4
+ 942 005f 05       		.byte	0x5
+ 943 0060 696E7400 		.ascii	"int\000"
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 33
+
+
+ 944 0064 02       		.uleb128 0x2
+ 945 0065 04       		.byte	0x4
+ 946 0066 07       		.byte	0x7
+ 947 0067 22020000 		.4byte	.LASF8
+ 948 006b 04       		.uleb128 0x4
+ 949 006c 9A010000 		.4byte	.LASF9
+ 950 0070 02       		.byte	0x2
+ 951 0071 B3       		.byte	0xb3
+ 952 0072 2C000000 		.4byte	0x2c
+ 953 0076 04       		.uleb128 0x4
+ 954 0077 28000000 		.4byte	.LASF10
+ 955 007b 02       		.byte	0x2
+ 956 007c B4       		.byte	0xb4
+ 957 007d 3A000000 		.4byte	0x3a
+ 958 0081 04       		.uleb128 0x4
+ 959 0082 CE010000 		.4byte	.LASF11
+ 960 0086 02       		.byte	0x2
+ 961 0087 B5       		.byte	0xb5
+ 962 0088 48000000 		.4byte	0x48
+ 963 008c 02       		.uleb128 0x2
+ 964 008d 04       		.byte	0x4
+ 965 008e 04       		.byte	0x4
+ 966 008f 52030000 		.4byte	.LASF12
+ 967 0093 02       		.uleb128 0x2
+ 968 0094 08       		.byte	0x8
+ 969 0095 04       		.byte	0x4
+ 970 0096 B8010000 		.4byte	.LASF13
+ 971 009a 02       		.uleb128 0x2
+ 972 009b 01       		.byte	0x1
+ 973 009c 08       		.byte	0x8
+ 974 009d 60040000 		.4byte	.LASF14
+ 975 00a1 05       		.uleb128 0x5
+ 976 00a2 6B000000 		.4byte	0x6b
+ 977 00a6 06       		.uleb128 0x6
+ 978 00a7 9E020000 		.4byte	.LASF15
+ 979 00ab 02       		.byte	0x2
+ 980 00ac 5F01     		.2byte	0x15f
+ 981 00ae B2000000 		.4byte	0xb2
+ 982 00b2 05       		.uleb128 0x5
+ 983 00b3 81000000 		.4byte	0x81
+ 984 00b7 06       		.uleb128 0x6
+ 985 00b8 65040000 		.4byte	.LASF16
+ 986 00bc 02       		.byte	0x2
+ 987 00bd 6F01     		.2byte	0x16f
+ 988 00bf C3000000 		.4byte	0xc3
+ 989 00c3 07       		.uleb128 0x7
+ 990 00c4 04       		.byte	0x4
+ 991 00c5 C9000000 		.4byte	0xc9
+ 992 00c9 08       		.uleb128 0x8
+ 993 00ca 02       		.uleb128 0x2
+ 994 00cb 04       		.byte	0x4
+ 995 00cc 07       		.byte	0x7
+ 996 00cd CA020000 		.4byte	.LASF17
+ 997 00d1 09       		.uleb128 0x9
+ 998 00d2 20       		.byte	0x20
+ 999 00d3 03       		.byte	0x3
+ 1000 00d4 63       		.byte	0x63
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 34
+
+
+ 1001 00d5 3A010000 		.4byte	0x13a
+ 1002 00d9 0A       		.uleb128 0xa
+ 1003 00da D5010000 		.4byte	.LASF18
+ 1004 00de 03       		.byte	0x3
+ 1005 00df 65       		.byte	0x65
+ 1006 00e0 81000000 		.4byte	0x81
+ 1007 00e4 00       		.byte	0
+ 1008 00e5 0A       		.uleb128 0xa
+ 1009 00e6 CD030000 		.4byte	.LASF19
+ 1010 00ea 03       		.byte	0x3
+ 1011 00eb 66       		.byte	0x66
+ 1012 00ec 81000000 		.4byte	0x81
+ 1013 00f0 04       		.byte	0x4
+ 1014 00f1 0A       		.uleb128 0xa
+ 1015 00f2 E8010000 		.4byte	.LASF20
+ 1016 00f6 03       		.byte	0x3
+ 1017 00f7 67       		.byte	0x67
+ 1018 00f8 81000000 		.4byte	0x81
+ 1019 00fc 08       		.byte	0x8
+ 1020 00fd 0A       		.uleb128 0xa
+ 1021 00fe 41030000 		.4byte	.LASF21
+ 1022 0102 03       		.byte	0x3
+ 1023 0103 68       		.byte	0x68
+ 1024 0104 81000000 		.4byte	0x81
+ 1025 0108 0C       		.byte	0xc
+ 1026 0109 0A       		.uleb128 0xa
+ 1027 010a C8040000 		.4byte	.LASF22
+ 1028 010e 03       		.byte	0x3
+ 1029 010f 69       		.byte	0x69
+ 1030 0110 81000000 		.4byte	0x81
+ 1031 0114 10       		.byte	0x10
+ 1032 0115 0A       		.uleb128 0xa
+ 1033 0116 40010000 		.4byte	.LASF23
+ 1034 011a 03       		.byte	0x3
+ 1035 011b 6A       		.byte	0x6a
+ 1036 011c 81000000 		.4byte	0x81
+ 1037 0120 14       		.byte	0x14
+ 1038 0121 0A       		.uleb128 0xa
+ 1039 0122 7C010000 		.4byte	.LASF24
+ 1040 0126 03       		.byte	0x3
+ 1041 0127 6B       		.byte	0x6b
+ 1042 0128 81000000 		.4byte	0x81
+ 1043 012c 18       		.byte	0x18
+ 1044 012d 0A       		.uleb128 0xa
+ 1045 012e BF010000 		.4byte	.LASF25
+ 1046 0132 03       		.byte	0x3
+ 1047 0133 6C       		.byte	0x6c
+ 1048 0134 6B000000 		.4byte	0x6b
+ 1049 0138 1C       		.byte	0x1c
+ 1050 0139 00       		.byte	0
+ 1051 013a 04       		.uleb128 0x4
+ 1052 013b 58030000 		.4byte	.LASF26
+ 1053 013f 03       		.byte	0x3
+ 1054 0140 6D       		.byte	0x6d
+ 1055 0141 D1000000 		.4byte	0xd1
+ 1056 0145 0B       		.uleb128 0xb
+ 1057 0146 4B050000 		.4byte	.LASF75
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 35
+
+
+ 1058 014a 01       		.byte	0x1
+ 1059 014b F901     		.2byte	0x1f9
+ 1060 014d 81000000 		.4byte	0x81
+ 1061 0151 00000000 		.4byte	.LFB7
+ 1062 0155 16000000 		.4byte	.LFE7-.LFB7
+ 1063 0159 01       		.uleb128 0x1
+ 1064 015a 9C       		.byte	0x9c
+ 1065 015b 8E010000 		.4byte	0x18e
+ 1066 015f 0C       		.uleb128 0xc
+ 1067 0160 78020000 		.4byte	.LASF27
+ 1068 0164 01       		.byte	0x1
+ 1069 0165 F901     		.2byte	0x1f9
+ 1070 0167 81000000 		.4byte	0x81
+ 1071 016b 00000000 		.4byte	.LLST0
+ 1072 016f 0D       		.uleb128 0xd
+ 1073 0170 7E020000 		.4byte	.LASF28
+ 1074 0174 01       		.byte	0x1
+ 1075 0175 F901     		.2byte	0x1f9
+ 1076 0177 81000000 		.4byte	0x81
+ 1077 017b 01       		.uleb128 0x1
+ 1078 017c 51       		.byte	0x51
+ 1079 017d 0E       		.uleb128 0xe
+ 1080 017e AF010000 		.4byte	.LASF30
+ 1081 0182 01       		.byte	0x1
+ 1082 0183 FB01     		.2byte	0x1fb
+ 1083 0185 81000000 		.4byte	0x81
+ 1084 0189 21000000 		.4byte	.LLST1
+ 1085 018d 00       		.byte	0
+ 1086 018e 0F       		.uleb128 0xf
+ 1087 018f 1F030000 		.4byte	.LASF32
+ 1088 0193 01       		.byte	0x1
+ 1089 0194 5C       		.byte	0x5c
+ 1090 0195 00000000 		.4byte	.LFB0
+ 1091 0199 D8010000 		.4byte	.LFE0-.LFB0
+ 1092 019d 01       		.uleb128 0x1
+ 1093 019e 9C       		.byte	0x9c
+ 1094 019f 2F020000 		.4byte	0x22f
+ 1095 01a3 10       		.uleb128 0x10
+ 1096 01a4 72040000 		.4byte	.LASF29
+ 1097 01a8 01       		.byte	0x1
+ 1098 01a9 5C       		.byte	0x5c
+ 1099 01aa 2F020000 		.4byte	0x22f
+ 1100 01ae 5B000000 		.4byte	.LLST2
+ 1101 01b2 11       		.uleb128 0x11
+ 1102 01b3 0C000000 		.4byte	.LVL8
+ 1103 01b7 E4050000 		.4byte	0x5e4
+ 1104 01bb C5010000 		.4byte	0x1c5
+ 1105 01bf 12       		.uleb128 0x12
+ 1106 01c0 01       		.uleb128 0x1
+ 1107 01c1 50       		.byte	0x50
+ 1108 01c2 01       		.uleb128 0x1
+ 1109 01c3 30       		.byte	0x30
+ 1110 01c4 00       		.byte	0
+ 1111 01c5 11       		.uleb128 0x11
+ 1112 01c6 18000000 		.4byte	.LVL11
+ 1113 01ca F5050000 		.4byte	0x5f5
+ 1114 01ce E2010000 		.4byte	0x1e2
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 36
+
+
+ 1115 01d2 12       		.uleb128 0x12
+ 1116 01d3 01       		.uleb128 0x1
+ 1117 01d4 52       		.byte	0x52
+ 1118 01d5 01       		.uleb128 0x1
+ 1119 01d6 30       		.byte	0x30
+ 1120 01d7 12       		.uleb128 0x12
+ 1121 01d8 01       		.uleb128 0x1
+ 1122 01d9 51       		.byte	0x51
+ 1123 01da 01       		.uleb128 0x1
+ 1124 01db 30       		.byte	0x30
+ 1125 01dc 12       		.uleb128 0x12
+ 1126 01dd 01       		.uleb128 0x1
+ 1127 01de 50       		.byte	0x50
+ 1128 01df 01       		.uleb128 0x1
+ 1129 01e0 38       		.byte	0x38
+ 1130 01e1 00       		.byte	0
+ 1131 01e2 13       		.uleb128 0x13
+ 1132 01e3 8A000000 		.4byte	.LVL12
+ 1133 01e7 45010000 		.4byte	0x145
+ 1134 01eb 13       		.uleb128 0x13
+ 1135 01ec 98000000 		.4byte	.LVL13
+ 1136 01f0 45010000 		.4byte	0x145
+ 1137 01f4 11       		.uleb128 0x11
+ 1138 01f5 D2000000 		.4byte	.LVL14
+ 1139 01f9 10060000 		.4byte	0x610
+ 1140 01fd 07020000 		.4byte	0x207
+ 1141 0201 12       		.uleb128 0x12
+ 1142 0202 01       		.uleb128 0x1
+ 1143 0203 50       		.byte	0x50
+ 1144 0204 01       		.uleb128 0x1
+ 1145 0205 3B       		.byte	0x3b
+ 1146 0206 00       		.byte	0
+ 1147 0207 11       		.uleb128 0x11
+ 1148 0208 DA000000 		.4byte	.LVL15
+ 1149 020c 21060000 		.4byte	0x621
+ 1150 0210 1F020000 		.4byte	0x21f
+ 1151 0214 12       		.uleb128 0x12
+ 1152 0215 01       		.uleb128 0x1
+ 1153 0216 51       		.byte	0x51
+ 1154 0217 01       		.uleb128 0x1
+ 1155 0218 33       		.byte	0x33
+ 1156 0219 12       		.uleb128 0x12
+ 1157 021a 01       		.uleb128 0x1
+ 1158 021b 50       		.byte	0x50
+ 1159 021c 01       		.uleb128 0x1
+ 1160 021d 3B       		.byte	0x3b
+ 1161 021e 00       		.byte	0
+ 1162 021f 14       		.uleb128 0x14
+ 1163 0220 EC000000 		.4byte	.LVL16
+ 1164 0224 37060000 		.4byte	0x637
+ 1165 0228 12       		.uleb128 0x12
+ 1166 0229 01       		.uleb128 0x1
+ 1167 022a 50       		.byte	0x50
+ 1168 022b 01       		.uleb128 0x1
+ 1169 022c 3B       		.byte	0x3b
+ 1170 022d 00       		.byte	0
+ 1171 022e 00       		.byte	0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 37
+
+
+ 1172 022f 07       		.uleb128 0x7
+ 1173 0230 04       		.byte	0x4
+ 1174 0231 35020000 		.4byte	0x235
+ 1175 0235 15       		.uleb128 0x15
+ 1176 0236 3A010000 		.4byte	0x13a
+ 1177 023a 16       		.uleb128 0x16
+ 1178 023b 2F010000 		.4byte	.LASF45
+ 1179 023f 01       		.byte	0x1
+ 1180 0240 2301     		.2byte	0x123
+ 1181 0242 00000000 		.4byte	.LFB1
+ 1182 0246 1C000000 		.4byte	.LFE1-.LFB1
+ 1183 024a 01       		.uleb128 0x1
+ 1184 024b 9C       		.byte	0x9c
+ 1185 024c 17       		.uleb128 0x17
+ 1186 024d 10000000 		.4byte	.LASF35
+ 1187 0251 01       		.byte	0x1
+ 1188 0252 3A01     		.2byte	0x13a
+ 1189 0254 81000000 		.4byte	0x81
+ 1190 0258 00000000 		.4byte	.LFB2
+ 1191 025c 68000000 		.4byte	.LFE2-.LFB2
+ 1192 0260 01       		.uleb128 0x1
+ 1193 0261 9C       		.byte	0x9c
+ 1194 0262 99020000 		.4byte	0x299
+ 1195 0266 0E       		.uleb128 0xe
+ 1196 0267 68050000 		.4byte	.LASF31
+ 1197 026b 01       		.byte	0x1
+ 1198 026c 3C01     		.2byte	0x13c
+ 1199 026e 81000000 		.4byte	0x81
+ 1200 0272 9D000000 		.4byte	.LLST3
+ 1201 0276 11       		.uleb128 0x11
+ 1202 0277 08000000 		.4byte	.LVL18
+ 1203 027b 10060000 		.4byte	0x610
+ 1204 027f 89020000 		.4byte	0x289
+ 1205 0283 12       		.uleb128 0x12
+ 1206 0284 01       		.uleb128 0x1
+ 1207 0285 50       		.byte	0x50
+ 1208 0286 01       		.uleb128 0x1
+ 1209 0287 3B       		.byte	0x3b
+ 1210 0288 00       		.byte	0
+ 1211 0289 14       		.uleb128 0x14
+ 1212 028a 50000000 		.4byte	.LVL22
+ 1213 028e 51060000 		.4byte	0x651
+ 1214 0292 12       		.uleb128 0x12
+ 1215 0293 01       		.uleb128 0x1
+ 1216 0294 50       		.byte	0x50
+ 1217 0295 01       		.uleb128 0x1
+ 1218 0296 3B       		.byte	0x3b
+ 1219 0297 00       		.byte	0
+ 1220 0298 00       		.byte	0
+ 1221 0299 18       		.uleb128 0x18
+ 1222 029a 99030000 		.4byte	.LASF33
+ 1223 029e 01       		.byte	0x1
+ 1224 029f 6D01     		.2byte	0x16d
+ 1225 02a1 00000000 		.4byte	.LFB3
+ 1226 02a5 40000000 		.4byte	.LFE3-.LFB3
+ 1227 02a9 01       		.uleb128 0x1
+ 1228 02aa 9C       		.byte	0x9c
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 38
+
+
+ 1229 02ab EF020000 		.4byte	0x2ef
+ 1230 02af 0C       		.uleb128 0xc
+ 1231 02b0 03030000 		.4byte	.LASF34
+ 1232 02b4 01       		.byte	0x1
+ 1233 02b5 6D01     		.2byte	0x16d
+ 1234 02b7 81000000 		.4byte	0x81
+ 1235 02bb BB000000 		.4byte	.LLST4
+ 1236 02bf 19       		.uleb128 0x19
+ 1237 02c0 1C000000 		.4byte	.LBB2
+ 1238 02c4 10000000 		.4byte	.LBE2-.LBB2
+ 1239 02c8 DD020000 		.4byte	0x2dd
+ 1240 02cc 0E       		.uleb128 0xe
+ 1241 02cd AF010000 		.4byte	.LASF30
+ 1242 02d1 01       		.byte	0x1
+ 1243 02d2 7801     		.2byte	0x178
+ 1244 02d4 81000000 		.4byte	0x81
+ 1245 02d8 F5000000 		.4byte	.LLST5
+ 1246 02dc 00       		.byte	0
+ 1247 02dd 14       		.uleb128 0x14
+ 1248 02de 16000000 		.4byte	.LVL25
+ 1249 02e2 45010000 		.4byte	0x145
+ 1250 02e6 12       		.uleb128 0x12
+ 1251 02e7 01       		.uleb128 0x1
+ 1252 02e8 50       		.byte	0x50
+ 1253 02e9 03       		.uleb128 0x3
+ 1254 02ea F3       		.byte	0xf3
+ 1255 02eb 01       		.uleb128 0x1
+ 1256 02ec 50       		.byte	0x50
+ 1257 02ed 00       		.byte	0
+ 1258 02ee 00       		.byte	0
+ 1259 02ef 17       		.uleb128 0x17
+ 1260 02f0 D3020000 		.4byte	.LASF36
+ 1261 02f4 01       		.byte	0x1
+ 1262 02f5 9601     		.2byte	0x196
+ 1263 02f7 81000000 		.4byte	0x81
+ 1264 02fb 00000000 		.4byte	.LFB4
+ 1265 02ff 24000000 		.4byte	.LFE4-.LFB4
+ 1266 0303 01       		.uleb128 0x1
+ 1267 0304 9C       		.byte	0x9c
+ 1268 0305 1A030000 		.4byte	0x31a
+ 1269 0309 0E       		.uleb128 0xe
+ 1270 030a 03030000 		.4byte	.LASF34
+ 1271 030e 01       		.byte	0x1
+ 1272 030f 9801     		.2byte	0x198
+ 1273 0311 81000000 		.4byte	0x81
+ 1274 0315 13010000 		.4byte	.LLST6
+ 1275 0319 00       		.byte	0
+ 1276 031a 18       		.uleb128 0x18
+ 1277 031b 2F000000 		.4byte	.LASF37
+ 1278 031f 01       		.byte	0x1
+ 1279 0320 BC01     		.2byte	0x1bc
+ 1280 0322 00000000 		.4byte	.LFB5
+ 1281 0326 30000000 		.4byte	.LFE5-.LFB5
+ 1282 032a 01       		.uleb128 0x1
+ 1283 032b 9C       		.byte	0x9c
+ 1284 032c 83030000 		.4byte	0x383
+ 1285 0330 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 39
+
+
+ 1286 0331 58040000 		.4byte	.LASF38
+ 1287 0335 01       		.byte	0x1
+ 1288 0336 BC01     		.2byte	0x1bc
+ 1289 0338 81000000 		.4byte	0x81
+ 1290 033c 31010000 		.4byte	.LLST7
+ 1291 0340 0C       		.uleb128 0xc
+ 1292 0341 8E030000 		.4byte	.LASF39
+ 1293 0345 01       		.byte	0x1
+ 1294 0346 BC01     		.2byte	0x1bc
+ 1295 0348 81000000 		.4byte	0x81
+ 1296 034c 5D010000 		.4byte	.LLST8
+ 1297 0350 0C       		.uleb128 0xc
+ 1298 0351 9B040000 		.4byte	.LASF40
+ 1299 0355 01       		.byte	0x1
+ 1300 0356 BC01     		.2byte	0x1bc
+ 1301 0358 83030000 		.4byte	0x383
+ 1302 035c 89010000 		.4byte	.LLST9
+ 1303 0360 11       		.uleb128 0x11
+ 1304 0361 10000000 		.4byte	.LVL37
+ 1305 0365 10060000 		.4byte	0x610
+ 1306 0369 73030000 		.4byte	0x373
+ 1307 036d 12       		.uleb128 0x12
+ 1308 036e 01       		.uleb128 0x1
+ 1309 036f 50       		.byte	0x50
+ 1310 0370 01       		.uleb128 0x1
+ 1311 0371 3B       		.byte	0x3b
+ 1312 0372 00       		.byte	0
+ 1313 0373 14       		.uleb128 0x14
+ 1314 0374 22000000 		.4byte	.LVL38
+ 1315 0378 51060000 		.4byte	0x651
+ 1316 037c 12       		.uleb128 0x12
+ 1317 037d 01       		.uleb128 0x1
+ 1318 037e 50       		.byte	0x50
+ 1319 037f 01       		.uleb128 0x1
+ 1320 0380 3B       		.byte	0x3b
+ 1321 0381 00       		.byte	0
+ 1322 0382 00       		.byte	0
+ 1323 0383 07       		.uleb128 0x7
+ 1324 0384 04       		.byte	0x4
+ 1325 0385 A1000000 		.4byte	0xa1
+ 1326 0389 18       		.uleb128 0x18
+ 1327 038a 12040000 		.4byte	.LASF41
+ 1328 038e 01       		.byte	0x1
+ 1329 038f DC01     		.2byte	0x1dc
+ 1330 0391 00000000 		.4byte	.LFB6
+ 1331 0395 0C000000 		.4byte	.LFE6-.LFB6
+ 1332 0399 01       		.uleb128 0x1
+ 1333 039a 9C       		.byte	0x9c
+ 1334 039b AE030000 		.4byte	0x3ae
+ 1335 039f 0D       		.uleb128 0xd
+ 1336 03a0 8E030000 		.4byte	.LASF39
+ 1337 03a4 01       		.byte	0x1
+ 1338 03a5 DC01     		.2byte	0x1dc
+ 1339 03a7 81000000 		.4byte	0x81
+ 1340 03ab 01       		.uleb128 0x1
+ 1341 03ac 50       		.byte	0x50
+ 1342 03ad 00       		.byte	0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 40
+
+
+ 1343 03ae 18       		.uleb128 0x18
+ 1344 03af 17010000 		.4byte	.LASF42
+ 1345 03b3 01       		.byte	0x1
+ 1346 03b4 1602     		.2byte	0x216
+ 1347 03b6 00000000 		.4byte	.LFB8
+ 1348 03ba 24000000 		.4byte	.LFE8-.LFB8
+ 1349 03be 01       		.uleb128 0x1
+ 1350 03bf 9C       		.byte	0x9c
+ 1351 03c0 E6030000 		.4byte	0x3e6
+ 1352 03c4 0C       		.uleb128 0xc
+ 1353 03c5 03030000 		.4byte	.LASF34
+ 1354 03c9 01       		.byte	0x1
+ 1355 03ca 1602     		.2byte	0x216
+ 1356 03cc 81000000 		.4byte	0x81
+ 1357 03d0 B5010000 		.4byte	.LLST10
+ 1358 03d4 14       		.uleb128 0x14
+ 1359 03d5 10000000 		.4byte	.LVL45
+ 1360 03d9 45010000 		.4byte	0x145
+ 1361 03dd 12       		.uleb128 0x12
+ 1362 03de 01       		.uleb128 0x1
+ 1363 03df 51       		.byte	0x51
+ 1364 03e0 03       		.uleb128 0x3
+ 1365 03e1 F3       		.byte	0xf3
+ 1366 03e2 01       		.uleb128 0x1
+ 1367 03e3 50       		.byte	0x50
+ 1368 03e4 00       		.byte	0
+ 1369 03e5 00       		.byte	0
+ 1370 03e6 1A       		.uleb128 0x1a
+ 1371 03e7 EB020000 		.4byte	.LASF76
+ 1372 03eb 01       		.byte	0x1
+ 1373 03ec 3002     		.2byte	0x230
+ 1374 03ee 81000000 		.4byte	0x81
+ 1375 03f2 00000000 		.4byte	.LFB9
+ 1376 03f6 0C000000 		.4byte	.LFE9-.LFB9
+ 1377 03fa 01       		.uleb128 0x1
+ 1378 03fb 9C       		.byte	0x9c
+ 1379 03fc 18       		.uleb128 0x18
+ 1380 03fd 46000000 		.4byte	.LASF43
+ 1381 0401 01       		.byte	0x1
+ 1382 0402 4902     		.2byte	0x249
+ 1383 0404 00000000 		.4byte	.LFB10
+ 1384 0408 30000000 		.4byte	.LFE10-.LFB10
+ 1385 040c 01       		.uleb128 0x1
+ 1386 040d 9C       		.byte	0x9c
+ 1387 040e 65040000 		.4byte	0x465
+ 1388 0412 0C       		.uleb128 0xc
+ 1389 0413 58040000 		.4byte	.LASF38
+ 1390 0417 01       		.byte	0x1
+ 1391 0418 4902     		.2byte	0x249
+ 1392 041a 81000000 		.4byte	0x81
+ 1393 041e E1010000 		.4byte	.LLST11
+ 1394 0422 0C       		.uleb128 0xc
+ 1395 0423 8E030000 		.4byte	.LASF39
+ 1396 0427 01       		.byte	0x1
+ 1397 0428 4902     		.2byte	0x249
+ 1398 042a 81000000 		.4byte	0x81
+ 1399 042e 0D020000 		.4byte	.LLST12
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 41
+
+
+ 1400 0432 0C       		.uleb128 0xc
+ 1401 0433 9B040000 		.4byte	.LASF40
+ 1402 0437 01       		.byte	0x1
+ 1403 0438 4902     		.2byte	0x249
+ 1404 043a 83030000 		.4byte	0x383
+ 1405 043e 39020000 		.4byte	.LLST13
+ 1406 0442 11       		.uleb128 0x11
+ 1407 0443 10000000 		.4byte	.LVL48
+ 1408 0447 10060000 		.4byte	0x610
+ 1409 044b 55040000 		.4byte	0x455
+ 1410 044f 12       		.uleb128 0x12
+ 1411 0450 01       		.uleb128 0x1
+ 1412 0451 50       		.byte	0x50
+ 1413 0452 01       		.uleb128 0x1
+ 1414 0453 3B       		.byte	0x3b
+ 1415 0454 00       		.byte	0
+ 1416 0455 14       		.uleb128 0x14
+ 1417 0456 22000000 		.4byte	.LVL49
+ 1418 045a 51060000 		.4byte	0x651
+ 1419 045e 12       		.uleb128 0x12
+ 1420 045f 01       		.uleb128 0x1
+ 1421 0460 50       		.byte	0x50
+ 1422 0461 01       		.uleb128 0x1
+ 1423 0462 3B       		.byte	0x3b
+ 1424 0463 00       		.byte	0
+ 1425 0464 00       		.byte	0
+ 1426 0465 18       		.uleb128 0x18
+ 1427 0466 35040000 		.4byte	.LASF44
+ 1428 046a 01       		.byte	0x1
+ 1429 046b 6902     		.2byte	0x269
+ 1430 046d 00000000 		.4byte	.LFB11
+ 1431 0471 0C000000 		.4byte	.LFE11-.LFB11
+ 1432 0475 01       		.uleb128 0x1
+ 1433 0476 9C       		.byte	0x9c
+ 1434 0477 8A040000 		.4byte	0x48a
+ 1435 047b 0D       		.uleb128 0xd
+ 1436 047c 8E030000 		.4byte	.LASF39
+ 1437 0480 01       		.byte	0x1
+ 1438 0481 6902     		.2byte	0x269
+ 1439 0483 81000000 		.4byte	0x81
+ 1440 0487 01       		.uleb128 0x1
+ 1441 0488 50       		.byte	0x50
+ 1442 0489 00       		.byte	0
+ 1443 048a 16       		.uleb128 0x16
+ 1444 048b 5D000000 		.4byte	.LASF46
+ 1445 048f 01       		.byte	0x1
+ 1446 0490 8702     		.2byte	0x287
+ 1447 0492 00000000 		.4byte	.LFB12
+ 1448 0496 18000000 		.4byte	.LFE12-.LFB12
+ 1449 049a 01       		.uleb128 0x1
+ 1450 049b 9C       		.byte	0x9c
+ 1451 049c 16       		.uleb128 0x16
+ 1452 049d 84020000 		.4byte	.LASF47
+ 1453 04a1 01       		.byte	0x1
+ 1454 04a2 EC02     		.2byte	0x2ec
+ 1455 04a4 00000000 		.4byte	.LFB13
+ 1456 04a8 18000000 		.4byte	.LFE13-.LFB13
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 42
+
+
+ 1457 04ac 01       		.uleb128 0x1
+ 1458 04ad 9C       		.byte	0x9c
+ 1459 04ae 1B       		.uleb128 0x1b
+ 1460 04af 71030000 		.4byte	.LASF48
+ 1461 04b3 04       		.byte	0x4
+ 1462 04b4 42       		.byte	0x42
+ 1463 04b5 6B000000 		.4byte	0x6b
+ 1464 04b9 1B       		.uleb128 0x1b
+ 1465 04ba A5050000 		.4byte	.LASF49
+ 1466 04be 04       		.byte	0x4
+ 1467 04bf 43       		.byte	0x43
+ 1468 04c0 6B000000 		.4byte	0x6b
+ 1469 04c4 1B       		.uleb128 0x1b
+ 1470 04c5 41020000 		.4byte	.LASF50
+ 1471 04c9 04       		.byte	0x4
+ 1472 04ca 44       		.byte	0x44
+ 1473 04cb 6B000000 		.4byte	0x6b
+ 1474 04cf 1B       		.uleb128 0x1b
+ 1475 04d0 0B030000 		.4byte	.LASF51
+ 1476 04d4 04       		.byte	0x4
+ 1477 04d5 54       		.byte	0x54
+ 1478 04d6 6B000000 		.4byte	0x6b
+ 1479 04da 1B       		.uleb128 0x1b
+ 1480 04db 6F050000 		.4byte	.LASF52
+ 1481 04df 04       		.byte	0x4
+ 1482 04e0 55       		.byte	0x55
+ 1483 04e1 6B000000 		.4byte	0x6b
+ 1484 04e5 1C       		.uleb128 0x1c
+ 1485 04e6 87010000 		.4byte	.LASF53
+ 1486 04ea 01       		.byte	0x1
+ 1487 04eb 40       		.byte	0x40
+ 1488 04ec 35020000 		.4byte	0x235
+ 1489 04f0 05       		.uleb128 0x5
+ 1490 04f1 03       		.byte	0x3
+ 1491 04f2 00000000 		.4byte	UART_1_configEzI2C
+ 1492 04f6 1C       		.uleb128 0x1c
+ 1493 04f7 94050000 		.4byte	.LASF54
+ 1494 04fb 01       		.byte	0x1
+ 1495 04fc 1A       		.byte	0x1a
+ 1496 04fd A1000000 		.4byte	0xa1
+ 1497 0501 05       		.uleb128 0x5
+ 1498 0502 03       		.byte	0x3
+ 1499 0503 00000000 		.4byte	UART_1_curStatus
+ 1500 0507 1C       		.uleb128 0x1c
+ 1501 0508 74000000 		.4byte	.LASF55
+ 1502 050c 01       		.byte	0x1
+ 1503 050d 1B       		.byte	0x1b
+ 1504 050e 6B000000 		.4byte	0x6b
+ 1505 0512 05       		.uleb128 0x5
+ 1506 0513 03       		.byte	0x3
+ 1507 0514 00000000 		.4byte	UART_1_fsmState
+ 1508 0518 1C       		.uleb128 0x1c
+ 1509 0519 A2040000 		.4byte	.LASF56
+ 1510 051d 01       		.byte	0x1
+ 1511 051e 1E       		.byte	0x1e
+ 1512 051f 83030000 		.4byte	0x383
+ 1513 0523 05       		.uleb128 0x5
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 43
+
+
+ 1514 0524 03       		.byte	0x3
+ 1515 0525 00000000 		.4byte	UART_1_dataBuffer1
+ 1516 0529 1C       		.uleb128 0x1c
+ 1517 052a EC030000 		.4byte	.LASF57
+ 1518 052e 01       		.byte	0x1
+ 1519 052f 1F       		.byte	0x1f
+ 1520 0530 76000000 		.4byte	0x76
+ 1521 0534 05       		.uleb128 0x5
+ 1522 0535 03       		.byte	0x3
+ 1523 0536 00000000 		.4byte	UART_1_bufSizeBuf1
+ 1524 053a 1C       		.uleb128 0x1c
+ 1525 053b A4020000 		.4byte	.LASF58
+ 1526 053f 01       		.byte	0x1
+ 1527 0540 20       		.byte	0x20
+ 1528 0541 76000000 		.4byte	0x76
+ 1529 0545 05       		.uleb128 0x5
+ 1530 0546 03       		.byte	0x3
+ 1531 0547 00000000 		.4byte	UART_1_protectBuf1
+ 1532 054b 1C       		.uleb128 0x1c
+ 1533 054c BB030000 		.4byte	.LASF59
+ 1534 0550 01       		.byte	0x1
+ 1535 0551 21       		.byte	0x21
+ 1536 0552 76000000 		.4byte	0x76
+ 1537 0556 05       		.uleb128 0x5
+ 1538 0557 03       		.byte	0x3
+ 1539 0558 00000000 		.4byte	UART_1_offsetBuf1
+ 1540 055c 1C       		.uleb128 0x1c
+ 1541 055d 79040000 		.4byte	.LASF60
+ 1542 0561 01       		.byte	0x1
+ 1543 0562 22       		.byte	0x22
+ 1544 0563 76000000 		.4byte	0x76
+ 1545 0567 05       		.uleb128 0x5
+ 1546 0568 03       		.byte	0x3
+ 1547 0569 00000000 		.4byte	UART_1_indexBuf1
+ 1548 056d 1C       		.uleb128 0x1c
+ 1549 056e C1050000 		.4byte	.LASF61
+ 1550 0572 01       		.byte	0x1
+ 1551 0573 25       		.byte	0x25
+ 1552 0574 6B000000 		.4byte	0x6b
+ 1553 0578 05       		.uleb128 0x5
+ 1554 0579 03       		.byte	0x3
+ 1555 057a 00000000 		.4byte	UART_1_addrBuf1
+ 1556 057e 1C       		.uleb128 0x1c
+ 1557 057f 00000000 		.4byte	.LASF62
+ 1558 0583 01       		.byte	0x1
+ 1559 0584 26       		.byte	0x26
+ 1560 0585 6B000000 		.4byte	0x6b
+ 1561 0589 05       		.uleb128 0x5
+ 1562 058a 03       		.byte	0x3
+ 1563 058b 00000000 		.4byte	UART_1_addrBuf2
+ 1564 058f 1C       		.uleb128 0x1c
+ 1565 0590 B5040000 		.4byte	.LASF63
+ 1566 0594 01       		.byte	0x1
+ 1567 0595 29       		.byte	0x29
+ 1568 0596 83030000 		.4byte	0x383
+ 1569 059a 05       		.uleb128 0x5
+ 1570 059b 03       		.byte	0x3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 44
+
+
+ 1571 059c 00000000 		.4byte	UART_1_dataBuffer2
+ 1572 05a0 1C       		.uleb128 0x1c
+ 1573 05a1 FF030000 		.4byte	.LASF64
+ 1574 05a5 01       		.byte	0x1
+ 1575 05a6 2A       		.byte	0x2a
+ 1576 05a7 76000000 		.4byte	0x76
+ 1577 05ab 05       		.uleb128 0x5
+ 1578 05ac 03       		.byte	0x3
+ 1579 05ad 00000000 		.4byte	UART_1_bufSizeBuf2
+ 1580 05b1 1C       		.uleb128 0x1c
+ 1581 05b2 B7020000 		.4byte	.LASF65
+ 1582 05b6 01       		.byte	0x1
+ 1583 05b7 2B       		.byte	0x2b
+ 1584 05b8 76000000 		.4byte	0x76
+ 1585 05bc 05       		.uleb128 0x5
+ 1586 05bd 03       		.byte	0x3
+ 1587 05be 00000000 		.4byte	UART_1_protectBuf2
+ 1588 05c2 1C       		.uleb128 0x1c
+ 1589 05c3 82050000 		.4byte	.LASF66
+ 1590 05c7 01       		.byte	0x1
+ 1591 05c8 2C       		.byte	0x2c
+ 1592 05c9 76000000 		.4byte	0x76
+ 1593 05cd 05       		.uleb128 0x5
+ 1594 05ce 03       		.byte	0x3
+ 1595 05cf 00000000 		.4byte	UART_1_offsetBuf2
+ 1596 05d3 1C       		.uleb128 0x1c
+ 1597 05d4 8A040000 		.4byte	.LASF67
+ 1598 05d8 01       		.byte	0x1
+ 1599 05d9 2D       		.byte	0x2d
+ 1600 05da 76000000 		.4byte	0x76
+ 1601 05de 05       		.uleb128 0x5
+ 1602 05df 03       		.byte	0x3
+ 1603 05e0 00000000 		.4byte	UART_1_indexBuf2
+ 1604 05e4 1D       		.uleb128 0x1d
+ 1605 05e5 BA050000 		.4byte	.LASF68
+ 1606 05e9 05       		.byte	0x5
+ 1607 05ea 60       		.byte	0x60
+ 1608 05eb F5050000 		.4byte	0x5f5
+ 1609 05ef 1E       		.uleb128 0x1e
+ 1610 05f0 6B000000 		.4byte	0x6b
+ 1611 05f4 00       		.byte	0
+ 1612 05f5 1D       		.uleb128 0x1d
+ 1613 05f6 A0010000 		.4byte	.LASF69
+ 1614 05fa 04       		.byte	0x4
+ 1615 05fb 30       		.byte	0x30
+ 1616 05fc 10060000 		.4byte	0x610
+ 1617 0600 1E       		.uleb128 0x1e
+ 1618 0601 81000000 		.4byte	0x81
+ 1619 0605 1E       		.uleb128 0x1e
+ 1620 0606 81000000 		.4byte	0x81
+ 1621 060a 1E       		.uleb128 0x1e
+ 1622 060b 81000000 		.4byte	0x81
+ 1623 060f 00       		.byte	0
+ 1624 0610 1D       		.uleb128 0x1d
+ 1625 0611 6F010000 		.4byte	.LASF70
+ 1626 0615 05       		.byte	0x5
+ 1627 0616 4E       		.byte	0x4e
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 45
+
+
+ 1628 0617 21060000 		.4byte	0x621
+ 1629 061b 1E       		.uleb128 0x1e
+ 1630 061c 6B000000 		.4byte	0x6b
+ 1631 0620 00       		.byte	0
+ 1632 0621 1D       		.uleb128 0x1d
+ 1633 0622 30030000 		.4byte	.LASF71
+ 1634 0626 05       		.byte	0x5
+ 1635 0627 49       		.byte	0x49
+ 1636 0628 37060000 		.4byte	0x637
+ 1637 062c 1E       		.uleb128 0x1e
+ 1638 062d 6B000000 		.4byte	0x6b
+ 1639 0631 1E       		.uleb128 0x1e
+ 1640 0632 6B000000 		.4byte	0x6b
+ 1641 0636 00       		.byte	0
+ 1642 0637 1F       		.uleb128 0x1f
+ 1643 0638 69020000 		.4byte	.LASF77
+ 1644 063c 05       		.byte	0x5
+ 1645 063d 46       		.byte	0x46
+ 1646 063e B7000000 		.4byte	0xb7
+ 1647 0642 51060000 		.4byte	0x651
+ 1648 0646 1E       		.uleb128 0x1e
+ 1649 0647 6B000000 		.4byte	0x6b
+ 1650 064b 1E       		.uleb128 0x1e
+ 1651 064c B7000000 		.4byte	0xb7
+ 1652 0650 00       		.byte	0
+ 1653 0651 20       		.uleb128 0x20
+ 1654 0652 E0030000 		.4byte	.LASF78
+ 1655 0656 05       		.byte	0x5
+ 1656 0657 4C       		.byte	0x4c
+ 1657 0658 1E       		.uleb128 0x1e
+ 1658 0659 6B000000 		.4byte	0x6b
+ 1659 065d 00       		.byte	0
+ 1660 065e 00       		.byte	0
+ 1661              		.section	.debug_abbrev,"",%progbits
+ 1662              	.Ldebug_abbrev0:
+ 1663 0000 01       		.uleb128 0x1
+ 1664 0001 11       		.uleb128 0x11
+ 1665 0002 01       		.byte	0x1
+ 1666 0003 25       		.uleb128 0x25
+ 1667 0004 0E       		.uleb128 0xe
+ 1668 0005 13       		.uleb128 0x13
+ 1669 0006 0B       		.uleb128 0xb
+ 1670 0007 03       		.uleb128 0x3
+ 1671 0008 0E       		.uleb128 0xe
+ 1672 0009 1B       		.uleb128 0x1b
+ 1673 000a 0E       		.uleb128 0xe
+ 1674 000b 55       		.uleb128 0x55
+ 1675 000c 17       		.uleb128 0x17
+ 1676 000d 11       		.uleb128 0x11
+ 1677 000e 01       		.uleb128 0x1
+ 1678 000f 10       		.uleb128 0x10
+ 1679 0010 17       		.uleb128 0x17
+ 1680 0011 00       		.byte	0
+ 1681 0012 00       		.byte	0
+ 1682 0013 02       		.uleb128 0x2
+ 1683 0014 24       		.uleb128 0x24
+ 1684 0015 00       		.byte	0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 46
+
+
+ 1685 0016 0B       		.uleb128 0xb
+ 1686 0017 0B       		.uleb128 0xb
+ 1687 0018 3E       		.uleb128 0x3e
+ 1688 0019 0B       		.uleb128 0xb
+ 1689 001a 03       		.uleb128 0x3
+ 1690 001b 0E       		.uleb128 0xe
+ 1691 001c 00       		.byte	0
+ 1692 001d 00       		.byte	0
+ 1693 001e 03       		.uleb128 0x3
+ 1694 001f 24       		.uleb128 0x24
+ 1695 0020 00       		.byte	0
+ 1696 0021 0B       		.uleb128 0xb
+ 1697 0022 0B       		.uleb128 0xb
+ 1698 0023 3E       		.uleb128 0x3e
+ 1699 0024 0B       		.uleb128 0xb
+ 1700 0025 03       		.uleb128 0x3
+ 1701 0026 08       		.uleb128 0x8
+ 1702 0027 00       		.byte	0
+ 1703 0028 00       		.byte	0
+ 1704 0029 04       		.uleb128 0x4
+ 1705 002a 16       		.uleb128 0x16
+ 1706 002b 00       		.byte	0
+ 1707 002c 03       		.uleb128 0x3
+ 1708 002d 0E       		.uleb128 0xe
+ 1709 002e 3A       		.uleb128 0x3a
+ 1710 002f 0B       		.uleb128 0xb
+ 1711 0030 3B       		.uleb128 0x3b
+ 1712 0031 0B       		.uleb128 0xb
+ 1713 0032 49       		.uleb128 0x49
+ 1714 0033 13       		.uleb128 0x13
+ 1715 0034 00       		.byte	0
+ 1716 0035 00       		.byte	0
+ 1717 0036 05       		.uleb128 0x5
+ 1718 0037 35       		.uleb128 0x35
+ 1719 0038 00       		.byte	0
+ 1720 0039 49       		.uleb128 0x49
+ 1721 003a 13       		.uleb128 0x13
+ 1722 003b 00       		.byte	0
+ 1723 003c 00       		.byte	0
+ 1724 003d 06       		.uleb128 0x6
+ 1725 003e 16       		.uleb128 0x16
+ 1726 003f 00       		.byte	0
+ 1727 0040 03       		.uleb128 0x3
+ 1728 0041 0E       		.uleb128 0xe
+ 1729 0042 3A       		.uleb128 0x3a
+ 1730 0043 0B       		.uleb128 0xb
+ 1731 0044 3B       		.uleb128 0x3b
+ 1732 0045 05       		.uleb128 0x5
+ 1733 0046 49       		.uleb128 0x49
+ 1734 0047 13       		.uleb128 0x13
+ 1735 0048 00       		.byte	0
+ 1736 0049 00       		.byte	0
+ 1737 004a 07       		.uleb128 0x7
+ 1738 004b 0F       		.uleb128 0xf
+ 1739 004c 00       		.byte	0
+ 1740 004d 0B       		.uleb128 0xb
+ 1741 004e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 47
+
+
+ 1742 004f 49       		.uleb128 0x49
+ 1743 0050 13       		.uleb128 0x13
+ 1744 0051 00       		.byte	0
+ 1745 0052 00       		.byte	0
+ 1746 0053 08       		.uleb128 0x8
+ 1747 0054 15       		.uleb128 0x15
+ 1748 0055 00       		.byte	0
+ 1749 0056 27       		.uleb128 0x27
+ 1750 0057 19       		.uleb128 0x19
+ 1751 0058 00       		.byte	0
+ 1752 0059 00       		.byte	0
+ 1753 005a 09       		.uleb128 0x9
+ 1754 005b 13       		.uleb128 0x13
+ 1755 005c 01       		.byte	0x1
+ 1756 005d 0B       		.uleb128 0xb
+ 1757 005e 0B       		.uleb128 0xb
+ 1758 005f 3A       		.uleb128 0x3a
+ 1759 0060 0B       		.uleb128 0xb
+ 1760 0061 3B       		.uleb128 0x3b
+ 1761 0062 0B       		.uleb128 0xb
+ 1762 0063 01       		.uleb128 0x1
+ 1763 0064 13       		.uleb128 0x13
+ 1764 0065 00       		.byte	0
+ 1765 0066 00       		.byte	0
+ 1766 0067 0A       		.uleb128 0xa
+ 1767 0068 0D       		.uleb128 0xd
+ 1768 0069 00       		.byte	0
+ 1769 006a 03       		.uleb128 0x3
+ 1770 006b 0E       		.uleb128 0xe
+ 1771 006c 3A       		.uleb128 0x3a
+ 1772 006d 0B       		.uleb128 0xb
+ 1773 006e 3B       		.uleb128 0x3b
+ 1774 006f 0B       		.uleb128 0xb
+ 1775 0070 49       		.uleb128 0x49
+ 1776 0071 13       		.uleb128 0x13
+ 1777 0072 38       		.uleb128 0x38
+ 1778 0073 0B       		.uleb128 0xb
+ 1779 0074 00       		.byte	0
+ 1780 0075 00       		.byte	0
+ 1781 0076 0B       		.uleb128 0xb
+ 1782 0077 2E       		.uleb128 0x2e
+ 1783 0078 01       		.byte	0x1
+ 1784 0079 03       		.uleb128 0x3
+ 1785 007a 0E       		.uleb128 0xe
+ 1786 007b 3A       		.uleb128 0x3a
+ 1787 007c 0B       		.uleb128 0xb
+ 1788 007d 3B       		.uleb128 0x3b
+ 1789 007e 05       		.uleb128 0x5
+ 1790 007f 27       		.uleb128 0x27
+ 1791 0080 19       		.uleb128 0x19
+ 1792 0081 49       		.uleb128 0x49
+ 1793 0082 13       		.uleb128 0x13
+ 1794 0083 11       		.uleb128 0x11
+ 1795 0084 01       		.uleb128 0x1
+ 1796 0085 12       		.uleb128 0x12
+ 1797 0086 06       		.uleb128 0x6
+ 1798 0087 40       		.uleb128 0x40
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 48
+
+
+ 1799 0088 18       		.uleb128 0x18
+ 1800 0089 9742     		.uleb128 0x2117
+ 1801 008b 19       		.uleb128 0x19
+ 1802 008c 01       		.uleb128 0x1
+ 1803 008d 13       		.uleb128 0x13
+ 1804 008e 00       		.byte	0
+ 1805 008f 00       		.byte	0
+ 1806 0090 0C       		.uleb128 0xc
+ 1807 0091 05       		.uleb128 0x5
+ 1808 0092 00       		.byte	0
+ 1809 0093 03       		.uleb128 0x3
+ 1810 0094 0E       		.uleb128 0xe
+ 1811 0095 3A       		.uleb128 0x3a
+ 1812 0096 0B       		.uleb128 0xb
+ 1813 0097 3B       		.uleb128 0x3b
+ 1814 0098 05       		.uleb128 0x5
+ 1815 0099 49       		.uleb128 0x49
+ 1816 009a 13       		.uleb128 0x13
+ 1817 009b 02       		.uleb128 0x2
+ 1818 009c 17       		.uleb128 0x17
+ 1819 009d 00       		.byte	0
+ 1820 009e 00       		.byte	0
+ 1821 009f 0D       		.uleb128 0xd
+ 1822 00a0 05       		.uleb128 0x5
+ 1823 00a1 00       		.byte	0
+ 1824 00a2 03       		.uleb128 0x3
+ 1825 00a3 0E       		.uleb128 0xe
+ 1826 00a4 3A       		.uleb128 0x3a
+ 1827 00a5 0B       		.uleb128 0xb
+ 1828 00a6 3B       		.uleb128 0x3b
+ 1829 00a7 05       		.uleb128 0x5
+ 1830 00a8 49       		.uleb128 0x49
+ 1831 00a9 13       		.uleb128 0x13
+ 1832 00aa 02       		.uleb128 0x2
+ 1833 00ab 18       		.uleb128 0x18
+ 1834 00ac 00       		.byte	0
+ 1835 00ad 00       		.byte	0
+ 1836 00ae 0E       		.uleb128 0xe
+ 1837 00af 34       		.uleb128 0x34
+ 1838 00b0 00       		.byte	0
+ 1839 00b1 03       		.uleb128 0x3
+ 1840 00b2 0E       		.uleb128 0xe
+ 1841 00b3 3A       		.uleb128 0x3a
+ 1842 00b4 0B       		.uleb128 0xb
+ 1843 00b5 3B       		.uleb128 0x3b
+ 1844 00b6 05       		.uleb128 0x5
+ 1845 00b7 49       		.uleb128 0x49
+ 1846 00b8 13       		.uleb128 0x13
+ 1847 00b9 02       		.uleb128 0x2
+ 1848 00ba 17       		.uleb128 0x17
+ 1849 00bb 00       		.byte	0
+ 1850 00bc 00       		.byte	0
+ 1851 00bd 0F       		.uleb128 0xf
+ 1852 00be 2E       		.uleb128 0x2e
+ 1853 00bf 01       		.byte	0x1
+ 1854 00c0 3F       		.uleb128 0x3f
+ 1855 00c1 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 49
+
+
+ 1856 00c2 03       		.uleb128 0x3
+ 1857 00c3 0E       		.uleb128 0xe
+ 1858 00c4 3A       		.uleb128 0x3a
+ 1859 00c5 0B       		.uleb128 0xb
+ 1860 00c6 3B       		.uleb128 0x3b
+ 1861 00c7 0B       		.uleb128 0xb
+ 1862 00c8 27       		.uleb128 0x27
+ 1863 00c9 19       		.uleb128 0x19
+ 1864 00ca 11       		.uleb128 0x11
+ 1865 00cb 01       		.uleb128 0x1
+ 1866 00cc 12       		.uleb128 0x12
+ 1867 00cd 06       		.uleb128 0x6
+ 1868 00ce 40       		.uleb128 0x40
+ 1869 00cf 18       		.uleb128 0x18
+ 1870 00d0 9742     		.uleb128 0x2117
+ 1871 00d2 19       		.uleb128 0x19
+ 1872 00d3 01       		.uleb128 0x1
+ 1873 00d4 13       		.uleb128 0x13
+ 1874 00d5 00       		.byte	0
+ 1875 00d6 00       		.byte	0
+ 1876 00d7 10       		.uleb128 0x10
+ 1877 00d8 05       		.uleb128 0x5
+ 1878 00d9 00       		.byte	0
+ 1879 00da 03       		.uleb128 0x3
+ 1880 00db 0E       		.uleb128 0xe
+ 1881 00dc 3A       		.uleb128 0x3a
+ 1882 00dd 0B       		.uleb128 0xb
+ 1883 00de 3B       		.uleb128 0x3b
+ 1884 00df 0B       		.uleb128 0xb
+ 1885 00e0 49       		.uleb128 0x49
+ 1886 00e1 13       		.uleb128 0x13
+ 1887 00e2 02       		.uleb128 0x2
+ 1888 00e3 17       		.uleb128 0x17
+ 1889 00e4 00       		.byte	0
+ 1890 00e5 00       		.byte	0
+ 1891 00e6 11       		.uleb128 0x11
+ 1892 00e7 898201   		.uleb128 0x4109
+ 1893 00ea 01       		.byte	0x1
+ 1894 00eb 11       		.uleb128 0x11
+ 1895 00ec 01       		.uleb128 0x1
+ 1896 00ed 31       		.uleb128 0x31
+ 1897 00ee 13       		.uleb128 0x13
+ 1898 00ef 01       		.uleb128 0x1
+ 1899 00f0 13       		.uleb128 0x13
+ 1900 00f1 00       		.byte	0
+ 1901 00f2 00       		.byte	0
+ 1902 00f3 12       		.uleb128 0x12
+ 1903 00f4 8A8201   		.uleb128 0x410a
+ 1904 00f7 00       		.byte	0
+ 1905 00f8 02       		.uleb128 0x2
+ 1906 00f9 18       		.uleb128 0x18
+ 1907 00fa 9142     		.uleb128 0x2111
+ 1908 00fc 18       		.uleb128 0x18
+ 1909 00fd 00       		.byte	0
+ 1910 00fe 00       		.byte	0
+ 1911 00ff 13       		.uleb128 0x13
+ 1912 0100 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 50
+
+
+ 1913 0103 00       		.byte	0
+ 1914 0104 11       		.uleb128 0x11
+ 1915 0105 01       		.uleb128 0x1
+ 1916 0106 31       		.uleb128 0x31
+ 1917 0107 13       		.uleb128 0x13
+ 1918 0108 00       		.byte	0
+ 1919 0109 00       		.byte	0
+ 1920 010a 14       		.uleb128 0x14
+ 1921 010b 898201   		.uleb128 0x4109
+ 1922 010e 01       		.byte	0x1
+ 1923 010f 11       		.uleb128 0x11
+ 1924 0110 01       		.uleb128 0x1
+ 1925 0111 31       		.uleb128 0x31
+ 1926 0112 13       		.uleb128 0x13
+ 1927 0113 00       		.byte	0
+ 1928 0114 00       		.byte	0
+ 1929 0115 15       		.uleb128 0x15
+ 1930 0116 26       		.uleb128 0x26
+ 1931 0117 00       		.byte	0
+ 1932 0118 49       		.uleb128 0x49
+ 1933 0119 13       		.uleb128 0x13
+ 1934 011a 00       		.byte	0
+ 1935 011b 00       		.byte	0
+ 1936 011c 16       		.uleb128 0x16
+ 1937 011d 2E       		.uleb128 0x2e
+ 1938 011e 00       		.byte	0
+ 1939 011f 3F       		.uleb128 0x3f
+ 1940 0120 19       		.uleb128 0x19
+ 1941 0121 03       		.uleb128 0x3
+ 1942 0122 0E       		.uleb128 0xe
+ 1943 0123 3A       		.uleb128 0x3a
+ 1944 0124 0B       		.uleb128 0xb
+ 1945 0125 3B       		.uleb128 0x3b
+ 1946 0126 05       		.uleb128 0x5
+ 1947 0127 27       		.uleb128 0x27
+ 1948 0128 19       		.uleb128 0x19
+ 1949 0129 11       		.uleb128 0x11
+ 1950 012a 01       		.uleb128 0x1
+ 1951 012b 12       		.uleb128 0x12
+ 1952 012c 06       		.uleb128 0x6
+ 1953 012d 40       		.uleb128 0x40
+ 1954 012e 18       		.uleb128 0x18
+ 1955 012f 9742     		.uleb128 0x2117
+ 1956 0131 19       		.uleb128 0x19
+ 1957 0132 00       		.byte	0
+ 1958 0133 00       		.byte	0
+ 1959 0134 17       		.uleb128 0x17
+ 1960 0135 2E       		.uleb128 0x2e
+ 1961 0136 01       		.byte	0x1
+ 1962 0137 3F       		.uleb128 0x3f
+ 1963 0138 19       		.uleb128 0x19
+ 1964 0139 03       		.uleb128 0x3
+ 1965 013a 0E       		.uleb128 0xe
+ 1966 013b 3A       		.uleb128 0x3a
+ 1967 013c 0B       		.uleb128 0xb
+ 1968 013d 3B       		.uleb128 0x3b
+ 1969 013e 05       		.uleb128 0x5
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 51
+
+
+ 1970 013f 27       		.uleb128 0x27
+ 1971 0140 19       		.uleb128 0x19
+ 1972 0141 49       		.uleb128 0x49
+ 1973 0142 13       		.uleb128 0x13
+ 1974 0143 11       		.uleb128 0x11
+ 1975 0144 01       		.uleb128 0x1
+ 1976 0145 12       		.uleb128 0x12
+ 1977 0146 06       		.uleb128 0x6
+ 1978 0147 40       		.uleb128 0x40
+ 1979 0148 18       		.uleb128 0x18
+ 1980 0149 9742     		.uleb128 0x2117
+ 1981 014b 19       		.uleb128 0x19
+ 1982 014c 01       		.uleb128 0x1
+ 1983 014d 13       		.uleb128 0x13
+ 1984 014e 00       		.byte	0
+ 1985 014f 00       		.byte	0
+ 1986 0150 18       		.uleb128 0x18
+ 1987 0151 2E       		.uleb128 0x2e
+ 1988 0152 01       		.byte	0x1
+ 1989 0153 3F       		.uleb128 0x3f
+ 1990 0154 19       		.uleb128 0x19
+ 1991 0155 03       		.uleb128 0x3
+ 1992 0156 0E       		.uleb128 0xe
+ 1993 0157 3A       		.uleb128 0x3a
+ 1994 0158 0B       		.uleb128 0xb
+ 1995 0159 3B       		.uleb128 0x3b
+ 1996 015a 05       		.uleb128 0x5
+ 1997 015b 27       		.uleb128 0x27
+ 1998 015c 19       		.uleb128 0x19
+ 1999 015d 11       		.uleb128 0x11
+ 2000 015e 01       		.uleb128 0x1
+ 2001 015f 12       		.uleb128 0x12
+ 2002 0160 06       		.uleb128 0x6
+ 2003 0161 40       		.uleb128 0x40
+ 2004 0162 18       		.uleb128 0x18
+ 2005 0163 9742     		.uleb128 0x2117
+ 2006 0165 19       		.uleb128 0x19
+ 2007 0166 01       		.uleb128 0x1
+ 2008 0167 13       		.uleb128 0x13
+ 2009 0168 00       		.byte	0
+ 2010 0169 00       		.byte	0
+ 2011 016a 19       		.uleb128 0x19
+ 2012 016b 0B       		.uleb128 0xb
+ 2013 016c 01       		.byte	0x1
+ 2014 016d 11       		.uleb128 0x11
+ 2015 016e 01       		.uleb128 0x1
+ 2016 016f 12       		.uleb128 0x12
+ 2017 0170 06       		.uleb128 0x6
+ 2018 0171 01       		.uleb128 0x1
+ 2019 0172 13       		.uleb128 0x13
+ 2020 0173 00       		.byte	0
+ 2021 0174 00       		.byte	0
+ 2022 0175 1A       		.uleb128 0x1a
+ 2023 0176 2E       		.uleb128 0x2e
+ 2024 0177 00       		.byte	0
+ 2025 0178 3F       		.uleb128 0x3f
+ 2026 0179 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 52
+
+
+ 2027 017a 03       		.uleb128 0x3
+ 2028 017b 0E       		.uleb128 0xe
+ 2029 017c 3A       		.uleb128 0x3a
+ 2030 017d 0B       		.uleb128 0xb
+ 2031 017e 3B       		.uleb128 0x3b
+ 2032 017f 05       		.uleb128 0x5
+ 2033 0180 27       		.uleb128 0x27
+ 2034 0181 19       		.uleb128 0x19
+ 2035 0182 49       		.uleb128 0x49
+ 2036 0183 13       		.uleb128 0x13
+ 2037 0184 11       		.uleb128 0x11
+ 2038 0185 01       		.uleb128 0x1
+ 2039 0186 12       		.uleb128 0x12
+ 2040 0187 06       		.uleb128 0x6
+ 2041 0188 40       		.uleb128 0x40
+ 2042 0189 18       		.uleb128 0x18
+ 2043 018a 9742     		.uleb128 0x2117
+ 2044 018c 19       		.uleb128 0x19
+ 2045 018d 00       		.byte	0
+ 2046 018e 00       		.byte	0
+ 2047 018f 1B       		.uleb128 0x1b
+ 2048 0190 34       		.uleb128 0x34
+ 2049 0191 00       		.byte	0
+ 2050 0192 03       		.uleb128 0x3
+ 2051 0193 0E       		.uleb128 0xe
+ 2052 0194 3A       		.uleb128 0x3a
+ 2053 0195 0B       		.uleb128 0xb
+ 2054 0196 3B       		.uleb128 0x3b
+ 2055 0197 0B       		.uleb128 0xb
+ 2056 0198 49       		.uleb128 0x49
+ 2057 0199 13       		.uleb128 0x13
+ 2058 019a 3F       		.uleb128 0x3f
+ 2059 019b 19       		.uleb128 0x19
+ 2060 019c 3C       		.uleb128 0x3c
+ 2061 019d 19       		.uleb128 0x19
+ 2062 019e 00       		.byte	0
+ 2063 019f 00       		.byte	0
+ 2064 01a0 1C       		.uleb128 0x1c
+ 2065 01a1 34       		.uleb128 0x34
+ 2066 01a2 00       		.byte	0
+ 2067 01a3 03       		.uleb128 0x3
+ 2068 01a4 0E       		.uleb128 0xe
+ 2069 01a5 3A       		.uleb128 0x3a
+ 2070 01a6 0B       		.uleb128 0xb
+ 2071 01a7 3B       		.uleb128 0x3b
+ 2072 01a8 0B       		.uleb128 0xb
+ 2073 01a9 49       		.uleb128 0x49
+ 2074 01aa 13       		.uleb128 0x13
+ 2075 01ab 3F       		.uleb128 0x3f
+ 2076 01ac 19       		.uleb128 0x19
+ 2077 01ad 02       		.uleb128 0x2
+ 2078 01ae 18       		.uleb128 0x18
+ 2079 01af 00       		.byte	0
+ 2080 01b0 00       		.byte	0
+ 2081 01b1 1D       		.uleb128 0x1d
+ 2082 01b2 2E       		.uleb128 0x2e
+ 2083 01b3 01       		.byte	0x1
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 53
+
+
+ 2084 01b4 3F       		.uleb128 0x3f
+ 2085 01b5 19       		.uleb128 0x19
+ 2086 01b6 03       		.uleb128 0x3
+ 2087 01b7 0E       		.uleb128 0xe
+ 2088 01b8 3A       		.uleb128 0x3a
+ 2089 01b9 0B       		.uleb128 0xb
+ 2090 01ba 3B       		.uleb128 0x3b
+ 2091 01bb 0B       		.uleb128 0xb
+ 2092 01bc 27       		.uleb128 0x27
+ 2093 01bd 19       		.uleb128 0x19
+ 2094 01be 3C       		.uleb128 0x3c
+ 2095 01bf 19       		.uleb128 0x19
+ 2096 01c0 01       		.uleb128 0x1
+ 2097 01c1 13       		.uleb128 0x13
+ 2098 01c2 00       		.byte	0
+ 2099 01c3 00       		.byte	0
+ 2100 01c4 1E       		.uleb128 0x1e
+ 2101 01c5 05       		.uleb128 0x5
+ 2102 01c6 00       		.byte	0
+ 2103 01c7 49       		.uleb128 0x49
+ 2104 01c8 13       		.uleb128 0x13
+ 2105 01c9 00       		.byte	0
+ 2106 01ca 00       		.byte	0
+ 2107 01cb 1F       		.uleb128 0x1f
+ 2108 01cc 2E       		.uleb128 0x2e
+ 2109 01cd 01       		.byte	0x1
+ 2110 01ce 3F       		.uleb128 0x3f
+ 2111 01cf 19       		.uleb128 0x19
+ 2112 01d0 03       		.uleb128 0x3
+ 2113 01d1 0E       		.uleb128 0xe
+ 2114 01d2 3A       		.uleb128 0x3a
+ 2115 01d3 0B       		.uleb128 0xb
+ 2116 01d4 3B       		.uleb128 0x3b
+ 2117 01d5 0B       		.uleb128 0xb
+ 2118 01d6 27       		.uleb128 0x27
+ 2119 01d7 19       		.uleb128 0x19
+ 2120 01d8 49       		.uleb128 0x49
+ 2121 01d9 13       		.uleb128 0x13
+ 2122 01da 3C       		.uleb128 0x3c
+ 2123 01db 19       		.uleb128 0x19
+ 2124 01dc 01       		.uleb128 0x1
+ 2125 01dd 13       		.uleb128 0x13
+ 2126 01de 00       		.byte	0
+ 2127 01df 00       		.byte	0
+ 2128 01e0 20       		.uleb128 0x20
+ 2129 01e1 2E       		.uleb128 0x2e
+ 2130 01e2 01       		.byte	0x1
+ 2131 01e3 3F       		.uleb128 0x3f
+ 2132 01e4 19       		.uleb128 0x19
+ 2133 01e5 03       		.uleb128 0x3
+ 2134 01e6 0E       		.uleb128 0xe
+ 2135 01e7 3A       		.uleb128 0x3a
+ 2136 01e8 0B       		.uleb128 0xb
+ 2137 01e9 3B       		.uleb128 0x3b
+ 2138 01ea 0B       		.uleb128 0xb
+ 2139 01eb 27       		.uleb128 0x27
+ 2140 01ec 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 54
+
+
+ 2141 01ed 3C       		.uleb128 0x3c
+ 2142 01ee 19       		.uleb128 0x19
+ 2143 01ef 00       		.byte	0
+ 2144 01f0 00       		.byte	0
+ 2145 01f1 00       		.byte	0
+ 2146              		.section	.debug_loc,"",%progbits
+ 2147              	.Ldebug_loc0:
+ 2148              	.LLST0:
+ 2149 0000 00000000 		.4byte	.LVL0
+ 2150 0004 10000000 		.4byte	.LVL4
+ 2151 0008 0100     		.2byte	0x1
+ 2152 000a 50       		.byte	0x50
+ 2153 000b 10000000 		.4byte	.LVL4
+ 2154 000f 16000000 		.4byte	.LFE7
+ 2155 0013 0400     		.2byte	0x4
+ 2156 0015 F3       		.byte	0xf3
+ 2157 0016 01       		.uleb128 0x1
+ 2158 0017 50       		.byte	0x50
+ 2159 0018 9F       		.byte	0x9f
+ 2160 0019 00000000 		.4byte	0
+ 2161 001d 00000000 		.4byte	0
+ 2162              	.LLST1:
+ 2163 0021 06000000 		.4byte	.LVL1
+ 2164 0025 08000000 		.4byte	.LVL2
+ 2165 0029 0100     		.2byte	0x1
+ 2166 002b 52       		.byte	0x52
+ 2167 002c 08000000 		.4byte	.LVL2
+ 2168 0030 0E000000 		.4byte	.LVL3
+ 2169 0034 0700     		.2byte	0x7
+ 2170 0036 70       		.byte	0x70
+ 2171 0037 00       		.sleb128 0
+ 2172 0038 71       		.byte	0x71
+ 2173 0039 00       		.sleb128 0
+ 2174 003a 27       		.byte	0x27
+ 2175 003b 20       		.byte	0x20
+ 2176 003c 9F       		.byte	0x9f
+ 2177 003d 0E000000 		.4byte	.LVL3
+ 2178 0041 14000000 		.4byte	.LVL5
+ 2179 0045 0100     		.2byte	0x1
+ 2180 0047 52       		.byte	0x52
+ 2181 0048 14000000 		.4byte	.LVL5
+ 2182 004c 16000000 		.4byte	.LFE7
+ 2183 0050 0100     		.2byte	0x1
+ 2184 0052 50       		.byte	0x50
+ 2185 0053 00000000 		.4byte	0
+ 2186 0057 00000000 		.4byte	0
+ 2187              	.LLST2:
+ 2188 005b 00000000 		.4byte	.LVL6
+ 2189 005f 08000000 		.4byte	.LVL7
+ 2190 0063 0100     		.2byte	0x1
+ 2191 0065 50       		.byte	0x50
+ 2192 0066 08000000 		.4byte	.LVL7
+ 2193 006a 0E000000 		.4byte	.LVL9
+ 2194 006e 0100     		.2byte	0x1
+ 2195 0070 54       		.byte	0x54
+ 2196 0071 0E000000 		.4byte	.LVL9
+ 2197 0075 10000000 		.4byte	.LVL10
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 55
+
+
+ 2198 0079 0100     		.2byte	0x1
+ 2199 007b 50       		.byte	0x50
+ 2200 007c 10000000 		.4byte	.LVL10
+ 2201 0080 54010000 		.4byte	.LVL17
+ 2202 0084 0100     		.2byte	0x1
+ 2203 0086 54       		.byte	0x54
+ 2204 0087 54010000 		.4byte	.LVL17
+ 2205 008b D8010000 		.4byte	.LFE0
+ 2206 008f 0400     		.2byte	0x4
+ 2207 0091 F3       		.byte	0xf3
+ 2208 0092 01       		.uleb128 0x1
+ 2209 0093 50       		.byte	0x50
+ 2210 0094 9F       		.byte	0x9f
+ 2211 0095 00000000 		.4byte	0
+ 2212 0099 00000000 		.4byte	0
+ 2213              	.LLST3:
+ 2214 009d 0E000000 		.4byte	.LVL19
+ 2215 00a1 52000000 		.4byte	.LVL23
+ 2216 00a5 0100     		.2byte	0x1
+ 2217 00a7 54       		.byte	0x54
+ 2218 00a8 52000000 		.4byte	.LVL23
+ 2219 00ac 68000000 		.4byte	.LFE2
+ 2220 00b0 0100     		.2byte	0x1
+ 2221 00b2 50       		.byte	0x50
+ 2222 00b3 00000000 		.4byte	0
+ 2223 00b7 00000000 		.4byte	0
+ 2224              	.LLST4:
+ 2225 00bb 00000000 		.4byte	.LVL24
+ 2226 00bf 15000000 		.4byte	.LVL25-1
+ 2227 00c3 0100     		.2byte	0x1
+ 2228 00c5 50       		.byte	0x50
+ 2229 00c6 15000000 		.4byte	.LVL25-1
+ 2230 00ca 1C000000 		.4byte	.LVL26
+ 2231 00ce 0400     		.2byte	0x4
+ 2232 00d0 F3       		.byte	0xf3
+ 2233 00d1 01       		.uleb128 0x1
+ 2234 00d2 50       		.byte	0x50
+ 2235 00d3 9F       		.byte	0x9f
+ 2236 00d4 1C000000 		.4byte	.LVL26
+ 2237 00d8 26000000 		.4byte	.LVL29
+ 2238 00dc 0100     		.2byte	0x1
+ 2239 00de 50       		.byte	0x50
+ 2240 00df 26000000 		.4byte	.LVL29
+ 2241 00e3 40000000 		.4byte	.LFE3
+ 2242 00e7 0400     		.2byte	0x4
+ 2243 00e9 F3       		.byte	0xf3
+ 2244 00ea 01       		.uleb128 0x1
+ 2245 00eb 50       		.byte	0x50
+ 2246 00ec 9F       		.byte	0x9f
+ 2247 00ed 00000000 		.4byte	0
+ 2248 00f1 00000000 		.4byte	0
+ 2249              	.LLST5:
+ 2250 00f5 20000000 		.4byte	.LVL27
+ 2251 00f9 2A000000 		.4byte	.LVL30
+ 2252 00fd 0100     		.2byte	0x1
+ 2253 00ff 51       		.byte	0x51
+ 2254 0100 2A000000 		.4byte	.LVL30
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 56
+
+
+ 2255 0104 2C000000 		.4byte	.LVL31
+ 2256 0108 0100     		.2byte	0x1
+ 2257 010a 52       		.byte	0x52
+ 2258 010b 00000000 		.4byte	0
+ 2259 010f 00000000 		.4byte	0
+ 2260              	.LLST6:
+ 2261 0113 0C000000 		.4byte	.LVL32
+ 2262 0117 0E000000 		.4byte	.LVL33
+ 2263 011b 0100     		.2byte	0x1
+ 2264 011d 50       		.byte	0x50
+ 2265 011e 16000000 		.4byte	.LVL34
+ 2266 0122 24000000 		.4byte	.LFE4
+ 2267 0126 0100     		.2byte	0x1
+ 2268 0128 50       		.byte	0x50
+ 2269 0129 00000000 		.4byte	0
+ 2270 012d 00000000 		.4byte	0
+ 2271              	.LLST7:
+ 2272 0131 00000000 		.4byte	.LVL35
+ 2273 0135 0C000000 		.4byte	.LVL36
+ 2274 0139 0100     		.2byte	0x1
+ 2275 013b 50       		.byte	0x50
+ 2276 013c 0C000000 		.4byte	.LVL36
+ 2277 0140 22000000 		.4byte	.LVL41
+ 2278 0144 0100     		.2byte	0x1
+ 2279 0146 56       		.byte	0x56
+ 2280 0147 22000000 		.4byte	.LVL41
+ 2281 014b 30000000 		.4byte	.LFE5
+ 2282 014f 0400     		.2byte	0x4
+ 2283 0151 F3       		.byte	0xf3
+ 2284 0152 01       		.uleb128 0x1
+ 2285 0153 50       		.byte	0x50
+ 2286 0154 9F       		.byte	0x9f
+ 2287 0155 00000000 		.4byte	0
+ 2288 0159 00000000 		.4byte	0
+ 2289              	.LLST8:
+ 2290 015d 00000000 		.4byte	.LVL35
+ 2291 0161 0F000000 		.4byte	.LVL37-1
+ 2292 0165 0100     		.2byte	0x1
+ 2293 0167 51       		.byte	0x51
+ 2294 0168 0F000000 		.4byte	.LVL37-1
+ 2295 016c 22000000 		.4byte	.LVL40
+ 2296 0170 0100     		.2byte	0x1
+ 2297 0172 55       		.byte	0x55
+ 2298 0173 22000000 		.4byte	.LVL40
+ 2299 0177 30000000 		.4byte	.LFE5
+ 2300 017b 0400     		.2byte	0x4
+ 2301 017d F3       		.byte	0xf3
+ 2302 017e 01       		.uleb128 0x1
+ 2303 017f 51       		.byte	0x51
+ 2304 0180 9F       		.byte	0x9f
+ 2305 0181 00000000 		.4byte	0
+ 2306 0185 00000000 		.4byte	0
+ 2307              	.LLST9:
+ 2308 0189 00000000 		.4byte	.LVL35
+ 2309 018d 0F000000 		.4byte	.LVL37-1
+ 2310 0191 0100     		.2byte	0x1
+ 2311 0193 52       		.byte	0x52
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 57
+
+
+ 2312 0194 0F000000 		.4byte	.LVL37-1
+ 2313 0198 22000000 		.4byte	.LVL39
+ 2314 019c 0100     		.2byte	0x1
+ 2315 019e 54       		.byte	0x54
+ 2316 019f 22000000 		.4byte	.LVL39
+ 2317 01a3 30000000 		.4byte	.LFE5
+ 2318 01a7 0400     		.2byte	0x4
+ 2319 01a9 F3       		.byte	0xf3
+ 2320 01aa 01       		.uleb128 0x1
+ 2321 01ab 52       		.byte	0x52
+ 2322 01ac 9F       		.byte	0x9f
+ 2323 01ad 00000000 		.4byte	0
+ 2324 01b1 00000000 		.4byte	0
+ 2325              	.LLST10:
+ 2326 01b5 00000000 		.4byte	.LVL43
+ 2327 01b9 0C000000 		.4byte	.LVL44
+ 2328 01bd 0100     		.2byte	0x1
+ 2329 01bf 50       		.byte	0x50
+ 2330 01c0 0C000000 		.4byte	.LVL44
+ 2331 01c4 0F000000 		.4byte	.LVL45-1
+ 2332 01c8 0100     		.2byte	0x1
+ 2333 01ca 51       		.byte	0x51
+ 2334 01cb 0F000000 		.4byte	.LVL45-1
+ 2335 01cf 24000000 		.4byte	.LFE8
+ 2336 01d3 0400     		.2byte	0x4
+ 2337 01d5 F3       		.byte	0xf3
+ 2338 01d6 01       		.uleb128 0x1
+ 2339 01d7 50       		.byte	0x50
+ 2340 01d8 9F       		.byte	0x9f
+ 2341 01d9 00000000 		.4byte	0
+ 2342 01dd 00000000 		.4byte	0
+ 2343              	.LLST11:
+ 2344 01e1 00000000 		.4byte	.LVL46
+ 2345 01e5 0C000000 		.4byte	.LVL47
+ 2346 01e9 0100     		.2byte	0x1
+ 2347 01eb 50       		.byte	0x50
+ 2348 01ec 0C000000 		.4byte	.LVL47
+ 2349 01f0 22000000 		.4byte	.LVL52
+ 2350 01f4 0100     		.2byte	0x1
+ 2351 01f6 56       		.byte	0x56
+ 2352 01f7 22000000 		.4byte	.LVL52
+ 2353 01fb 30000000 		.4byte	.LFE10
+ 2354 01ff 0400     		.2byte	0x4
+ 2355 0201 F3       		.byte	0xf3
+ 2356 0202 01       		.uleb128 0x1
+ 2357 0203 50       		.byte	0x50
+ 2358 0204 9F       		.byte	0x9f
+ 2359 0205 00000000 		.4byte	0
+ 2360 0209 00000000 		.4byte	0
+ 2361              	.LLST12:
+ 2362 020d 00000000 		.4byte	.LVL46
+ 2363 0211 0F000000 		.4byte	.LVL48-1
+ 2364 0215 0100     		.2byte	0x1
+ 2365 0217 51       		.byte	0x51
+ 2366 0218 0F000000 		.4byte	.LVL48-1
+ 2367 021c 22000000 		.4byte	.LVL51
+ 2368 0220 0100     		.2byte	0x1
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 58
+
+
+ 2369 0222 55       		.byte	0x55
+ 2370 0223 22000000 		.4byte	.LVL51
+ 2371 0227 30000000 		.4byte	.LFE10
+ 2372 022b 0400     		.2byte	0x4
+ 2373 022d F3       		.byte	0xf3
+ 2374 022e 01       		.uleb128 0x1
+ 2375 022f 51       		.byte	0x51
+ 2376 0230 9F       		.byte	0x9f
+ 2377 0231 00000000 		.4byte	0
+ 2378 0235 00000000 		.4byte	0
+ 2379              	.LLST13:
+ 2380 0239 00000000 		.4byte	.LVL46
+ 2381 023d 0F000000 		.4byte	.LVL48-1
+ 2382 0241 0100     		.2byte	0x1
+ 2383 0243 52       		.byte	0x52
+ 2384 0244 0F000000 		.4byte	.LVL48-1
+ 2385 0248 22000000 		.4byte	.LVL50
+ 2386 024c 0100     		.2byte	0x1
+ 2387 024e 54       		.byte	0x54
+ 2388 024f 22000000 		.4byte	.LVL50
+ 2389 0253 30000000 		.4byte	.LFE10
+ 2390 0257 0400     		.2byte	0x4
+ 2391 0259 F3       		.byte	0xf3
+ 2392 025a 01       		.uleb128 0x1
+ 2393 025b 52       		.byte	0x52
+ 2394 025c 9F       		.byte	0x9f
+ 2395 025d 00000000 		.4byte	0
+ 2396 0261 00000000 		.4byte	0
+ 2397              		.section	.debug_aranges,"",%progbits
+ 2398 0000 84000000 		.4byte	0x84
+ 2399 0004 0200     		.2byte	0x2
+ 2400 0006 00000000 		.4byte	.Ldebug_info0
+ 2401 000a 04       		.byte	0x4
+ 2402 000b 00       		.byte	0
+ 2403 000c 0000     		.2byte	0
+ 2404 000e 0000     		.2byte	0
+ 2405 0010 00000000 		.4byte	.LFB7
+ 2406 0014 16000000 		.4byte	.LFE7-.LFB7
+ 2407 0018 00000000 		.4byte	.LFB0
+ 2408 001c D8010000 		.4byte	.LFE0-.LFB0
+ 2409 0020 00000000 		.4byte	.LFB1
+ 2410 0024 1C000000 		.4byte	.LFE1-.LFB1
+ 2411 0028 00000000 		.4byte	.LFB2
+ 2412 002c 68000000 		.4byte	.LFE2-.LFB2
+ 2413 0030 00000000 		.4byte	.LFB3
+ 2414 0034 40000000 		.4byte	.LFE3-.LFB3
+ 2415 0038 00000000 		.4byte	.LFB4
+ 2416 003c 24000000 		.4byte	.LFE4-.LFB4
+ 2417 0040 00000000 		.4byte	.LFB5
+ 2418 0044 30000000 		.4byte	.LFE5-.LFB5
+ 2419 0048 00000000 		.4byte	.LFB6
+ 2420 004c 0C000000 		.4byte	.LFE6-.LFB6
+ 2421 0050 00000000 		.4byte	.LFB8
+ 2422 0054 24000000 		.4byte	.LFE8-.LFB8
+ 2423 0058 00000000 		.4byte	.LFB9
+ 2424 005c 0C000000 		.4byte	.LFE9-.LFB9
+ 2425 0060 00000000 		.4byte	.LFB10
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 59
+
+
+ 2426 0064 30000000 		.4byte	.LFE10-.LFB10
+ 2427 0068 00000000 		.4byte	.LFB11
+ 2428 006c 0C000000 		.4byte	.LFE11-.LFB11
+ 2429 0070 00000000 		.4byte	.LFB12
+ 2430 0074 18000000 		.4byte	.LFE12-.LFB12
+ 2431 0078 00000000 		.4byte	.LFB13
+ 2432 007c 18000000 		.4byte	.LFE13-.LFB13
+ 2433 0080 00000000 		.4byte	0
+ 2434 0084 00000000 		.4byte	0
+ 2435              		.section	.debug_ranges,"",%progbits
+ 2436              	.Ldebug_ranges0:
+ 2437 0000 00000000 		.4byte	.LFB7
+ 2438 0004 16000000 		.4byte	.LFE7
+ 2439 0008 00000000 		.4byte	.LFB0
+ 2440 000c D8010000 		.4byte	.LFE0
+ 2441 0010 00000000 		.4byte	.LFB1
+ 2442 0014 1C000000 		.4byte	.LFE1
+ 2443 0018 00000000 		.4byte	.LFB2
+ 2444 001c 68000000 		.4byte	.LFE2
+ 2445 0020 00000000 		.4byte	.LFB3
+ 2446 0024 40000000 		.4byte	.LFE3
+ 2447 0028 00000000 		.4byte	.LFB4
+ 2448 002c 24000000 		.4byte	.LFE4
+ 2449 0030 00000000 		.4byte	.LFB5
+ 2450 0034 30000000 		.4byte	.LFE5
+ 2451 0038 00000000 		.4byte	.LFB6
+ 2452 003c 0C000000 		.4byte	.LFE6
+ 2453 0040 00000000 		.4byte	.LFB8
+ 2454 0044 24000000 		.4byte	.LFE8
+ 2455 0048 00000000 		.4byte	.LFB9
+ 2456 004c 0C000000 		.4byte	.LFE9
+ 2457 0050 00000000 		.4byte	.LFB10
+ 2458 0054 30000000 		.4byte	.LFE10
+ 2459 0058 00000000 		.4byte	.LFB11
+ 2460 005c 0C000000 		.4byte	.LFE11
+ 2461 0060 00000000 		.4byte	.LFB12
+ 2462 0064 18000000 		.4byte	.LFE12
+ 2463 0068 00000000 		.4byte	.LFB13
+ 2464 006c 18000000 		.4byte	.LFE13
+ 2465 0070 00000000 		.4byte	0
+ 2466 0074 00000000 		.4byte	0
+ 2467              		.section	.debug_line,"",%progbits
+ 2468              	.Ldebug_line0:
+ 2469 0000 25020000 		.section	.debug_str,"MS",%progbits,1
+ 2469      02008F00 
+ 2469      00000201 
+ 2469      FB0E0D00 
+ 2469      01010101 
+ 2470              	.LASF62:
+ 2471 0000 55415254 		.ascii	"UART_1_addrBuf2\000"
+ 2471      5F315F61 
+ 2471      64647242 
+ 2471      75663200 
+ 2472              	.LASF35:
+ 2473 0010 55415254 		.ascii	"UART_1_EzI2CGetActivity\000"
+ 2473      5F315F45 
+ 2473      7A493243 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 60
+
+
+ 2473      47657441 
+ 2473      63746976 
+ 2474              	.LASF10:
+ 2475 0028 75696E74 		.ascii	"uint16\000"
+ 2475      313600
+ 2476              	.LASF37:
+ 2477 002f 55415254 		.ascii	"UART_1_EzI2CSetBuffer1\000"
+ 2477      5F315F45 
+ 2477      7A493243 
+ 2477      53657442 
+ 2477      75666665 
+ 2478              	.LASF43:
+ 2479 0046 55415254 		.ascii	"UART_1_EzI2CSetBuffer2\000"
+ 2479      5F315F45 
+ 2479      7A493243 
+ 2479      53657442 
+ 2479      75666665 
+ 2480              	.LASF46:
+ 2481 005d 55415254 		.ascii	"UART_1_EzI2CSaveConfig\000"
+ 2481      5F315F45 
+ 2481      7A493243 
+ 2481      53617665 
+ 2481      436F6E66 
+ 2482              	.LASF55:
+ 2483 0074 55415254 		.ascii	"UART_1_fsmState\000"
+ 2483      5F315F66 
+ 2483      736D5374 
+ 2483      61746500 
+ 2484              	.LASF72:
+ 2485 0084 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 2485      4320342E 
+ 2485      382E3420 
+ 2485      32303134 
+ 2485      30353236 
+ 2486 00b7 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 2486      20726576 
+ 2486      6973696F 
+ 2486      6E203231 
+ 2486      31333538 
+ 2487 00ea 67202D66 		.ascii	"g -ffunction-sections\000"
+ 2487      66756E63 
+ 2487      74696F6E 
+ 2487      2D736563 
+ 2487      74696F6E 
+ 2488              	.LASF7:
+ 2489 0100 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2489      206C6F6E 
+ 2489      6720756E 
+ 2489      7369676E 
+ 2489      65642069 
+ 2490              	.LASF42:
+ 2491 0117 55415254 		.ascii	"UART_1_EzI2CSetAddress2\000"
+ 2491      5F315F45 
+ 2491      7A493243 
+ 2491      53657441 
+ 2491      64647265 
+ 2492              	.LASF45:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 61
+
+
+ 2493 012f 55415254 		.ascii	"UART_1_EzI2CStop\000"
+ 2493      5F315F45 
+ 2493      7A493243 
+ 2493      53746F70 
+ 2493      00
+ 2494              	.LASF23:
+ 2495 0140 73756241 		.ascii	"subAddrSize\000"
+ 2495      64647253 
+ 2495      697A6500 
+ 2496              	.LASF6:
+ 2497 014c 6C6F6E67 		.ascii	"long long int\000"
+ 2497      206C6F6E 
+ 2497      6720696E 
+ 2497      7400
+ 2498              	.LASF0:
+ 2499 015a 7369676E 		.ascii	"signed char\000"
+ 2499      65642063 
+ 2499      68617200 
+ 2500              	.LASF4:
+ 2501 0166 6C6F6E67 		.ascii	"long int\000"
+ 2501      20696E74 
+ 2501      00
+ 2502              	.LASF70:
+ 2503 016f 4379496E 		.ascii	"CyIntDisable\000"
+ 2503      74446973 
+ 2503      61626C65 
+ 2503      00
+ 2504              	.LASF24:
+ 2505 017c 656E6162 		.ascii	"enableWake\000"
+ 2505      6C655761 
+ 2505      6B6500
+ 2506              	.LASF53:
+ 2507 0187 55415254 		.ascii	"UART_1_configEzI2C\000"
+ 2507      5F315F63 
+ 2507      6F6E6669 
+ 2507      67457A49 
+ 2507      324300
+ 2508              	.LASF9:
+ 2509 019a 75696E74 		.ascii	"uint8\000"
+ 2509      3800
+ 2510              	.LASF69:
+ 2511 01a0 55415254 		.ascii	"UART_1_SetPins\000"
+ 2511      5F315F53 
+ 2511      65745069 
+ 2511      6E7300
+ 2512              	.LASF30:
+ 2513 01af 6D617463 		.ascii	"matchReg\000"
+ 2513      68526567 
+ 2513      00
+ 2514              	.LASF13:
+ 2515 01b8 646F7562 		.ascii	"double\000"
+ 2515      6C6500
+ 2516              	.LASF25:
+ 2517 01bf 656E6162 		.ascii	"enableByteMode\000"
+ 2517      6C654279 
+ 2517      74654D6F 
+ 2517      646500
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 62
+
+
+ 2518              	.LASF11:
+ 2519 01ce 75696E74 		.ascii	"uint32\000"
+ 2519      333200
+ 2520              	.LASF18:
+ 2521 01d5 656E6162 		.ascii	"enableClockStretch\000"
+ 2521      6C65436C 
+ 2521      6F636B53 
+ 2521      74726574 
+ 2521      636800
+ 2522              	.LASF20:
+ 2523 01e8 6E756D62 		.ascii	"numberOfAddresses\000"
+ 2523      65724F66 
+ 2523      41646472 
+ 2523      65737365 
+ 2523      7300
+ 2524              	.LASF73:
+ 2525 01fa 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_EZI2C.c\000"
+ 2525      6E657261 
+ 2525      7465645F 
+ 2525      536F7572 
+ 2525      63655C50 
+ 2526              	.LASF8:
+ 2527 0222 756E7369 		.ascii	"unsigned int\000"
+ 2527      676E6564 
+ 2527      20696E74 
+ 2527      00
+ 2528              	.LASF5:
+ 2529 022f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2529      20756E73 
+ 2529      69676E65 
+ 2529      6420696E 
+ 2529      7400
+ 2530              	.LASF50:
+ 2531 0241 55415254 		.ascii	"UART_1_scbEnableIntr\000"
+ 2531      5F315F73 
+ 2531      6362456E 
+ 2531      61626C65 
+ 2531      496E7472 
+ 2532              	.LASF3:
+ 2533 0256 73686F72 		.ascii	"short unsigned int\000"
+ 2533      7420756E 
+ 2533      7369676E 
+ 2533      65642069 
+ 2533      6E7400
+ 2534              	.LASF77:
+ 2535 0269 4379496E 		.ascii	"CyIntSetVector\000"
+ 2535      74536574 
+ 2535      56656374 
+ 2535      6F7200
+ 2536              	.LASF27:
+ 2537 0278 61646472 		.ascii	"addr1\000"
+ 2537      3100
+ 2538              	.LASF28:
+ 2539 027e 61646472 		.ascii	"addr2\000"
+ 2539      3200
+ 2540              	.LASF47:
+ 2541 0284 55415254 		.ascii	"UART_1_EzI2CRestoreConfig\000"
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 63
+
+
+ 2541      5F315F45 
+ 2541      7A493243 
+ 2541      52657374 
+ 2541      6F726543 
+ 2542              	.LASF15:
+ 2543 029e 72656733 		.ascii	"reg32\000"
+ 2543      3200
+ 2544              	.LASF58:
+ 2545 02a4 55415254 		.ascii	"UART_1_protectBuf1\000"
+ 2545      5F315F70 
+ 2545      726F7465 
+ 2545      63744275 
+ 2545      663100
+ 2546              	.LASF65:
+ 2547 02b7 55415254 		.ascii	"UART_1_protectBuf2\000"
+ 2547      5F315F70 
+ 2547      726F7465 
+ 2547      63744275 
+ 2547      663200
+ 2548              	.LASF17:
+ 2549 02ca 73697A65 		.ascii	"sizetype\000"
+ 2549      74797065 
+ 2549      00
+ 2550              	.LASF36:
+ 2551 02d3 55415254 		.ascii	"UART_1_EzI2CGetAddress1\000"
+ 2551      5F315F45 
+ 2551      7A493243 
+ 2551      47657441 
+ 2551      64647265 
+ 2552              	.LASF76:
+ 2553 02eb 55415254 		.ascii	"UART_1_EzI2CGetAddress2\000"
+ 2553      5F315F45 
+ 2553      7A493243 
+ 2553      47657441 
+ 2553      64647265 
+ 2554              	.LASF34:
+ 2555 0303 61646472 		.ascii	"address\000"
+ 2555      65737300 
+ 2556              	.LASF51:
+ 2557 030b 55415254 		.ascii	"UART_1_numberOfAddr\000"
+ 2557      5F315F6E 
+ 2557      756D6265 
+ 2557      724F6641 
+ 2557      64647200 
+ 2558              	.LASF32:
+ 2559 031f 55415254 		.ascii	"UART_1_EzI2CInit\000"
+ 2559      5F315F45 
+ 2559      7A493243 
+ 2559      496E6974 
+ 2559      00
+ 2560              	.LASF71:
+ 2561 0330 4379496E 		.ascii	"CyIntSetPriority\000"
+ 2561      74536574 
+ 2561      5072696F 
+ 2561      72697479 
+ 2561      00
+ 2562              	.LASF21:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 64
+
+
+ 2563 0341 7072696D 		.ascii	"primarySlaveAddr\000"
+ 2563      61727953 
+ 2563      6C617665 
+ 2563      41646472 
+ 2563      00
+ 2564              	.LASF12:
+ 2565 0352 666C6F61 		.ascii	"float\000"
+ 2565      7400
+ 2566              	.LASF26:
+ 2567 0358 55415254 		.ascii	"UART_1_EZI2C_INIT_STRUCT\000"
+ 2567      5F315F45 
+ 2567      5A493243 
+ 2567      5F494E49 
+ 2567      545F5354 
+ 2568              	.LASF48:
+ 2569 0371 55415254 		.ascii	"UART_1_scbMode\000"
+ 2569      5F315F73 
+ 2569      63624D6F 
+ 2569      646500
+ 2570              	.LASF1:
+ 2571 0380 756E7369 		.ascii	"unsigned char\000"
+ 2571      676E6564 
+ 2571      20636861 
+ 2571      7200
+ 2572              	.LASF39:
+ 2573 038e 7277426F 		.ascii	"rwBoundary\000"
+ 2573      756E6461 
+ 2573      727900
+ 2574              	.LASF33:
+ 2575 0399 55415254 		.ascii	"UART_1_EzI2CSetAddress1\000"
+ 2575      5F315F45 
+ 2575      7A493243 
+ 2575      53657441 
+ 2575      64647265 
+ 2576              	.LASF2:
+ 2577 03b1 73686F72 		.ascii	"short int\000"
+ 2577      7420696E 
+ 2577      7400
+ 2578              	.LASF59:
+ 2579 03bb 55415254 		.ascii	"UART_1_offsetBuf1\000"
+ 2579      5F315F6F 
+ 2579      66667365 
+ 2579      74427566 
+ 2579      3100
+ 2580              	.LASF19:
+ 2581 03cd 656E6162 		.ascii	"enableMedianFilter\000"
+ 2581      6C654D65 
+ 2581      6469616E 
+ 2581      46696C74 
+ 2581      657200
+ 2582              	.LASF78:
+ 2583 03e0 4379496E 		.ascii	"CyIntEnable\000"
+ 2583      74456E61 
+ 2583      626C6500 
+ 2584              	.LASF57:
+ 2585 03ec 55415254 		.ascii	"UART_1_bufSizeBuf1\000"
+ 2585      5F315F62 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 65
+
+
+ 2585      75665369 
+ 2585      7A654275 
+ 2585      663100
+ 2586              	.LASF64:
+ 2587 03ff 55415254 		.ascii	"UART_1_bufSizeBuf2\000"
+ 2587      5F315F62 
+ 2587      75665369 
+ 2587      7A654275 
+ 2587      663200
+ 2588              	.LASF41:
+ 2589 0412 55415254 		.ascii	"UART_1_EzI2CSetReadBoundaryBuffer1\000"
+ 2589      5F315F45 
+ 2589      7A493243 
+ 2589      53657452 
+ 2589      65616442 
+ 2590              	.LASF44:
+ 2591 0435 55415254 		.ascii	"UART_1_EzI2CSetReadBoundaryBuffer2\000"
+ 2591      5F315F45 
+ 2591      7A493243 
+ 2591      53657452 
+ 2591      65616442 
+ 2592              	.LASF38:
+ 2593 0458 62756653 		.ascii	"bufSize\000"
+ 2593      697A6500 
+ 2594              	.LASF14:
+ 2595 0460 63686172 		.ascii	"char\000"
+ 2595      00
+ 2596              	.LASF16:
+ 2597 0465 63796973 		.ascii	"cyisraddress\000"
+ 2597      72616464 
+ 2597      72657373 
+ 2597      00
+ 2598              	.LASF29:
+ 2599 0472 636F6E66 		.ascii	"config\000"
+ 2599      696700
+ 2600              	.LASF60:
+ 2601 0479 55415254 		.ascii	"UART_1_indexBuf1\000"
+ 2601      5F315F69 
+ 2601      6E646578 
+ 2601      42756631 
+ 2601      00
+ 2602              	.LASF67:
+ 2603 048a 55415254 		.ascii	"UART_1_indexBuf2\000"
+ 2603      5F315F69 
+ 2603      6E646578 
+ 2603      42756632 
+ 2603      00
+ 2604              	.LASF40:
+ 2605 049b 62756666 		.ascii	"buffer\000"
+ 2605      657200
+ 2606              	.LASF56:
+ 2607 04a2 55415254 		.ascii	"UART_1_dataBuffer1\000"
+ 2607      5F315F64 
+ 2607      61746142 
+ 2607      75666665 
+ 2607      723100
+ 2608              	.LASF63:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 66
+
+
+ 2609 04b5 55415254 		.ascii	"UART_1_dataBuffer2\000"
+ 2609      5F315F64 
+ 2609      61746142 
+ 2609      75666665 
+ 2609      723200
+ 2610              	.LASF22:
+ 2611 04c8 7365636F 		.ascii	"secondarySlaveAddr\000"
+ 2611      6E646172 
+ 2611      79536C61 
+ 2611      76654164 
+ 2611      647200
+ 2612              	.LASF74:
+ 2613 04db 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
+ 2613      73657273 
+ 2613      5C4D6172 
+ 2613      63656C6F 
+ 2613      5C446F63 
+ 2614 0509 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
+ 2614      686F6761 
+ 2614      725C5073 
+ 2614      6F635F43 
+ 2614      72656174 
+ 2615 0539 66616365 		.ascii	"face_driver.cydsn\000"
+ 2615      5F647269 
+ 2615      7665722E 
+ 2615      63796473 
+ 2615      6E00
+ 2616              	.LASF75:
+ 2617 054b 55415254 		.ascii	"UART_1_EzI2CUpdateRxMatchReg\000"
+ 2617      5F315F45 
+ 2617      7A493243 
+ 2617      55706461 
+ 2617      74655278 
+ 2618              	.LASF31:
+ 2619 0568 73746174 		.ascii	"status\000"
+ 2619      757300
+ 2620              	.LASF52:
+ 2621 056f 55415254 		.ascii	"UART_1_subAddrSize\000"
+ 2621      5F315F73 
+ 2621      75624164 
+ 2621      64725369 
+ 2621      7A6500
+ 2622              	.LASF66:
+ 2623 0582 55415254 		.ascii	"UART_1_offsetBuf2\000"
+ 2623      5F315F6F 
+ 2623      66667365 
+ 2623      74427566 
+ 2623      3200
+ 2624              	.LASF54:
+ 2625 0594 55415254 		.ascii	"UART_1_curStatus\000"
+ 2625      5F315F63 
+ 2625      75725374 
+ 2625      61747573 
+ 2625      00
+ 2626              	.LASF49:
+ 2627 05a5 55415254 		.ascii	"UART_1_scbEnableWake\000"
+ 2627      5F315F73 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccXINoAB.s 			page 67
+
+
+ 2627      6362456E 
+ 2627      61626C65 
+ 2627      57616B65 
+ 2628              	.LASF68:
+ 2629 05ba 43794861 		.ascii	"CyHalt\000"
+ 2629      6C7400
+ 2630              	.LASF61:
+ 2631 05c1 55415254 		.ascii	"UART_1_addrBuf1\000"
+ 2631      5F315F61 
+ 2631      64647242 
+ 2631      75663100 
+ 2632              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

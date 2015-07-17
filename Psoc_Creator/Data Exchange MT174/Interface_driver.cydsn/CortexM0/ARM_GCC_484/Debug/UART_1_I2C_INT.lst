@@ -1,0 +1,3520 @@
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"UART_1_I2C_INT.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.UART_1_I2C_ISR,"ax",%progbits
+  18              		.align	2
+  19              		.global	UART_1_I2C_ISR
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	UART_1_I2C_ISR, %function
+  23              	UART_1_I2C_ISR:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\UART_1_I2C_INT.c"
+   1:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * File Name: UART_1_I2C_INT.c
+   3:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Version 3.0
+   4:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *
+   5:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Description:
+   6:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *  This file provides the source code to the Interrupt Service Routine for
+   7:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *  the SCB Component in I2C mode.
+   8:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *
+   9:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Note:
+  10:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *
+  11:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  18:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** #include "UART_1_PVT.h"
+  19:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** #include "UART_1_I2C_PVT.h"
+  20:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  21:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  22:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** /*******************************************************************************
+  23:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Function Name: UART_1_I2C_ISR
+  24:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** ********************************************************************************
+  25:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *
+  26:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Summary:
+  27:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *  Handles the Interrupt Service Routine for the SCB I2C mode.
+  28:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *
+  29:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Parameters:
+  30:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *  None
+  31:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *
+  32:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** * Return:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *  None
+  34:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *
+  35:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** *******************************************************************************/
+  36:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** CY_ISR(UART_1_I2C_ISR)
+  37:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** {
+  26              		.loc 1 37 0
+  27              		.cfi_startproc
+  28 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  29              		.cfi_def_cfa_offset 24
+  30              		.cfi_offset 3, -24
+  31              		.cfi_offset 4, -20
+  32              		.cfi_offset 5, -16
+  33              		.cfi_offset 6, -12
+  34              		.cfi_offset 7, -8
+  35              		.cfi_offset 14, -4
+  36 0002 4F46     		mov	r7, r9
+  37 0004 4646     		mov	r6, r8
+  38 0006 C0B4     		push	{r6, r7}
+  39              		.cfi_def_cfa_offset 32
+  40              		.cfi_offset 8, -32
+  41              		.cfi_offset 9, -28
+  42              	.LVL0:
+  38:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     uint32 diffCount;
+  39:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     uint32 endTransfer;
+  40:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  41:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** #if (UART_1_I2C_CUSTOM_ADDRESS_HANDLER_CONST)
+  42:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     uint32 response;
+  43:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  44:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     response = UART_1_I2C_ACK_ADDR;
+  45:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** #endif /* (UART_1_I2C_CUSTOM_ADDRESS_HANDLER_CONST) */
+  46:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  47:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     endTransfer = 0u; /* Continue active transfer */
+  48:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  49:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     /* Calls customer routine if registered */
+  50:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     if(NULL != UART_1_customIntrHandler)
+  43              		.loc 1 50 0
+  44 0008 C74B     		ldr	r3, .L99
+  45 000a 1B68     		ldr	r3, [r3]
+  46 000c 002B     		cmp	r3, #0
+  47 000e 00D0     		beq	.L2
+  51:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     {
+  52:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_customIntrHandler();
+  48              		.loc 1 52 0
+  49 0010 9847     		blx	r3
+  50              	.LVL1:
+  51              	.L2:
+  53:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     }
+  54:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  55:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     if(UART_1_CHECK_INTR_I2C_EC_MASKED(UART_1_INTR_I2C_EC_WAKE_UP))
+  52              		.loc 1 55 0
+  53 0012 C64B     		ldr	r3, .L99+4
+  54 0014 1B68     		ldr	r3, [r3]
+  55 0016 D807     		lsl	r0, r3, #31
+  56 0018 02D5     		bpl	.L3
+  56:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     {
+  57:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         /* Mask-off after wakeup */
+  58:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_SetI2CExtClkInterruptMode(UART_1_NO_INTR_SOURCES);
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 3
+
+
+  57              		.loc 1 58 0
+  58 001a 0022     		mov	r2, #0
+  59 001c C44B     		ldr	r3, .L99+8
+  60 001e 1A60     		str	r2, [r3]
+  61              	.L3:
+  59:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     }
+  60:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  61:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     /* Master and Slave error tracking:
+  62:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * Add the master state check to track only the master errors when the master is active or
+  63:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * track slave errors when the slave is active or idle.
+  64:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * A special MMS case: in the address phase with misplaced Start: the master sets the LOST_ARB a
+  65:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * slave BUS_ERR. The valid event is LOST_ARB comes from the master.
+  66:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     */
+  67:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     if(UART_1_CHECK_I2C_FSM_MASTER)
+  62              		.loc 1 67 0
+  63 0020 C44B     		ldr	r3, .L99+12
+  64 0022 1B78     		ldrb	r3, [r3]
+  65 0024 9906     		lsl	r1, r3, #26
+  66 0026 7BD5     		bpl	.L4
+  68:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     {
+  69:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         if(UART_1_I2C_MASTER)
+  67              		.loc 1 69 0
+  68 0028 C34B     		ldr	r3, .L99+16
+  69 002a 1B78     		ldrb	r3, [r3]
+  70 002c 9A07     		lsl	r2, r3, #30
+  71 002e 00D4     		bmi	.LCB53
+  72 0030 9BE0     		b	.L76	@long jump
+  73              	.LCB53:
+  70:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         {
+  71:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* INTR_MASTER_I2C_BUS_ERROR:
+  72:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * A misplaced Start or Stop condition occurred on the bus: complete the transaction.
+  73:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The interrupt is cleared in I2C_FSM_EXIT_IDLE.
+  74:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+  75:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_MASTER_MASKED(UART_1_INTR_MASTER_I2C_BUS_ERROR))
+  74              		.loc 1 75 0
+  75 0032 C24A     		ldr	r2, .L99+20
+  76 0034 1268     		ldr	r2, [r2]
+  77 0036 D405     		lsl	r4, r2, #23
+  78 0038 07D5     		bpl	.L77
+  76:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+  77:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_ERR_XFER |
+  79              		.loc 1 77 0
+  80 003a C14A     		ldr	r2, .L99+24
+  81 003c 1088     		ldrh	r0, [r2]
+  82 003e C021     		mov	r1, #192
+  83 0040 8900     		lsl	r1, r1, #2
+  84 0042 0143     		orr	r1, r0
+  85 0044 1180     		strh	r1, [r2]
+  86              	.LVL2:
+  78:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                          UART_1_I2C_MSTAT_ERR_BUS_ERROR);
+  79:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  80:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+  87              		.loc 1 80 0
+  88 0046 0122     		mov	r2, #1
+  89 0048 00E0     		b	.L6
+  90              	.LVL3:
+  91              	.L77:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 4
+
+
+  47:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     endTransfer = 0u; /* Continue active transfer */
+  92              		.loc 1 47 0
+  93 004a 0022     		mov	r2, #0
+  94              	.LVL4:
+  95              	.L6:
+  81:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+  82:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  83:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* INTR_MASTER_I2C_ARB_LOST:
+  84:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The MultiMaster lost arbitrage during transaction.
+  85:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * A Misplaced Start or Stop condition is treated as lost arbitration when the master dr
+  86:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The interrupt source is cleared in I2C_FSM_EXIT_IDLE.
+  87:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+  88:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_MASTER_MASKED(UART_1_INTR_MASTER_I2C_ARB_LOST))
+  96              		.loc 1 88 0
+  97 004c BB49     		ldr	r1, .L99+20
+  98 004e 0968     		ldr	r1, [r1]
+  99 0050 CF07     		lsl	r7, r1, #31
+ 100 0052 06D5     		bpl	.L7
+  89:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+  90:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_ERR_XFER |
+ 101              		.loc 1 90 0
+ 102 0054 BA4A     		ldr	r2, .L99+24
+ 103              	.LVL5:
+ 104 0056 1088     		ldrh	r0, [r2]
+ 105 0058 9021     		mov	r1, #144
+ 106 005a 8900     		lsl	r1, r1, #2
+ 107 005c 0143     		orr	r1, r0
+ 108 005e 1180     		strh	r1, [r2]
+ 109              	.LVL6:
+  91:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                          UART_1_I2C_MSTAT_ERR_ARB_LOST);
+  92:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  93:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 110              		.loc 1 93 0
+ 111 0060 0122     		mov	r2, #1
+ 112              	.LVL7:
+ 113              	.L7:
+  94:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+  95:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+  96:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_I2C_MULTI_MASTER_SLAVE)
+ 114              		.loc 1 96 0
+ 115 0062 072B     		cmp	r3, #7
+ 116 0064 0AD1     		bne	.L8
+  97:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+  98:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* I2C_MASTER_CMD_M_START_ON_IDLE:
+  99:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 * MultiMaster-Slave does not generate start, because Slave was addressed.
+ 100:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 * Pass control to slave.
+ 101:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 */
+ 102:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_CHECK_I2C_MASTER_CMD(UART_1_I2C_MASTER_CMD_M_START_ON_IDLE))
+ 117              		.loc 1 102 0
+ 118 0066 B749     		ldr	r1, .L99+28
+ 119 0068 0968     		ldr	r1, [r1]
+ 120 006a 8807     		lsl	r0, r1, #30
+ 121 006c 06D5     		bpl	.L8
+ 103:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 104:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_ERR_XFER |
+ 122              		.loc 1 104 0
+ 123 006e B44A     		ldr	r2, .L99+24
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 5
+
+
+ 124              	.LVL8:
+ 125 0070 1088     		ldrh	r0, [r2]
+ 126 0072 A021     		mov	r1, #160
+ 127 0074 8900     		lsl	r1, r1, #2
+ 128 0076 0143     		orr	r1, r0
+ 129 0078 1180     		strh	r1, [r2]
+ 130              	.LVL9:
+ 105:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                              UART_1_I2C_MSTAT_ERR_ABORT_XFER);
+ 106:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 107:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 131              		.loc 1 107 0
+ 132 007a 0122     		mov	r2, #1
+ 133              	.LVL10:
+ 134              	.L8:
+ 108:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 109:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 110:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             
+ 111:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 112:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* The error handling common part:
+ 113:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * Sets a completion flag of the master transaction and passes control to:
+ 114:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             *  - I2C_FSM_EXIT_IDLE - to complete transaction in case of: ARB_LOST or BUS_ERR.
+ 115:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             *  - I2C_FSM_IDLE      - to take chance for the slave to process incoming transaction.
+ 116:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 117:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(0u != endTransfer)
+ 135              		.loc 1 117 0
+ 136 007c 002A     		cmp	r2, #0
+ 137 007e 79D0     		beq	.L5
+ 118:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 119:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Set completion flags for master */
+ 120:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_mstrStatus |= (uint16) UART_1_GET_I2C_MSTAT_CMPLT;
+ 138              		.loc 1 120 0
+ 139 0080 AC49     		ldr	r1, .L99+12
+ 140 0082 0978     		ldrb	r1, [r1]
+ 141 0084 CC07     		lsl	r4, r1, #31
+ 142 0086 01D5     		bpl	.L78
+ 143 0088 0120     		mov	r0, #1
+ 144 008a 00E0     		b	.L9
+ 145              	.L78:
+ 146 008c 0220     		mov	r0, #2
+ 147              	.L9:
+ 148              		.loc 1 120 0 is_stmt 0 discriminator 3
+ 149 008e AC49     		ldr	r1, .L99+24
+ 150 0090 0C88     		ldrh	r4, [r1]
+ 151 0092 2043     		orr	r0, r4
+ 152 0094 0880     		strh	r0, [r1]
+ 121:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 122:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_I2C_MULTI_MASTER_SLAVE)
+ 153              		.loc 1 122 0 is_stmt 1 discriminator 3
+ 154 0096 072B     		cmp	r3, #7
+ 155 0098 3ED1     		bne	.L10
+ 123:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 124:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if(UART_1_CHECK_I2C_FSM_ADDR)
+ 156              		.loc 1 124 0
+ 157 009a A64B     		ldr	r3, .L99+12
+ 158 009c 1B78     		ldrb	r3, [r3]
+ 159 009e 1F07     		lsl	r7, r3, #28
+ 160 00a0 36D5     		bpl	.L11
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 6
+
+
+ 125:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 126:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Start generation is set after another master starts accessing Slave.
+ 127:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * Clean-up master and turn to slave. Set state to IDLE.
+ 128:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ 129:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(UART_1_CHECK_I2C_MASTER_CMD(UART_1_I2C_MASTER_CMD_M_START_ON_IDLE))
+ 161              		.loc 1 129 0
+ 162 00a2 A84B     		ldr	r3, .L99+28
+ 163 00a4 1B68     		ldr	r3, [r3]
+ 164 00a6 9807     		lsl	r0, r3, #30
+ 165 00a8 04D5     		bpl	.L12
+ 130:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 131:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_I2C_MASTER_CLEAR_START;
+ 166              		.loc 1 131 0
+ 167 00aa 0022     		mov	r2, #0
+ 168              	.LVL11:
+ 169 00ac A54B     		ldr	r3, .L99+28
+ 170 00ae 1A60     		str	r2, [r3]
+ 171              	.LVL12:
+ 132:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 133:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER; /* Pass control to Slave *
+ 172              		.loc 1 133 0
+ 173 00b0 0122     		mov	r2, #1
+ 174 00b2 0CE0     		b	.L13
+ 175              	.LVL13:
+ 176              	.L12:
+ 134:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 135:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Valid arbitration lost on the address phase happens only when: master LO
+ 136:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * slave BUS_ERR is cleared. Only in that case set the state to IDLE without
+ 137:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ 138:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else if((!UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_BUS_ERROR))
+ 177              		.loc 1 138 0
+ 178 00b4 A44B     		ldr	r3, .L99+32
+ 179 00b6 1B68     		ldr	r3, [r3]
+ 180 00b8 D905     		lsl	r1, r3, #23
+ 181 00ba 05D4     		bmi	.L79
+ 139:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                && UART_1_CHECK_INTR_MASTER_MASKED(UART_1_INTR_MASTER_I2C_ARB_LOST))
+ 182              		.loc 1 139 0
+ 183 00bc 9F4B     		ldr	r3, .L99+20
+ 184 00be 1B68     		ldr	r3, [r3]
+ 185 00c0 DA07     		lsl	r2, r3, #31
+ 186 00c2 03D4     		bmi	.L80
+ 187              	.LVL14:
+ 140:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 141:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER; /* Pass control to Slave *
+ 142:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 143:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else
+ 144:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 145:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             endTransfer = 0u; /* Causes I2C_FSM_EXIT_IDLE to be set below */
+ 188              		.loc 1 145 0
+ 189 00c4 0022     		mov	r2, #0
+ 190 00c6 02E0     		b	.L13
+ 191              	.LVL15:
+ 192              	.L79:
+ 193 00c8 0022     		mov	r2, #0
+ 194              	.LVL16:
+ 195 00ca 00E0     		b	.L13
+ 196              	.L80:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 7
+
+
+ 141:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER; /* Pass control to Slave *
+ 197              		.loc 1 141 0
+ 198 00cc 0122     		mov	r2, #1
+ 199              	.L13:
+ 200              	.LVL17:
+ 146:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 147:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 148:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(0u != endTransfer) /* Clean-up master to proceed with slave */
+ 201              		.loc 1 148 0
+ 202 00ce 002A     		cmp	r2, #0
+ 203 00d0 1AD0     		beq	.L14
+ 149:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 150:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_CLEAR_TX_FIFO; /* Shifter keeps address, clear it */
+ 204              		.loc 1 150 0
+ 205 00d2 9E4B     		ldr	r3, .L99+36
+ 206 00d4 1868     		ldr	r0, [r3]
+ 207 00d6 8021     		mov	r1, #128
+ 208 00d8 4902     		lsl	r1, r1, #9
+ 209 00da 0143     		orr	r1, r0
+ 210 00dc 1960     		str	r1, [r3]
+ 211 00de 1868     		ldr	r0, [r3]
+ 212 00e0 9B49     		ldr	r1, .L99+40
+ 213 00e2 0140     		and	r1, r0
+ 214 00e4 1960     		str	r1, [r3]
+ 151:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 152:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_DISABLE_MASTER_AUTO_DATA_ACK; /* In case of reading disable auto
+ 215              		.loc 1 152 0
+ 216 00e6 9B4B     		ldr	r3, .L99+44
+ 217 00e8 1868     		ldr	r0, [r3]
+ 218 00ea 9B49     		ldr	r1, .L99+48
+ 219 00ec 0140     		and	r1, r0
+ 220 00ee 1960     		str	r1, [r3]
+ 153:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 154:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Clean-up master interrupt sources */
+ 155:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_ClearMasterInterruptSource(UART_1_INTR_MASTER_ALL);
+ 221              		.loc 1 155 0
+ 222 00f0 9A49     		ldr	r1, .L99+52
+ 223 00f2 9B4B     		ldr	r3, .L99+56
+ 224 00f4 1960     		str	r1, [r3]
+ 156:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 157:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Disable data processing interrupts: they have to be cleared before *
+ 158:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_SetRxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 225              		.loc 1 158 0
+ 226 00f6 0023     		mov	r3, #0
+ 227 00f8 9A49     		ldr	r1, .L99+60
+ 228 00fa 0B60     		str	r3, [r1]
+ 159:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_SetTxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 229              		.loc 1 159 0
+ 230 00fc 9A49     		ldr	r1, .L99+64
+ 231 00fe 0B60     		str	r3, [r1]
+ 160:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 161:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_state = UART_1_I2C_FSM_IDLE;
+ 232              		.loc 1 161 0
+ 233 0100 1021     		mov	r1, #16
+ 234 0102 8C4B     		ldr	r3, .L99+12
+ 235 0104 1970     		strb	r1, [r3]
+ 236 0106 35E0     		b	.L5
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 8
+
+
+ 237              	.L14:
+ 162:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 163:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else
+ 164:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 165:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Set I2C_FSM_EXIT_IDLE for BUS_ERR and ARB_LOST (that is really bus e
+ 166:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_state = UART_1_I2C_FSM_EXIT_IDLE;
+ 238              		.loc 1 166 0
+ 239 0108 0021     		mov	r1, #0
+ 240 010a 8A4B     		ldr	r3, .L99+12
+ 241 010c 1970     		strb	r1, [r3]
+ 242 010e 31E0     		b	.L5
+ 243              	.L11:
+ 167:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 168:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 169:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     else
+ 170:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 171:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Set I2C_FSM_EXIT_IDLE if any other state than address */
+ 172:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_state = UART_1_I2C_FSM_EXIT_IDLE;
+ 244              		.loc 1 172 0
+ 245 0110 0021     		mov	r1, #0
+ 246 0112 884B     		ldr	r3, .L99+12
+ 247 0114 1970     		strb	r1, [r3]
+ 248 0116 2DE0     		b	.L5
+ 249              	.L10:
+ 173:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 174:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 175:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 else
+ 176:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 177:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* In case of LOST*/
+ 178:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_state = UART_1_I2C_FSM_EXIT_IDLE;
+ 250              		.loc 1 178 0
+ 251 0118 0021     		mov	r1, #0
+ 252 011a 864B     		ldr	r3, .L99+12
+ 253 011c 1970     		strb	r1, [r3]
+ 254 011e 29E0     		b	.L5
+ 255              	.LVL18:
+ 256              	.L4:
+ 179:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 180:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 
+ 181:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 182:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         }
+ 183:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         
+ 184:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     }
+ 185:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     else /* (UART_1_CHECK_I2C_FSM_SLAVE) */
+ 186:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     {
+ 187:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         if(UART_1_I2C_SLAVE)
+ 257              		.loc 1 187 0
+ 258 0120 854B     		ldr	r3, .L99+16
+ 259 0122 1B78     		ldrb	r3, [r3]
+ 260 0124 DC07     		lsl	r4, r3, #31
+ 261 0126 22D5     		bpl	.L81
+ 188:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         {
+ 189:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* INTR_SLAVE_I2C_BUS_ERROR or UART_1_INTR_SLAVE_I2C_ARB_LOST:
+ 190:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * A Misplaced Start or Stop condition occurred on the bus: set a flag
+ 191:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * to notify an error condition.
+ 192:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 193:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_BUS_ERROR |
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 9
+
+
+ 262              		.loc 1 193 0
+ 263 0128 874B     		ldr	r3, .L99+32
+ 264 012a 1A68     		ldr	r2, [r3]
+ 265 012c 0223     		mov	r3, #2
+ 266 012e FF33     		add	r3, r3, #255
+ 267 0130 1A42     		tst	r2, r3
+ 268 0132 1ED0     		beq	.L82
+ 194:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                         UART_1_INTR_SLAVE_I2C_ARB_LOST))
+ 195:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 196:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_CHECK_I2C_FSM_RD)
+ 269              		.loc 1 196 0
+ 270 0134 7F4B     		ldr	r3, .L99+12
+ 271 0136 1B78     		ldrb	r3, [r3]
+ 272 0138 DF07     		lsl	r7, r3, #31
+ 273 013a 09D5     		bpl	.L15
+ 197:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 198:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* TX direction: master reads from slave */
+ 199:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slStatus &= (uint8) ~UART_1_I2C_SSTAT_RD_BUSY;
+ 274              		.loc 1 199 0
+ 275 013c 8B4B     		ldr	r3, .L99+68
+ 276 013e 1A78     		ldrb	r2, [r3]
+ 277 0140 0221     		mov	r1, #2
+ 278 0142 8A43     		bic	r2, r1
+ 279 0144 1A70     		strb	r2, [r3]
+ 200:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slStatus |= (uint8) (UART_1_I2C_SSTAT_RD_ERR |
+ 280              		.loc 1 200 0
+ 281 0146 1978     		ldrb	r1, [r3]
+ 282 0148 0922     		mov	r2, #9
+ 283 014a 0A43     		orr	r2, r1
+ 284 014c 1A70     		strb	r2, [r3]
+ 285 014e 08E0     		b	.L16
+ 286              	.L15:
+ 201:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                           UART_1_I2C_SSTAT_RD_CMPLT);
+ 202:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 203:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 else
+ 204:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 205:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* RX direction: master writes into slave */
+ 206:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slStatus &= (uint8) ~UART_1_I2C_SSTAT_WR_BUSY;
+ 287              		.loc 1 206 0
+ 288 0150 864B     		ldr	r3, .L99+68
+ 289 0152 1A78     		ldrb	r2, [r3]
+ 290 0154 2021     		mov	r1, #32
+ 291 0156 8A43     		bic	r2, r1
+ 292 0158 1A70     		strb	r2, [r3]
+ 207:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slStatus |= (uint8) (UART_1_I2C_SSTAT_WR_ERR |
+ 293              		.loc 1 207 0
+ 294 015a 1978     		ldrb	r1, [r3]
+ 295 015c 9022     		mov	r2, #144
+ 296 015e 0A43     		orr	r2, r1
+ 297 0160 1A70     		strb	r2, [r3]
+ 298              	.L16:
+ 208:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                           UART_1_I2C_SSTAT_WR_CMPLT);
+ 209:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 210:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 211:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_state = UART_1_I2C_FSM_EXIT_IDLE;
+ 299              		.loc 1 211 0
+ 300 0162 0022     		mov	r2, #0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 10
+
+
+ 301 0164 734B     		ldr	r3, .L99+12
+ 302 0166 1A70     		strb	r2, [r3]
+ 303 0168 04E0     		b	.L5
+ 304              	.L76:
+  47:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     endTransfer = 0u; /* Continue active transfer */
+ 305              		.loc 1 47 0
+ 306 016a 0022     		mov	r2, #0
+ 307 016c 02E0     		b	.L5
+ 308              	.L81:
+ 309 016e 0022     		mov	r2, #0
+ 310 0170 00E0     		b	.L5
+ 311              	.L82:
+ 312 0172 0022     		mov	r2, #0
+ 313              	.LVL19:
+ 314              	.L5:
+ 212:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 213:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         }
+ 214:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         
+ 215:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     }
+ 216:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 217:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     /* States description:
+ 218:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * Any Master operation starts from: the ADDR_RD/WR state as the master generates traffic on the
+ 219:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * Any Slave operation starts from: the IDLE state as the slave always waits for actions from th
+ 220:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     */
+ 221:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 222:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     /* FSM Master */
+ 223:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     if(UART_1_CHECK_I2C_FSM_MASTER)
+ 315              		.loc 1 223 0
+ 316 0174 6F4B     		ldr	r3, .L99+12
+ 317 0176 1B78     		ldrb	r3, [r3]
+ 318 0178 9806     		lsl	r0, r3, #26
+ 319 017a 00D4     		bmi	.LCB343
+ 320 017c 61E1     		b	.L17	@long jump
+ 321              	.LCB343:
+ 224:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     {
+ 225:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         if(UART_1_I2C_MASTER)
+ 322              		.loc 1 225 0
+ 323 017e 6E4B     		ldr	r3, .L99+16
+ 324 0180 1B78     		ldrb	r3, [r3]
+ 325 0182 9907     		lsl	r1, r3, #30
+ 326 0184 00D4     		bmi	.LCB350
+ 327 0186 5CE3     		b	.L1	@long jump
+ 328              	.LCB350:
+ 226:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         {
+ 227:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* INTR_MASTER_I2C_STOP:
+ 228:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * A Stop condition was generated by the master: the end of the transaction.
+ 229:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * Set completion flags to notify the API.
+ 230:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 231:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_MASTER_MASKED(UART_1_INTR_MASTER_I2C_STOP))
+ 329              		.loc 1 231 0
+ 330 0188 6C4B     		ldr	r3, .L99+20
+ 331 018a 1B68     		ldr	r3, [r3]
+ 332 018c DC06     		lsl	r4, r3, #27
+ 333 018e 11D5     		bpl	.L19
+ 232:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 233:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearMasterInterruptSource(UART_1_INTR_MASTER_I2C_STOP);
+ 334              		.loc 1 233 0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 11
+
+
+ 335 0190 1022     		mov	r2, #16
+ 336              	.LVL20:
+ 337 0192 734B     		ldr	r3, .L99+56
+ 338 0194 1A60     		str	r2, [r3]
+ 234:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 235:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_mstrStatus |= (uint16) UART_1_GET_I2C_MSTAT_CMPLT;
+ 339              		.loc 1 235 0
+ 340 0196 674B     		ldr	r3, .L99+12
+ 341 0198 1B78     		ldrb	r3, [r3]
+ 342 019a DF07     		lsl	r7, r3, #31
+ 343 019c 01D5     		bpl	.L83
+ 344 019e 0122     		mov	r2, #1
+ 345 01a0 00E0     		b	.L20
+ 346              	.L83:
+ 347 01a2 0222     		mov	r2, #2
+ 348              	.L20:
+ 349              		.loc 1 235 0 is_stmt 0 discriminator 4
+ 350 01a4 664B     		ldr	r3, .L99+24
+ 351 01a6 1988     		ldrh	r1, [r3]
+ 352 01a8 0A43     		orr	r2, r1
+ 353 01aa 1A80     		strh	r2, [r3]
+ 236:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_state       = UART_1_I2C_FSM_IDLE;
+ 354              		.loc 1 236 0 is_stmt 1 discriminator 4
+ 355 01ac 1022     		mov	r2, #16
+ 356 01ae 614B     		ldr	r3, .L99+12
+ 357 01b0 1A70     		strb	r2, [r3]
+ 358 01b2 46E3     		b	.L1
+ 359              	.LVL21:
+ 360              	.L19:
+ 237:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 238:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             else
+ 239:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 240:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_CHECK_I2C_FSM_ADDR) /* Address stage */
+ 361              		.loc 1 240 0
+ 362 01b4 5F4B     		ldr	r3, .L99+12
+ 363 01b6 1B78     		ldrb	r3, [r3]
+ 364 01b8 1807     		lsl	r0, r3, #28
+ 365 01ba 20D5     		bpl	.L21
+ 241:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 242:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* INTR_MASTER_I2C_NACK:
+ 243:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     * The master sent an address but it was NACKed by the slave. Complete transacti
+ 244:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     */
+ 245:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if(UART_1_CHECK_INTR_MASTER_MASKED(UART_1_INTR_MASTER_I2C_NACK))
+ 366              		.loc 1 245 0
+ 367 01bc 5F4B     		ldr	r3, .L99+20
+ 368 01be 1B68     		ldr	r3, [r3]
+ 369 01c0 9907     		lsl	r1, r3, #30
+ 370 01c2 0AD5     		bpl	.L22
+ 246:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 247:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_ClearMasterInterruptSource(UART_1_INTR_MASTER_I2C_NACK);
+ 371              		.loc 1 247 0
+ 372 01c4 0222     		mov	r2, #2
+ 373              	.LVL22:
+ 374 01c6 664B     		ldr	r3, .L99+56
+ 375 01c8 1A60     		str	r2, [r3]
+ 248:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 249:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_ERR_XFER |
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 12
+
+
+ 376              		.loc 1 249 0
+ 377 01ca 5D4B     		ldr	r3, .L99+24
+ 378 01cc 1988     		ldrh	r1, [r3]
+ 379 01ce 8822     		mov	r2, #136
+ 380 01d0 9200     		lsl	r2, r2, #2
+ 381 01d2 0A43     		orr	r2, r1
+ 382 01d4 1A80     		strh	r2, [r3]
+ 383              	.LVL23:
+ 250:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                                  UART_1_I2C_MSTAT_ERR_ADDR_NAK);
+ 251:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 252:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 384              		.loc 1 252 0
+ 385 01d6 0122     		mov	r2, #1
+ 386 01d8 11E0     		b	.L21
+ 387              	.LVL24:
+ 388              	.L22:
+ 253:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 254:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* INTR_TX_UNDERFLOW. The master sent an address:
+ 255:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     *  - TX direction: the clock is stretched after the ACK phase, because the TX F
+ 256:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     *    EMPTY. The TX EMPTY cleans all the TX interrupt sources.
+ 257:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     *  - RX direction: the 1st byte is received, but there is no ACK permission,
+ 258:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     *    the clock is stretched after 1 byte is received.
+ 259:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     */
+ 260:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     else
+ 261:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 262:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(UART_1_CHECK_I2C_FSM_RD) /* Reading */
+ 389              		.loc 1 262 0
+ 390 01da 564B     		ldr	r3, .L99+12
+ 391 01dc 1B78     		ldrb	r3, [r3]
+ 392 01de DC07     		lsl	r4, r3, #31
+ 393 01e0 03D5     		bpl	.L23
+ 263:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 264:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_state = UART_1_I2C_FSM_MSTR_RD_DATA;
+ 394              		.loc 1 264 0
+ 395 01e2 2521     		mov	r1, #37
+ 396 01e4 534B     		ldr	r3, .L99+12
+ 397 01e6 1970     		strb	r1, [r3]
+ 398 01e8 09E0     		b	.L21
+ 399              	.L23:
+ 265:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 266:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else /* Writing */
+ 267:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 268:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_state = UART_1_I2C_FSM_MSTR_WR_DATA;
+ 400              		.loc 1 268 0
+ 401 01ea 2421     		mov	r1, #36
+ 402 01ec 514B     		ldr	r3, .L99+12
+ 403 01ee 1970     		strb	r1, [r3]
+ 269:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if(0u != UART_1_mstrWrBufSize)
+ 404              		.loc 1 269 0
+ 405 01f0 5F4B     		ldr	r3, .L99+72
+ 406 01f2 1B68     		ldr	r3, [r3]
+ 407 01f4 002B     		cmp	r3, #0
+ 408 01f6 02D0     		beq	.L21
+ 270:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 271:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 /* Enable INTR.TX_EMPTY if there is data to transmit */
+ 272:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_SetTxInterruptMode(UART_1_INTR_TX_EMPTY);
+ 409              		.loc 1 272 0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 13
+
+
+ 410 01f8 1021     		mov	r1, #16
+ 411 01fa 5B4B     		ldr	r3, .L99+64
+ 412 01fc 1960     		str	r1, [r3]
+ 413              	.LVL25:
+ 414              	.L21:
+ 273:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 274:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 275:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 276:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 277:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 278:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_CHECK_I2C_FSM_DATA) /* Data phase */
+ 415              		.loc 1 278 0
+ 416 01fe 4D4B     		ldr	r3, .L99+12
+ 417 0200 1B78     		ldrb	r3, [r3]
+ 418 0202 5F07     		lsl	r7, r3, #29
+ 419 0204 00D4     		bmi	.LCB460
+ 420 0206 F2E0     		b	.L24	@long jump
+ 421              	.LCB460:
+ 279:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 280:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if(UART_1_CHECK_I2C_FSM_RD) /* Reading */
+ 422              		.loc 1 280 0
+ 423 0208 4A4B     		ldr	r3, .L99+12
+ 424 020a 1B78     		ldrb	r3, [r3]
+ 425 020c D807     		lsl	r0, r3, #31
+ 426 020e 4AD5     		bpl	.L25
+ 281:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 282:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* INTR_RX_FULL:
+ 283:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * RX direction: the master received 8 bytes.
+ 284:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * Get data from RX FIFO and decide whether to ACK or  NACK the following by
+ 285:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ 286:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(UART_1_CHECK_INTR_RX_MASKED(UART_1_INTR_RX_FULL))
+ 427              		.loc 1 286 0
+ 428 0210 584B     		ldr	r3, .L99+76
+ 429 0212 1B68     		ldr	r3, [r3]
+ 430 0214 1907     		lsl	r1, r3, #28
+ 431 0216 28D5     		bpl	.L26
+ 287:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 288:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Calculate difference */
+ 289:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             diffCount =  UART_1_mstrRdBufSize -
+ 432              		.loc 1 289 0
+ 433 0218 574B     		ldr	r3, .L99+80
+ 434 021a 1968     		ldr	r1, [r3]
+ 290:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                         (UART_1_mstrRdBufIndex + UART_1_GET_RX_FIFO_ENTRIES);
+ 435              		.loc 1 290 0
+ 436 021c 574B     		ldr	r3, .L99+84
+ 437 021e 1B68     		ldr	r3, [r3]
+ 438 0220 0F20     		mov	r0, #15
+ 439 0222 0340     		and	r3, r0
+ 440 0224 5648     		ldr	r0, .L99+88
+ 441 0226 0068     		ldr	r0, [r0]
+ 442 0228 1B18     		add	r3, r3, r0
+ 289:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             diffCount =  UART_1_mstrRdBufSize -
+ 443              		.loc 1 289 0
+ 444 022a CB1A     		sub	r3, r1, r3
+ 445              	.LVL26:
+ 291:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 292:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Proceed transaction or end it when RX FIFO becomes FULL again */
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 14
+
+
+ 293:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if(diffCount > UART_1_I2C_FIFO_SIZE)
+ 446              		.loc 1 293 0
+ 447 022c 082B     		cmp	r3, #8
+ 448 022e 09D8     		bhi	.L84
+ 294:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 295:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 diffCount = UART_1_I2C_FIFO_SIZE;
+ 296:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 297:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             else
+ 298:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 299:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 if(0u == diffCount)
+ 449              		.loc 1 299 0
+ 450 0230 002B     		cmp	r3, #0
+ 451 0232 14D1     		bne	.L28
+ 300:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 {
+ 301:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     UART_1_DISABLE_MASTER_AUTO_DATA_ACK;
+ 452              		.loc 1 301 0
+ 453 0234 474B     		ldr	r3, .L99+44
+ 454              	.LVL27:
+ 455 0236 1968     		ldr	r1, [r3]
+ 456 0238 474A     		ldr	r2, .L99+48
+ 457              	.LVL28:
+ 458 023a 0A40     		and	r2, r1
+ 459 023c 1A60     		str	r2, [r3]
+ 460              	.LVL29:
+ 302:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 303:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     diffCount   = UART_1_I2C_FIFO_SIZE;
+ 304:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 461              		.loc 1 304 0
+ 462 023e 0122     		mov	r2, #1
+ 303:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     diffCount   = UART_1_I2C_FIFO_SIZE;
+ 463              		.loc 1 303 0
+ 464 0240 0823     		mov	r3, #8
+ 465 0242 0CE0     		b	.L28
+ 466              	.LVL30:
+ 467              	.L84:
+ 295:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 diffCount = UART_1_I2C_FIFO_SIZE;
+ 468              		.loc 1 295 0
+ 469 0244 0823     		mov	r3, #8
+ 470              	.LVL31:
+ 471 0246 0AE0     		b	.L28
+ 472              	.LVL32:
+ 473              	.L29:
+ 305:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 }
+ 306:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 307:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 308:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             for(; (0u != diffCount); diffCount--)
+ 309:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 310:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_mstrRdBufPtr[UART_1_mstrRdBufIndex] = (uint8)
+ 474              		.loc 1 310 0 discriminator 2
+ 475 0248 0868     		ldr	r0, [r1]
+ 476 024a 3468     		ldr	r4, [r6]
+ 477 024c 2018     		add	r0, r4, r0
+ 311:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                                                         UART_1_RX_F
+ 478              		.loc 1 311 0 discriminator 2
+ 479 024e 2C68     		ldr	r4, [r5]
+ 310:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_mstrRdBufPtr[UART_1_mstrRdBufIndex] = (uint8)
+ 480              		.loc 1 310 0 discriminator 2
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 15
+
+
+ 481 0250 E4B2     		uxtb	r4, r4
+ 482 0252 0470     		strb	r4, [r0]
+ 312:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_mstrRdBufIndex++;
+ 483              		.loc 1 312 0 discriminator 2
+ 484 0254 0868     		ldr	r0, [r1]
+ 485 0256 0130     		add	r0, r0, #1
+ 486 0258 0860     		str	r0, [r1]
+ 308:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             for(; (0u != diffCount); diffCount--)
+ 487              		.loc 1 308 0 discriminator 2
+ 488 025a 013B     		sub	r3, r3, #1
+ 489              	.LVL33:
+ 490 025c 02E0     		b	.L94
+ 491              	.LVL34:
+ 492              	.L28:
+ 310:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_mstrRdBufPtr[UART_1_mstrRdBufIndex] = (uint8)
+ 493              		.loc 1 310 0 discriminator 1
+ 494 025e 4849     		ldr	r1, .L99+88
+ 495 0260 484E     		ldr	r6, .L99+92
+ 311:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                                                         UART_1_RX_F
+ 496              		.loc 1 311 0 discriminator 1
+ 497 0262 494D     		ldr	r5, .L99+96
+ 498              	.L94:
+ 499              	.LVL35:
+ 308:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             for(; (0u != diffCount); diffCount--)
+ 500              		.loc 1 308 0 discriminator 1
+ 501 0264 002B     		cmp	r3, #0
+ 502 0266 EFD1     		bne	.L29
+ 503 0268 19E0     		b	.L30
+ 504              	.LVL36:
+ 505              	.L26:
+ 313:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 314:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 315:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* INTR_RX_NOT_EMPTY:
+ 316:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * RX direction: the master received one data byte, ACK or NACK it.
+ 317:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * The last byte is stored and NACKed by the master. The NACK and Stop is
+ 318:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * generated by one command generate Stop.
+ 319:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ 320:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else if(UART_1_CHECK_INTR_RX_MASKED(UART_1_INTR_RX_NOT_EMPTY))
+ 506              		.loc 1 320 0
+ 507 026a 424B     		ldr	r3, .L99+76
+ 508 026c 1B68     		ldr	r3, [r3]
+ 509 026e 5F07     		lsl	r7, r3, #29
+ 510 0270 15D5     		bpl	.L30
+ 321:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 322:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Put data in component buffer */
+ 323:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrRdBufPtr[UART_1_mstrRdBufIndex] = (uint8) UART_1_RX_FIFO_RD_
+ 511              		.loc 1 323 0
+ 512 0272 434B     		ldr	r3, .L99+88
+ 513 0274 1968     		ldr	r1, [r3]
+ 514 0276 4348     		ldr	r0, .L99+92
+ 515 0278 0068     		ldr	r0, [r0]
+ 516 027a 4118     		add	r1, r0, r1
+ 517 027c 4248     		ldr	r0, .L99+96
+ 518 027e 0068     		ldr	r0, [r0]
+ 519 0280 C0B2     		uxtb	r0, r0
+ 520 0282 0870     		strb	r0, [r1]
+ 324:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrRdBufIndex++;
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 16
+
+
+ 521              		.loc 1 324 0
+ 522 0284 1968     		ldr	r1, [r3]
+ 523 0286 0131     		add	r1, r1, #1
+ 524 0288 1960     		str	r1, [r3]
+ 325:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 326:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if(UART_1_mstrRdBufIndex < UART_1_mstrRdBufSize)
+ 525              		.loc 1 326 0
+ 526 028a 1968     		ldr	r1, [r3]
+ 527 028c 3A4B     		ldr	r3, .L99+80
+ 528 028e 1B68     		ldr	r3, [r3]
+ 529 0290 9942     		cmp	r1, r3
+ 530 0292 03D2     		bcs	.L85
+ 327:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 328:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_I2C_MASTER_GENERATE_ACK;
+ 531              		.loc 1 328 0
+ 532 0294 0421     		mov	r1, #4
+ 533 0296 2B4B     		ldr	r3, .L99+28
+ 534 0298 1960     		str	r1, [r3]
+ 535 029a 00E0     		b	.L30
+ 536              	.L85:
+ 329:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 330:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             else
+ 331:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 332:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 537              		.loc 1 332 0
+ 538 029c 0122     		mov	r2, #1
+ 539              	.LVL37:
+ 540              	.L30:
+ 333:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 334:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 335:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else
+ 336:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 337:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Do nothing */
+ 338:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 339:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 340:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_ClearRxInterruptSource(UART_1_INTR_RX_ALL);
+ 541              		.loc 1 340 0 discriminator 6
+ 542 029e 3B49     		ldr	r1, .L99+100
+ 543 02a0 3B4B     		ldr	r3, .L99+104
+ 544 02a2 1960     		str	r1, [r3]
+ 545 02a4 A3E0     		b	.L24
+ 546              	.L25:
+ 341:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 342:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     else /* Writing */
+ 343:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 344:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* INTR_MASTER_I2C_NACK :
+ 345:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * The master writes data to the slave and NACK was received: not all the by
+ 346:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * written to the slave from the TX FIFO. Revert the index if there is data 
+ 347:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * the TX FIFO and pass control to a complete transfer.
+ 348:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ 349:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(UART_1_CHECK_INTR_MASTER_MASKED(UART_1_INTR_MASTER_I2C_NACK))
+ 547              		.loc 1 349 0
+ 548 02a6 254B     		ldr	r3, .L99+20
+ 549 02a8 1B68     		ldr	r3, [r3]
+ 550 02aa 9807     		lsl	r0, r3, #30
+ 551 02ac 27D5     		bpl	.L31
+ 350:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 17
+
+
+ 351:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_ClearMasterInterruptSource(UART_1_INTR_MASTER_I2C_NACK);
+ 552              		.loc 1 351 0
+ 553 02ae 0222     		mov	r2, #2
+ 554              	.LVL38:
+ 555 02b0 2B4B     		ldr	r3, .L99+56
+ 556 02b2 1A60     		str	r2, [r3]
+ 352:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 353:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Rollback write buffer index: NACKed byte remains in shifter */
+ 354:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrWrBufIndexTmp -= (UART_1_GET_TX_FIFO_ENTRIES +
+ 557              		.loc 1 354 0
+ 558 02b4 374B     		ldr	r3, .L99+108
+ 559 02b6 1968     		ldr	r1, [r3]
+ 560 02b8 374B     		ldr	r3, .L99+112
+ 561 02ba 1A68     		ldr	r2, [r3]
+ 562 02bc 0F20     		mov	r0, #15
+ 563 02be 0240     		and	r2, r0
+ 355:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                                    UART_1_GET_TX_FIFO_SR_VALID);
+ 564              		.loc 1 355 0
+ 565 02c0 1B68     		ldr	r3, [r3]
+ 354:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrWrBufIndexTmp -= (UART_1_GET_TX_FIFO_ENTRIES +
+ 566              		.loc 1 354 0
+ 567 02c2 1C04     		lsl	r4, r3, #16
+ 568 02c4 01D5     		bpl	.L86
+ 569 02c6 0120     		mov	r0, #1
+ 570 02c8 00E0     		b	.L32
+ 571              	.L86:
+ 572 02ca 0020     		mov	r0, #0
+ 573              	.L32:
+ 354:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrWrBufIndexTmp -= (UART_1_GET_TX_FIFO_ENTRIES +
+ 574              		.loc 1 354 0 is_stmt 0 discriminator 8
+ 575 02cc 1318     		add	r3, r2, r0
+ 576 02ce CA1A     		sub	r2, r1, r3
+ 577 02d0 304B     		ldr	r3, .L99+108
+ 578 02d2 1A60     		str	r2, [r3]
+ 356:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 357:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Update number of transferred bytes */
+ 358:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrWrBufIndex = UART_1_mstrWrBufIndexTmp;
+ 579              		.loc 1 358 0 is_stmt 1 discriminator 8
+ 580 02d4 1A68     		ldr	r2, [r3]
+ 581 02d6 314B     		ldr	r3, .L99+116
+ 582 02d8 1A60     		str	r2, [r3]
+ 359:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 360:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_ERR_XFER |
+ 583              		.loc 1 360 0 discriminator 8
+ 584 02da 194B     		ldr	r3, .L99+24
+ 585 02dc 1988     		ldrh	r1, [r3]
+ 586 02de 8422     		mov	r2, #132
+ 587 02e0 9200     		lsl	r2, r2, #2
+ 588 02e2 0A43     		orr	r2, r1
+ 589 02e4 1A80     		strh	r2, [r3]
+ 361:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                                      UART_1_I2C_MSTAT_ERR_SHORT_XFE
+ 362:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 363:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_CLEAR_TX_FIFO;
+ 590              		.loc 1 363 0 discriminator 8
+ 591 02e6 194B     		ldr	r3, .L99+36
+ 592 02e8 1968     		ldr	r1, [r3]
+ 593 02ea 8022     		mov	r2, #128
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 18
+
+
+ 594 02ec 5202     		lsl	r2, r2, #9
+ 595 02ee 0A43     		orr	r2, r1
+ 596 02f0 1A60     		str	r2, [r3]
+ 597 02f2 1968     		ldr	r1, [r3]
+ 598 02f4 164A     		ldr	r2, .L99+40
+ 599 02f6 0A40     		and	r2, r1
+ 600 02f8 1A60     		str	r2, [r3]
+ 601              	.LVL39:
+ 364:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 365:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 602              		.loc 1 365 0 discriminator 8
+ 603 02fa 0122     		mov	r2, #1
+ 604 02fc 77E0     		b	.L24
+ 605              	.LVL40:
+ 606              	.L31:
+ 366:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 367:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* INTR_TX_EMPTY :
+ 368:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * TX direction: the TX FIFO is EMPTY, the data from the buffer needs to be 
+ 369:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * When there is no data in the component buffer, the underflow interrupt is
+ 370:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * enabled to catch when all the data has been transferred.
+ 371:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ 372:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else if(UART_1_CHECK_INTR_TX_MASKED(UART_1_INTR_TX_EMPTY))
+ 607              		.loc 1 372 0
+ 608 02fe 284B     		ldr	r3, .L99+120
+ 609 0300 1B68     		ldr	r3, [r3]
+ 610 0302 DF06     		lsl	r7, r3, #27
+ 611 0304 4ED4     		bmi	.L33
+ 612 0306 69E0     		b	.L95
+ 613              	.L36:
+ 373:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 374:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             while(UART_1_I2C_FIFO_SIZE != UART_1_GET_TX_FIFO_ENTRIES)
+ 375:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 376:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 /* The temporary mstrWrBufIndexTmp is used because slave could NACK
+ 377:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 * roll-back required in this case. The mstrWrBufIndex is updated at
+ 378:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 */
+ 379:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 if(UART_1_mstrWrBufIndexTmp < UART_1_mstrWrBufSize)
+ 614              		.loc 1 379 0
+ 615 0308 3868     		ldr	r0, [r7]
+ 616 030a 3168     		ldr	r1, [r6]
+ 617 030c 8842     		cmp	r0, r1
+ 618 030e 58D2     		bcs	.L35
+ 380:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 {
+ 381:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 #if(!UART_1_CY_SCBIP_V0)
+ 382:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                    /* Clear INTR_TX.UNDERFLOW before putting the last byte into TX 
+ 383:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     * a proper trigger at the end of transaction when INTR_TX.UNDER
+ 384:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     * event. Ticket ID# 156735.
+ 385:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     */
+ 386:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     if(UART_1_mstrWrBufIndexTmp == (UART_1_mstrWrBufSize - 1u))
+ 387:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     {
+ 388:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                         UART_1_ClearTxInterruptSource(UART_1_INTR_TX_UNDERFLOW);
+ 389:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                         UART_1_SetTxInterruptMode(UART_1_INTR_TX_UNDERFLOW);
+ 390:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     }
+ 391:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                  #endif /* (!UART_1_CY_SCBIP_V0) */
+ 392:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 393:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     /* Put data into TX FIFO */
+ 394:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     UART_1_TX_FIFO_WR_REG = (uint32) UART_1_mstrWrBufPtr[UART_1_mst
+ 619              		.loc 1 394 0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 19
+
+
+ 620 0310 1968     		ldr	r1, [r3]
+ 621 0312 4046     		mov	r0, r8
+ 622 0314 0068     		ldr	r0, [r0]
+ 623 0316 4118     		add	r1, r0, r1
+ 624 0318 0978     		ldrb	r1, [r1]
+ 625 031a C9B2     		uxtb	r1, r1
+ 626 031c 6446     		mov	r4, ip
+ 627 031e 2160     		str	r1, [r4]
+ 395:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     UART_1_mstrWrBufIndexTmp++;
+ 628              		.loc 1 395 0
+ 629 0320 1968     		ldr	r1, [r3]
+ 630 0322 0131     		add	r1, r1, #1
+ 631 0324 1960     		str	r1, [r3]
+ 632 0326 47E0     		b	.L96
+ 633              	.L100:
+ 634              		.align	2
+ 635              	.L99:
+ 636 0328 00000000 		.word	UART_1_customIntrHandler
+ 637 032c 8C0E0740 		.word	1074204300
+ 638 0330 880E0740 		.word	1074204296
+ 639 0334 00000000 		.word	UART_1_state
+ 640 0338 00000000 		.word	UART_1_mode
+ 641 033c 0C0F0740 		.word	1074204428
+ 642 0340 00000000 		.word	UART_1_mstrStatus
+ 643 0344 68000740 		.word	1074200680
+ 644 0348 4C0F0740 		.word	1074204492
+ 645 034c 04020740 		.word	1074201092
+ 646 0350 FFFFFEFF 		.word	-65537
+ 647 0354 60000740 		.word	1074200672
+ 648 0358 FFFEFFFF 		.word	-257
+ 649 035c 17030000 		.word	791
+ 650 0360 000F0740 		.word	1074204416
+ 651 0364 C80F0740 		.word	1074204616
+ 652 0368 880F0740 		.word	1074204552
+ 653 036c 00000000 		.word	UART_1_slStatus
+ 654 0370 00000000 		.word	UART_1_mstrWrBufSize
+ 655 0374 CC0F0740 		.word	1074204620
+ 656 0378 00000000 		.word	UART_1_mstrRdBufSize
+ 657 037c 08030740 		.word	1074201352
+ 658 0380 00000000 		.word	UART_1_mstrRdBufIndex
+ 659 0384 00000000 		.word	UART_1_mstrRdBufPtr
+ 660 0388 40030740 		.word	1074201408
+ 661 038c ED0F0000 		.word	4077
+ 662 0390 C00F0740 		.word	1074204608
+ 663 0394 00000000 		.word	UART_1_mstrWrBufIndexTmp
+ 664 0398 08020740 		.word	1074201096
+ 665 039c 00000000 		.word	UART_1_mstrWrBufIndex
+ 666 03a0 8C0F0740 		.word	1074204556
+ 667              	.L33:
+ 374:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             while(UART_1_I2C_FIFO_SIZE != UART_1_GET_TX_FIFO_ENTRIES)
+ 668              		.loc 1 374 0 discriminator 1
+ 669 03a4 CC4D     		ldr	r5, .L101
+ 670 03a6 0F27     		mov	r7, #15
+ 671 03a8 B946     		mov	r9, r7
+ 379:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 if(UART_1_mstrWrBufIndexTmp < UART_1_mstrWrBufSize)
+ 672              		.loc 1 379 0 discriminator 1
+ 673 03aa CC4F     		ldr	r7, .L101+4
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 20
+
+
+ 674 03ac CC4E     		ldr	r6, .L101+8
+ 394:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     UART_1_TX_FIFO_WR_REG = (uint32) UART_1_mstrWrBufPtr[UART_1_mst
+ 675              		.loc 1 394 0 discriminator 1
+ 676 03ae 3B1C     		mov	r3, r7
+ 677 03b0 CC48     		ldr	r0, .L101+12
+ 678 03b2 8046     		mov	r8, r0
+ 679 03b4 CC49     		ldr	r1, .L101+16
+ 680 03b6 8C46     		mov	ip, r1
+ 681              	.L96:
+ 374:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             while(UART_1_I2C_FIFO_SIZE != UART_1_GET_TX_FIFO_ENTRIES)
+ 682              		.loc 1 374 0 discriminator 1
+ 683 03b8 2968     		ldr	r1, [r5]
+ 684 03ba 4C46     		mov	r4, r9
+ 685 03bc 2140     		and	r1, r4
+ 686 03be 0829     		cmp	r1, #8
+ 687 03c0 A2D1     		bne	.L36
+ 688              	.L35:
+ 396:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 }
+ 397:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 else
+ 398:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 {
+ 399:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     break; /* No more data to put */
+ 400:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 }
+ 401:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 402:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 403:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         #if(UART_1_CY_SCBIP_V0)
+ 404:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if(UART_1_mstrWrBufIndexTmp == UART_1_mstrWrBufSize)
+ 689              		.loc 1 404 0
+ 690 03c2 C64B     		ldr	r3, .L101+4
+ 691 03c4 1968     		ldr	r1, [r3]
+ 692 03c6 C64B     		ldr	r3, .L101+8
+ 693 03c8 1B68     		ldr	r3, [r3]
+ 694 03ca 9942     		cmp	r1, r3
+ 695 03cc 02D1     		bne	.L37
+ 405:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 406:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_SetTxInterruptMode(UART_1_INTR_TX_UNDERFLOW);
+ 696              		.loc 1 406 0
+ 697 03ce 4021     		mov	r1, #64
+ 698 03d0 C64B     		ldr	r3, .L101+20
+ 699 03d2 1960     		str	r1, [r3]
+ 700              	.L37:
+ 407:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 408:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 409:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_ClearTxInterruptSource(UART_1_INTR_TX_ALL);
+ 701              		.loc 1 409 0
+ 702 03d4 C649     		ldr	r1, .L101+24
+ 703 03d6 C74B     		ldr	r3, .L101+28
+ 704 03d8 1960     		str	r1, [r3]
+ 705 03da 08E0     		b	.L24
+ 706              	.L95:
+ 410:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         #else
+ 411:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_ClearTxInterruptSource(UART_1_INTR_TX_EMPTY);
+ 412:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         #endif /* (UART_1_CY_SCBIP_V0) */
+ 413:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 414:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* INTR_TX_UNDERFLOW:
+ 415:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * TX direction: all data from the TX FIFO was transferred to the slave.
+ 416:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * The transaction needs to be completed.
+ 417:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 21
+
+
+ 418:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else if(UART_1_CHECK_INTR_TX_MASKED(UART_1_INTR_TX_UNDERFLOW))
+ 707              		.loc 1 418 0
+ 708 03dc C64B     		ldr	r3, .L101+32
+ 709 03de 1B68     		ldr	r3, [r3]
+ 710 03e0 5F06     		lsl	r7, r3, #25
+ 711 03e2 04D5     		bpl	.L24
+ 419:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 420:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Update number of transferred bytes */
+ 421:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_mstrWrBufIndex = UART_1_mstrWrBufIndexTmp;
+ 712              		.loc 1 421 0
+ 713 03e4 BD4B     		ldr	r3, .L101+4
+ 714 03e6 1A68     		ldr	r2, [r3]
+ 715              	.LVL41:
+ 716 03e8 C44B     		ldr	r3, .L101+36
+ 717 03ea 1A60     		str	r2, [r3]
+ 718              	.LVL42:
+ 422:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 423:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 719              		.loc 1 423 0
+ 720 03ec 0122     		mov	r2, #1
+ 721              	.LVL43:
+ 722              	.L24:
+ 424:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 425:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else
+ 426:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 427:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Do nothing */
+ 428:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 429:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 430:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 431:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 432:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(0u != endTransfer) /* Complete transfer */
+ 723              		.loc 1 432 0
+ 724 03ee 002A     		cmp	r2, #0
+ 725 03f0 00D1     		bne	.LCB775
+ 726 03f2 26E2     		b	.L1	@long jump
+ 727              	.LCB775:
+ 433:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 434:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Clean-up master after reading: only in case of NACK */
+ 435:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_DISABLE_MASTER_AUTO_DATA_ACK;
+ 728              		.loc 1 435 0
+ 729 03f4 C24B     		ldr	r3, .L101+40
+ 730 03f6 1968     		ldr	r1, [r3]
+ 731 03f8 C24A     		ldr	r2, .L101+44
+ 732              	.LVL44:
+ 733 03fa 0A40     		and	r2, r1
+ 734 03fc 1A60     		str	r2, [r3]
+ 436:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 437:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Disable data processing interrupts: they have to be cleared before */
+ 438:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_SetRxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 735              		.loc 1 438 0
+ 736 03fe 0023     		mov	r3, #0
+ 737 0400 C14A     		ldr	r2, .L101+48
+ 738 0402 1360     		str	r3, [r2]
+ 439:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_SetTxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 739              		.loc 1 439 0
+ 740 0404 B94A     		ldr	r2, .L101+20
+ 741 0406 1360     		str	r3, [r2]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 22
+
+
+ 440:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 441:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if(UART_1_CHECK_I2C_MODE_NO_STOP(UART_1_mstrControl))
+ 742              		.loc 1 441 0
+ 743 0408 C04B     		ldr	r3, .L101+52
+ 744 040a 1B78     		ldrb	r3, [r3]
+ 745 040c 9807     		lsl	r0, r3, #30
+ 746 040e 0ED5     		bpl	.L38
+ 442:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 443:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* On-going transaction is suspended: the ReStart is generated by the API r
+ 444:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_XFER_HALT |
+ 445:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                                  UART_1_GET_I2C_MSTAT_CMPLT);
+ 747              		.loc 1 445 0
+ 748 0410 BF4B     		ldr	r3, .L101+56
+ 749 0412 1B78     		ldrb	r3, [r3]
+ 444:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_XFER_HALT |
+ 750              		.loc 1 444 0
+ 751 0414 D907     		lsl	r1, r3, #31
+ 752 0416 01D5     		bpl	.L87
+ 753 0418 0921     		mov	r1, #9
+ 754 041a 00E0     		b	.L39
+ 755              	.L87:
+ 756 041c 0A21     		mov	r1, #10
+ 757              	.L39:
+ 444:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_mstrStatus |= (uint16) (UART_1_I2C_MSTAT_XFER_HALT |
+ 758              		.loc 1 444 0 is_stmt 0 discriminator 9
+ 759 041e BD4B     		ldr	r3, .L101+60
+ 760 0420 1A88     		ldrh	r2, [r3]
+ 761 0422 0A43     		orr	r2, r1
+ 762 0424 1A80     		strh	r2, [r3]
+ 446:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 447:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_state = UART_1_I2C_FSM_MSTR_HALT;
+ 763              		.loc 1 447 0 is_stmt 1 discriminator 9
+ 764 0426 6022     		mov	r2, #96
+ 765 0428 B94B     		ldr	r3, .L101+56
+ 766 042a 1A70     		strb	r2, [r3]
+ 767 042c 09E2     		b	.L1
+ 768              	.L38:
+ 448:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 449:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     else
+ 450:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 451:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Complete transaction: exclude the data processing state and generate Sto
+ 452:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * The completion status will be set after Stop generation.
+ 453:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * A special case is read: because NACK and Stop are generated by the comman
+ 454:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * Lost arbitration can occur during NACK generation when
+ 455:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * the other master is still reading from the slave.
+ 456:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         */
+ 457:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_I2C_MASTER_GENERATE_STOP;
+ 769              		.loc 1 457 0
+ 770 042e BA4B     		ldr	r3, .L101+64
+ 771 0430 1B68     		ldr	r3, [r3]
+ 772 0432 9A06     		lsl	r2, r3, #26
+ 773 0434 01D5     		bpl	.L88
+ 774 0436 1822     		mov	r2, #24
+ 775 0438 00E0     		b	.L40
+ 776              	.L88:
+ 777 043a 1022     		mov	r2, #16
+ 778              	.L40:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 23
+
+
+ 779              		.loc 1 457 0 is_stmt 0 discriminator 3
+ 780 043c B74B     		ldr	r3, .L101+68
+ 781 043e 1A60     		str	r2, [r3]
+ 782 0440 FFE1     		b	.L1
+ 783              	.LVL45:
+ 784              	.L17:
+ 458:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 459:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 460:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 461:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 462:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         } /* (UART_1_I2C_MASTER) */
+ 463:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         
+ 464:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 465:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     } /* (UART_1_CHECK_I2C_FSM_MASTER) */
+ 466:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 467:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 468:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     /* FSM Slave */
+ 469:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     else if(UART_1_CHECK_I2C_FSM_SLAVE)
+ 785              		.loc 1 469 0 is_stmt 1
+ 786 0442 B34B     		ldr	r3, .L101+56
+ 787 0444 1B78     		ldrb	r3, [r3]
+ 788 0446 DC06     		lsl	r4, r3, #27
+ 789 0448 00D4     		bmi	.LCB852
+ 790 044a D3E1     		b	.L41	@long jump
+ 791              	.LCB852:
+ 470:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     {
+ 471:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         if(UART_1_I2C_SLAVE)
+ 792              		.loc 1 471 0
+ 793 044c B44B     		ldr	r3, .L101+72
+ 794 044e 1B78     		ldrb	r3, [r3]
+ 795 0450 DF07     		lsl	r7, r3, #31
+ 796 0452 00D4     		bmi	.LCB859
+ 797 0454 F5E1     		b	.L1	@long jump
+ 798              	.LCB859:
+ 472:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         {
+ 473:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* INTR_SLAVE_NACK:
+ 474:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The master completes reading the slave: the appropriate flags have to be set.
+ 475:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The TX FIFO is cleared after an overflow condition is set.
+ 476:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 477:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_NACK))
+ 799              		.loc 1 477 0
+ 800 0456 B34B     		ldr	r3, .L101+76
+ 801 0458 1B68     		ldr	r3, [r3]
+ 802 045a 9807     		lsl	r0, r3, #30
+ 803 045c 3ED5     		bpl	.L42
+ 478:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 479:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearSlaveInterruptSource(UART_1_INTR_SLAVE_I2C_NACK);
+ 804              		.loc 1 479 0
+ 805 045e 0222     		mov	r2, #2
+ 806              	.LVL46:
+ 807 0460 B14B     		ldr	r3, .L101+80
+ 808 0462 1A60     		str	r2, [r3]
+ 480:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 481:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* All entries that remain in TX FIFO max value is 9: 8 (FIFO) + 1 (SHIFTER) */
+ 482:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 diffCount = (UART_1_GET_TX_FIFO_ENTRIES + UART_1_GET_TX_FIFO_SR_VALID);
+ 809              		.loc 1 482 0
+ 810 0464 9C4B     		ldr	r3, .L101
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 24
+
+
+ 811 0466 1A68     		ldr	r2, [r3]
+ 812 0468 0F21     		mov	r1, #15
+ 813 046a 0A40     		and	r2, r1
+ 814 046c 1B68     		ldr	r3, [r3]
+ 815 046e 1904     		lsl	r1, r3, #16
+ 816 0470 01D5     		bpl	.L89
+ 817 0472 0123     		mov	r3, #1
+ 818 0474 00E0     		b	.L43
+ 819              	.L89:
+ 820 0476 0023     		mov	r3, #0
+ 821              	.L43:
+ 822              		.loc 1 482 0 is_stmt 0 discriminator 3
+ 823 0478 D318     		add	r3, r2, r3
+ 824              	.LVL47:
+ 483:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 484:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_slOverFlowCount > diffCount) /* Overflow */
+ 825              		.loc 1 484 0 is_stmt 1 discriminator 3
+ 826 047a AC4A     		ldr	r2, .L101+84
+ 827 047c 1278     		ldrb	r2, [r2]
+ 828 047e D2B2     		uxtb	r2, r2
+ 829 0480 9A42     		cmp	r2, r3
+ 830 0482 05D9     		bls	.L44
+ 485:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 486:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slStatus |= (uint8) UART_1_I2C_SSTAT_RD_OVFL;
+ 831              		.loc 1 486 0
+ 832 0484 AA4B     		ldr	r3, .L101+88
+ 833              	.LVL48:
+ 834 0486 1978     		ldrb	r1, [r3]
+ 835 0488 0422     		mov	r2, #4
+ 836 048a 0A43     		orr	r2, r1
+ 837 048c 1A70     		strb	r2, [r3]
+ 838 048e 06E0     		b	.L45
+ 839              	.LVL49:
+ 840              	.L44:
+ 487:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 488:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 else /* No Overflow */
+ 489:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 490:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Roll-back temporary index */
+ 491:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slRdBufIndexTmp -= (diffCount - UART_1_slOverFlowCount);
+ 841              		.loc 1 491 0
+ 842 0490 A64A     		ldr	r2, .L101+84
+ 843 0492 1278     		ldrb	r2, [r2]
+ 844 0494 D31A     		sub	r3, r2, r3
+ 845              	.LVL50:
+ 846 0496 A74A     		ldr	r2, .L101+92
+ 847 0498 1168     		ldr	r1, [r2]
+ 848 049a 5B18     		add	r3, r3, r1
+ 849 049c 1360     		str	r3, [r2]
+ 850              	.L45:
+ 492:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 493:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 494:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Update slave of transferred bytes */
+ 495:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_slRdBufIndex = UART_1_slRdBufIndexTmp;
+ 851              		.loc 1 495 0
+ 852 049e A54B     		ldr	r3, .L101+92
+ 853 04a0 1A68     		ldr	r2, [r3]
+ 854 04a2 A54B     		ldr	r3, .L101+96
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 25
+
+
+ 855 04a4 1A60     		str	r2, [r3]
+ 496:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 497:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Clean-up TX FIFO */
+ 498:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_SetTxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 856              		.loc 1 498 0
+ 857 04a6 0023     		mov	r3, #0
+ 858 04a8 904A     		ldr	r2, .L101+20
+ 859 04aa 1360     		str	r3, [r2]
+ 499:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_slOverFlowCount = 0u;
+ 860              		.loc 1 499 0
+ 861 04ac 9F4A     		ldr	r2, .L101+84
+ 862 04ae 1370     		strb	r3, [r2]
+ 500:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_CLEAR_TX_FIFO;
+ 863              		.loc 1 500 0
+ 864 04b0 A24B     		ldr	r3, .L101+100
+ 865 04b2 1968     		ldr	r1, [r3]
+ 866 04b4 8022     		mov	r2, #128
+ 867 04b6 5202     		lsl	r2, r2, #9
+ 868 04b8 0A43     		orr	r2, r1
+ 869 04ba 1A60     		str	r2, [r3]
+ 870 04bc 1968     		ldr	r1, [r3]
+ 871 04be A04A     		ldr	r2, .L101+104
+ 872 04c0 0A40     		and	r2, r1
+ 873 04c2 1A60     		str	r2, [r3]
+ 501:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 502:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Complete master reading */
+ 503:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_slStatus &= (uint8) ~UART_1_I2C_SSTAT_RD_BUSY;
+ 874              		.loc 1 503 0
+ 875 04c4 9A4B     		ldr	r3, .L101+88
+ 876 04c6 1A78     		ldrb	r2, [r3]
+ 877 04c8 0221     		mov	r1, #2
+ 878 04ca 8A43     		bic	r2, r1
+ 879 04cc 1A70     		strb	r2, [r3]
+ 504:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_slStatus |= (uint8)  UART_1_I2C_SSTAT_RD_CMPLT;
+ 880              		.loc 1 504 0
+ 881 04ce 1978     		ldrb	r1, [r3]
+ 882 04d0 0122     		mov	r2, #1
+ 883 04d2 0A43     		orr	r2, r1
+ 884 04d4 1A70     		strb	r2, [r3]
+ 505:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_state     =  UART_1_I2C_FSM_IDLE;
+ 885              		.loc 1 505 0
+ 886 04d6 1022     		mov	r2, #16
+ 887 04d8 8D4B     		ldr	r3, .L101+56
+ 888 04da 1A70     		strb	r2, [r3]
+ 889              	.L42:
+ 506:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 507:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 508:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 509:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* INTR_SLAVE_I2C_WRITE_STOP:
+ 510:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The master completes writing to the slave: the appropriate flags have to be set.
+ 511:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The RX FIFO contains 1-8 bytes from the previous transaction which needs to be read.
+ 512:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * There is a possibility that RX FIFO contains an address, it needs to leave it there.
+ 513:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 514:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_WRITE_STOP))
+ 890              		.loc 1 514 0
+ 891 04dc 914B     		ldr	r3, .L101+76
+ 892 04de 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 26
+
+
+ 893 04e0 1A07     		lsl	r2, r3, #28
+ 894 04e2 4AD5     		bpl	.L46
+ 515:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 516:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearSlaveInterruptSource(UART_1_INTR_SLAVE_I2C_WRITE_STOP);
+ 895              		.loc 1 516 0
+ 896 04e4 0822     		mov	r2, #8
+ 897 04e6 904B     		ldr	r3, .L101+80
+ 898 04e8 1A60     		str	r2, [r3]
+ 517:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 518:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Read bytes from RX FIFO when auto data ACK receive logic is enabled. Otherwise a
+ 519:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 * were already read from the RX FIFO except for address byte which has to stay here
+ 520:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 * I2C_ADDR_MATCH.
+ 521:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 */
+ 522:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if (0u != (UART_1_I2C_CTRL_REG & UART_1_I2C_CTRL_S_READY_DATA_ACK))
+ 899              		.loc 1 522 0
+ 900 04ea 854B     		ldr	r3, .L101+40
+ 901 04ec 1B68     		ldr	r3, [r3]
+ 902 04ee 9C04     		lsl	r4, r3, #18
+ 903 04f0 16D4     		bmi	.L47
+ 904 04f2 27E0     		b	.L48
+ 905              	.L51:
+ 523:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 524:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     while(0u != UART_1_GET_RX_FIFO_ENTRIES)
+ 525:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 526:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(UART_1_CHECK_I2C_ACCEPT_ADDRESS)
+ 906              		.loc 1 526 0
+ 907 04f4 2278     		ldrb	r2, [r4]
+ 908 04f6 002A     		cmp	r2, #0
+ 909 04f8 08D0     		beq	.L49
+ 527:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 528:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if((1u == UART_1_GET_RX_FIFO_ENTRIES) &&
+ 910              		.loc 1 528 0
+ 911 04fa 0268     		ldr	r2, [r0]
+ 912 04fc 0A40     		and	r2, r1
+ 913 04fe 012A     		cmp	r2, #1
+ 914 0500 04D1     		bne	.L49
+ 529:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                (UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_ADDR_MATCH)))
+ 915              		.loc 1 529 0 discriminator 1
+ 916 0502 6746     		mov	r7, ip
+ 917 0504 3A68     		ldr	r2, [r7]
+ 528:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if((1u == UART_1_GET_RX_FIFO_ENTRIES) &&
+ 918              		.loc 1 528 0 discriminator 1
+ 919 0506 4746     		mov	r7, r8
+ 920 0508 1742     		tst	r7, r2
+ 921 050a 16D1     		bne	.L50
+ 922              	.L49:
+ 530:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 531:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 break; /* Leave address in RX FIFO */
+ 532:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 533:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 534:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         
+ 535:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 536:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Put data in component buffer */
+ 537:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_slWrBufPtr[UART_1_slWrBufIndex] = (uint8) UART_1_RX_FIFO_RD_REG;
+ 923              		.loc 1 537 0
+ 924 050c 1A68     		ldr	r2, [r3]
+ 925 050e 3768     		ldr	r7, [r6]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 27
+
+
+ 926 0510 BA18     		add	r2, r7, r2
+ 927 0512 2F68     		ldr	r7, [r5]
+ 928 0514 FFB2     		uxtb	r7, r7
+ 929 0516 1770     		strb	r7, [r2]
+ 538:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_slWrBufIndex++;
+ 930              		.loc 1 538 0
+ 931 0518 1A68     		ldr	r2, [r3]
+ 932 051a 0132     		add	r2, r2, #1
+ 933 051c 1A60     		str	r2, [r3]
+ 934 051e 09E0     		b	.L97
+ 935              	.L47:
+ 524:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     while(0u != UART_1_GET_RX_FIFO_ENTRIES)
+ 936              		.loc 1 524 0 discriminator 1
+ 937 0520 8848     		ldr	r0, .L101+108
+ 938 0522 0F21     		mov	r1, #15
+ 526:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(UART_1_CHECK_I2C_ACCEPT_ADDRESS)
+ 939              		.loc 1 526 0 discriminator 1
+ 940 0524 884C     		ldr	r4, .L101+112
+ 529:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                (UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_ADDR_MATCH)))
+ 941              		.loc 1 529 0 discriminator 1
+ 942 0526 7F4A     		ldr	r2, .L101+76
+ 943 0528 9446     		mov	ip, r2
+ 944 052a 4023     		mov	r3, #64
+ 945 052c 9846     		mov	r8, r3
+ 537:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_slWrBufPtr[UART_1_slWrBufIndex] = (uint8) UART_1_RX_FIFO_RD_REG;
+ 946              		.loc 1 537 0 discriminator 1
+ 947 052e 874B     		ldr	r3, .L101+116
+ 948 0530 874E     		ldr	r6, .L101+120
+ 949 0532 884D     		ldr	r5, .L101+124
+ 950              	.L97:
+ 524:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     while(0u != UART_1_GET_RX_FIFO_ENTRIES)
+ 951              		.loc 1 524 0 discriminator 1
+ 952 0534 0268     		ldr	r2, [r0]
+ 953 0536 1142     		tst	r1, r2
+ 954 0538 DCD1     		bne	.L51
+ 955              	.L50:
+ 539:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 540:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 541:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_DISABLE_SLAVE_AUTO_DATA;
+ 956              		.loc 1 541 0
+ 957 053a 714B     		ldr	r3, .L101+40
+ 958 053c 1968     		ldr	r1, [r3]
+ 959 053e 864A     		ldr	r2, .L101+128
+ 960 0540 0A40     		and	r2, r1
+ 961 0542 1A60     		str	r2, [r3]
+ 962              	.L48:
+ 542:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 543:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 544:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_CHECK_INTR_RX(UART_1_INTR_RX_OVERFLOW))
+ 963              		.loc 1 544 0
+ 964 0544 854B     		ldr	r3, .L101+132
+ 965 0546 1B68     		ldr	r3, [r3]
+ 966 0548 9C06     		lsl	r4, r3, #26
+ 967 054a 04D5     		bpl	.L52
+ 545:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 546:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slStatus |= (uint8) UART_1_I2C_SSTAT_WR_OVFL;
+ 968              		.loc 1 546 0
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 28
+
+
+ 969 054c 784B     		ldr	r3, .L101+88
+ 970 054e 1978     		ldrb	r1, [r3]
+ 971 0550 4022     		mov	r2, #64
+ 972 0552 0A43     		orr	r2, r1
+ 973 0554 1A70     		strb	r2, [r3]
+ 974              	.L52:
+ 547:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 548:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 549:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Clears RX interrupt sources triggered on data receiving */
+ 550:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_SetRxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 975              		.loc 1 550 0
+ 976 0556 0022     		mov	r2, #0
+ 977 0558 6B4B     		ldr	r3, .L101+48
+ 978 055a 1A60     		str	r2, [r3]
+ 551:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearRxInterruptSource(UART_1_INTR_RX_ALL);
+ 979              		.loc 1 551 0
+ 980 055c 804A     		ldr	r2, .L101+136
+ 981 055e 7F4B     		ldr	r3, .L101+132
+ 982 0560 1A60     		str	r2, [r3]
+ 552:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 553:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Complete master writing */
+ 554:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_slStatus &= (uint8) ~UART_1_I2C_SSTAT_WR_BUSY;
+ 983              		.loc 1 554 0
+ 984 0562 734B     		ldr	r3, .L101+88
+ 985 0564 1A78     		ldrb	r2, [r3]
+ 986 0566 2021     		mov	r1, #32
+ 987 0568 8A43     		bic	r2, r1
+ 988 056a 1A70     		strb	r2, [r3]
+ 555:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_slStatus |= (uint8)  UART_1_I2C_SSTAT_WR_CMPLT;
+ 989              		.loc 1 555 0
+ 990 056c 1978     		ldrb	r1, [r3]
+ 991 056e 1022     		mov	r2, #16
+ 992 0570 0A43     		orr	r2, r1
+ 993 0572 1A70     		strb	r2, [r3]
+ 556:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_state     =  UART_1_I2C_FSM_IDLE;
+ 994              		.loc 1 556 0
+ 995 0574 664B     		ldr	r3, .L101+56
+ 996 0576 1022     		mov	r2, #16
+ 997 0578 1A70     		strb	r2, [r3]
+ 998              	.L46:
+ 557:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 558:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 559:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 560:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* INTR_SLAVE_I2C_ADDR_MATCH or INTR_SLAVE_I2C_GENERAL:
+ 561:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The address match or general call address event starts the slave operation:
+ 562:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * after leaving the TX or RX direction has to be chosen.
+ 563:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The wakeup interrupt must be cleared only after an address match is set.
+ 564:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 565:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         #if (UART_1_I2C_CUSTOM_ADDRESS_HANDLER_CONST)
+ 566:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if (UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_ADDR_MATCH |
+ 999              		.loc 1 566 0
+ 1000 057a 6A4B     		ldr	r3, .L101+76
+ 1001 057c 1B68     		ldr	r3, [r3]
+ 1002 057e C022     		mov	r2, #192
+ 1003 0580 1A42     		tst	r2, r3
+ 1004 0582 5FD0     		beq	.L53
+ 567:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                                          UART_1_INTR_SLAVE_I2C_GENERAL))
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 29
+
+
+ 568:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         #else
+ 569:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if (UART_1_CHECK_INTR_SLAVE_MASKED(UART_1_INTR_SLAVE_I2C_ADDR_MATCH))
+ 570:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         #endif /* (UART_1_I2C_CUSTOM_ADDRESS_HANDLER_CONST) */
+ 571:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 572:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Clear externally clocked address match interrupt source when internally clocked 
+ 573:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearI2CExtClkInterruptSource(UART_1_INTR_I2C_EC_WAKE_UP);
+ 1005              		.loc 1 573 0
+ 1006 0584 0122     		mov	r2, #1
+ 1007 0586 774B     		ldr	r3, .L101+140
+ 1008 0588 1A60     		str	r2, [r3]
+ 574:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 575:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if (UART_1_I2C_CUSTOM_ADDRESS_HANDLER)
+ 1009              		.loc 1 575 0
+ 1010 058a 5D4B     		ldr	r3, .L101+40
+ 1011 058c 1B68     		ldr	r3, [r3]
+ 1012 058e 1F05     		lsl	r7, r3, #20
+ 1013 0590 03D4     		bmi	.L54
+ 1014              		.loc 1 575 0 is_stmt 0 discriminator 1
+ 1015 0592 6D4B     		ldr	r3, .L101+112
+ 1016 0594 1B78     		ldrb	r3, [r3]
+ 1017 0596 002B     		cmp	r3, #0
+ 1018 0598 0CD0     		beq	.L90
+ 1019              	.L54:
+ 576:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 577:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if (NULL != UART_1_customAddressHandler)
+ 1020              		.loc 1 577 0 is_stmt 1
+ 1021 059a 734B     		ldr	r3, .L101+144
+ 1022 059c 1B68     		ldr	r3, [r3]
+ 1023 059e 002B     		cmp	r3, #0
+ 1024 05a0 01D0     		beq	.L56
+ 578:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 579:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Call custom address handler */
+ 580:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         response = UART_1_customAddressHandler();
+ 1025              		.loc 1 580 0
+ 1026 05a2 9847     		blx	r3
+ 1027              	.LVL51:
+ 1028 05a4 02E0     		b	.L57
+ 1029              	.LVL52:
+ 1030              	.L56:
+ 581:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 582:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     else
+ 583:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 584:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Read address from the RX FIFO. If there is no address underflow triggers
+ 585:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         * componnet does not use that source. */
+ 586:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         (void) UART_1_RX_FIFO_RD_REG;
+ 1031              		.loc 1 586 0
+ 1032 05a6 6B4B     		ldr	r3, .L101+124
+ 1033 05a8 1B68     		ldr	r3, [r3]
+ 587:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         response = UART_1_I2C_ACK_ADDR;
+ 1034              		.loc 1 587 0
+ 1035 05aa 0020     		mov	r0, #0
+ 1036              	.LVL53:
+ 1037              	.L57:
+ 588:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 589:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 590:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Clears RX sources after address was received in the RX FIFO */
+ 591:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_ClearRxInterruptSource(UART_1_INTR_RX_ALL);
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 30
+
+
+ 1038              		.loc 1 591 0
+ 1039 05ac 6C4A     		ldr	r2, .L101+136
+ 1040 05ae 6B4B     		ldr	r3, .L101+132
+ 1041 05b0 1A60     		str	r2, [r3]
+ 1042 05b2 00E0     		b	.L55
+ 1043              	.LVL54:
+ 1044              	.L90:
+  44:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     response = UART_1_I2C_ACK_ADDR;
+ 1045              		.loc 1 44 0
+ 1046 05b4 0020     		mov	r0, #0
+ 1047              	.LVL55:
+ 1048              	.L55:
+ 592:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 593:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 
+ 594:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 595:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             #if (UART_1_I2C_CUSTOM_ADDRESS_HANDLER_CONST)
+ 596:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if (response == UART_1_I2C_NAK_ADDR)
+ 1049              		.loc 1 596 0
+ 1050 05b6 0128     		cmp	r0, #1
+ 1051 05b8 05D1     		bne	.L58
+ 597:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 598:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 #if (!UART_1_CY_SCBIP_V0)
+ 599:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Disable write stop interrupt source as it triggers after address was NACKed.
+ 600:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_DISABLE_INTR_SLAVE(UART_1_INTR_SLAVE_I2C_WRITE_STOP);
+ 601:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 #endif /* (!UART_1_CY_SCBIP_V0) */
+ 602:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 603:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Clear address match and stop history */
+ 604:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_ClearSlaveInterruptSource(UART_1_INTR_SLAVE_ALL);
+ 1052              		.loc 1 604 0
+ 1053 05ba 6C4A     		ldr	r2, .L101+148
+ 1054 05bc 5A4B     		ldr	r3, .L101+80
+ 1055 05be 1A60     		str	r2, [r3]
+ 605:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 606:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* ACK the address byte */
+ 607:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_I2C_SLAVE_GENERATE_NACK;
+ 1056              		.loc 1 607 0
+ 1057 05c0 FFF7FEFF 		bl	UART_1_I2CSlaveNackGeneration
+ 1058              	.LVL56:
+ 1059 05c4 3EE0     		b	.L53
+ 1060              	.LVL57:
+ 1061              	.L58:
+ 608:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 609:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 else
+ 610:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             #endif /* (UART_1_I2C_CUSTOM_ADDRESS_HANDLER_CONST) */
+ 611:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 612:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if(UART_1_CHECK_I2C_STATUS(UART_1_I2C_STATUS_S_READ))
+ 1062              		.loc 1 612 0
+ 1063 05c6 544B     		ldr	r3, .L101+64
+ 1064 05c8 1B68     		ldr	r3, [r3]
+ 1065 05ca D806     		lsl	r0, r3, #27
+ 1066 05cc 0FD5     		bpl	.L59
+ 1067              	.LVL58:
+ 613:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* TX direction: master reads from slave */
+ 614:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 615:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_SetTxInterruptMode(UART_1_INTR_TX_EMPTY);
+ 1068              		.loc 1 615 0
+ 1069 05ce 1022     		mov	r2, #16
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 31
+
+
+ 1070 05d0 464B     		ldr	r3, .L101+20
+ 1071 05d2 1A60     		str	r2, [r3]
+ 616:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 617:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Set temporary index to address buffer clear from API */
+ 618:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_slRdBufIndexTmp = UART_1_slRdBufIndex;
+ 1072              		.loc 1 618 0
+ 1073 05d4 584B     		ldr	r3, .L101+96
+ 1074 05d6 1A68     		ldr	r2, [r3]
+ 1075 05d8 564B     		ldr	r3, .L101+92
+ 1076 05da 1A60     		str	r2, [r3]
+ 619:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 620:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Start master reading */
+ 621:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_slStatus |= (uint8) UART_1_I2C_SSTAT_RD_BUSY;
+ 1077              		.loc 1 621 0
+ 1078 05dc 544B     		ldr	r3, .L101+88
+ 1079 05de 1978     		ldrb	r1, [r3]
+ 1080 05e0 0222     		mov	r2, #2
+ 1081 05e2 0A43     		orr	r2, r1
+ 1082 05e4 1A70     		strb	r2, [r3]
+ 622:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_state     = UART_1_I2C_FSM_SL_RD;
+ 1083              		.loc 1 622 0
+ 1084 05e6 1222     		mov	r2, #18
+ 1085 05e8 494B     		ldr	r3, .L101+56
+ 1086 05ea 1A70     		strb	r2, [r3]
+ 1087 05ec 24E0     		b	.L60
+ 1088              	.L59:
+ 623:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 624:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     else
+ 625:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* RX direction: master writes into slave */
+ 626:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 627:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Calculate available buffer size */
+ 628:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         diffCount = (UART_1_slWrBufSize - UART_1_slWrBufIndex);
+ 1089              		.loc 1 628 0
+ 1090 05ee 604B     		ldr	r3, .L101+152
+ 1091 05f0 1A68     		ldr	r2, [r3]
+ 1092 05f2 564B     		ldr	r3, .L101+116
+ 1093 05f4 1B68     		ldr	r3, [r3]
+ 1094 05f6 D31A     		sub	r3, r2, r3
+ 1095              	.LVL59:
+ 629:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 630:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     #if (UART_1_CY_SCBIP_V0)
+ 631:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(diffCount < UART_1_I2C_FIFO_SIZE)
+ 1096              		.loc 1 631 0
+ 1097 05f8 072B     		cmp	r3, #7
+ 1098 05fa 03D8     		bhi	.L61
+ 632:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Receive data: byte-by-byte */
+ 633:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 634:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_SetRxInterruptMode(UART_1_INTR_RX_NOT_EMPTY);
+ 1099              		.loc 1 634 0
+ 1100 05fc 0422     		mov	r2, #4
+ 1101 05fe 424B     		ldr	r3, .L101+48
+ 1102              	.LVL60:
+ 1103 0600 1A60     		str	r2, [r3]
+ 1104 0602 11E0     		b	.L62
+ 1105              	.LVL61:
+ 1106              	.L61:
+ 635:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 32
+
+
+ 636:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else
+ 637:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Receive data: into RX FIFO */
+ 638:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 639:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if(diffCount == UART_1_I2C_FIFO_SIZE)
+ 1107              		.loc 1 639 0
+ 1108 0604 082B     		cmp	r3, #8
+ 1109 0606 06D1     		bne	.L63
+ 640:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 641:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 /* NACK when RX FIFO become FULL */
+ 642:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_ENABLE_SLAVE_AUTO_DATA;
+ 1110              		.loc 1 642 0
+ 1111 0608 3D4B     		ldr	r3, .L101+40
+ 1112              	.LVL62:
+ 1113 060a 1968     		ldr	r1, [r3]
+ 1114 060c A022     		mov	r2, #160
+ 1115 060e 1202     		lsl	r2, r2, #8
+ 1116 0610 0A43     		orr	r2, r1
+ 1117 0612 1A60     		str	r2, [r3]
+ 1118 0614 08E0     		b	.L62
+ 1119              	.LVL63:
+ 1120              	.L63:
+ 643:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 644:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             else
+ 645:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 646:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 /* Stretch clock when RX FIFO becomes FULL */
+ 647:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_ENABLE_SLAVE_AUTO_DATA_ACK;
+ 1121              		.loc 1 647 0
+ 1122 0616 3A4B     		ldr	r3, .L101+40
+ 1123              	.LVL64:
+ 1124 0618 1968     		ldr	r1, [r3]
+ 1125 061a 8022     		mov	r2, #128
+ 1126 061c 9201     		lsl	r2, r2, #6
+ 1127 061e 0A43     		orr	r2, r1
+ 1128 0620 1A60     		str	r2, [r3]
+ 648:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_SetRxInterruptMode(UART_1_INTR_RX_FULL);
+ 1129              		.loc 1 648 0
+ 1130 0622 0822     		mov	r2, #8
+ 1131 0624 384B     		ldr	r3, .L101+48
+ 1132 0626 1A60     		str	r2, [r3]
+ 1133              	.L62:
+ 649:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 650:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 651:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 652:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     #else
+ 653:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(UART_1_CHECK_I2C_ACCEPT_ADDRESS)
+ 654:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 655:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Enable RX.NOT_EMPTY interrupt source to receive byte by byte.
+ 656:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             * The byte by byte receive is always chosen for the case when an addres
+ 657:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             * in RX FIFO. Ticket ID#175559.
+ 658:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             */
+ 659:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_SetRxInterruptMode(UART_1_INTR_RX_NOT_EMPTY);
+ 660:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 661:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         else
+ 662:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 663:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             if(diffCount < UART_1_I2C_FIFO_SIZE)
+ 664:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Receive data: byte-by-byte */
+ 665:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 33
+
+
+ 666:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 UART_1_SetRxInterruptMode(UART_1_INTR_RX_NOT_EMPTY);
+ 667:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 668:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             else
+ 669:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Receive data: into RX FIFO */
+ 670:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             {
+ 671:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 if(diffCount == UART_1_I2C_FIFO_SIZE)
+ 672:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 {
+ 673:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     /* NACK when RX FIFO become FULL */
+ 674:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     UART_1_ENABLE_SLAVE_AUTO_DATA;
+ 675:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 }
+ 676:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 else
+ 677:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 {
+ 678:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     /* Stretch clock when RX FIFO becomes FULL */
+ 679:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     UART_1_ENABLE_SLAVE_AUTO_DATA_ACK;
+ 680:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                     UART_1_SetRxInterruptMode(UART_1_INTR_RX_FULL);
+ 681:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                                 }
+ 682:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             }
+ 683:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 684:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         
+ 685:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     #endif /* (UART_1_CY_SCBIP_V0) */
+ 686:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 687:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         /* Start master reading */
+ 688:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_slStatus |= (uint8) UART_1_I2C_SSTAT_WR_BUSY;
+ 1134              		.loc 1 688 0
+ 1135 0628 414B     		ldr	r3, .L101+88
+ 1136 062a 1978     		ldrb	r1, [r3]
+ 1137 062c 2022     		mov	r2, #32
+ 1138 062e 0A43     		orr	r2, r1
+ 1139 0630 1A70     		strb	r2, [r3]
+ 689:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_state     = UART_1_I2C_FSM_SL_WR;
+ 1140              		.loc 1 689 0
+ 1141 0632 1122     		mov	r2, #17
+ 1142 0634 364B     		ldr	r3, .L101+56
+ 1143 0636 1A70     		strb	r2, [r3]
+ 1144              	.L60:
+ 690:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 691:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 692:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Clear address match and stop history */
+ 693:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_ClearSlaveInterruptSource(UART_1_INTR_SLAVE_ALL);
+ 1145              		.loc 1 693 0
+ 1146 0638 4C4A     		ldr	r2, .L101+148
+ 1147 063a 3B4B     		ldr	r3, .L101+80
+ 1148 063c 1A60     		str	r2, [r3]
+ 694:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 695:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 #if (!UART_1_CY_SCBIP_V0)
+ 696:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Enable write stop interrupt source as it triggers after address was NACKed. 
+ 697:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_ENABLE_INTR_SLAVE(UART_1_INTR_SLAVE_I2C_WRITE_STOP);
+ 698:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 #endif /* (!UART_1_CY_SCBIP_V0) */
+ 699:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 700:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* ACK the address byte */
+ 701:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_I2C_SLAVE_GENERATE_ACK;
+ 1149              		.loc 1 701 0
+ 1150 063e 0122     		mov	r2, #1
+ 1151 0640 4C4B     		ldr	r3, .L101+156
+ 1152 0642 1A60     		str	r2, [r3]
+ 1153              	.L53:
+ 702:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 34
+
+
+ 703:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 704:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 705:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* UART_1_INTR_RX_FULL:
+ 706:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * Get data from the RX FIFO and decide whether to ACK or NACK the following bytes
+ 707:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 708:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_RX_MASKED(UART_1_INTR_RX_FULL))
+ 1154              		.loc 1 708 0
+ 1155 0644 4C4B     		ldr	r3, .L101+160
+ 1156 0646 1B68     		ldr	r3, [r3]
+ 1157 0648 1907     		lsl	r1, r3, #28
+ 1158 064a 2BD5     		bpl	.L64
+ 709:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 710:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Calculate available buffer size to take into account that RX FIFO is FULL */
+ 711:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 diffCount =  UART_1_slWrBufSize -
+ 1159              		.loc 1 711 0
+ 1160 064c 484B     		ldr	r3, .L101+152
+ 1161 064e 1A68     		ldr	r2, [r3]
+ 1162 0650 3E4B     		ldr	r3, .L101+116
+ 1163 0652 1B68     		ldr	r3, [r3]
+ 1164 0654 D31A     		sub	r3, r2, r3
+ 1165 0656 083B     		sub	r3, r3, #8
+ 1166              	.LVL65:
+ 712:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             (UART_1_slWrBufIndex + UART_1_I2C_FIFO_SIZE);
+ 713:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 714:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(diffCount > UART_1_I2C_FIFO_SIZE) /* Proceed transaction */
+ 1167              		.loc 1 714 0
+ 1168 0658 082B     		cmp	r3, #8
+ 1169 065a 02D9     		bls	.L91
+ 715:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 716:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     diffCount   = UART_1_I2C_FIFO_SIZE;
+ 717:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     endTransfer = 0u;  /* Continue active transfer */
+ 1170              		.loc 1 717 0
+ 1171 065c 0026     		mov	r6, #0
+ 716:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     diffCount   = UART_1_I2C_FIFO_SIZE;
+ 1172              		.loc 1 716 0
+ 1173 065e 0823     		mov	r3, #8
+ 1174              	.LVL66:
+ 1175 0660 0CE0     		b	.L66
+ 1176              	.LVL67:
+ 1177              	.L91:
+ 718:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 719:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 else /* End when FIFO becomes FULL again */
+ 720:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 721:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     endTransfer = UART_1_I2C_CMPLT_ANY_TRANSFER;
+ 1178              		.loc 1 721 0
+ 1179 0662 0126     		mov	r6, #1
+ 1180 0664 0AE0     		b	.L66
+ 1181              	.LVL68:
+ 1182              	.L67:
+ 722:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 723:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 724:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 for(; (0u != diffCount); diffCount--)
+ 725:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 726:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Put data in component buffer */
+ 727:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slWrBufPtr[UART_1_slWrBufIndex] = (uint8) UART_1_RX_FIFO_RD_REG;
+ 1183              		.loc 1 727 0 discriminator 2
+ 1184 0666 1168     		ldr	r1, [r2]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 35
+
+
+ 1185 0668 2F68     		ldr	r7, [r5]
+ 1186 066a 7918     		add	r1, r7, r1
+ 1187 066c 2068     		ldr	r0, [r4]
+ 1188 066e C0B2     		uxtb	r0, r0
+ 1189 0670 0870     		strb	r0, [r1]
+ 728:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slWrBufIndex++;
+ 1190              		.loc 1 728 0 discriminator 2
+ 1191 0672 1168     		ldr	r1, [r2]
+ 1192 0674 0131     		add	r1, r1, #1
+ 1193 0676 1160     		str	r1, [r2]
+ 724:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 for(; (0u != diffCount); diffCount--)
+ 1194              		.loc 1 724 0 discriminator 2
+ 1195 0678 013B     		sub	r3, r3, #1
+ 1196              	.LVL69:
+ 1197 067a 02E0     		b	.L98
+ 1198              	.LVL70:
+ 1199              	.L66:
+ 727:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slWrBufPtr[UART_1_slWrBufIndex] = (uint8) UART_1_RX_FIFO_RD_REG;
+ 1200              		.loc 1 727 0 discriminator 1
+ 1201 067c 334A     		ldr	r2, .L101+116
+ 1202 067e 344D     		ldr	r5, .L101+120
+ 1203 0680 344C     		ldr	r4, .L101+124
+ 1204              	.L98:
+ 1205              	.LVL71:
+ 724:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 for(; (0u != diffCount); diffCount--)
+ 1206              		.loc 1 724 0 discriminator 1
+ 1207 0682 002B     		cmp	r3, #0
+ 1208 0684 EFD1     		bne	.L67
+ 729:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 730:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 731:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(0u != endTransfer) /* End transfer sending NACK */
+ 1209              		.loc 1 731 0
+ 1210 0686 002E     		cmp	r6, #0
+ 1211 0688 08D0     		beq	.L68
+ 732:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 733:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_ENABLE_SLAVE_AUTO_DATA_NACK;
+ 1212              		.loc 1 733 0
+ 1213 068a 1D4B     		ldr	r3, .L101+40
+ 1214              	.LVL72:
+ 1215 068c 1968     		ldr	r1, [r3]
+ 1216 068e 8022     		mov	r2, #128
+ 1217 0690 1202     		lsl	r2, r2, #8
+ 1218 0692 0A43     		orr	r2, r1
+ 1219 0694 1A60     		str	r2, [r3]
+ 734:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 735:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* INTR_RX_FULL triggers earlier than INTR_SLAVE_I2C_STOP:
+ 736:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     * disable all RX interrupt sources.
+ 737:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     */
+ 738:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_SetRxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 1220              		.loc 1 738 0
+ 1221 0696 0022     		mov	r2, #0
+ 1222 0698 1B4B     		ldr	r3, .L101+48
+ 1223 069a 1A60     		str	r2, [r3]
+ 1224              	.L68:
+ 739:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 740:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 741:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearRxInterruptSource(UART_1_INTR_RX_FULL);
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 36
+
+
+ 1225              		.loc 1 741 0
+ 1226 069c 0822     		mov	r2, #8
+ 1227 069e 2F4B     		ldr	r3, .L101+132
+ 1228 06a0 1A60     		str	r2, [r3]
+ 1229 06a2 75E0     		b	.L69
+ 1230              	.LVL73:
+ 1231              	.L64:
+ 742:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 743:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* UART_1_INTR_RX_NOT_EMPTY:
+ 744:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The buffer size is less than 8: it requires processing in byte-by-byte mode.
+ 745:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 746:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             else if(UART_1_CHECK_INTR_RX_MASKED(UART_1_INTR_RX_NOT_EMPTY))
+ 1232              		.loc 1 746 0
+ 1233 06a4 344B     		ldr	r3, .L101+160
+ 1234 06a6 1B68     		ldr	r3, [r3]
+ 1235 06a8 5807     		lsl	r0, r3, #29
+ 1236 06aa 71D5     		bpl	.L69
+ 747:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 748:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 diffCount = UART_1_RX_FIFO_RD_REG;
+ 1237              		.loc 1 748 0
+ 1238 06ac 294B     		ldr	r3, .L101+124
+ 1239 06ae 1968     		ldr	r1, [r3]
+ 1240              	.LVL74:
+ 749:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 750:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 if(UART_1_slWrBufIndex < UART_1_slWrBufSize)
+ 1241              		.loc 1 750 0
+ 1242 06b0 264B     		ldr	r3, .L101+116
+ 1243 06b2 1A68     		ldr	r2, [r3]
+ 1244 06b4 2E4B     		ldr	r3, .L101+152
+ 1245 06b6 1B68     		ldr	r3, [r3]
+ 1246 06b8 9A42     		cmp	r2, r3
+ 1247 06ba 5FD2     		bcs	.L70
+ 751:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 752:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_I2C_SLAVE_GENERATE_ACK;
+ 1248              		.loc 1 752 0
+ 1249 06bc 0122     		mov	r2, #1
+ 1250 06be 2D4B     		ldr	r3, .L101+156
+ 1251 06c0 1A60     		str	r2, [r3]
+ 753:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 754:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Put data into component buffer */
+ 755:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slWrBufPtr[UART_1_slWrBufIndex] = (uint8) diffCount;
+ 1252              		.loc 1 755 0
+ 1253 06c2 224B     		ldr	r3, .L101+116
+ 1254 06c4 1A68     		ldr	r2, [r3]
+ 1255 06c6 2248     		ldr	r0, .L101+120
+ 1256 06c8 0068     		ldr	r0, [r0]
+ 1257 06ca 8218     		add	r2, r0, r2
+ 1258 06cc C9B2     		uxtb	r1, r1
+ 1259              	.LVL75:
+ 1260 06ce 1170     		strb	r1, [r2]
+ 756:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slWrBufIndex++;
+ 1261              		.loc 1 756 0
+ 1262 06d0 1A68     		ldr	r2, [r3]
+ 1263 06d2 0132     		add	r2, r2, #1
+ 1264 06d4 1A60     		str	r2, [r3]
+ 1265 06d6 58E0     		b	.L71
+ 1266              	.L102:
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 37
+
+
+ 1267              		.align	2
+ 1268              	.L101:
+ 1269 06d8 08020740 		.word	1074201096
+ 1270 06dc 00000000 		.word	UART_1_mstrWrBufIndexTmp
+ 1271 06e0 00000000 		.word	UART_1_mstrWrBufSize
+ 1272 06e4 00000000 		.word	UART_1_mstrWrBufPtr
+ 1273 06e8 40020740 		.word	1074201152
+ 1274 06ec 880F0740 		.word	1074204552
+ 1275 06f0 F3070000 		.word	2035
+ 1276 06f4 800F0740 		.word	1074204544
+ 1277 06f8 8C0F0740 		.word	1074204556
+ 1278 06fc 00000000 		.word	UART_1_mstrWrBufIndex
+ 1279 0700 60000740 		.word	1074200672
+ 1280 0704 FFFEFFFF 		.word	-257
+ 1281 0708 C80F0740 		.word	1074204616
+ 1282 070c 00000000 		.word	UART_1_mstrControl
+ 1283 0710 00000000 		.word	UART_1_state
+ 1284 0714 00000000 		.word	UART_1_mstrStatus
+ 1285 0718 64000740 		.word	1074200676
+ 1286 071c 68000740 		.word	1074200680
+ 1287 0720 00000000 		.word	UART_1_mode
+ 1288 0724 4C0F0740 		.word	1074204492
+ 1289 0728 400F0740 		.word	1074204480
+ 1290 072c 00000000 		.word	UART_1_slOverFlowCount
+ 1291 0730 00000000 		.word	UART_1_slStatus
+ 1292 0734 00000000 		.word	UART_1_slRdBufIndexTmp
+ 1293 0738 00000000 		.word	UART_1_slRdBufIndex
+ 1294 073c 04020740 		.word	1074201092
+ 1295 0740 FFFFFEFF 		.word	-65537
+ 1296 0744 08030740 		.word	1074201352
+ 1297 0748 00000000 		.word	UART_1_acceptAddr
+ 1298 074c 00000000 		.word	UART_1_slWrBufIndex
+ 1299 0750 00000000 		.word	UART_1_slWrBufPtr
+ 1300 0754 40030740 		.word	1074201408
+ 1301 0758 FF5FFFFF 		.word	-40961
+ 1302 075c C00F0740 		.word	1074204608
+ 1303 0760 ED0F0000 		.word	4077
+ 1304 0764 800E0740 		.word	1074204288
+ 1305 0768 00000000 		.word	UART_1_customAddressHandler
+ 1306 076c FF0F0000 		.word	4095
+ 1307 0770 00000000 		.word	UART_1_slWrBufSize
+ 1308 0774 6C000740 		.word	1074200684
+ 1309 0778 CC0F0740 		.word	1074204620
+ 1310              	.LVL76:
+ 1311              	.L70:
+ 757:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 758:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 else /* Overflow: there is no space in write buffer */
+ 759:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 760:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_I2C_SLAVE_GENERATE_NACK;
+ 1312              		.loc 1 760 0
+ 1313 077c FFF7FEFF 		bl	UART_1_I2CSlaveNackGeneration
+ 1314              	.LVL77:
+ 761:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 762:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     UART_1_slStatus |= (uint8) UART_1_I2C_SSTAT_WR_OVFL;
+ 1315              		.loc 1 762 0
+ 1316 0780 324B     		ldr	r3, .L103
+ 1317 0782 1978     		ldrb	r1, [r3]
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 38
+
+
+ 1318 0784 4022     		mov	r2, #64
+ 1319 0786 0A43     		orr	r2, r1
+ 1320 0788 1A70     		strb	r2, [r3]
+ 1321              	.L71:
+ 763:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 764:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 765:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearRxInterruptSource(UART_1_INTR_RX_NOT_EMPTY);
+ 1322              		.loc 1 765 0 discriminator 10
+ 1323 078a 0422     		mov	r2, #4
+ 1324 078c 304B     		ldr	r3, .L103+4
+ 1325 078e 1A60     		str	r2, [r3]
+ 1326              	.L69:
+ 766:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 767:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             else
+ 768:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 769:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 /* Does nothing */
+ 770:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 771:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 772:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 773:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             /* UART_1_INTR_TX_EMPTY:
+ 774:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The master reads the slave: provide data to read or 0xFF in the case of the end of th
+ 775:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * The overflow condition must be captured, but not set until the end of transaction.
+ 776:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             * There is a possibility of a false overflow due to TX FIFO utilization.
+ 777:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             */
+ 778:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             if(UART_1_CHECK_INTR_TX_MASKED(UART_1_INTR_TX_EMPTY))
+ 1327              		.loc 1 778 0
+ 1328 0790 304B     		ldr	r3, .L103+8
+ 1329 0792 1B68     		ldr	r3, [r3]
+ 1330 0794 D906     		lsl	r1, r3, #27
+ 1331 0796 1CD4     		bmi	.L92
+ 1332 0798 53E0     		b	.L1
+ 1333              	.L75:
+ 779:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             {
+ 780:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 while(UART_1_I2C_FIFO_SIZE != UART_1_GET_TX_FIFO_ENTRIES)
+ 781:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 {
+ 782:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Temporary slRdBufIndexTmp is used because the master can NACK the byte and
+ 783:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     * index roll-back is required in this case. The slRdBufIndex is updated at the 
+ 784:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     * of the read transfer.
+ 785:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     */
+ 786:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if(UART_1_slRdBufIndexTmp < UART_1_slRdBufSize)
+ 1334              		.loc 1 786 0
+ 1335 079a 3268     		ldr	r2, [r6]
+ 1336 079c 2B68     		ldr	r3, [r5]
+ 1337 079e 9A42     		cmp	r2, r3
+ 1338 07a0 0AD2     		bcs	.L73
+ 787:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Data from buffer */
+ 788:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 789:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_TX_FIFO_WR_REG = (uint32) UART_1_slRdBufPtr[UART_1_slRdBufIndexTmp];
+ 1339              		.loc 1 789 0
+ 1340 07a2 0B68     		ldr	r3, [r1]
+ 1341 07a4 3A68     		ldr	r2, [r7]
+ 1342 07a6 D318     		add	r3, r2, r3
+ 1343 07a8 1A78     		ldrb	r2, [r3]
+ 1344 07aa D2B2     		uxtb	r2, r2
+ 1345 07ac 2A4B     		ldr	r3, .L103+12
+ 1346 07ae 1A60     		str	r2, [r3]
+ 790:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_slRdBufIndexTmp++;
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 39
+
+
+ 1347              		.loc 1 790 0
+ 1348 07b0 0B68     		ldr	r3, [r1]
+ 1349 07b2 0133     		add	r3, r3, #1
+ 1350 07b4 0B60     		str	r3, [r1]
+ 1351 07b6 15E0     		b	.L93
+ 1352              	.L73:
+ 791:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 792:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     else
+ 793:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     /* Probably Overflow */
+ 794:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     {
+ 795:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_TX_FIFO_WR_REG = UART_1_I2C_SLAVE_OVFL_RETURN;
+ 1353              		.loc 1 795 0
+ 1354 07b8 FF22     		mov	r2, #255
+ 1355 07ba 274B     		ldr	r3, .L103+12
+ 1356 07bc 1A60     		str	r2, [r3]
+ 796:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 797:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(0u == (UART_1_INTR_TX_OVERFLOW & UART_1_slOverFlowCount))
+ 1357              		.loc 1 797 0
+ 1358 07be 6246     		mov	r2, ip
+ 1359 07c0 1378     		ldrb	r3, [r2]
+ 1360 07c2 9A06     		lsl	r2, r3, #26
+ 1361 07c4 0ED4     		bmi	.L93
+ 798:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         {
+ 799:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             /* Get counter in range of byte: value 10 is overflow */
+ 800:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                             UART_1_slOverFlowCount++;
+ 1362              		.loc 1 800 0
+ 1363 07c6 4246     		mov	r2, r8
+ 1364 07c8 1378     		ldrb	r3, [r2]
+ 1365 07ca 0133     		add	r3, r3, #1
+ 1366 07cc DBB2     		uxtb	r3, r3
+ 1367 07ce 1370     		strb	r3, [r2]
+ 1368 07d0 08E0     		b	.L93
+ 1369              	.L92:
+ 780:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 while(UART_1_I2C_FIFO_SIZE != UART_1_GET_TX_FIFO_ENTRIES)
+ 1370              		.loc 1 780 0 discriminator 1
+ 1371 07d2 224C     		ldr	r4, .L103+16
+ 1372 07d4 0F20     		mov	r0, #15
+ 786:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     if(UART_1_slRdBufIndexTmp < UART_1_slRdBufSize)
+ 1373              		.loc 1 786 0 discriminator 1
+ 1374 07d6 224E     		ldr	r6, .L103+20
+ 1375 07d8 224D     		ldr	r5, .L103+24
+ 797:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         if(0u == (UART_1_INTR_TX_OVERFLOW & UART_1_slOverFlowCount))
+ 1376              		.loc 1 797 0 discriminator 1
+ 1377 07da 234B     		ldr	r3, .L103+28
+ 1378 07dc 9C46     		mov	ip, r3
+ 1379              		.loc 1 800 0 discriminator 1
+ 1380 07de 9846     		mov	r8, r3
+ 789:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         UART_1_TX_FIFO_WR_REG = (uint32) UART_1_slRdBufPtr[UART_1_slRdBufIndexTmp];
+ 1381              		.loc 1 789 0 discriminator 1
+ 1382 07e0 311C     		mov	r1, r6
+ 1383 07e2 224F     		ldr	r7, .L103+32
+ 1384              	.L93:
+ 780:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 while(UART_1_I2C_FIFO_SIZE != UART_1_GET_TX_FIFO_ENTRIES)
+ 1385              		.loc 1 780 0 discriminator 1
+ 1386 07e4 2368     		ldr	r3, [r4]
+ 1387 07e6 0340     		and	r3, r0
+ 1388 07e8 082B     		cmp	r3, #8
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 40
+
+
+ 1389 07ea D6D1     		bne	.L75
+ 801:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                         }
+ 802:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                     }
+ 803:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 }
+ 804:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 805:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****                 UART_1_ClearTxInterruptSource(UART_1_INTR_TX_EMPTY);
+ 1390              		.loc 1 805 0
+ 1391 07ec 1022     		mov	r2, #16
+ 1392 07ee 204B     		ldr	r3, .L103+36
+ 1393 07f0 1A60     		str	r2, [r3]
+ 1394 07f2 26E0     		b	.L1
+ 1395              	.LVL78:
+ 1396              	.L41:
+ 806:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****             }
+ 807:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 808:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         }  /* (UART_1_I2C_SLAVE) */
+ 809:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         
+ 810:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     }
+ 811:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 812:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 813:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     /* FSM EXIT:
+ 814:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * Slave:  INTR_SLAVE_I2C_BUS_ERROR, INTR_SLAVE_I2C_ARB_LOST
+ 815:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     * Master: INTR_MASTER_I2C_BUS_ERROR, INTR_MASTER_I2C_ARB_LOST.
+ 816:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     */
+ 817:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     else
+ 818:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     {
+ 819:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_CTRL_REG &= (uint32) ~UART_1_CTRL_ENABLED; /* Disable scb IP */
+ 1397              		.loc 1 819 0
+ 1398 07f4 1F4B     		ldr	r3, .L103+40
+ 1399 07f6 1A68     		ldr	r2, [r3]
+ 1400              	.LVL79:
+ 1401 07f8 5200     		lsl	r2, r2, #1
+ 1402 07fa 5208     		lsr	r2, r2, #1
+ 1403 07fc 1A60     		str	r2, [r3]
+ 820:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 821:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_state = UART_1_I2C_FSM_IDLE;
+ 1404              		.loc 1 821 0
+ 1405 07fe 1021     		mov	r1, #16
+ 1406 0800 1D4A     		ldr	r2, .L103+44
+ 1407 0802 1170     		strb	r1, [r2]
+ 822:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 823:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_DISABLE_SLAVE_AUTO_DATA;
+ 1408              		.loc 1 823 0
+ 1409 0804 1D4A     		ldr	r2, .L103+48
+ 1410 0806 1068     		ldr	r0, [r2]
+ 1411 0808 1D49     		ldr	r1, .L103+52
+ 1412 080a 0140     		and	r1, r0
+ 1413 080c 1160     		str	r1, [r2]
+ 824:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_DISABLE_MASTER_AUTO_DATA;
+ 1414              		.loc 1 824 0
+ 1415 080e 1068     		ldr	r0, [r2]
+ 1416 0810 1C49     		ldr	r1, .L103+56
+ 1417 0812 0140     		and	r1, r0
+ 1418 0814 1160     		str	r1, [r2]
+ 825:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 826:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     #if(UART_1_CY_SCBIP_V0)
+ 827:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_SetRxInterruptMode(UART_1_NO_INTR_SOURCES);
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 41
+
+
+ 1419              		.loc 1 827 0
+ 1420 0816 0022     		mov	r2, #0
+ 1421 0818 1B49     		ldr	r1, .L103+60
+ 1422 081a 0A60     		str	r2, [r1]
+ 828:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_SetTxInterruptMode(UART_1_NO_INTR_SOURCES);
+ 1423              		.loc 1 828 0
+ 1424 081c 1B49     		ldr	r1, .L103+64
+ 1425 081e 0A60     		str	r2, [r1]
+ 829:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 830:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         /* Clear interrupt sources as they are not automatically cleared after SCB is disabled */
+ 831:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_ClearTxInterruptSource(UART_1_INTR_RX_ALL);
+ 1426              		.loc 1 831 0
+ 1427 0820 1B49     		ldr	r1, .L103+68
+ 1428 0822 134A     		ldr	r2, .L103+36
+ 1429 0824 1160     		str	r1, [r2]
+ 832:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_ClearRxInterruptSource(UART_1_INTR_TX_ALL);
+ 1430              		.loc 1 832 0
+ 1431 0826 1B49     		ldr	r1, .L103+72
+ 1432 0828 094A     		ldr	r2, .L103+4
+ 1433 082a 1160     		str	r1, [r2]
+ 833:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_ClearSlaveInterruptSource(UART_1_INTR_SLAVE_ALL);
+ 1434              		.loc 1 833 0
+ 1435 082c 1A49     		ldr	r1, .L103+76
+ 1436 082e 1B4A     		ldr	r2, .L103+80
+ 1437 0830 1160     		str	r1, [r2]
+ 834:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_ClearMasterInterruptSource(UART_1_INTR_MASTER_ALL);
+ 1438              		.loc 1 834 0
+ 1439 0832 1B49     		ldr	r1, .L103+84
+ 1440 0834 1B4A     		ldr	r2, .L103+88
+ 1441 0836 1160     		str	r1, [r2]
+ 835:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     #endif /* (UART_1_CY_SCBIP_V0) */
+ 836:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** 
+ 837:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****         UART_1_CTRL_REG |= (uint32) UART_1_CTRL_ENABLED;  /* Enable scb IP */
+ 1442              		.loc 1 837 0
+ 1443 0838 1968     		ldr	r1, [r3]
+ 1444 083a 8022     		mov	r2, #128
+ 1445 083c 1206     		lsl	r2, r2, #24
+ 1446 083e 0A43     		orr	r2, r1
+ 1447 0840 1A60     		str	r2, [r3]
+ 1448              	.LVL80:
+ 1449              	.L1:
+ 838:.\Generated_Source\PSoC4/UART_1_I2C_INT.c ****     }
+ 839:.\Generated_Source\PSoC4/UART_1_I2C_INT.c **** }
+ 1450              		.loc 1 839 0
+ 1451              		@ sp needed
+ 1452 0842 0CBC     		pop	{r2, r3}
+ 1453 0844 9046     		mov	r8, r2
+ 1454 0846 9946     		mov	r9, r3
+ 1455 0848 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1456              	.L104:
+ 1457 084a C046     		.align	2
+ 1458              	.L103:
+ 1459 084c 00000000 		.word	UART_1_slStatus
+ 1460 0850 C00F0740 		.word	1074204608
+ 1461 0854 8C0F0740 		.word	1074204556
+ 1462 0858 40020740 		.word	1074201152
+ 1463 085c 08020740 		.word	1074201096
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 42
+
+
+ 1464 0860 00000000 		.word	UART_1_slRdBufIndexTmp
+ 1465 0864 00000000 		.word	UART_1_slRdBufSize
+ 1466 0868 00000000 		.word	UART_1_slOverFlowCount
+ 1467 086c 00000000 		.word	UART_1_slRdBufPtr
+ 1468 0870 800F0740 		.word	1074204544
+ 1469 0874 00000740 		.word	1074200576
+ 1470 0878 00000000 		.word	UART_1_state
+ 1471 087c 60000740 		.word	1074200672
+ 1472 0880 FF5FFFFF 		.word	-40961
+ 1473 0884 FFFCFFFF 		.word	-769
+ 1474 0888 C80F0740 		.word	1074204616
+ 1475 088c 880F0740 		.word	1074204552
+ 1476 0890 ED0F0000 		.word	4077
+ 1477 0894 F3070000 		.word	2035
+ 1478 0898 FF0F0000 		.word	4095
+ 1479 089c 400F0740 		.word	1074204480
+ 1480 08a0 17030000 		.word	791
+ 1481 08a4 000F0740 		.word	1074204416
+ 1482              		.cfi_endproc
+ 1483              	.LFE0:
+ 1484              		.size	UART_1_I2C_ISR, .-UART_1_I2C_ISR
+ 1485              		.text
+ 1486              	.Letext0:
+ 1487              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 1488              		.file 3 ".\\Generated_Source\\PSoC4\\UART_1_PVT.h"
+ 1489              		.file 4 ".\\Generated_Source\\PSoC4\\UART_1_I2C_PVT.h"
+ 1490              		.file 5 ".\\Generated_Source\\PSoC4\\UART_1.h"
+ 1491              		.section	.debug_info,"",%progbits
+ 1492              	.Ldebug_info0:
+ 1493 0000 3E020000 		.4byte	0x23e
+ 1494 0004 0400     		.2byte	0x4
+ 1495 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1496 000a 04       		.byte	0x4
+ 1497 000b 01       		.uleb128 0x1
+ 1498 000c B2010000 		.4byte	.LASF44
+ 1499 0010 01       		.byte	0x1
+ 1500 0011 74010000 		.4byte	.LASF45
+ 1501 0015 31000000 		.4byte	.LASF46
+ 1502 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1503 001d 00000000 		.4byte	0
+ 1504 0021 00000000 		.4byte	.Ldebug_line0
+ 1505 0025 02       		.uleb128 0x2
+ 1506 0026 01       		.byte	0x1
+ 1507 0027 06       		.byte	0x6
+ 1508 0028 C2030000 		.4byte	.LASF0
+ 1509 002c 02       		.uleb128 0x2
+ 1510 002d 01       		.byte	0x1
+ 1511 002e 08       		.byte	0x8
+ 1512 002f 2E020000 		.4byte	.LASF1
+ 1513 0033 02       		.uleb128 0x2
+ 1514 0034 02       		.byte	0x2
+ 1515 0035 05       		.byte	0x5
+ 1516 0036 9D030000 		.4byte	.LASF2
+ 1517 003a 02       		.uleb128 0x2
+ 1518 003b 02       		.byte	0x2
+ 1519 003c 07       		.byte	0x7
+ 1520 003d CD000000 		.4byte	.LASF3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 43
+
+
+ 1521 0041 02       		.uleb128 0x2
+ 1522 0042 04       		.byte	0x4
+ 1523 0043 05       		.byte	0x5
+ 1524 0044 B9030000 		.4byte	.LASF4
+ 1525 0048 02       		.uleb128 0x2
+ 1526 0049 04       		.byte	0x4
+ 1527 004a 07       		.byte	0x7
+ 1528 004b 3C020000 		.4byte	.LASF5
+ 1529 004f 02       		.uleb128 0x2
+ 1530 0050 08       		.byte	0x8
+ 1531 0051 05       		.byte	0x5
+ 1532 0052 68030000 		.4byte	.LASF6
+ 1533 0056 02       		.uleb128 0x2
+ 1534 0057 08       		.byte	0x8
+ 1535 0058 07       		.byte	0x7
+ 1536 0059 B3020000 		.4byte	.LASF7
+ 1537 005d 03       		.uleb128 0x3
+ 1538 005e 04       		.byte	0x4
+ 1539 005f 05       		.byte	0x5
+ 1540 0060 696E7400 		.ascii	"int\000"
+ 1541 0064 02       		.uleb128 0x2
+ 1542 0065 04       		.byte	0x4
+ 1543 0066 07       		.byte	0x7
+ 1544 0067 A6020000 		.4byte	.LASF8
+ 1545 006b 04       		.uleb128 0x4
+ 1546 006c 58020000 		.4byte	.LASF9
+ 1547 0070 02       		.byte	0x2
+ 1548 0071 B3       		.byte	0xb3
+ 1549 0072 2C000000 		.4byte	0x2c
+ 1550 0076 04       		.uleb128 0x4
+ 1551 0077 89020000 		.4byte	.LASF10
+ 1552 007b 02       		.byte	0x2
+ 1553 007c B4       		.byte	0xb4
+ 1554 007d 3A000000 		.4byte	0x3a
+ 1555 0081 04       		.uleb128 0x4
+ 1556 0082 90020000 		.4byte	.LASF11
+ 1557 0086 02       		.byte	0x2
+ 1558 0087 B5       		.byte	0xb5
+ 1559 0088 48000000 		.4byte	0x48
+ 1560 008c 02       		.uleb128 0x2
+ 1561 008d 04       		.byte	0x4
+ 1562 008e 04       		.byte	0x4
+ 1563 008f 6E010000 		.4byte	.LASF12
+ 1564 0093 02       		.uleb128 0x2
+ 1565 0094 08       		.byte	0x8
+ 1566 0095 04       		.byte	0x4
+ 1567 0096 82020000 		.4byte	.LASF13
+ 1568 009a 02       		.uleb128 0x2
+ 1569 009b 01       		.byte	0x1
+ 1570 009c 08       		.byte	0x8
+ 1571 009d 76030000 		.4byte	.LASF14
+ 1572 00a1 05       		.uleb128 0x5
+ 1573 00a2 6B000000 		.4byte	0x6b
+ 1574 00a6 05       		.uleb128 0x5
+ 1575 00a7 76000000 		.4byte	0x76
+ 1576 00ab 06       		.uleb128 0x6
+ 1577 00ac 19000000 		.4byte	.LASF15
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 44
+
+
+ 1578 00b0 02       		.byte	0x2
+ 1579 00b1 5F01     		.2byte	0x15f
+ 1580 00b3 B7000000 		.4byte	0xb7
+ 1581 00b7 05       		.uleb128 0x5
+ 1582 00b8 81000000 		.4byte	0x81
+ 1583 00bc 06       		.uleb128 0x6
+ 1584 00bd 08030000 		.4byte	.LASF16
+ 1585 00c1 02       		.byte	0x2
+ 1586 00c2 6F01     		.2byte	0x16f
+ 1587 00c4 C8000000 		.4byte	0xc8
+ 1588 00c8 07       		.uleb128 0x7
+ 1589 00c9 04       		.byte	0x4
+ 1590 00ca CE000000 		.4byte	0xce
+ 1591 00ce 08       		.uleb128 0x8
+ 1592 00cf 02       		.uleb128 0x2
+ 1593 00d0 04       		.byte	0x4
+ 1594 00d1 07       		.byte	0x7
+ 1595 00d2 5F030000 		.4byte	.LASF17
+ 1596 00d6 09       		.uleb128 0x9
+ 1597 00d7 97020000 		.4byte	.LASF47
+ 1598 00db 01       		.byte	0x1
+ 1599 00dc 24       		.byte	0x24
+ 1600 00dd 00000000 		.4byte	.LFB0
+ 1601 00e1 A8080000 		.4byte	.LFE0-.LFB0
+ 1602 00e5 01       		.uleb128 0x1
+ 1603 00e6 9C       		.byte	0x9c
+ 1604 00e7 2B010000 		.4byte	0x12b
+ 1605 00eb 0A       		.uleb128 0xa
+ 1606 00ec 4E020000 		.4byte	.LASF18
+ 1607 00f0 01       		.byte	0x1
+ 1608 00f1 26       		.byte	0x26
+ 1609 00f2 81000000 		.4byte	0x81
+ 1610 00f6 00000000 		.4byte	.LLST0
+ 1611 00fa 0A       		.uleb128 0xa
+ 1612 00fb F6000000 		.4byte	.LASF19
+ 1613 00ff 01       		.byte	0x1
+ 1614 0100 27       		.byte	0x27
+ 1615 0101 81000000 		.4byte	0x81
+ 1616 0105 AE000000 		.4byte	.LLST1
+ 1617 0109 0A       		.uleb128 0xa
+ 1618 010a 15030000 		.4byte	.LASF20
+ 1619 010e 01       		.byte	0x1
+ 1620 010f 2A       		.byte	0x2a
+ 1621 0110 81000000 		.4byte	0x81
+ 1622 0114 F5010000 		.4byte	.LLST2
+ 1623 0118 0B       		.uleb128 0xb
+ 1624 0119 C4050000 		.4byte	.LVL56
+ 1625 011d 39020000 		.4byte	0x239
+ 1626 0121 0B       		.uleb128 0xb
+ 1627 0122 80070000 		.4byte	.LVL77
+ 1628 0126 39020000 		.4byte	0x239
+ 1629 012a 00       		.byte	0
+ 1630 012b 0C       		.uleb128 0xc
+ 1631 012c 00000000 		.4byte	.LASF21
+ 1632 0130 03       		.byte	0x3
+ 1633 0131 3A       		.byte	0x3a
+ 1634 0132 BC000000 		.4byte	0xbc
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 45
+
+
+ 1635 0136 0C       		.uleb128 0xc
+ 1636 0137 46010000 		.4byte	.LASF22
+ 1637 013b 03       		.byte	0x3
+ 1638 013c 47       		.byte	0x47
+ 1639 013d 6B000000 		.4byte	0x6b
+ 1640 0141 0C       		.uleb128 0xc
+ 1641 0142 A7030000 		.4byte	.LASF23
+ 1642 0146 03       		.byte	0x3
+ 1643 0147 48       		.byte	0x48
+ 1644 0148 6B000000 		.4byte	0x6b
+ 1645 014c 0C       		.uleb128 0xc
+ 1646 014d 90030000 		.4byte	.LASF24
+ 1647 0151 04       		.byte	0x4
+ 1648 0152 1D       		.byte	0x1d
+ 1649 0153 A1000000 		.4byte	0xa1
+ 1650 0157 0C       		.uleb128 0xc
+ 1651 0158 E4030000 		.4byte	.LASF25
+ 1652 015c 04       		.byte	0x4
+ 1653 015d 20       		.byte	0x20
+ 1654 015e A1000000 		.4byte	0xa1
+ 1655 0162 0C       		.uleb128 0xc
+ 1656 0163 5E020000 		.4byte	.LASF26
+ 1657 0167 04       		.byte	0x4
+ 1658 0168 23       		.byte	0x23
+ 1659 0169 6D010000 		.4byte	0x16d
+ 1660 016d 07       		.uleb128 0x7
+ 1661 016e 04       		.byte	0x4
+ 1662 016f A1000000 		.4byte	0xa1
+ 1663 0173 0C       		.uleb128 0xc
+ 1664 0174 CA020000 		.4byte	.LASF27
+ 1665 0178 04       		.byte	0x4
+ 1666 0179 24       		.byte	0x24
+ 1667 017a B7000000 		.4byte	0xb7
+ 1668 017e 0C       		.uleb128 0xc
+ 1669 017f 9E010000 		.4byte	.LASF28
+ 1670 0183 04       		.byte	0x4
+ 1671 0184 25       		.byte	0x25
+ 1672 0185 B7000000 		.4byte	0xb7
+ 1673 0189 0C       		.uleb128 0xc
+ 1674 018a 1F000000 		.4byte	.LASF29
+ 1675 018e 04       		.byte	0x4
+ 1676 018f 28       		.byte	0x28
+ 1677 0190 6D010000 		.4byte	0x16d
+ 1678 0194 0C       		.uleb128 0xc
+ 1679 0195 33010000 		.4byte	.LASF30
+ 1680 0199 04       		.byte	0x4
+ 1681 019a 29       		.byte	0x29
+ 1682 019b B7000000 		.4byte	0xb7
+ 1683 019f 0C       		.uleb128 0xc
+ 1684 01a0 DD020000 		.4byte	.LASF31
+ 1685 01a4 04       		.byte	0x4
+ 1686 01a5 2A       		.byte	0x2a
+ 1687 01a6 B7000000 		.4byte	0xb7
+ 1688 01aa 0C       		.uleb128 0xc
+ 1689 01ab F1020000 		.4byte	.LASF32
+ 1690 01af 04       		.byte	0x4
+ 1691 01b0 2B       		.byte	0x2b
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 46
+
+
+ 1692 01b1 B7000000 		.4byte	0xb7
+ 1693 01b5 0C       		.uleb128 0xc
+ 1694 01b6 A1000000 		.4byte	.LASF33
+ 1695 01ba 04       		.byte	0x4
+ 1696 01bb 2C       		.byte	0x2c
+ 1697 01bc A1000000 		.4byte	0xa1
+ 1698 01c0 0C       		.uleb128 0xc
+ 1699 01c1 70020000 		.4byte	.LASF34
+ 1700 01c5 04       		.byte	0x4
+ 1701 01c6 30       		.byte	0x30
+ 1702 01c7 A6000000 		.4byte	0xa6
+ 1703 01cb 0C       		.uleb128 0xc
+ 1704 01cc 02010000 		.4byte	.LASF35
+ 1705 01d0 04       		.byte	0x4
+ 1706 01d1 31       		.byte	0x31
+ 1707 01d2 A1000000 		.4byte	0xa1
+ 1708 01d6 0C       		.uleb128 0xc
+ 1709 01d7 1E030000 		.4byte	.LASF36
+ 1710 01db 04       		.byte	0x4
+ 1711 01dc 34       		.byte	0x34
+ 1712 01dd 6D010000 		.4byte	0x16d
+ 1713 01e1 0C       		.uleb128 0xc
+ 1714 01e2 7B030000 		.4byte	.LASF37
+ 1715 01e6 04       		.byte	0x4
+ 1716 01e7 35       		.byte	0x35
+ 1717 01e8 B7000000 		.4byte	0xb7
+ 1718 01ec 0C       		.uleb128 0xc
+ 1719 01ed E0000000 		.4byte	.LASF38
+ 1720 01f1 04       		.byte	0x4
+ 1721 01f2 36       		.byte	0x36
+ 1722 01f3 B7000000 		.4byte	0xb7
+ 1723 01f7 0C       		.uleb128 0xc
+ 1724 01f8 32030000 		.4byte	.LASF39
+ 1725 01fc 04       		.byte	0x4
+ 1726 01fd 39       		.byte	0x39
+ 1727 01fe 6D010000 		.4byte	0x16d
+ 1728 0202 0C       		.uleb128 0xc
+ 1729 0203 B8000000 		.4byte	.LASF40
+ 1730 0207 04       		.byte	0x4
+ 1731 0208 3A       		.byte	0x3a
+ 1732 0209 B7000000 		.4byte	0xb7
+ 1733 020d 0C       		.uleb128 0xc
+ 1734 020e CE030000 		.4byte	.LASF41
+ 1735 0212 04       		.byte	0x4
+ 1736 0213 3B       		.byte	0x3b
+ 1737 0214 B7000000 		.4byte	0xb7
+ 1738 0218 0C       		.uleb128 0xc
+ 1739 0219 46030000 		.4byte	.LASF42
+ 1740 021d 04       		.byte	0x4
+ 1741 021e 3C       		.byte	0x3c
+ 1742 021f B7000000 		.4byte	0xb7
+ 1743 0223 0D       		.uleb128 0xd
+ 1744 0224 81000000 		.4byte	0x81
+ 1745 0228 0C       		.uleb128 0xc
+ 1746 0229 52010000 		.4byte	.LASF43
+ 1747 022d 04       		.byte	0x4
+ 1748 022e 40       		.byte	0x40
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 47
+
+
+ 1749 022f 33020000 		.4byte	0x233
+ 1750 0233 07       		.uleb128 0x7
+ 1751 0234 04       		.byte	0x4
+ 1752 0235 23020000 		.4byte	0x223
+ 1753 0239 0E       		.uleb128 0xe
+ 1754 023a 15010000 		.4byte	.LASF48
+ 1755 023e 05       		.byte	0x5
+ 1756 023f 1005     		.2byte	0x510
+ 1757 0241 00       		.byte	0
+ 1758              		.section	.debug_abbrev,"",%progbits
+ 1759              	.Ldebug_abbrev0:
+ 1760 0000 01       		.uleb128 0x1
+ 1761 0001 11       		.uleb128 0x11
+ 1762 0002 01       		.byte	0x1
+ 1763 0003 25       		.uleb128 0x25
+ 1764 0004 0E       		.uleb128 0xe
+ 1765 0005 13       		.uleb128 0x13
+ 1766 0006 0B       		.uleb128 0xb
+ 1767 0007 03       		.uleb128 0x3
+ 1768 0008 0E       		.uleb128 0xe
+ 1769 0009 1B       		.uleb128 0x1b
+ 1770 000a 0E       		.uleb128 0xe
+ 1771 000b 55       		.uleb128 0x55
+ 1772 000c 17       		.uleb128 0x17
+ 1773 000d 11       		.uleb128 0x11
+ 1774 000e 01       		.uleb128 0x1
+ 1775 000f 10       		.uleb128 0x10
+ 1776 0010 17       		.uleb128 0x17
+ 1777 0011 00       		.byte	0
+ 1778 0012 00       		.byte	0
+ 1779 0013 02       		.uleb128 0x2
+ 1780 0014 24       		.uleb128 0x24
+ 1781 0015 00       		.byte	0
+ 1782 0016 0B       		.uleb128 0xb
+ 1783 0017 0B       		.uleb128 0xb
+ 1784 0018 3E       		.uleb128 0x3e
+ 1785 0019 0B       		.uleb128 0xb
+ 1786 001a 03       		.uleb128 0x3
+ 1787 001b 0E       		.uleb128 0xe
+ 1788 001c 00       		.byte	0
+ 1789 001d 00       		.byte	0
+ 1790 001e 03       		.uleb128 0x3
+ 1791 001f 24       		.uleb128 0x24
+ 1792 0020 00       		.byte	0
+ 1793 0021 0B       		.uleb128 0xb
+ 1794 0022 0B       		.uleb128 0xb
+ 1795 0023 3E       		.uleb128 0x3e
+ 1796 0024 0B       		.uleb128 0xb
+ 1797 0025 03       		.uleb128 0x3
+ 1798 0026 08       		.uleb128 0x8
+ 1799 0027 00       		.byte	0
+ 1800 0028 00       		.byte	0
+ 1801 0029 04       		.uleb128 0x4
+ 1802 002a 16       		.uleb128 0x16
+ 1803 002b 00       		.byte	0
+ 1804 002c 03       		.uleb128 0x3
+ 1805 002d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 48
+
+
+ 1806 002e 3A       		.uleb128 0x3a
+ 1807 002f 0B       		.uleb128 0xb
+ 1808 0030 3B       		.uleb128 0x3b
+ 1809 0031 0B       		.uleb128 0xb
+ 1810 0032 49       		.uleb128 0x49
+ 1811 0033 13       		.uleb128 0x13
+ 1812 0034 00       		.byte	0
+ 1813 0035 00       		.byte	0
+ 1814 0036 05       		.uleb128 0x5
+ 1815 0037 35       		.uleb128 0x35
+ 1816 0038 00       		.byte	0
+ 1817 0039 49       		.uleb128 0x49
+ 1818 003a 13       		.uleb128 0x13
+ 1819 003b 00       		.byte	0
+ 1820 003c 00       		.byte	0
+ 1821 003d 06       		.uleb128 0x6
+ 1822 003e 16       		.uleb128 0x16
+ 1823 003f 00       		.byte	0
+ 1824 0040 03       		.uleb128 0x3
+ 1825 0041 0E       		.uleb128 0xe
+ 1826 0042 3A       		.uleb128 0x3a
+ 1827 0043 0B       		.uleb128 0xb
+ 1828 0044 3B       		.uleb128 0x3b
+ 1829 0045 05       		.uleb128 0x5
+ 1830 0046 49       		.uleb128 0x49
+ 1831 0047 13       		.uleb128 0x13
+ 1832 0048 00       		.byte	0
+ 1833 0049 00       		.byte	0
+ 1834 004a 07       		.uleb128 0x7
+ 1835 004b 0F       		.uleb128 0xf
+ 1836 004c 00       		.byte	0
+ 1837 004d 0B       		.uleb128 0xb
+ 1838 004e 0B       		.uleb128 0xb
+ 1839 004f 49       		.uleb128 0x49
+ 1840 0050 13       		.uleb128 0x13
+ 1841 0051 00       		.byte	0
+ 1842 0052 00       		.byte	0
+ 1843 0053 08       		.uleb128 0x8
+ 1844 0054 15       		.uleb128 0x15
+ 1845 0055 00       		.byte	0
+ 1846 0056 27       		.uleb128 0x27
+ 1847 0057 19       		.uleb128 0x19
+ 1848 0058 00       		.byte	0
+ 1849 0059 00       		.byte	0
+ 1850 005a 09       		.uleb128 0x9
+ 1851 005b 2E       		.uleb128 0x2e
+ 1852 005c 01       		.byte	0x1
+ 1853 005d 3F       		.uleb128 0x3f
+ 1854 005e 19       		.uleb128 0x19
+ 1855 005f 03       		.uleb128 0x3
+ 1856 0060 0E       		.uleb128 0xe
+ 1857 0061 3A       		.uleb128 0x3a
+ 1858 0062 0B       		.uleb128 0xb
+ 1859 0063 3B       		.uleb128 0x3b
+ 1860 0064 0B       		.uleb128 0xb
+ 1861 0065 27       		.uleb128 0x27
+ 1862 0066 19       		.uleb128 0x19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 49
+
+
+ 1863 0067 11       		.uleb128 0x11
+ 1864 0068 01       		.uleb128 0x1
+ 1865 0069 12       		.uleb128 0x12
+ 1866 006a 06       		.uleb128 0x6
+ 1867 006b 40       		.uleb128 0x40
+ 1868 006c 18       		.uleb128 0x18
+ 1869 006d 9642     		.uleb128 0x2116
+ 1870 006f 19       		.uleb128 0x19
+ 1871 0070 01       		.uleb128 0x1
+ 1872 0071 13       		.uleb128 0x13
+ 1873 0072 00       		.byte	0
+ 1874 0073 00       		.byte	0
+ 1875 0074 0A       		.uleb128 0xa
+ 1876 0075 34       		.uleb128 0x34
+ 1877 0076 00       		.byte	0
+ 1878 0077 03       		.uleb128 0x3
+ 1879 0078 0E       		.uleb128 0xe
+ 1880 0079 3A       		.uleb128 0x3a
+ 1881 007a 0B       		.uleb128 0xb
+ 1882 007b 3B       		.uleb128 0x3b
+ 1883 007c 0B       		.uleb128 0xb
+ 1884 007d 49       		.uleb128 0x49
+ 1885 007e 13       		.uleb128 0x13
+ 1886 007f 02       		.uleb128 0x2
+ 1887 0080 17       		.uleb128 0x17
+ 1888 0081 00       		.byte	0
+ 1889 0082 00       		.byte	0
+ 1890 0083 0B       		.uleb128 0xb
+ 1891 0084 898201   		.uleb128 0x4109
+ 1892 0087 00       		.byte	0
+ 1893 0088 11       		.uleb128 0x11
+ 1894 0089 01       		.uleb128 0x1
+ 1895 008a 31       		.uleb128 0x31
+ 1896 008b 13       		.uleb128 0x13
+ 1897 008c 00       		.byte	0
+ 1898 008d 00       		.byte	0
+ 1899 008e 0C       		.uleb128 0xc
+ 1900 008f 34       		.uleb128 0x34
+ 1901 0090 00       		.byte	0
+ 1902 0091 03       		.uleb128 0x3
+ 1903 0092 0E       		.uleb128 0xe
+ 1904 0093 3A       		.uleb128 0x3a
+ 1905 0094 0B       		.uleb128 0xb
+ 1906 0095 3B       		.uleb128 0x3b
+ 1907 0096 0B       		.uleb128 0xb
+ 1908 0097 49       		.uleb128 0x49
+ 1909 0098 13       		.uleb128 0x13
+ 1910 0099 3F       		.uleb128 0x3f
+ 1911 009a 19       		.uleb128 0x19
+ 1912 009b 3C       		.uleb128 0x3c
+ 1913 009c 19       		.uleb128 0x19
+ 1914 009d 00       		.byte	0
+ 1915 009e 00       		.byte	0
+ 1916 009f 0D       		.uleb128 0xd
+ 1917 00a0 15       		.uleb128 0x15
+ 1918 00a1 00       		.byte	0
+ 1919 00a2 27       		.uleb128 0x27
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 50
+
+
+ 1920 00a3 19       		.uleb128 0x19
+ 1921 00a4 49       		.uleb128 0x49
+ 1922 00a5 13       		.uleb128 0x13
+ 1923 00a6 00       		.byte	0
+ 1924 00a7 00       		.byte	0
+ 1925 00a8 0E       		.uleb128 0xe
+ 1926 00a9 2E       		.uleb128 0x2e
+ 1927 00aa 00       		.byte	0
+ 1928 00ab 3F       		.uleb128 0x3f
+ 1929 00ac 19       		.uleb128 0x19
+ 1930 00ad 03       		.uleb128 0x3
+ 1931 00ae 0E       		.uleb128 0xe
+ 1932 00af 3A       		.uleb128 0x3a
+ 1933 00b0 0B       		.uleb128 0xb
+ 1934 00b1 3B       		.uleb128 0x3b
+ 1935 00b2 05       		.uleb128 0x5
+ 1936 00b3 27       		.uleb128 0x27
+ 1937 00b4 19       		.uleb128 0x19
+ 1938 00b5 3C       		.uleb128 0x3c
+ 1939 00b6 19       		.uleb128 0x19
+ 1940 00b7 00       		.byte	0
+ 1941 00b8 00       		.byte	0
+ 1942 00b9 00       		.byte	0
+ 1943              		.section	.debug_loc,"",%progbits
+ 1944              	.Ldebug_loc0:
+ 1945              	.LLST0:
+ 1946 0000 2C020000 		.4byte	.LVL26
+ 1947 0004 36020000 		.4byte	.LVL27
+ 1948 0008 0100     		.2byte	0x1
+ 1949 000a 53       		.byte	0x53
+ 1950 000b 3E020000 		.4byte	.LVL29
+ 1951 000f 44020000 		.4byte	.LVL30
+ 1952 0013 0200     		.2byte	0x2
+ 1953 0015 38       		.byte	0x38
+ 1954 0016 9F       		.byte	0x9f
+ 1955 0017 44020000 		.4byte	.LVL30
+ 1956 001b 46020000 		.4byte	.LVL31
+ 1957 001f 0100     		.2byte	0x1
+ 1958 0021 53       		.byte	0x53
+ 1959 0022 48020000 		.4byte	.LVL32
+ 1960 0026 5E020000 		.4byte	.LVL34
+ 1961 002a 0100     		.2byte	0x1
+ 1962 002c 53       		.byte	0x53
+ 1963 002d 64020000 		.4byte	.LVL35
+ 1964 0031 6A020000 		.4byte	.LVL36
+ 1965 0035 0100     		.2byte	0x1
+ 1966 0037 53       		.byte	0x53
+ 1967 0038 7A040000 		.4byte	.LVL47
+ 1968 003c 86040000 		.4byte	.LVL48
+ 1969 0040 0100     		.2byte	0x1
+ 1970 0042 53       		.byte	0x53
+ 1971 0043 90040000 		.4byte	.LVL49
+ 1972 0047 96040000 		.4byte	.LVL50
+ 1973 004b 0100     		.2byte	0x1
+ 1974 004d 53       		.byte	0x53
+ 1975 004e F8050000 		.4byte	.LVL59
+ 1976 0052 00060000 		.4byte	.LVL60
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 51
+
+
+ 1977 0056 0100     		.2byte	0x1
+ 1978 0058 53       		.byte	0x53
+ 1979 0059 04060000 		.4byte	.LVL61
+ 1980 005d 0A060000 		.4byte	.LVL62
+ 1981 0061 0100     		.2byte	0x1
+ 1982 0063 53       		.byte	0x53
+ 1983 0064 16060000 		.4byte	.LVL63
+ 1984 0068 18060000 		.4byte	.LVL64
+ 1985 006c 0100     		.2byte	0x1
+ 1986 006e 53       		.byte	0x53
+ 1987 006f 58060000 		.4byte	.LVL65
+ 1988 0073 60060000 		.4byte	.LVL66
+ 1989 0077 0100     		.2byte	0x1
+ 1990 0079 53       		.byte	0x53
+ 1991 007a 62060000 		.4byte	.LVL67
+ 1992 007e 7C060000 		.4byte	.LVL70
+ 1993 0082 0100     		.2byte	0x1
+ 1994 0084 53       		.byte	0x53
+ 1995 0085 82060000 		.4byte	.LVL71
+ 1996 0089 8C060000 		.4byte	.LVL72
+ 1997 008d 0100     		.2byte	0x1
+ 1998 008f 53       		.byte	0x53
+ 1999 0090 B0060000 		.4byte	.LVL74
+ 2000 0094 CE060000 		.4byte	.LVL75
+ 2001 0098 0100     		.2byte	0x1
+ 2002 009a 51       		.byte	0x51
+ 2003 009b 7C070000 		.4byte	.LVL76
+ 2004 009f 7F070000 		.4byte	.LVL77-1
+ 2005 00a3 0100     		.2byte	0x1
+ 2006 00a5 51       		.byte	0x51
+ 2007 00a6 00000000 		.4byte	0
+ 2008 00aa 00000000 		.4byte	0
+ 2009              	.LLST1:
+ 2010 00ae 08000000 		.4byte	.LVL0
+ 2011 00b2 46000000 		.4byte	.LVL2
+ 2012 00b6 0200     		.2byte	0x2
+ 2013 00b8 30       		.byte	0x30
+ 2014 00b9 9F       		.byte	0x9f
+ 2015 00ba 46000000 		.4byte	.LVL2
+ 2016 00be 4A000000 		.4byte	.LVL3
+ 2017 00c2 0200     		.2byte	0x2
+ 2018 00c4 31       		.byte	0x31
+ 2019 00c5 9F       		.byte	0x9f
+ 2020 00c6 4A000000 		.4byte	.LVL3
+ 2021 00ca 4C000000 		.4byte	.LVL4
+ 2022 00ce 0200     		.2byte	0x2
+ 2023 00d0 30       		.byte	0x30
+ 2024 00d1 9F       		.byte	0x9f
+ 2025 00d2 4C000000 		.4byte	.LVL4
+ 2026 00d6 56000000 		.4byte	.LVL5
+ 2027 00da 0100     		.2byte	0x1
+ 2028 00dc 52       		.byte	0x52
+ 2029 00dd 60000000 		.4byte	.LVL6
+ 2030 00e1 62000000 		.4byte	.LVL7
+ 2031 00e5 0200     		.2byte	0x2
+ 2032 00e7 31       		.byte	0x31
+ 2033 00e8 9F       		.byte	0x9f
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 52
+
+
+ 2034 00e9 62000000 		.4byte	.LVL7
+ 2035 00ed 70000000 		.4byte	.LVL8
+ 2036 00f1 0100     		.2byte	0x1
+ 2037 00f3 52       		.byte	0x52
+ 2038 00f4 7A000000 		.4byte	.LVL9
+ 2039 00f8 7C000000 		.4byte	.LVL10
+ 2040 00fc 0200     		.2byte	0x2
+ 2041 00fe 31       		.byte	0x31
+ 2042 00ff 9F       		.byte	0x9f
+ 2043 0100 7C000000 		.4byte	.LVL10
+ 2044 0104 AC000000 		.4byte	.LVL11
+ 2045 0108 0100     		.2byte	0x1
+ 2046 010a 52       		.byte	0x52
+ 2047 010b B0000000 		.4byte	.LVL12
+ 2048 010f B4000000 		.4byte	.LVL13
+ 2049 0113 0200     		.2byte	0x2
+ 2050 0115 31       		.byte	0x31
+ 2051 0116 9F       		.byte	0x9f
+ 2052 0117 B4000000 		.4byte	.LVL13
+ 2053 011b C4000000 		.4byte	.LVL14
+ 2054 011f 0100     		.2byte	0x1
+ 2055 0121 52       		.byte	0x52
+ 2056 0122 C8000000 		.4byte	.LVL15
+ 2057 0126 CA000000 		.4byte	.LVL16
+ 2058 012a 0100     		.2byte	0x1
+ 2059 012c 52       		.byte	0x52
+ 2060 012d CE000000 		.4byte	.LVL17
+ 2061 0131 20010000 		.4byte	.LVL18
+ 2062 0135 0100     		.2byte	0x1
+ 2063 0137 52       		.byte	0x52
+ 2064 0138 20010000 		.4byte	.LVL18
+ 2065 013c 74010000 		.4byte	.LVL19
+ 2066 0140 0200     		.2byte	0x2
+ 2067 0142 30       		.byte	0x30
+ 2068 0143 9F       		.byte	0x9f
+ 2069 0144 74010000 		.4byte	.LVL19
+ 2070 0148 92010000 		.4byte	.LVL20
+ 2071 014c 0100     		.2byte	0x1
+ 2072 014e 52       		.byte	0x52
+ 2073 014f B4010000 		.4byte	.LVL21
+ 2074 0153 C6010000 		.4byte	.LVL22
+ 2075 0157 0100     		.2byte	0x1
+ 2076 0159 52       		.byte	0x52
+ 2077 015a D6010000 		.4byte	.LVL23
+ 2078 015e DA010000 		.4byte	.LVL24
+ 2079 0162 0200     		.2byte	0x2
+ 2080 0164 31       		.byte	0x31
+ 2081 0165 9F       		.byte	0x9f
+ 2082 0166 DA010000 		.4byte	.LVL24
+ 2083 016a 3A020000 		.4byte	.LVL28
+ 2084 016e 0100     		.2byte	0x1
+ 2085 0170 52       		.byte	0x52
+ 2086 0171 3E020000 		.4byte	.LVL29
+ 2087 0175 44020000 		.4byte	.LVL30
+ 2088 0179 0200     		.2byte	0x2
+ 2089 017b 31       		.byte	0x31
+ 2090 017c 9F       		.byte	0x9f
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 53
+
+
+ 2091 017d 44020000 		.4byte	.LVL30
+ 2092 0181 5E020000 		.4byte	.LVL34
+ 2093 0185 0100     		.2byte	0x1
+ 2094 0187 52       		.byte	0x52
+ 2095 0188 64020000 		.4byte	.LVL35
+ 2096 018c B0020000 		.4byte	.LVL38
+ 2097 0190 0100     		.2byte	0x1
+ 2098 0192 52       		.byte	0x52
+ 2099 0193 FA020000 		.4byte	.LVL39
+ 2100 0197 FE020000 		.4byte	.LVL40
+ 2101 019b 0200     		.2byte	0x2
+ 2102 019d 31       		.byte	0x31
+ 2103 019e 9F       		.byte	0x9f
+ 2104 019f FE020000 		.4byte	.LVL40
+ 2105 01a3 E8030000 		.4byte	.LVL41
+ 2106 01a7 0100     		.2byte	0x1
+ 2107 01a9 52       		.byte	0x52
+ 2108 01aa EC030000 		.4byte	.LVL42
+ 2109 01ae EE030000 		.4byte	.LVL43
+ 2110 01b2 0200     		.2byte	0x2
+ 2111 01b4 31       		.byte	0x31
+ 2112 01b5 9F       		.byte	0x9f
+ 2113 01b6 EE030000 		.4byte	.LVL43
+ 2114 01ba FA030000 		.4byte	.LVL44
+ 2115 01be 0100     		.2byte	0x1
+ 2116 01c0 52       		.byte	0x52
+ 2117 01c1 42040000 		.4byte	.LVL45
+ 2118 01c5 60040000 		.4byte	.LVL46
+ 2119 01c9 0100     		.2byte	0x1
+ 2120 01cb 52       		.byte	0x52
+ 2121 01cc 66060000 		.4byte	.LVL68
+ 2122 01d0 7C060000 		.4byte	.LVL70
+ 2123 01d4 0100     		.2byte	0x1
+ 2124 01d6 56       		.byte	0x56
+ 2125 01d7 82060000 		.4byte	.LVL71
+ 2126 01db A4060000 		.4byte	.LVL73
+ 2127 01df 0100     		.2byte	0x1
+ 2128 01e1 56       		.byte	0x56
+ 2129 01e2 F4070000 		.4byte	.LVL78
+ 2130 01e6 F8070000 		.4byte	.LVL79
+ 2131 01ea 0100     		.2byte	0x1
+ 2132 01ec 52       		.byte	0x52
+ 2133 01ed 00000000 		.4byte	0
+ 2134 01f1 00000000 		.4byte	0
+ 2135              	.LLST2:
+ 2136 01f5 08000000 		.4byte	.LVL0
+ 2137 01f9 A4050000 		.4byte	.LVL51
+ 2138 01fd 0200     		.2byte	0x2
+ 2139 01ff 30       		.byte	0x30
+ 2140 0200 9F       		.byte	0x9f
+ 2141 0201 A4050000 		.4byte	.LVL51
+ 2142 0205 A6050000 		.4byte	.LVL52
+ 2143 0209 0100     		.2byte	0x1
+ 2144 020b 50       		.byte	0x50
+ 2145 020c A6050000 		.4byte	.LVL52
+ 2146 0210 AC050000 		.4byte	.LVL53
+ 2147 0214 0200     		.2byte	0x2
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 54
+
+
+ 2148 0216 30       		.byte	0x30
+ 2149 0217 9F       		.byte	0x9f
+ 2150 0218 AC050000 		.4byte	.LVL53
+ 2151 021c B4050000 		.4byte	.LVL54
+ 2152 0220 0100     		.2byte	0x1
+ 2153 0222 50       		.byte	0x50
+ 2154 0223 B4050000 		.4byte	.LVL54
+ 2155 0227 B6050000 		.4byte	.LVL55
+ 2156 022b 0200     		.2byte	0x2
+ 2157 022d 30       		.byte	0x30
+ 2158 022e 9F       		.byte	0x9f
+ 2159 022f B6050000 		.4byte	.LVL55
+ 2160 0233 C3050000 		.4byte	.LVL56-1
+ 2161 0237 0100     		.2byte	0x1
+ 2162 0239 50       		.byte	0x50
+ 2163 023a C6050000 		.4byte	.LVL57
+ 2164 023e CE050000 		.4byte	.LVL58
+ 2165 0242 0100     		.2byte	0x1
+ 2166 0244 50       		.byte	0x50
+ 2167 0245 F4070000 		.4byte	.LVL78
+ 2168 0249 42080000 		.4byte	.LVL80
+ 2169 024d 0200     		.2byte	0x2
+ 2170 024f 30       		.byte	0x30
+ 2171 0250 9F       		.byte	0x9f
+ 2172 0251 00000000 		.4byte	0
+ 2173 0255 00000000 		.4byte	0
+ 2174              		.section	.debug_aranges,"",%progbits
+ 2175 0000 1C000000 		.4byte	0x1c
+ 2176 0004 0200     		.2byte	0x2
+ 2177 0006 00000000 		.4byte	.Ldebug_info0
+ 2178 000a 04       		.byte	0x4
+ 2179 000b 00       		.byte	0
+ 2180 000c 0000     		.2byte	0
+ 2181 000e 0000     		.2byte	0
+ 2182 0010 00000000 		.4byte	.LFB0
+ 2183 0014 A8080000 		.4byte	.LFE0-.LFB0
+ 2184 0018 00000000 		.4byte	0
+ 2185 001c 00000000 		.4byte	0
+ 2186              		.section	.debug_ranges,"",%progbits
+ 2187              	.Ldebug_ranges0:
+ 2188 0000 00000000 		.4byte	.LFB0
+ 2189 0004 A8080000 		.4byte	.LFE0
+ 2190 0008 00000000 		.4byte	0
+ 2191 000c 00000000 		.4byte	0
+ 2192              		.section	.debug_line,"",%progbits
+ 2193              	.Ldebug_line0:
+ 2194 0000 BB020000 		.section	.debug_str,"MS",%progbits,1
+ 2194      02009400 
+ 2194      00000201 
+ 2194      FB0E0D00 
+ 2194      01010101 
+ 2195              	.LASF21:
+ 2196 0000 55415254 		.ascii	"UART_1_customIntrHandler\000"
+ 2196      5F315F63 
+ 2196      7573746F 
+ 2196      6D496E74 
+ 2196      7248616E 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 55
+
+
+ 2197              	.LASF15:
+ 2198 0019 72656733 		.ascii	"reg32\000"
+ 2198      3200
+ 2199              	.LASF29:
+ 2200 001f 55415254 		.ascii	"UART_1_slRdBufPtr\000"
+ 2200      5F315F73 
+ 2200      6C526442 
+ 2200      75665074 
+ 2200      7200
+ 2201              	.LASF46:
+ 2202 0031 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
+ 2202      73657273 
+ 2202      5C4D6172 
+ 2202      63656C6F 
+ 2202      5C446F63 
+ 2203 005f 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
+ 2203      686F6761 
+ 2203      725C5073 
+ 2203      6F635F43 
+ 2203      72656174 
+ 2204 008f 66616365 		.ascii	"face_driver.cydsn\000"
+ 2204      5F647269 
+ 2204      7665722E 
+ 2204      63796473 
+ 2204      6E00
+ 2205              	.LASF33:
+ 2206 00a1 55415254 		.ascii	"UART_1_slOverFlowCount\000"
+ 2206      5F315F73 
+ 2206      6C4F7665 
+ 2206      72466C6F 
+ 2206      77436F75 
+ 2207              	.LASF40:
+ 2208 00b8 55415254 		.ascii	"UART_1_mstrWrBufSize\000"
+ 2208      5F315F6D 
+ 2208      73747257 
+ 2208      72427566 
+ 2208      53697A65 
+ 2209              	.LASF3:
+ 2210 00cd 73686F72 		.ascii	"short unsigned int\000"
+ 2210      7420756E 
+ 2210      7369676E 
+ 2210      65642069 
+ 2210      6E7400
+ 2211              	.LASF38:
+ 2212 00e0 55415254 		.ascii	"UART_1_mstrRdBufIndex\000"
+ 2212      5F315F6D 
+ 2212      73747252 
+ 2212      64427566 
+ 2212      496E6465 
+ 2213              	.LASF19:
+ 2214 00f6 656E6454 		.ascii	"endTransfer\000"
+ 2214      72616E73 
+ 2214      66657200 
+ 2215              	.LASF35:
+ 2216 0102 55415254 		.ascii	"UART_1_mstrControl\000"
+ 2216      5F315F6D 
+ 2216      73747243 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 56
+
+
+ 2216      6F6E7472 
+ 2216      6F6C00
+ 2217              	.LASF48:
+ 2218 0115 55415254 		.ascii	"UART_1_I2CSlaveNackGeneration\000"
+ 2218      5F315F49 
+ 2218      3243536C 
+ 2218      6176654E 
+ 2218      61636B47 
+ 2219              	.LASF30:
+ 2220 0133 55415254 		.ascii	"UART_1_slRdBufSize\000"
+ 2220      5F315F73 
+ 2220      6C526442 
+ 2220      75665369 
+ 2220      7A6500
+ 2221              	.LASF22:
+ 2222 0146 55415254 		.ascii	"UART_1_mode\000"
+ 2222      5F315F6D 
+ 2222      6F646500 
+ 2223              	.LASF43:
+ 2224 0152 55415254 		.ascii	"UART_1_customAddressHandler\000"
+ 2224      5F315F63 
+ 2224      7573746F 
+ 2224      6D416464 
+ 2224      72657373 
+ 2225              	.LASF12:
+ 2226 016e 666C6F61 		.ascii	"float\000"
+ 2226      7400
+ 2227              	.LASF45:
+ 2228 0174 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_I2C_INT.c\000"
+ 2228      6E657261 
+ 2228      7465645F 
+ 2228      536F7572 
+ 2228      63655C50 
+ 2229              	.LASF28:
+ 2230 019e 55415254 		.ascii	"UART_1_slWrBufIndex\000"
+ 2230      5F315F73 
+ 2230      6C577242 
+ 2230      7566496E 
+ 2230      64657800 
+ 2231              	.LASF44:
+ 2232 01b2 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 2232      4320342E 
+ 2232      382E3420 
+ 2232      32303134 
+ 2232      30353236 
+ 2233 01e5 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 2233      20726576 
+ 2233      6973696F 
+ 2233      6E203231 
+ 2233      31333538 
+ 2234 0218 67202D66 		.ascii	"g -ffunction-sections\000"
+ 2234      66756E63 
+ 2234      74696F6E 
+ 2234      2D736563 
+ 2234      74696F6E 
+ 2235              	.LASF1:
+ 2236 022e 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 57
+
+
+ 2236      676E6564 
+ 2236      20636861 
+ 2236      7200
+ 2237              	.LASF5:
+ 2238 023c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2238      20756E73 
+ 2238      69676E65 
+ 2238      6420696E 
+ 2238      7400
+ 2239              	.LASF18:
+ 2240 024e 64696666 		.ascii	"diffCount\000"
+ 2240      436F756E 
+ 2240      7400
+ 2241              	.LASF9:
+ 2242 0258 75696E74 		.ascii	"uint8\000"
+ 2242      3800
+ 2243              	.LASF26:
+ 2244 025e 55415254 		.ascii	"UART_1_slWrBufPtr\000"
+ 2244      5F315F73 
+ 2244      6C577242 
+ 2244      75665074 
+ 2244      7200
+ 2245              	.LASF34:
+ 2246 0270 55415254 		.ascii	"UART_1_mstrStatus\000"
+ 2246      5F315F6D 
+ 2246      73747253 
+ 2246      74617475 
+ 2246      7300
+ 2247              	.LASF13:
+ 2248 0282 646F7562 		.ascii	"double\000"
+ 2248      6C6500
+ 2249              	.LASF10:
+ 2250 0289 75696E74 		.ascii	"uint16\000"
+ 2250      313600
+ 2251              	.LASF11:
+ 2252 0290 75696E74 		.ascii	"uint32\000"
+ 2252      333200
+ 2253              	.LASF47:
+ 2254 0297 55415254 		.ascii	"UART_1_I2C_ISR\000"
+ 2254      5F315F49 
+ 2254      32435F49 
+ 2254      535200
+ 2255              	.LASF8:
+ 2256 02a6 756E7369 		.ascii	"unsigned int\000"
+ 2256      676E6564 
+ 2256      20696E74 
+ 2256      00
+ 2257              	.LASF7:
+ 2258 02b3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2258      206C6F6E 
+ 2258      6720756E 
+ 2258      7369676E 
+ 2258      65642069 
+ 2259              	.LASF27:
+ 2260 02ca 55415254 		.ascii	"UART_1_slWrBufSize\000"
+ 2260      5F315F73 
+ 2260      6C577242 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 58
+
+
+ 2260      75665369 
+ 2260      7A6500
+ 2261              	.LASF31:
+ 2262 02dd 55415254 		.ascii	"UART_1_slRdBufIndex\000"
+ 2262      5F315F73 
+ 2262      6C526442 
+ 2262      7566496E 
+ 2262      64657800 
+ 2263              	.LASF32:
+ 2264 02f1 55415254 		.ascii	"UART_1_slRdBufIndexTmp\000"
+ 2264      5F315F73 
+ 2264      6C526442 
+ 2264      7566496E 
+ 2264      64657854 
+ 2265              	.LASF16:
+ 2266 0308 63796973 		.ascii	"cyisraddress\000"
+ 2266      72616464 
+ 2266      72657373 
+ 2266      00
+ 2267              	.LASF20:
+ 2268 0315 72657370 		.ascii	"response\000"
+ 2268      6F6E7365 
+ 2268      00
+ 2269              	.LASF36:
+ 2270 031e 55415254 		.ascii	"UART_1_mstrRdBufPtr\000"
+ 2270      5F315F6D 
+ 2270      73747252 
+ 2270      64427566 
+ 2270      50747200 
+ 2271              	.LASF39:
+ 2272 0332 55415254 		.ascii	"UART_1_mstrWrBufPtr\000"
+ 2272      5F315F6D 
+ 2272      73747257 
+ 2272      72427566 
+ 2272      50747200 
+ 2273              	.LASF42:
+ 2274 0346 55415254 		.ascii	"UART_1_mstrWrBufIndexTmp\000"
+ 2274      5F315F6D 
+ 2274      73747257 
+ 2274      72427566 
+ 2274      496E6465 
+ 2275              	.LASF17:
+ 2276 035f 73697A65 		.ascii	"sizetype\000"
+ 2276      74797065 
+ 2276      00
+ 2277              	.LASF6:
+ 2278 0368 6C6F6E67 		.ascii	"long long int\000"
+ 2278      206C6F6E 
+ 2278      6720696E 
+ 2278      7400
+ 2279              	.LASF14:
+ 2280 0376 63686172 		.ascii	"char\000"
+ 2280      00
+ 2281              	.LASF37:
+ 2282 037b 55415254 		.ascii	"UART_1_mstrRdBufSize\000"
+ 2282      5F315F6D 
+ 2282      73747252 
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccHjeWsE.s 			page 59
+
+
+ 2282      64427566 
+ 2282      53697A65 
+ 2283              	.LASF24:
+ 2284 0390 55415254 		.ascii	"UART_1_state\000"
+ 2284      5F315F73 
+ 2284      74617465 
+ 2284      00
+ 2285              	.LASF2:
+ 2286 039d 73686F72 		.ascii	"short int\000"
+ 2286      7420696E 
+ 2286      7400
+ 2287              	.LASF23:
+ 2288 03a7 55415254 		.ascii	"UART_1_acceptAddr\000"
+ 2288      5F315F61 
+ 2288      63636570 
+ 2288      74416464 
+ 2288      7200
+ 2289              	.LASF4:
+ 2290 03b9 6C6F6E67 		.ascii	"long int\000"
+ 2290      20696E74 
+ 2290      00
+ 2291              	.LASF0:
+ 2292 03c2 7369676E 		.ascii	"signed char\000"
+ 2292      65642063 
+ 2292      68617200 
+ 2293              	.LASF41:
+ 2294 03ce 55415254 		.ascii	"UART_1_mstrWrBufIndex\000"
+ 2294      5F315F6D 
+ 2294      73747257 
+ 2294      72427566 
+ 2294      496E6465 
+ 2295              	.LASF25:
+ 2296 03e4 55415254 		.ascii	"UART_1_slStatus\000"
+ 2296      5F315F73 
+ 2296      6C537461 
+ 2296      74757300 
+ 2297              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
