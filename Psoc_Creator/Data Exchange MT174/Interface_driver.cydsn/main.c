@@ -169,4 +169,31 @@ static void send(char8 bytes[], float tr)
     UART_1_UartPutString(bytes);
     CyDelay(tr);
 }
+
+static void substr(char8* substring , char8 *string, int start, int end)
+{
+    strcpy(substring,"");
+    int large = strlen(string) -1;
+    int init, last;
+    char8 c[]="";
+    
+    if(end > 0 && end <= large)
+    {
+        last = end;
+    }
+    else if(end < 0)
+    {
+        last = large + end;
+    }
+    else
+    {
+        last = large;
+    }
+    
+    for(init = start; init <= last; init++)
+    {
+        c[0] = string[init];
+        strcat(substring, c);
+    }
+}
 /* [] END OF FILE */
