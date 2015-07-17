@@ -157,4 +157,16 @@ static void BaudRate(char baudios)
     }
     
 }
+
+static void send(char8 bytes[], float tr)
+{
+    /*
+    sends an command to serial and reads and checks the echo
+    port  - the open serial port
+    bytes - the string to be send
+    tr    - the responce time
+    */
+    UART_1_UartPutString(bytes);
+    CyDelay(tr);
+}
 /* [] END OF FILE */
