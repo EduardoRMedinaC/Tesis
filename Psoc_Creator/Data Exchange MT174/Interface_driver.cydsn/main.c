@@ -278,5 +278,37 @@ static int read_datablock(char8 *data)
     BaudRate(speed[0]);
     UART_1_Start();
     CyDelay(tr);
+    // 4 <-
+    strcpy(data,"");
+    if(UART_1_UartGetChar() == STX)
+    {
+        ch[0] = UART_1_UartGetChar();
+        bcc = 0;
+        while (ch[0] != '!')
+        {
+            bcc = bcc ^ ch[0];
+            strcat(data,ch);
+            ch[0] = UART_1_UartGetChar();
+        }
+        while (ch[0] != ETX)
+        {
+            bcc = bcc ^ ch[0];
+            ch[0] = UART_1_UartGetChar();
+        }
+        bcc = bcc ^ ch[0];      // ETX itself is part of block check
+        ch[0] = UART_1_UartGetChar();       // ch[0] es ahora el BLOCK CHECK CHARACTER
+        
+        if(bcc != ch[0])
+        {
+            strcpy(data, "");
+            return 2;           // El resultado no es el correcto, pruebe nuevamente
+        }
+    }
+    else
+    {
+        return 1;               // No se ha encontrado el STX
+    }
+    UART_1_Stop();
+    return 0;                   // La comunicacion fue un exito!
 }
 /* [] END OF FILE */
