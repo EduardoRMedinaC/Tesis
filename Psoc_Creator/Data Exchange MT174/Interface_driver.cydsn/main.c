@@ -129,10 +129,30 @@ int main()
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+    UART_1_UartInit(&configUart);
+    UART_2_Start();
+    char8 data[]="";
+    int log;
 
     for(;;)
     {
         /* Place your application code here. */
+         if(UART_2_UartGetChar() == 'z')
+        {
+            log = read_datablock(data);
+            if(log == 4)
+                UART_2_UartPutString("No identification message\r\n");
+            if(log == 3)
+                UART_2_UartPutString("Identification Message too short\r\n");
+            if(log == 2)
+                UART_2_UartPutString("El resultado no es el correcto, pruebe nuevamente\r\n");
+            if(log == 1)
+                UART_2_UartPutString("No se ha encontrado el STX\r\n");
+            if(log == 0)
+                UART_2_UartPutString("La comunicacion fue un exito!\r\n");
+        }
+        if(UART_2_UartGetChar() == 'a')
+            UART_2_UartPutString("La comunicacion fue un exito\r\n");
     }
 }
 
