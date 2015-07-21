@@ -7333,7 +7333,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  452              	.set CYDEV_DFT_SELECT_CLK1, 2
  453              	.set CYDEV_HEAP_SIZE, 0x80
  454              	.set CYDEV_IMO_TRIMMED_BY_WCO, 0
- 455              	.set CYDEV_PROJ_TYPE, 0
+ 455              	.set CYDEV_PROJ_TYPE, 2
  456              	.set CYDEV_PROJ_TYPE_BOOTLOADER, 1
  457              	.set CYDEV_PROJ_TYPE_LAUNCHER, 5
  458              	.set CYDEV_PROJ_TYPE_LOADABLE, 2

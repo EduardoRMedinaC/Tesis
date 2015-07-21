@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
   31:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_bufSizeBuf1; /* Size of buffer 1 in bytes      */
   32:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_protectBuf1; /* Start index of write protected area buffer 1 */
   33:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_offsetBuf1; /* Current offset within buffer 1 */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 2
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 2
 
 
   34:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** uint16 UART_1_indexBuf1;  /* Current index within buffer 1  */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
   88:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
   89:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
   90:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 3
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 3
 
 
   91:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  145:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             /* Configure TX direction */
  146:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_TX_CTRL_REG      = UART_1_EZI2C_TX_CTRL;
  147:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_TX_FIFO_CTRL_REG = ((0u != (config->enableClockStretch)) ?
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 4
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 4
 
 
  148:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                  UART_1_CLEAR_REG : UART_1_EZI2C_TX_FIFO_CTRL);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  202:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
  203:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
  204:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Configures the SCB for the EZI2C operation.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 5
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 5
 
 
  205:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  259:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         /* Configure global variables */
  260:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_fsmState = UART_1_EZI2C_FSM_IDLE;
  261:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 6
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 6
 
 
  262:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_curStatus  = 0u;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  316:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     uint32 status;
  317:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
  318:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     UART_1_DisableInt();  /* Lock from interruption */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 7
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 7
 
 
  319:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  373:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     }
  374:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     else
  375:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     {
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 8
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 8
 
 
  376:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         uint32 matchReg;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  430:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  Sets up the data buffer to be exposed to the I2C master on a primary slave
  431:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *  address request.
  432:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 9
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 9
 
 
  433:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** * Parameters:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  487:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Summary:
  488:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  Returns the value of the RX MATCH register for addr1 and addr2. The addr1 is
  489:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  accepted as the primary address and it is written to RX_MATCH.ADDRESS
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 10
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 10
 
 
  490:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  (addr1 << 0x01).
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
   53              		.align	2
   54              		.global	UART_1_EzI2CInit
   55              		.code	16
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 11
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 11
 
 
   56              		.thumb_func
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  101              		.loc 1 110 0
  102 0030 227D     		ldrb	r2, [r4, #20]
  103 0032 4D4B     		ldr	r3, .L19+16
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 12
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 12
 
 
  104 0034 1A70     		strb	r2, [r3]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  149              		.loc 1 131 0
  150 0076 0022     		mov	r2, #0
  151 0078 434B     		ldr	r3, .L19+48
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 13
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 13
 
 
  152 007a 1A60     		str	r2, [r3]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  197              		.loc 1 156 0
  198 00bc 384A     		ldr	r2, .L19+72
  199 00be 1360     		str	r3, [r2]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 14
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 14
 
 
  157:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_INTR_SLAVE_MASK_REG  = UART_1_EZI2C_INTR_SLAVE_MASK;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  245              	.L11:
  176:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                 UART_1_I2C_CTRL_REG |= UART_1_EZI2C_CTRL_AUTO;
  246              		.loc 1 176 0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 15
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 15
 
 
  247 0104 1D4B     		ldr	r3, .L19+36
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  292 0146 1380     		strh	r3, [r2]
  192:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_addrBuf1 = (uint8) config->primarySlaveAddr;
  293              		.loc 1 192 0 discriminator 3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 16
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 16
 
 
  294 0148 227B     		ldrb	r2, [r4, #12]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  346              		.global	UART_1_EzI2CStop
  347              		.code	16
  348              		.thumb_func
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 17
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 17
 
 
  349              		.type	UART_1_EzI2CStop, %function
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  396              		.loc 1 320 0
  397 0008 124B     		ldr	r3, .L33
  398 000a 1C78     		ldrb	r4, [r3]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 18
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 18
 
 
  399 000c E4B2     		uxtb	r4, r4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  444 0042 1A78     		ldrb	r2, [r3]
  445 0044 1F21     		mov	r1, #31
  446 0046 8A43     		bic	r2, r1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 19
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 19
 
 
  447 0048 1A70     		strb	r2, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  495              	.LVL25:
  496 0016 094B     		ldr	r3, .L38+12
  497 0018 1860     		str	r0, [r3]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 20
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 20
 
 
  498 001a 07E0     		b	.L35
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  545 0000 054B     		ldr	r3, .L43
  546 0002 1B78     		ldrb	r3, [r3]
  547 0004 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 21
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 21
 
 
  548 0006 02D0     		beq	.L41
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  448:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         UART_1_DisableInt();  /* Lock from interruption */
  597              		.loc 1 448 0
  598 000a 0B20     		mov	r0, #11
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 22
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 22
 
 
  599              	.LVL36:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  645              		.loc 1 479 0
  646              		@ sp needed
  647 0004 7047     		bx	lr
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 23
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 23
 
 
  648              	.L51:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  679              	.LVL45:
  680 0010 034B     		ldr	r3, .L53+8
  681 0012 1860     		str	r0, [r3]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 24
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 24
 
 
  539:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                                                                                address);
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  711 0006 C046     		.align	2
  712              	.L56:
  713 0008 00000000 		.word	UART_1_addrBuf2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 25
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 25
 
 
  714              		.cfi_endproc
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  742 000c FFF7FEFF 		bl	CyIntDisable
  743              	.LVL48:
  590:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 26
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 26
 
 
  591:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****             UART_1_dataBuffer2 =  buffer;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  608:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Parameters:
  609:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  rwBoundary: Sets how many bytes are writeable at the beginning of the buffer.
  610:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *              This value must be less than or equal to the buffer size.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 27
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 27
 
 
  611:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *              Data located at offset rwBoundry and greater are read only.
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  641:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
  642:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *
  643:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     * Return:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 28
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 28
 
 
  644:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     *  None
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  686:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         if(0u == (UART_1_GetI2CExtClkInterruptSource() & UART_1_INTR_I2C_EC_WAKE_UP
  687:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                         {
  688:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             /* NACK command was set before. It is safe to disable block */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 29
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 29
 
 
  689:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****                             UART_1_CTRL_REG &= (uint32) ~UART_1_CTRL_ENABLED;
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  835              	.LFB13:
  725:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
  726:.\Generated_Source\PSoC4/UART_1_EZI2C.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 30
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 30
 
 
  727:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****     /*******************************************************************************
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  769:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         #endif /* (UART_1_SCB_CLK_INTERNAL) */
  770:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         }
  771:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         else
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 31
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 31
 
 
  772:.\Generated_Source\PSoC4/UART_1_EZI2C.c ****         {
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  884 0014 00000000 		.word	0
  885 0018 00000000 		.word	0
  886 001c 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 32
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 32
 
 
  887 001d 000000   		.space	3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  941 005e 04       		.byte	0x4
  942 005f 05       		.byte	0x5
  943 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 33
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 33
 
 
  944 0064 02       		.uleb128 0x2
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  998 00d2 20       		.byte	0x20
  999 00d3 03       		.byte	0x3
  1000 00d4 63       		.byte	0x63
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 34
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 34
 
 
  1001 00d5 3A010000 		.4byte	0x13a
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1055 0141 D1000000 		.4byte	0xd1
  1056 0145 0B       		.uleb128 0xb
  1057 0146 4B050000 		.4byte	.LASF75
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 35
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 35
 
 
  1058 014a 01       		.byte	0x1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1112 01c6 18000000 		.4byte	.LVL11
  1113 01ca F5050000 		.4byte	0x5f5
  1114 01ce E2010000 		.4byte	0x1e2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 36
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 36
 
 
  1115 01d2 12       		.uleb128 0x12
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1169 022c 3B       		.byte	0x3b
  1170 022d 00       		.byte	0
  1171 022e 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 37
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 37
 
 
  1172 022f 07       		.uleb128 0x7
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1226 02a5 40000000 		.4byte	.LFE3-.LFB3
  1227 02a9 01       		.uleb128 0x1
  1228 02aa 9C       		.byte	0x9c
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 38
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 38
 
 
  1229 02ab EF020000 		.4byte	0x2ef
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1283 032b 9C       		.byte	0x9c
  1284 032c 83030000 		.4byte	0x383
  1285 0330 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 39
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 39
 
 
  1286 0331 58040000 		.4byte	.LASF38
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1340 03ab 01       		.uleb128 0x1
  1341 03ac 50       		.byte	0x50
  1342 03ad 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 40
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 40
 
 
  1343 03ae 18       		.uleb128 0x18
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1397 0428 4902     		.2byte	0x249
  1398 042a 81000000 		.4byte	0x81
  1399 042e 0D020000 		.4byte	.LLST12
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 41
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 41
 
 
  1400 0432 0C       		.uleb128 0xc
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1454 04a2 EC02     		.2byte	0x2ec
  1455 04a4 00000000 		.4byte	.LFB13
  1456 04a8 18000000 		.4byte	.LFE13-.LFB13
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 42
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 42
 
 
  1457 04ac 01       		.uleb128 0x1
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1511 051e 1E       		.byte	0x1e
  1512 051f 83030000 		.4byte	0x383
  1513 0523 05       		.uleb128 0x5
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 43
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 43
 
 
  1514 0524 03       		.byte	0x3
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1568 0596 83030000 		.4byte	0x383
  1569 059a 05       		.uleb128 0x5
  1570 059b 03       		.byte	0x3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 44
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 44
 
 
  1571 059c 00000000 		.4byte	UART_1_dataBuffer2
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1625 0611 6F010000 		.4byte	.LASF70
  1626 0615 05       		.byte	0x5
  1627 0616 4E       		.byte	0x4e
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 45
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 45
 
 
  1628 0617 21060000 		.4byte	0x621
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1682 0013 02       		.uleb128 0x2
  1683 0014 24       		.uleb128 0x24
  1684 0015 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 46
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 46
 
 
  1685 0016 0B       		.uleb128 0xb
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1739 004c 00       		.byte	0
  1740 004d 0B       		.uleb128 0xb
  1741 004e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 47
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 47
 
 
  1742 004f 49       		.uleb128 0x49
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1796 0085 12       		.uleb128 0x12
  1797 0086 06       		.uleb128 0x6
  1798 0087 40       		.uleb128 0x40
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 48
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 48
 
 
  1799 0088 18       		.uleb128 0x18
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1853 00bf 01       		.byte	0x1
  1854 00c0 3F       		.uleb128 0x3f
  1855 00c1 19       		.uleb128 0x19
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 49
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 49
 
 
  1856 00c2 03       		.uleb128 0x3
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1910 00fe 00       		.byte	0
  1911 00ff 13       		.uleb128 0x13
  1912 0100 898201   		.uleb128 0x4109
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 50
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 50
 
 
  1913 0103 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  1967 013c 0B       		.uleb128 0xb
  1968 013d 3B       		.uleb128 0x3b
  1969 013e 05       		.uleb128 0x5
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 51
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 51
 
 
  1970 013f 27       		.uleb128 0x27
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2024 0177 00       		.byte	0
  2025 0178 3F       		.uleb128 0x3f
  2026 0179 19       		.uleb128 0x19
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 52
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 52
 
 
  2027 017a 03       		.uleb128 0x3
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2081 01b1 1D       		.uleb128 0x1d
  2082 01b2 2E       		.uleb128 0x2e
  2083 01b3 01       		.byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 53
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 53
 
 
  2084 01b4 3F       		.uleb128 0x3f
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2138 01ea 0B       		.uleb128 0xb
  2139 01eb 27       		.uleb128 0x27
  2140 01ec 19       		.uleb128 0x19
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 54
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 54
 
 
  2141 01ed 3C       		.uleb128 0x3c
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2195 0070 54       		.byte	0x54
  2196 0071 0E000000 		.4byte	.LVL9
  2197 0075 10000000 		.4byte	.LVL10
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 55
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 55
 
 
  2198 0079 0100     		.2byte	0x1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2252 00fd 0100     		.2byte	0x1
  2253 00ff 51       		.byte	0x51
  2254 0100 2A000000 		.4byte	.LVL30
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 56
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 56
 
 
  2255 0104 2C000000 		.4byte	.LVL31
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2309 018d 0F000000 		.4byte	.LVL37-1
  2310 0191 0100     		.2byte	0x1
  2311 0193 52       		.byte	0x52
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 57
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 57
 
 
  2312 0194 0F000000 		.4byte	.LVL37-1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2366 0218 0F000000 		.4byte	.LVL48-1
  2367 021c 22000000 		.4byte	.LVL51
  2368 0220 0100     		.2byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 58
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 58
 
 
  2369 0222 55       		.byte	0x55
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2423 0058 00000000 		.4byte	.LFB9
  2424 005c 0C000000 		.4byte	.LFE9-.LFB9
  2425 0060 00000000 		.4byte	.LFB10
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 59
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 59
 
 
  2426 0064 30000000 		.4byte	.LFE10-.LFB10
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2473 0010 55415254 		.ascii	"UART_1_EzI2CGetActivity\000"
  2473      5F315F45 
  2473      7A493243 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 60
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 60
 
 
  2473      47657441 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2491      53657441 
  2491      64647265 
  2492              	.LASF45:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 61
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 61
 
 
  2493 012f 55415254 		.ascii	"UART_1_EzI2CStop\000"
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2517      6C654279 
  2517      74654D6F 
  2517      646500
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 62
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 62
 
 
  2518              	.LASF11:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2539      3200
  2540              	.LASF47:
  2541 0284 55415254 		.ascii	"UART_1_EzI2CRestoreConfig\000"
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 63
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 63
 
 
  2541      5F315F45 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2561      72697479 
  2561      00
  2562              	.LASF21:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 64
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 64
 
 
  2563 0341 7072696D 		.ascii	"primarySlaveAddr\000"
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2584              	.LASF57:
  2585 03ec 55415254 		.ascii	"UART_1_bufSizeBuf1\000"
  2585      5F315F62 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 65
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 65
 
 
  2585      75665369 
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2607      75666665 
  2607      723100
  2608              	.LASF63:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 66
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 66
 
 
  2609 04b5 55415254 		.ascii	"UART_1_dataBuffer2\000"
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 1
  2626              	.LASF49:
  2627 05a5 55415254 		.ascii	"UART_1_scbEnableWake\000"
  2627      5F315F73 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccdLFUae.s 			page 67
+ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccQeKZz5.s 			page 67
 
 
  2627      6362456E 

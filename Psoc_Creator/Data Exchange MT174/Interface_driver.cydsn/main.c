@@ -62,13 +62,13 @@ uint8 bufferRx[COMMON_BUFFER_SIZE + 1u];
 * UART operation.
 */
 
-#define UART_CLK_DIVIDER_FOR_19200          (78u)
-#define UART_CLK_DIVIDER_FOR_9600           (156u)
-#define UART_CLK_DIVIDER_FOR_4800           (312u)
-#define UART_CLK_DIVIDER_FOR_2400           (625u)
-#define UART_CLK_DIVIDER_FOR_1200           (1250u)
-#define UART_CLK_DIVIDER_FOR_600            (2500u)
-#define UART_CLK_DIVIDER_FOR_300            (5000u)
+#define UART_CLK_DIVIDER_FOR_19200          (77u)
+#define UART_CLK_DIVIDER_FOR_9600           (155u)
+#define UART_CLK_DIVIDER_FOR_4800           (311u)
+#define UART_CLK_DIVIDER_FOR_2400           (624u)
+#define UART_CLK_DIVIDER_FOR_1200           (1249u)
+#define UART_CLK_DIVIDER_FOR_600            (2499u)
+#define UART_CLK_DIVIDER_FOR_300            (4999u)
 
 /* Commons Baud Rate */
 #define BD_300      '0'
@@ -151,8 +151,6 @@ int main()
             if(log == 0)
                 UART_2_UartPutString("La comunicacion fue un exito!\r\n");
         }
-        if(UART_2_UartGetChar() == 'a')
-            UART_2_UartPutString("La comunicacion fue un exito\r\n");
     }
 }
 
@@ -182,7 +180,6 @@ static void BaudRate(char baudios)
             UART_CLK_SetFractionalDividerRegister(UART_CLK_DIVIDER_FOR_300, 0u);
             break;
     }
-    
 }
 
 static void send(char8 bytes[], float tr)
@@ -226,32 +223,32 @@ static void substr(char8* substring , char8 *string, int start, int end)
 
 static void readlineCR(char8* line, int select)
 {
-    char8 ch[] = "";
+    char8 ch[2]="";
     strcpy(line,"");
     while (1)
     {
-        if(select == 1)
+        if(select == 1){
             ch[0] = UART_1_UartGetChar();
-        else if(select ==2)
-            ch[0] = UART_2_UartGetChar();
-        strcat(line, ch);
-        if ( strcmp(ch, "\r") || strcmp(ch,""))
-        {
-            break;
+            UART_2_UartPutChar(ch[0]);
         }
+        else if(select == 2)
+            ch[0] = UART_2_UartGetChar();
+        strcat(line,ch);
+        if(!strcmp(ch,"\r"))
+            break;
     }
 }
 
 static int read_datablock(char8 *data)
 {
     uint tr = 200;
-    char8 identification_message[32] = "";
-    char8 manufactures_id[6] = "";
-    char8 identification[] = "";            // meassure id
-    char8 speed[]="";
+    char8 identification_message[32]="";
+    char8 manufactures_id[6]="";
+    char8 identification[]="";              // meassure id
+    char8 speed[2]="";
     char8 acknowledgement_message[]="";
-    char8 ack[]="";
-    char8 ch[]="";                          // received character
+    char8 ack[2]="";
+    char8 ch[2]="";                         // received character
     int bcc;                                // block character controller
     
     BaudRate(BD_300);
@@ -290,13 +287,14 @@ static int read_datablock(char8 *data)
     // IEC 62056-21:2002(E) 6.3.3
     ack[0] = ACK;
     strcat(acknowledgement_message,ack);
+    strcat(acknowledgement_message,"0");
     strcat(acknowledgement_message,speed);
     strcat(acknowledgement_message,"0\r\n");
     send(acknowledgement_message, tr);
     
     UART_1_Stop();
     BaudRate(speed[0]);
-    UART_1_Start();
+    UART_1_Enable();
     CyDelay(tr);
     // 4 <-
     strcpy(data,"");
@@ -315,7 +313,7 @@ static int read_datablock(char8 *data)
             bcc = bcc ^ ch[0];
             ch[0] = UART_1_UartGetChar();
         }
-        bcc = bcc ^ ch[0];      // ETX itself is part of block check
+        bcc = bcc ^ ch[0];                  // ETX itself is part of block check
         ch[0] = UART_1_UartGetChar();       // ch[0] es ahora el BLOCK CHECK CHARACTER
         
         if(bcc != ch[0])

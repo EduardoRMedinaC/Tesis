@@ -4,6 +4,8 @@
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\cyfitter_cfg.h" value="NONE;" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\cyfitter_cfg.c" value="ARM_C_FILE;" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\protect.hex" value="NONE;" />
+  <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\cybootloader.icf" value="NONE;" />
+  <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\cybootloader.c" value="ARM_C_FILE;" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\cymetadata.c" value="ARM_C_FILE;" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\cydevice_trm.h" value="NONE;" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\cydevicegnu_trm.inc" value="NONE;" />
@@ -56,6 +58,8 @@
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\UART_2_BOOT.h" value="NONE;UART_2" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\UART_CLK.c" value="ARM_C_FILE;UART_CLK" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\UART_CLK.h" value="NONE;UART_CLK" />
+  <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\Bootloadable_1.c" value="ARM_C_FILE;Bootloadable_1" />
+  <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\Bootloadable_1.h" value="NONE;Bootloadable_1" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\UART_1_uart_rx_i2c_scl_spi_mosi.c" value="ARM_C_FILE;UART_1_uart_rx_i2c_scl_spi_mosi" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\UART_1_uart_rx_i2c_scl_spi_mosi.h" value="NONE;UART_1_uart_rx_i2c_scl_spi_mosi" />
   <file name="C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\codegentemp\UART_1_uart_rx_i2c_scl_spi_mosi_aliases.h" value="NONE;UART_1_uart_rx_i2c_scl_spi_mosi" />
