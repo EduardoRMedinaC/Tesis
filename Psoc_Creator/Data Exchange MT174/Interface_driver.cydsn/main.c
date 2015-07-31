@@ -17,9 +17,10 @@
 * Function Prototypes
 *******************************************************************************/
 static void BaudRate(char8 baudios);
-static void send(char8 bytes[], float tr);
+static void send(char8 bytes[], int tr);
 static int read_datablock(char8* data);
-static void readlineCR(char8* line, int select);
+cystatus readlineCR(char8* line, uint16 timeout);
+cystatus read (char8* buffer, uint16 size, uint16 timeOut);
 static void substr(char8* substring, char8* string, int start, int end);
 
 
@@ -30,7 +31,7 @@ static void substr(char8* substring, char8* string, int start, int end);
 #define NON_APPLICABLE  (DISABLED)
 
 /* RX and TX buffers UART operation */
-#define COMMON_BUFFER_SIZE     (16u)
+#define COMMON_BUFFER_SIZE     (8u)
 uint8 bufferTx[COMMON_BUFFER_SIZE];
 uint8 bufferRx[COMMON_BUFFER_SIZE + 1u];
 
@@ -102,7 +103,7 @@ const UART_1_UART_INIT_STRUCT configUart =
     DISABLED,                   /* multiprocAcceptAddr: disabled */
     NON_APPLICABLE,             /* multiprocAddr: N/A */
     NON_APPLICABLE,             /* multiprocAddrMask: N/A */
-    ENABLED,                    /* enableInterrupt: enable internal interrupt
+    DISABLED,                    /* enableInterrupt: enable internal interrupt
                                  * handler for the software buffer */
     UART_RX_INTR_MASK,          /* rxInterruptMask: enable INTR_RX.NOT_EMPTY to
                                  * handle RX software buffer operations */
@@ -119,9 +120,9 @@ const UART_1_UART_INIT_STRUCT configUart =
 /*************************************************************
 * Especial characters
 **************************************************************/
-#define ACK     0x06
-#define STX     0x02
-#define ETX     0x03
+#define ACK 0x06u
+#define STX 0x02u
+#define ETX 0x03u
 
 
 int main()
@@ -130,8 +131,9 @@ int main()
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     UART_1_UartInit(&configUart);
+    UART_1_Start();
     UART_2_Start();
-    char8 data[]="";
+    char8 data[10]="";
     int log;
 
     for(;;)
@@ -151,10 +153,11 @@ int main()
             if(log == 0)
                 UART_2_UartPutString("La comunicacion fue un exito!\r\n");
         }
+        UART_2_UartPutString(data);
     }
 }
 
-static void BaudRate(char baudios)
+static void BaudRate(char8 baudios)
 {   
     switch(baudios)
     {
@@ -182,7 +185,7 @@ static void BaudRate(char baudios)
     }
 }
 
-static void send(char8 bytes[], float tr)
+static void send(char8 *bytes, int tr)
 {
     /*
     sends an command to serial and reads and checks the echo
@@ -190,8 +193,28 @@ static void send(char8 bytes[], float tr)
     bytes - the string to be send
     tr    - the responce time
     */
+    int len = strlen(bytes);
+    char8 echo[10] = "";
+    char8 mensaje[55] = "bytes vs echo no son iguales(";
+    UART_1_SpiUartClearRxBuffer();
+    UART_1_SpiUartClearTxBuffer();
+    
     UART_1_UartPutString(bytes);
     CyDelay(tr);
+    
+    read(echo,len,1500);
+    if(strcmp(echo,bytes) != 0)
+    {    
+        strcat(mensaje,bytes);
+        strcat(mensaje,"vs");
+        strcat(mensaje,echo);
+        strcat(mensaje, ")\r\n");
+        UART_2_UartPutString(mensaje);
+    }
+    if(bytes[0] != echo[0])
+    {
+        UART_2_UartPutChar(echo[0]+'0');
+    }
 }
 
 static void substr(char8* substring , char8 *string, int start, int end)
@@ -199,7 +222,7 @@ static void substr(char8* substring , char8 *string, int start, int end)
     strcpy(substring,"");
     int large = strlen(string) -1;
     int init, last;
-    char8 c[]="";
+    char8 c[2]="";
     
     if(end > 0 && end <= large)
     {
@@ -221,44 +244,70 @@ static void substr(char8* substring , char8 *string, int start, int end)
     }
 }
 
-static void readlineCR(char8* line, int select)
+cystatus readlineCR(char8* line, uint16 timeout)
 {
+    int timeoutUs = timeout * 1000;
+    cystatus status = CYRET_TIMEOUT;
     char8 ch[2]="";
     strcpy(line,"");
-    while (1)
+    do
     {
-        if(select == 1){
+        if(UART_1_SpiUartGetRxBufferSize() > 0)
+        {
             ch[0] = UART_1_UartGetChar();
-            UART_2_UartPutChar(ch[0]);
+            strcat(line,ch);
+            timeoutUs = timeout * 1000;
+        } 
+        else
+        {
+            CyDelayUs(5);
+            timeoutUs -= 5;
         }
-        else if(select == 2)
-            ch[0] = UART_2_UartGetChar();
-        strcat(line,ch);
-        if(!strcmp(ch,"\r"))
-            break;
-    }
+    }while (ch[0] != '\n' && timeoutUs >= 0);
+    
+    return status;
+}
+
+cystatus read (char8* buffer, uint16 size, uint16 timeOut) {
+	int timeoutUs = timeOut * 1000;
+	cystatus status = CYRET_TIMEOUT;
+	
+	uint16 count = 0;
+	while(count < size && timeoutUs >= 0) {
+		if(UART_1_SpiUartGetRxBufferSize() > 0) {
+			buffer[count++] = UART_1_UartGetByte();
+			// Switch to byte-to-byte timeout and mark as success
+			timeoutUs = timeOut * 1000; //mS
+			status = CYRET_SUCCESS;
+		} else {
+			CyDelayUs(5);
+			timeoutUs -= 5;
+		}
+	}
+	return status;
 }
 
 static int read_datablock(char8 *data)
 {
-    uint tr = 200;
+    int16 tr = 200;
     char8 identification_message[32]="";
     char8 manufactures_id[6]="";
-    char8 identification[]="";              // meassure id
-    char8 speed[2]="";
-    char8 acknowledgement_message[]="";
-    char8 ack[2]="";
+    char8 identification[20]="";              // meassure id
+    char8 speed;
+    char8 acknowledgement_message[7]={ACK,'0','0','0','\r','\n','\0'};
     char8 ch[2]="";                         // received character
     int bcc;                                // block character controller
     
+    UART_1_Stop();
     BaudRate(BD_300);
-    UART_1_Start();
+    UART_1_Enable();
     // 1 ->
     CyDelay(tr);
     send("/?!\r\n", tr);     //IEC 62056-21:2002(E) 6.3.1
     //2 <-
     CyDelay(tr);
-    readlineCR(identification_message, 1);      //IEC 62056-21:2002(E) 6.3.2
+    readlineCR(identification_message,1500);      //IEC 62056-21:2002(E) 6.3.2
+    //UART_2_UartPutString(identification_message);
     if(strlen(identification_message) < 1 || identification_message[0] != '/')
     {
         UART_1_Stop();
@@ -269,52 +318,46 @@ static int read_datablock(char8 *data)
         UART_1_Stop();
         return 3;       // Identification Message too short
     }
-    if(islower(identification_message[4]))
-    {
+    if(islower(identification_message[3]))
         tr = 20;
-    }
     substr(manufactures_id, identification_message, 1, 4);
     if(identification_message[5] == '\\')
-    {
         substr(identification, identification_message, 7, -2);
-    }
     else
-    {
         substr(identification, identification_message, 5, -2);
-    }
-    speed[0] = identification_message[4];
+    speed = identification_message[4];
     // 3 ->
     // IEC 62056-21:2002(E) 6.3.3
-    ack[0] = ACK;
-    strcat(acknowledgement_message,ack);
-    strcat(acknowledgement_message,"0");
-    strcat(acknowledgement_message,speed);
-    strcat(acknowledgement_message,"0\r\n");
+    acknowledgement_message[2] = speed;
     send(acknowledgement_message, tr);
     
     UART_1_Stop();
-    BaudRate(speed[0]);
+    BaudRate(speed);
     UART_1_Enable();
+    UART_1_SpiUartClearRxBuffer();
     CyDelay(tr);
     // 4 <-
+    read(ch,1,2200);
     strcpy(data,"");
-    if(UART_1_UartGetChar() == STX)
+    if( ch[0] == STX)
     {
-        ch[0] = UART_1_UartGetChar();
+        read(ch,1,1500);
+        UART_2_UartPutString(ch);
         bcc = 0;
         while (ch[0] != '!')
         {
             bcc = bcc ^ ch[0];
-            strcat(data,ch);
-            ch[0] = UART_1_UartGetChar();
+            read(ch,1,1500);
+            UART_2_UartPutString(ch);
         }
         while (ch[0] != ETX)
         {
             bcc = bcc ^ ch[0];
-            ch[0] = UART_1_UartGetChar();
+            read(ch,1,1500);
+            UART_2_UartPutString(ch);
         }
         bcc = bcc ^ ch[0];                  // ETX itself is part of block check
-        ch[0] = UART_1_UartGetChar();       // ch[0] es ahora el BLOCK CHECK CHARACTER
+        read(ch,1,1500);                    // ch[0] es ahora el BLOCK CHECK CHARACTER
         
         if(bcc != ch[0])
         {

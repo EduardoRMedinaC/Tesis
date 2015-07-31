@@ -1,5 +1,5 @@
-C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\Interface_driver.cyprj|0a6e0118-7cba-4151-889c-346128e76155
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2441583e-39c2-4d75-b521-793c29422cc3
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|22d8f6cb-63c0-4722-9783-0aa202adb247
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e19edb82-77f9-4a33-ab14-2395f14655e8
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|019c64dd-4624-4cb4-81e9-0c5c5eec601e
+C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\Interface_driver.cyprj|bef009d0-1cb6-4dab-9697-2d8cf6f0352e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|74ef64af-3190-41ef-aa9b-e68cf6861eb6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e5d6c268-ea1e-4796-8101-78b7c16a0f17
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|248eab94-342a-4cf4-bd32-2c76d0bb15fd
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|dd8ff723-83a2-428d-93fd-2c910f866237
