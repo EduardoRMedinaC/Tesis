@@ -21,6 +21,7 @@
 static void BaudRate(char baudios);
 static void send(char bytes[], int tr);
 static int read_datablock(char* data);
+void mapping(char*data, char**map[]);
 cystatus readlineCR(char* line, uint16 timeout);
 cystatus read (char* buffer, uint16 size, uint16 timeOut);
 
@@ -134,6 +135,19 @@ int main()
     UART_2_Start();
     char data[10]="";
     int log;
+    
+    /************************************************************************
+    * map contiene el OBIS y la etiqueta de los parametros relevantes para
+    ser filtrados del bloque de datos
+    ************************************************************************/
+    char *serial[] = {"1-0:0.0.1*255","serial",NULL};
+	char *energia_activa[] = {"1-0:15.8.0*255","Energia Activa",NULL};
+	char *demanda_maxima[] = {"1-0:15.6.0*255","Demana Maxima",NULL};
+	char *corriente_l1[] = {"1-0:31.7.0*255","Corriente L1",NULL};
+	char *corriente_l2[] = {"1-0:51.7.0*255","Corriente L2",NULL};
+	char *corriente_l3[] = {"1-0:71.7.0*255","Corriente L3",NULL};
+
+	char **map[] = {serial, energia_activa, demanda_maxima, corriente_l1, corriente_l2,corriente_l3, NULL};
 
     for(;;)
     {
@@ -150,10 +164,46 @@ int main()
             if(log == 1)
                 UART_2_UartPutString("No se ha encontrado el STX\r\n");
             if(log == 0)
-                UART_2_UartPutString("La comunicacion fue un exito!\r\n");
+                mapping(data, map);
         }
-        UART_2_UartPutString(data);
+        //UART_2_UartPutString(data);
     }
+}
+
+void mapping(char *data, char **map[])
+{
+	char **breakCRLF, **obisValue;
+	char *obis, *value;
+	char *filter = malloc(sizeof(char)*28);
+    size_t index, idx;
+
+	strcpy(filter,"");
+	breakCRLF = split(data, "\n");
+
+	for(index = 0; *(breakCRLF + index); index++) 
+	{
+		if(strcmp(*(breakCRLF + index),""))
+		{
+			obisValue = split(*(breakCRLF + index),"(");
+			obis = *(obisValue);
+			value = substring(*(obisValue + 1),0,-2);
+			for(idx=0;*(map + idx);idx++)
+			{
+				if(!strcmp(**(map + idx),obis))
+				{
+					strcat(filter,*(*(map + idx) + 1));
+					strcat(filter,":");
+					strcat(filter,value);
+					UART_2_UartPutString(filter);
+					strcpy(filter,"");
+				}
+			}
+			free(value);
+		}
+		free(obisValue);
+	}
+	free(filter);
+	free(breakCRLF);
 }
 
 static void BaudRate(char8 baudios)
@@ -327,6 +377,7 @@ static int read_datablock(char *data)
         {
             bcc = bcc ^ ch[0];
             read(ch,1,1500);
+            strcat(data, ch);
             UART_2_UartPutString(ch);
         }
         while (ch[0] != ETX)
