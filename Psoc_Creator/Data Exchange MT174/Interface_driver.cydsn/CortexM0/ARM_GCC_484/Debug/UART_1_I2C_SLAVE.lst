@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
   30:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** volatile uint32  UART_1_slWrBufSize;     /* Slave Receive buffer size  */
   31:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** volatile uint32  UART_1_slWrBufIndex;    /* Slave Receive buffer Index */
   32:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 2
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** /* Transmit buffer variables */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
   41              		.size	UART_1_SetI2cAddressCustomInterruptHandler, .-UART_1_SetI2cAddressCustomInterruptHandler
   42              		.section	.text.UART_1_I2CSlaveStatus,"ax",%progbits
   43              		.align	2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 3
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 3
 
 
   44              		.global	UART_1_I2CSlaveStatus
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
   96:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** 
   97:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** 
   98:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** /*******************************************************************************
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 4
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 4
 
 
   99:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** * Function Name: UART_1_I2CSlaveClearReadStatus
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  128:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c ****     return(status);
  129:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** }
   99              		.loc 1 129 0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 5
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 5
 
 
  100 001e 201C     		mov	r0, r4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  155:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** 
  156:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c ****     /* Mask of transfer complete flag and Error status */
  157:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c ****     status = ((uint32) UART_1_slStatus & UART_1_I2C_SSTAT_WR_MASK);
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 6
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 6
 
 
  129              		.loc 1 157 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  177:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** * Return:
  178:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *  None
  179:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 7
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 7
 
 
  180:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *******************************************************************************/
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  197:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *
  198:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** * Summary:
  199:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *  Sets the I2C slave address mask.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 8
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 8
 
 
  200:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  234              		.thumb_func
  235              		.type	UART_1_I2CSlaveInitReadBuf, %function
  236              	UART_1_I2CSlaveInitReadBuf:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 9
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 9
 
 
  237              	.LFB6:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  255:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** 
  256:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c ****         UART_1_slRdBufPtr      = (volatile uint8 *) rdBuf; /* Set buffer pointer  */
  257              		.loc 1 256 0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 10
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 10
 
 
  258 0010 064B     		ldr	r3, .L21
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  271:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *  Sets the buffer pointer and size of the read buffer. This function also
  272:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *  resets the transfer count returned with the I2C_SlaveGetReadBufSize function.
  273:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 11
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 11
 
 
  274:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** * Parameters:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  324 0018 0022     		mov	r2, #0
  325 001a 054B     		ldr	r3, .L25+8
  326 001c 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 12
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 12
 
 
  302:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  329:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c **** {
  354              		.loc 1 329 0
  355              		.cfi_startproc
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 13
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 13
 
 
  330:.\Generated_Source\PSoC4/UART_1_I2C_SLAVE.c ****     return(UART_1_slRdBufIndex);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  382              		.loc 1 357 0
  383              		@ sp needed
  384 0004 7047     		bx	lr
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 14
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 14
 
 
  385              	.L32:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  414              	.LFE10:
  415              		.size	UART_1_I2CSlaveClearReadBuf, .-UART_1_I2CSlaveClearReadBuf
  416              		.section	.text.UART_1_I2CSlaveClearWriteBuf,"ax",%progbits
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 15
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 15
 
 
  417              		.align	2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  446              		.comm	UART_1_slWrBufIndex,4,4
  447              		.comm	UART_1_slWrBufSize,4,4
  448              		.comm	UART_1_slWrBufPtr,4,4
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 16
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 16
 
 
  449              		.comm	UART_1_slStatus,1,1
@@ -920,48 +920,48 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  465 0006 00000000 		.4byte	.Ldebug_abbrev0
  466 000a 04       		.byte	0x4
  467 000b 01       		.uleb128 0x1
- 468 000c 4E010000 		.4byte	.LASF46
+ 468 000c 35010000 		.4byte	.LASF46
  469 0010 01       		.byte	0x1
- 470 0011 88000000 		.4byte	.LASF47
- 471 0015 18000000 		.4byte	.LASF48
+ 470 0011 1F000000 		.4byte	.LASF47
+ 471 0015 5E000000 		.4byte	.LASF48
  472 0019 00000000 		.4byte	.Ldebug_ranges0+0
  473 001d 00000000 		.4byte	0
  474 0021 00000000 		.4byte	.Ldebug_line0
  475 0025 02       		.uleb128 0x2
  476 0026 01       		.byte	0x1
  477 0027 06       		.byte	0x6
- 478 0028 35040000 		.4byte	.LASF0
+ 478 0028 1C040000 		.4byte	.LASF0
  479 002c 02       		.uleb128 0x2
  480 002d 01       		.byte	0x1
  481 002e 08       		.byte	0x8
- 482 002f CA010000 		.4byte	.LASF1
+ 482 002f B1010000 		.4byte	.LASF1
  483 0033 02       		.uleb128 0x2
  484 0034 02       		.byte	0x2
  485 0035 05       		.byte	0x5
- 486 0036 F1030000 		.4byte	.LASF2
+ 486 0036 D8030000 		.4byte	.LASF2
  487 003a 02       		.uleb128 0x2
  488 003b 02       		.byte	0x2
  489 003c 07       		.byte	0x7
- 490 003d B4000000 		.4byte	.LASF3
+ 490 003d 4B000000 		.4byte	.LASF3
  491 0041 02       		.uleb128 0x2
  492 0042 04       		.byte	0x4
  493 0043 05       		.byte	0x5
- 494 0044 03040000 		.4byte	.LASF4
+ 494 0044 EA030000 		.4byte	.LASF4
  495 0048 02       		.uleb128 0x2
  496 0049 04       		.byte	0x4
  497 004a 07       		.byte	0x7
- 498 004b 14020000 		.4byte	.LASF5
+ 498 004b FB010000 		.4byte	.LASF5
  499 004f 02       		.uleb128 0x2
  500 0050 08       		.byte	0x8
  501 0051 05       		.byte	0x5
- 502 0052 87030000 		.4byte	.LASF6
+ 502 0052 6E030000 		.4byte	.LASF6
  503 0056 02       		.uleb128 0x2
  504 0057 08       		.byte	0x8
  505 0058 07       		.byte	0x7
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 17
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 17
 
 
- 506 0059 06030000 		.4byte	.LASF7
+ 506 0059 ED020000 		.4byte	.LASF7
  507 005d 03       		.uleb128 0x3
  508 005e 04       		.byte	0x4
  509 005f 05       		.byte	0x5
@@ -969,29 +969,29 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  511 0064 02       		.uleb128 0x2
  512 0065 04       		.byte	0x4
  513 0066 07       		.byte	0x7
- 514 0067 D4020000 		.4byte	.LASF8
+ 514 0067 BB020000 		.4byte	.LASF8
  515 006b 04       		.uleb128 0x4
- 516 006c 42020000 		.4byte	.LASF9
+ 516 006c 29020000 		.4byte	.LASF9
  517 0070 02       		.byte	0x2
  518 0071 B3       		.byte	0xb3
  519 0072 2C000000 		.4byte	0x2c
  520 0076 04       		.uleb128 0x4
- 521 0077 CD020000 		.4byte	.LASF10
+ 521 0077 B4020000 		.4byte	.LASF10
  522 007b 02       		.byte	0x2
  523 007c B5       		.byte	0xb5
  524 007d 48000000 		.4byte	0x48
  525 0081 02       		.uleb128 0x2
  526 0082 04       		.byte	0x4
  527 0083 04       		.byte	0x4
- 528 0084 34010000 		.4byte	.LASF11
+ 528 0084 1B010000 		.4byte	.LASF11
  529 0088 02       		.uleb128 0x2
  530 0089 08       		.byte	0x8
  531 008a 04       		.byte	0x4
- 532 008b 99020000 		.4byte	.LASF12
+ 532 008b 80020000 		.4byte	.LASF12
  533 008f 02       		.uleb128 0x2
  534 0090 01       		.byte	0x1
  535 0091 08       		.byte	0x8
- 536 0092 95030000 		.4byte	.LASF13
+ 536 0092 7C030000 		.4byte	.LASF13
  537 0096 05       		.uleb128 0x5
  538 0097 6B000000 		.4byte	0x6b
  539 009b 06       		.uleb128 0x6
@@ -1004,9 +1004,9 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  546 00ac 02       		.uleb128 0x2
  547 00ad 04       		.byte	0x4
  548 00ae 07       		.byte	0x7
- 549 00af 7E030000 		.4byte	.LASF15
+ 549 00af 65030000 		.4byte	.LASF15
  550 00b3 07       		.uleb128 0x7
- 551 00b4 B9030000 		.4byte	.LASF19
+ 551 00b4 A0030000 		.4byte	.LASF19
  552 00b8 01       		.byte	0x1
  553 00b9 43       		.byte	0x43
  554 00ba 00000000 		.4byte	.LFB0
@@ -1015,10 +1015,10 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  557 00c3 9C       		.byte	0x9c
  558 00c4 D6000000 		.4byte	0xd6
  559 00c8 08       		.uleb128 0x8
- 560 00c9 A0020000 		.4byte	.LASF21
+ 560 00c9 87020000 		.4byte	.LASF21
  561 00cd 01       		.byte	0x1
  562 00ce 43       		.byte	0x43
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 18
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 18
 
 
  563 00cf DB000000 		.4byte	0xdb
@@ -1031,7 +1031,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  570 00dc 04       		.byte	0x4
  571 00dd D6000000 		.4byte	0xd6
  572 00e1 0B       		.uleb128 0xb
- 573 00e2 02010000 		.4byte	.LASF31
+ 573 00e2 E9000000 		.4byte	.LASF31
  574 00e6 01       		.byte	0x1
  575 00e7 5C       		.byte	0x5c
  576 00e8 76000000 		.4byte	0x76
@@ -1040,7 +1040,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  579 00f4 01       		.uleb128 0x1
  580 00f5 9C       		.byte	0x9c
  581 00f6 0C       		.uleb128 0xc
- 582 00f7 7A020000 		.4byte	.LASF16
+ 582 00f7 61020000 		.4byte	.LASF16
  583 00fb 01       		.byte	0x1
  584 00fc 74       		.byte	0x74
  585 00fd 76000000 		.4byte	0x76
@@ -1050,7 +1050,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  589 010a 9C       		.byte	0x9c
  590 010b 41010000 		.4byte	0x141
  591 010f 0D       		.uleb128 0xd
- 592 0110 C7000000 		.4byte	.LASF18
+ 592 0110 06000000 		.4byte	.LASF18
  593 0114 01       		.byte	0x1
  594 0115 76       		.byte	0x76
  595 0116 76000000 		.4byte	0x76
@@ -1076,9 +1076,9 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  615 013f 00       		.byte	0
  616 0140 00       		.byte	0
  617 0141 0C       		.uleb128 0xc
- 618 0142 0C040000 		.4byte	.LASF17
+ 618 0142 F3030000 		.4byte	.LASF17
  619 0146 01       		.byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 19
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 19
 
 
  620 0147 96       		.byte	0x96
@@ -1089,7 +1089,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  625 0155 9C       		.byte	0x9c
  626 0156 8C010000 		.4byte	0x18c
  627 015a 0D       		.uleb128 0xd
- 628 015b C7000000 		.4byte	.LASF18
+ 628 015b 06000000 		.4byte	.LASF18
  629 015f 01       		.byte	0x1
  630 0160 98       		.byte	0x98
  631 0161 76000000 		.4byte	0x76
@@ -1115,7 +1115,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  651 018a 00       		.byte	0
  652 018b 00       		.byte	0
  653 018c 07       		.uleb128 0x7
- 654 018d 5A020000 		.4byte	.LASF20
+ 654 018d 41020000 		.4byte	.LASF20
  655 0191 01       		.byte	0x1
  656 0192 B5       		.byte	0xb5
  657 0193 00000000 		.4byte	.LFB4
@@ -1124,21 +1124,21 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  660 019c 9C       		.byte	0x9c
  661 019d C0010000 		.4byte	0x1c0
  662 01a1 11       		.uleb128 0x11
- 663 01a2 FE020000 		.4byte	.LASF22
+ 663 01a2 E5020000 		.4byte	.LASF22
  664 01a6 01       		.byte	0x1
  665 01a7 B5       		.byte	0xb5
  666 01a8 76000000 		.4byte	0x76
  667 01ac 3C000000 		.4byte	.LLST2
  668 01b0 0D       		.uleb128 0xd
- 669 01b1 2C040000 		.4byte	.LASF23
+ 669 01b1 13040000 		.4byte	.LASF23
  670 01b5 01       		.byte	0x1
  671 01b6 B7       		.byte	0xb7
  672 01b7 76000000 		.4byte	0x76
  673 01bb 5D000000 		.4byte	.LLST3
  674 01bf 00       		.byte	0
  675 01c0 07       		.uleb128 0x7
- 676 01c1 D8010000 		.4byte	.LASF24
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 20
+ 676 01c1 BF010000 		.4byte	.LASF24
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 20
 
 
  677 01c5 01       		.byte	0x1
@@ -1149,20 +1149,20 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  682 01d0 9C       		.byte	0x9c
  683 01d1 F4010000 		.4byte	0x1f4
  684 01d5 11       		.uleb128 0x11
- 685 01d6 1D030000 		.4byte	.LASF25
+ 685 01d6 04030000 		.4byte	.LASF25
  686 01da 01       		.byte	0x1
  687 01db D2       		.byte	0xd2
  688 01dc 76000000 		.4byte	0x76
  689 01e0 7B000000 		.4byte	.LLST4
  690 01e4 0D       		.uleb128 0xd
- 691 01e5 2C040000 		.4byte	.LASF23
+ 691 01e5 13040000 		.4byte	.LASF23
  692 01e9 01       		.byte	0x1
  693 01ea D4       		.byte	0xd4
  694 01eb 76000000 		.4byte	0x76
  695 01ef 9C000000 		.4byte	.LLST5
  696 01f3 00       		.byte	0
  697 01f4 07       		.uleb128 0x7
- 698 01f5 CE000000 		.4byte	.LASF26
+ 698 01f5 B5000000 		.4byte	.LASF26
  699 01f9 01       		.byte	0x1
  700 01fa F9       		.byte	0xf9
  701 01fb 00000000 		.4byte	.LFB6
@@ -1171,13 +1171,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  704 0204 9C       		.byte	0x9c
  705 0205 4A020000 		.4byte	0x24a
  706 0209 11       		.uleb128 0x11
- 707 020a E9000000 		.4byte	.LASF27
+ 707 020a D0000000 		.4byte	.LASF27
  708 020e 01       		.byte	0x1
  709 020f F9       		.byte	0xf9
  710 0210 4A020000 		.4byte	0x24a
  711 0214 C5000000 		.4byte	.LLST6
  712 0218 11       		.uleb128 0x11
- 713 0219 FB030000 		.4byte	.LASF28
+ 713 0219 E2030000 		.4byte	.LASF28
  714 021d 01       		.byte	0x1
  715 021e F9       		.byte	0xf9
  716 021f 76000000 		.4byte	0x76
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  731 0243 0F       		.uleb128 0xf
  732 0244 01       		.uleb128 0x1
  733 0245 50       		.byte	0x50
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 21
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 21
 
 
  734 0246 01       		.uleb128 0x1
@@ -1209,7 +1209,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  739 024b 04       		.byte	0x4
  740 024c 6B000000 		.4byte	0x6b
  741 0250 12       		.uleb128 0x12
- 742 0251 26020000 		.4byte	.LASF29
+ 742 0251 0D020000 		.4byte	.LASF29
  743 0255 01       		.byte	0x1
  744 0256 2401     		.2byte	0x124
  745 0258 00000000 		.4byte	.LFB7
@@ -1218,13 +1218,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  748 0261 9C       		.byte	0x9c
  749 0262 A9020000 		.4byte	0x2a9
  750 0266 13       		.uleb128 0x13
- 751 0267 74020000 		.4byte	.LASF30
+ 751 0267 5B020000 		.4byte	.LASF30
  752 026b 01       		.byte	0x1
  753 026c 2401     		.2byte	0x124
  754 026e 4A020000 		.4byte	0x24a
  755 0272 1D010000 		.4byte	.LLST8
  756 0276 13       		.uleb128 0x13
- 757 0277 FB030000 		.4byte	.LASF28
+ 757 0277 E2030000 		.4byte	.LASF28
  758 027b 01       		.byte	0x1
  759 027c 2401     		.2byte	0x124
  760 027e 76000000 		.4byte	0x76
@@ -1250,7 +1250,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  780 02a7 00       		.byte	0
  781 02a8 00       		.byte	0
  782 02a9 14       		.uleb128 0x14
- 783 02aa F6010000 		.4byte	.LASF32
+ 783 02aa DD010000 		.4byte	.LASF32
  784 02ae 01       		.byte	0x1
  785 02af 4801     		.2byte	0x148
  786 02b1 76000000 		.4byte	0x76
@@ -1258,11 +1258,11 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  788 02b9 0C000000 		.4byte	.LFE8-.LFB8
  789 02bd 01       		.uleb128 0x1
  790 02be 9C       		.byte	0x9c
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 22
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 22
 
 
  791 02bf 14       		.uleb128 0x14
- 792 02c0 9A030000 		.4byte	.LASF33
+ 792 02c0 81030000 		.4byte	.LASF33
  793 02c4 01       		.byte	0x1
  794 02c5 6201     		.2byte	0x162
  795 02c7 76000000 		.4byte	0x76
@@ -1271,7 +1271,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  798 02d3 01       		.uleb128 0x1
  799 02d4 9C       		.byte	0x9c
  800 02d5 15       		.uleb128 0x15
- 801 02d6 B1020000 		.4byte	.LASF34
+ 801 02d6 98020000 		.4byte	.LASF34
  802 02da 01       		.byte	0x1
  803 02db 7B01     		.2byte	0x17b
  804 02dd 00000000 		.4byte	.LFB10
@@ -1279,7 +1279,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  806 02e5 01       		.uleb128 0x1
  807 02e6 9C       		.byte	0x9c
  808 02e7 15       		.uleb128 0x15
- 809 02e8 E1020000 		.4byte	.LASF35
+ 809 02e8 C8020000 		.4byte	.LASF35
  810 02ec 01       		.byte	0x1
  811 02ed 9401     		.2byte	0x194
  812 02ef 00000000 		.4byte	.LFB11
@@ -1287,7 +1287,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  814 02f7 01       		.uleb128 0x1
  815 02f8 9C       		.byte	0x9c
  816 02f9 16       		.uleb128 0x16
- 817 02fa 41040000 		.4byte	.LASF36
+ 817 02fa 28040000 		.4byte	.LASF36
  818 02fe 01       		.byte	0x1
  819 02ff 1A       		.byte	0x1a
  820 0300 96000000 		.4byte	0x96
@@ -1295,7 +1295,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  822 0305 03       		.byte	0x3
  823 0306 00000000 		.4byte	UART_1_slStatus
  824 030a 16       		.uleb128 0x16
- 825 030b 48020000 		.4byte	.LASF37
+ 825 030b 2F020000 		.4byte	.LASF37
  826 030f 01       		.byte	0x1
  827 0310 1D       		.byte	0x1d
  828 0311 1B030000 		.4byte	0x31b
@@ -1306,7 +1306,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  833 031c 04       		.byte	0x4
  834 031d 96000000 		.4byte	0x96
  835 0321 16       		.uleb128 0x16
- 836 0322 29030000 		.4byte	.LASF38
+ 836 0322 10030000 		.4byte	.LASF38
  837 0326 01       		.byte	0x1
  838 0327 1E       		.byte	0x1e
  839 0328 A7000000 		.4byte	0xa7
@@ -1314,18 +1314,18 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  841 032d 03       		.byte	0x3
  842 032e 00000000 		.4byte	UART_1_slWrBufSize
  843 0332 16       		.uleb128 0x16
- 844 0333 3A010000 		.4byte	.LASF39
+ 844 0333 21010000 		.4byte	.LASF39
  845 0337 01       		.byte	0x1
  846 0338 1F       		.byte	0x1f
  847 0339 A7000000 		.4byte	0xa7
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 23
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 23
 
 
  848 033d 05       		.uleb128 0x5
  849 033e 03       		.byte	0x3
  850 033f 00000000 		.4byte	UART_1_slWrBufIndex
  851 0343 16       		.uleb128 0x16
- 852 0344 06000000 		.4byte	.LASF40
+ 852 0344 0D000000 		.4byte	.LASF40
  853 0348 01       		.byte	0x1
  854 0349 22       		.byte	0x22
  855 034a 1B030000 		.4byte	0x31b
@@ -1333,7 +1333,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  857 034f 03       		.byte	0x3
  858 0350 00000000 		.4byte	UART_1_slRdBufPtr
  859 0354 16       		.uleb128 0x16
- 860 0355 EF000000 		.4byte	.LASF41
+ 860 0355 D6000000 		.4byte	.LASF41
  861 0359 01       		.byte	0x1
  862 035a 23       		.byte	0x23
  863 035b A7000000 		.4byte	0xa7
@@ -1341,7 +1341,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  865 0360 03       		.byte	0x3
  866 0361 00000000 		.4byte	UART_1_slRdBufSize
  867 0365 16       		.uleb128 0x16
- 868 0366 3C030000 		.4byte	.LASF42
+ 868 0366 23030000 		.4byte	.LASF42
  869 036a 01       		.byte	0x1
  870 036b 24       		.byte	0x24
  871 036c A7000000 		.4byte	0xa7
@@ -1349,7 +1349,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  873 0371 03       		.byte	0x3
  874 0372 00000000 		.4byte	UART_1_slRdBufIndex
  875 0376 16       		.uleb128 0x16
- 876 0377 50030000 		.4byte	.LASF43
+ 876 0377 37030000 		.4byte	.LASF43
  877 037b 01       		.byte	0x1
  878 037c 25       		.byte	0x25
  879 037d A7000000 		.4byte	0xa7
@@ -1357,7 +1357,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  881 0382 03       		.byte	0x3
  882 0383 00000000 		.4byte	UART_1_slRdBufIndexTmp
  883 0387 16       		.uleb128 0x16
- 884 0388 67030000 		.4byte	.LASF44
+ 884 0388 4E030000 		.4byte	.LASF44
  885 038c 01       		.byte	0x1
  886 038d 26       		.byte	0x26
  887 038e 96000000 		.4byte	0x96
@@ -1365,7 +1365,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  889 0393 03       		.byte	0x3
  890 0394 00000000 		.4byte	UART_1_slOverFlowCount
  891 0398 16       		.uleb128 0x16
- 892 0399 18010000 		.4byte	.LASF45
+ 892 0399 FF000000 		.4byte	.LASF45
  893 039d 01       		.byte	0x1
  894 039e 2A       		.byte	0x2a
  895 039f DB000000 		.4byte	0xdb
@@ -1373,18 +1373,18 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  897 03a4 03       		.byte	0x3
  898 03a5 00000000 		.4byte	UART_1_customAddressHandler
  899 03a9 17       		.uleb128 0x17
- 900 03aa E4030000 		.4byte	.LASF49
+ 900 03aa CB030000 		.4byte	.LASF49
  901 03ae 03       		.byte	0x3
  902 03af 4E       		.byte	0x4e
  903 03b0 BA030000 		.4byte	0x3ba
  904 03b4 18       		.uleb128 0x18
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 24
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 24
 
 
  905 03b5 6B000000 		.4byte	0x6b
  906 03b9 00       		.byte	0
  907 03ba 19       		.uleb128 0x19
- 908 03bb A5020000 		.4byte	.LASF50
+ 908 03bb 8C020000 		.4byte	.LASF50
  909 03bf 03       		.byte	0x3
  910 03c0 4C       		.byte	0x4c
  911 03c1 18       		.uleb128 0x18
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  959 002a 16       		.uleb128 0x16
  960 002b 00       		.byte	0
  961 002c 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 25
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 25
 
 
  962 002d 0E       		.uleb128 0xe
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1016 0064 08       		.uleb128 0x8
  1017 0065 05       		.uleb128 0x5
  1018 0066 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 26
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 26
 
 
  1019 0067 03       		.uleb128 0x3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1073 009e 00       		.byte	0
  1074 009f 0C       		.uleb128 0xc
  1075 00a0 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 27
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 27
 
 
  1076 00a1 01       		.byte	0x1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1130 00dc 02       		.uleb128 0x2
  1131 00dd 18       		.uleb128 0x18
  1132 00de 9142     		.uleb128 0x2111
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 28
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 28
 
 
  1133 00e0 18       		.uleb128 0x18
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1187 0119 00       		.byte	0
  1188 011a 03       		.uleb128 0x3
  1189 011b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 29
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 29
 
 
  1190 011c 3A       		.uleb128 0x3a
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1244 0153 9742     		.uleb128 0x2117
  1245 0155 19       		.uleb128 0x19
  1246 0156 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 30
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 30
 
 
  1247 0157 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1301 018d 0B       		.uleb128 0xb
  1302 018e 27       		.uleb128 0x27
  1303 018f 19       		.uleb128 0x19
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 31
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 31
 
 
  1304 0190 3C       		.uleb128 0x3c
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1358              	.LLST4:
  1359 007b 00000000 		.4byte	.LVL14
  1360 007f 0A000000 		.4byte	.LVL17
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 32
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 32
 
 
  1361 0083 0100     		.2byte	0x1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1415 010b 3C000000 		.4byte	.LFE6
  1416 010f 0400     		.2byte	0x4
  1417 0111 F3       		.byte	0xf3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 33
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 33
 
 
  1418 0112 01       		.uleb128 0x1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1472 0024 28000000 		.4byte	.LFE2-.LFB2
  1473 0028 00000000 		.4byte	.LFB3
  1474 002c 28000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 34
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 34
 
 
  1475 0030 00000000 		.4byte	.LFB4
@@ -2037,287 +2037,282 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 1
  1524              	.LASF14:
  1525 0000 72656733 		.ascii	"reg32\000"
  1525      3200
- 1526              	.LASF40:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 35
+ 1526              	.LASF18:
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 35
 
 
- 1527 0006 55415254 		.ascii	"UART_1_slRdBufPtr\000"
- 1527      5F315F73 
- 1527      6C526442 
- 1527      75665074 
- 1527      7200
- 1528              	.LASF48:
- 1529 0018 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
- 1529      73657273 
- 1529      5C4D6172 
- 1529      63656C6F 
- 1529      5C446F63 
- 1530 0046 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
- 1530      686F6761 
- 1530      725C5073 
- 1530      6F635F43 
- 1530      72656174 
- 1531 0076 66616365 		.ascii	"face_driver.cydsn\000"
- 1531      5F647269 
- 1531      7665722E 
- 1531      63796473 
- 1531      6E00
- 1532              	.LASF47:
- 1533 0088 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_I2C_SLAVE.c\000"
- 1533      6E657261 
- 1533      7465645F 
- 1533      536F7572 
- 1533      63655C50 
- 1534              	.LASF3:
- 1535 00b4 73686F72 		.ascii	"short unsigned int\000"
- 1535      7420756E 
- 1535      7369676E 
- 1535      65642069 
- 1535      6E7400
- 1536              	.LASF18:
- 1537 00c7 73746174 		.ascii	"status\000"
- 1537      757300
- 1538              	.LASF26:
- 1539 00ce 55415254 		.ascii	"UART_1_I2CSlaveInitReadBuf\000"
- 1539      5F315F49 
- 1539      3243536C 
- 1539      61766549 
- 1539      6E697452 
- 1540              	.LASF27:
- 1541 00e9 72644275 		.ascii	"rdBuf\000"
- 1541      6600
- 1542              	.LASF41:
- 1543 00ef 55415254 		.ascii	"UART_1_slRdBufSize\000"
- 1543      5F315F73 
- 1543      6C526442 
- 1543      75665369 
- 1543      7A6500
- 1544              	.LASF31:
- 1545 0102 55415254 		.ascii	"UART_1_I2CSlaveStatus\000"
- 1545      5F315F49 
- 1545      3243536C 
- 1545      61766553 
- 1545      74617475 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 36
+ 1527 0006 73746174 		.ascii	"status\000"
+ 1527      757300
+ 1528              	.LASF40:
+ 1529 000d 55415254 		.ascii	"UART_1_slRdBufPtr\000"
+ 1529      5F315F73 
+ 1529      6C526442 
+ 1529      75665074 
+ 1529      7200
+ 1530              	.LASF47:
+ 1531 001f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_I2C_SLAVE.c\000"
+ 1531      6E657261 
+ 1531      7465645F 
+ 1531      536F7572 
+ 1531      63655C50 
+ 1532              	.LASF3:
+ 1533 004b 73686F72 		.ascii	"short unsigned int\000"
+ 1533      7420756E 
+ 1533      7369676E 
+ 1533      65642069 
+ 1533      6E7400
+ 1534              	.LASF48:
+ 1535 005e 433A5C55 		.ascii	"C:\\Users\\marce\\Documents\\Tesis\\Psoc_Creator\\D"
+ 1535      73657273 
+ 1535      5C6D6172 
+ 1535      63655C44 
+ 1535      6F63756D 
+ 1536 008b 61746120 		.ascii	"ata Exchange MT174\\Interface_driver.cydsn\000"
+ 1536      45786368 
+ 1536      616E6765 
+ 1536      204D5431 
+ 1536      37345C49 
+ 1537              	.LASF26:
+ 1538 00b5 55415254 		.ascii	"UART_1_I2CSlaveInitReadBuf\000"
+ 1538      5F315F49 
+ 1538      3243536C 
+ 1538      61766549 
+ 1538      6E697452 
+ 1539              	.LASF27:
+ 1540 00d0 72644275 		.ascii	"rdBuf\000"
+ 1540      6600
+ 1541              	.LASF41:
+ 1542 00d6 55415254 		.ascii	"UART_1_slRdBufSize\000"
+ 1542      5F315F73 
+ 1542      6C526442 
+ 1542      75665369 
+ 1542      7A6500
+ 1543              	.LASF31:
+ 1544 00e9 55415254 		.ascii	"UART_1_I2CSlaveStatus\000"
+ 1544      5F315F49 
+ 1544      3243536C 
+ 1544      61766553 
+ 1544      74617475 
+ 1545              	.LASF45:
+ 1546 00ff 55415254 		.ascii	"UART_1_customAddressHandler\000"
+ 1546      5F315F63 
+ 1546      7573746F 
+ 1546      6D416464 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 36
 
 
- 1546              	.LASF45:
- 1547 0118 55415254 		.ascii	"UART_1_customAddressHandler\000"
- 1547      5F315F63 
- 1547      7573746F 
- 1547      6D416464 
- 1547      72657373 
- 1548              	.LASF11:
- 1549 0134 666C6F61 		.ascii	"float\000"
- 1549      7400
- 1550              	.LASF39:
- 1551 013a 55415254 		.ascii	"UART_1_slWrBufIndex\000"
- 1551      5F315F73 
- 1551      6C577242 
- 1551      7566496E 
- 1551      64657800 
- 1552              	.LASF46:
- 1553 014e 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 1553      4320342E 
- 1553      382E3420 
- 1553      32303134 
- 1553      30353236 
- 1554 0181 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 1554      20726576 
- 1554      6973696F 
- 1554      6E203231 
- 1554      31333538 
- 1555 01b4 67202D66 		.ascii	"g -ffunction-sections\000"
- 1555      66756E63 
- 1555      74696F6E 
- 1555      2D736563 
- 1555      74696F6E 
- 1556              	.LASF1:
- 1557 01ca 756E7369 		.ascii	"unsigned char\000"
- 1557      676E6564 
- 1557      20636861 
- 1557      7200
- 1558              	.LASF24:
- 1559 01d8 55415254 		.ascii	"UART_1_I2CSlaveSetAddressMask\000"
- 1559      5F315F49 
- 1559      3243536C 
- 1559      61766553 
- 1559      65744164 
- 1560              	.LASF32:
- 1561 01f6 55415254 		.ascii	"UART_1_I2CSlaveGetReadBufSize\000"
- 1561      5F315F49 
- 1561      3243536C 
- 1561      61766547 
- 1561      65745265 
- 1562              	.LASF5:
- 1563 0214 6C6F6E67 		.ascii	"long unsigned int\000"
- 1563      20756E73 
- 1563      69676E65 
- 1563      6420696E 
- 1563      7400
- 1564              	.LASF29:
- 1565 0226 55415254 		.ascii	"UART_1_I2CSlaveInitWriteBuf\000"
- 1565      5F315F49 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 37
+ 1546      72657373 
+ 1547              	.LASF11:
+ 1548 011b 666C6F61 		.ascii	"float\000"
+ 1548      7400
+ 1549              	.LASF39:
+ 1550 0121 55415254 		.ascii	"UART_1_slWrBufIndex\000"
+ 1550      5F315F73 
+ 1550      6C577242 
+ 1550      7566496E 
+ 1550      64657800 
+ 1551              	.LASF46:
+ 1552 0135 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1552      4320342E 
+ 1552      382E3420 
+ 1552      32303134 
+ 1552      30353236 
+ 1553 0168 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1553      20726576 
+ 1553      6973696F 
+ 1553      6E203231 
+ 1553      31333538 
+ 1554 019b 67202D66 		.ascii	"g -ffunction-sections\000"
+ 1554      66756E63 
+ 1554      74696F6E 
+ 1554      2D736563 
+ 1554      74696F6E 
+ 1555              	.LASF1:
+ 1556 01b1 756E7369 		.ascii	"unsigned char\000"
+ 1556      676E6564 
+ 1556      20636861 
+ 1556      7200
+ 1557              	.LASF24:
+ 1558 01bf 55415254 		.ascii	"UART_1_I2CSlaveSetAddressMask\000"
+ 1558      5F315F49 
+ 1558      3243536C 
+ 1558      61766553 
+ 1558      65744164 
+ 1559              	.LASF32:
+ 1560 01dd 55415254 		.ascii	"UART_1_I2CSlaveGetReadBufSize\000"
+ 1560      5F315F49 
+ 1560      3243536C 
+ 1560      61766547 
+ 1560      65745265 
+ 1561              	.LASF5:
+ 1562 01fb 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1562      20756E73 
+ 1562      69676E65 
+ 1562      6420696E 
+ 1562      7400
+ 1563              	.LASF29:
+ 1564 020d 55415254 		.ascii	"UART_1_I2CSlaveInitWriteBuf\000"
+ 1564      5F315F49 
+ 1564      3243536C 
+ 1564      61766549 
+ 1564      6E697457 
+ 1565              	.LASF9:
+ 1566 0229 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 37
 
 
- 1565      3243536C 
- 1565      61766549 
- 1565      6E697457 
- 1566              	.LASF9:
- 1567 0242 75696E74 		.ascii	"uint8\000"
- 1567      3800
- 1568              	.LASF37:
- 1569 0248 55415254 		.ascii	"UART_1_slWrBufPtr\000"
- 1569      5F315F73 
- 1569      6C577242 
- 1569      75665074 
- 1569      7200
- 1570              	.LASF20:
- 1571 025a 55415254 		.ascii	"UART_1_I2CSlaveSetAddress\000"
- 1571      5F315F49 
- 1571      3243536C 
- 1571      61766553 
- 1571      65744164 
- 1572              	.LASF30:
- 1573 0274 77724275 		.ascii	"wrBuf\000"
- 1573      6600
- 1574              	.LASF16:
- 1575 027a 55415254 		.ascii	"UART_1_I2CSlaveClearReadStatus\000"
- 1575      5F315F49 
- 1575      3243536C 
- 1575      61766543 
- 1575      6C656172 
- 1576              	.LASF12:
- 1577 0299 646F7562 		.ascii	"double\000"
- 1577      6C6500
- 1578              	.LASF21:
- 1579 02a0 66756E63 		.ascii	"func\000"
- 1579      00
- 1580              	.LASF50:
- 1581 02a5 4379496E 		.ascii	"CyIntEnable\000"
- 1581      74456E61 
- 1581      626C6500 
- 1582              	.LASF34:
- 1583 02b1 55415254 		.ascii	"UART_1_I2CSlaveClearReadBuf\000"
- 1583      5F315F49 
- 1583      3243536C 
- 1583      61766543 
- 1583      6C656172 
- 1584              	.LASF10:
- 1585 02cd 75696E74 		.ascii	"uint32\000"
- 1585      333200
- 1586              	.LASF8:
- 1587 02d4 756E7369 		.ascii	"unsigned int\000"
- 1587      676E6564 
- 1587      20696E74 
- 1587      00
- 1588              	.LASF35:
- 1589 02e1 55415254 		.ascii	"UART_1_I2CSlaveClearWriteBuf\000"
- 1589      5F315F49 
- 1589      3243536C 
- 1589      61766543 
- 1589      6C656172 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 38
+ 1566      3800
+ 1567              	.LASF37:
+ 1568 022f 55415254 		.ascii	"UART_1_slWrBufPtr\000"
+ 1568      5F315F73 
+ 1568      6C577242 
+ 1568      75665074 
+ 1568      7200
+ 1569              	.LASF20:
+ 1570 0241 55415254 		.ascii	"UART_1_I2CSlaveSetAddress\000"
+ 1570      5F315F49 
+ 1570      3243536C 
+ 1570      61766553 
+ 1570      65744164 
+ 1571              	.LASF30:
+ 1572 025b 77724275 		.ascii	"wrBuf\000"
+ 1572      6600
+ 1573              	.LASF16:
+ 1574 0261 55415254 		.ascii	"UART_1_I2CSlaveClearReadStatus\000"
+ 1574      5F315F49 
+ 1574      3243536C 
+ 1574      61766543 
+ 1574      6C656172 
+ 1575              	.LASF12:
+ 1576 0280 646F7562 		.ascii	"double\000"
+ 1576      6C6500
+ 1577              	.LASF21:
+ 1578 0287 66756E63 		.ascii	"func\000"
+ 1578      00
+ 1579              	.LASF50:
+ 1580 028c 4379496E 		.ascii	"CyIntEnable\000"
+ 1580      74456E61 
+ 1580      626C6500 
+ 1581              	.LASF34:
+ 1582 0298 55415254 		.ascii	"UART_1_I2CSlaveClearReadBuf\000"
+ 1582      5F315F49 
+ 1582      3243536C 
+ 1582      61766543 
+ 1582      6C656172 
+ 1583              	.LASF10:
+ 1584 02b4 75696E74 		.ascii	"uint32\000"
+ 1584      333200
+ 1585              	.LASF8:
+ 1586 02bb 756E7369 		.ascii	"unsigned int\000"
+ 1586      676E6564 
+ 1586      20696E74 
+ 1586      00
+ 1587              	.LASF35:
+ 1588 02c8 55415254 		.ascii	"UART_1_I2CSlaveClearWriteBuf\000"
+ 1588      5F315F49 
+ 1588      3243536C 
+ 1588      61766543 
+ 1588      6C656172 
+ 1589              	.LASF22:
+ 1590 02e5 61646472 		.ascii	"address\000"
+ 1590      65737300 
+ 1591              	.LASF7:
+ 1592 02ed 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 38
 
 
- 1590              	.LASF22:
- 1591 02fe 61646472 		.ascii	"address\000"
- 1591      65737300 
- 1592              	.LASF7:
- 1593 0306 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1593      206C6F6E 
- 1593      6720756E 
- 1593      7369676E 
- 1593      65642069 
- 1594              	.LASF25:
- 1595 031d 61646472 		.ascii	"addressMask\000"
- 1595      6573734D 
- 1595      61736B00 
- 1596              	.LASF38:
- 1597 0329 55415254 		.ascii	"UART_1_slWrBufSize\000"
- 1597      5F315F73 
- 1597      6C577242 
- 1597      75665369 
- 1597      7A6500
- 1598              	.LASF42:
- 1599 033c 55415254 		.ascii	"UART_1_slRdBufIndex\000"
- 1599      5F315F73 
- 1599      6C526442 
- 1599      7566496E 
- 1599      64657800 
- 1600              	.LASF43:
- 1601 0350 55415254 		.ascii	"UART_1_slRdBufIndexTmp\000"
- 1601      5F315F73 
- 1601      6C526442 
- 1601      7566496E 
- 1601      64657854 
- 1602              	.LASF44:
- 1603 0367 55415254 		.ascii	"UART_1_slOverFlowCount\000"
- 1603      5F315F73 
- 1603      6C4F7665 
- 1603      72466C6F 
- 1603      77436F75 
- 1604              	.LASF15:
- 1605 037e 73697A65 		.ascii	"sizetype\000"
- 1605      74797065 
- 1605      00
- 1606              	.LASF6:
- 1607 0387 6C6F6E67 		.ascii	"long long int\000"
- 1607      206C6F6E 
- 1607      6720696E 
- 1607      7400
- 1608              	.LASF13:
- 1609 0395 63686172 		.ascii	"char\000"
- 1609      00
- 1610              	.LASF33:
- 1611 039a 55415254 		.ascii	"UART_1_I2CSlaveGetWriteBufSize\000"
- 1611      5F315F49 
- 1611      3243536C 
- 1611      61766547 
- 1611      65745772 
- 1612              	.LASF19:
- 1613 03b9 55415254 		.ascii	"UART_1_SetI2cAddressCustomInterruptHandler\000"
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccX2zZUc.s 			page 39
+ 1592      206C6F6E 
+ 1592      6720756E 
+ 1592      7369676E 
+ 1592      65642069 
+ 1593              	.LASF25:
+ 1594 0304 61646472 		.ascii	"addressMask\000"
+ 1594      6573734D 
+ 1594      61736B00 
+ 1595              	.LASF38:
+ 1596 0310 55415254 		.ascii	"UART_1_slWrBufSize\000"
+ 1596      5F315F73 
+ 1596      6C577242 
+ 1596      75665369 
+ 1596      7A6500
+ 1597              	.LASF42:
+ 1598 0323 55415254 		.ascii	"UART_1_slRdBufIndex\000"
+ 1598      5F315F73 
+ 1598      6C526442 
+ 1598      7566496E 
+ 1598      64657800 
+ 1599              	.LASF43:
+ 1600 0337 55415254 		.ascii	"UART_1_slRdBufIndexTmp\000"
+ 1600      5F315F73 
+ 1600      6C526442 
+ 1600      7566496E 
+ 1600      64657854 
+ 1601              	.LASF44:
+ 1602 034e 55415254 		.ascii	"UART_1_slOverFlowCount\000"
+ 1602      5F315F73 
+ 1602      6C4F7665 
+ 1602      72466C6F 
+ 1602      77436F75 
+ 1603              	.LASF15:
+ 1604 0365 73697A65 		.ascii	"sizetype\000"
+ 1604      74797065 
+ 1604      00
+ 1605              	.LASF6:
+ 1606 036e 6C6F6E67 		.ascii	"long long int\000"
+ 1606      206C6F6E 
+ 1606      6720696E 
+ 1606      7400
+ 1607              	.LASF13:
+ 1608 037c 63686172 		.ascii	"char\000"
+ 1608      00
+ 1609              	.LASF33:
+ 1610 0381 55415254 		.ascii	"UART_1_I2CSlaveGetWriteBufSize\000"
+ 1610      5F315F49 
+ 1610      3243536C 
+ 1610      61766547 
+ 1610      65745772 
+ 1611              	.LASF19:
+ 1612 03a0 55415254 		.ascii	"UART_1_SetI2cAddressCustomInterruptHandler\000"
+ 1612      5F315F53 
+ 1612      65744932 
+ 1612      63416464 
+ 1612      72657373 
+ 1613              	.LASF49:
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccLzTCzk.s 			page 39
 
 
- 1613      5F315F53 
- 1613      65744932 
- 1613      63416464 
- 1613      72657373 
- 1614              	.LASF49:
- 1615 03e4 4379496E 		.ascii	"CyIntDisable\000"
- 1615      74446973 
- 1615      61626C65 
- 1615      00
- 1616              	.LASF2:
- 1617 03f1 73686F72 		.ascii	"short int\000"
- 1617      7420696E 
- 1617      7400
- 1618              	.LASF28:
- 1619 03fb 62756653 		.ascii	"bufSize\000"
- 1619      697A6500 
- 1620              	.LASF4:
- 1621 0403 6C6F6E67 		.ascii	"long int\000"
- 1621      20696E74 
- 1621      00
- 1622              	.LASF17:
- 1623 040c 55415254 		.ascii	"UART_1_I2CSlaveClearWriteStatus\000"
- 1623      5F315F49 
- 1623      3243536C 
- 1623      61766543 
- 1623      6C656172 
- 1624              	.LASF23:
- 1625 042c 6D617463 		.ascii	"matchReg\000"
- 1625      68526567 
- 1625      00
- 1626              	.LASF0:
- 1627 0435 7369676E 		.ascii	"signed char\000"
- 1627      65642063 
- 1627      68617200 
- 1628              	.LASF36:
- 1629 0441 55415254 		.ascii	"UART_1_slStatus\000"
- 1629      5F315F73 
- 1629      6C537461 
- 1629      74757300 
- 1630              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 1614 03cb 4379496E 		.ascii	"CyIntDisable\000"
+ 1614      74446973 
+ 1614      61626C65 
+ 1614      00
+ 1615              	.LASF2:
+ 1616 03d8 73686F72 		.ascii	"short int\000"
+ 1616      7420696E 
+ 1616      7400
+ 1617              	.LASF28:
+ 1618 03e2 62756653 		.ascii	"bufSize\000"
+ 1618      697A6500 
+ 1619              	.LASF4:
+ 1620 03ea 6C6F6E67 		.ascii	"long int\000"
+ 1620      20696E74 
+ 1620      00
+ 1621              	.LASF17:
+ 1622 03f3 55415254 		.ascii	"UART_1_I2CSlaveClearWriteStatus\000"
+ 1622      5F315F49 
+ 1622      3243536C 
+ 1622      61766543 
+ 1622      6C656172 
+ 1623              	.LASF23:
+ 1624 0413 6D617463 		.ascii	"matchReg\000"
+ 1624      68526567 
+ 1624      00
+ 1625              	.LASF0:
+ 1626 041c 7369676E 		.ascii	"signed char\000"
+ 1626      65642063 
+ 1626      68617200 
+ 1627              	.LASF36:
+ 1628 0428 55415254 		.ascii	"UART_1_slStatus\000"
+ 1628      5F315F73 
+ 1628      6C537461 
+ 1628      74757300 
+ 1629              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

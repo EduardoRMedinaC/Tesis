@@ -1,5 +1,5 @@
--- Project:   C:\Users\Marcelo\Documents\Proyecto_Tesis\tablero_hogar\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\Interface_driver.cyprj
--- Generated: 07/27/2015 21:17:45
+-- Project:   C:\Users\marce\Documents\Tesis\Psoc_Creator\Data Exchange MT174\Interface_driver.cydsn\Interface_driver.cyprj
+-- Generated: 08/10/2015 15:12:13
 -- PSoC Creator  3.2
 
 ENTITY Interface_driver IS

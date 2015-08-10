@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
   30:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** *
   31:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** * Parameters:
   32:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 2
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** *    clock is started.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
   38              	.L3:
   39 000e C046     		.align	2
   40              	.L2:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 3
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 3
 
 
   41 0010 40000240 		.word	1073872960
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
   57 0002 1A68     		ldr	r2, [r3]
   58 0004 5200     		lsl	r2, r2, #1
   59 0006 5208     		lsr	r2, r2, #1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 4
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 4
 
 
   60 0008 1A60     		str	r2, [r3]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  145:.\Generated_Source\PSoC4/UART_2_SCBCLK.c ****     regVal = maskVal |
  146:.\Generated_Source\PSoC4/UART_2_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  UART_2_SCBCLK_DIV_INT_SHIFT) & UART_2_SCBCLK_DIV_INT_MASK)
  147:.\Generated_Source\PSoC4/UART_2_SCBCLK.c ****         ((uint32)((uint32)clkFractional << UART_2_SCBCLK_DIV_FRAC_SHIFT) & UART_2_SCBCLK_DIV_FRAC_M
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 5
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 5
 
 
  148:.\Generated_Source\PSoC4/UART_2_SCBCLK.c ****     
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  173:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** *  divide by 2, the return value will be 1.
  174:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** *
  175:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** *******************************************************************************/
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 6
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 6
 
 
  176:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** uint16 UART_2_SCBCLK_GetDividerRegister(void)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  204:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** #else
  205:.\Generated_Source\PSoC4/UART_2_SCBCLK.c ****     return 0u;
  206:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** #endif /* UART_2_SCBCLK__FRAC_MASK */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 7
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 7
 
 
  207:.\Generated_Source\PSoC4/UART_2_SCBCLK.c **** }
@@ -379,46 +379,46 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  151 0006 00000000 		.4byte	.Ldebug_abbrev0
  152 000a 04       		.byte	0x4
  153 000b 01       		.uleb128 0x1
- 154 000c 44010000 		.4byte	.LASF24
+ 154 000c 2B010000 		.4byte	.LASF24
  155 0010 01       		.byte	0x1
- 156 0011 37020000 		.4byte	.LASF25
- 157 0015 06000000 		.4byte	.LASF26
+ 156 0011 1E020000 		.4byte	.LASF25
+ 157 0015 0E000000 		.4byte	.LASF26
  158 0019 00000000 		.4byte	.Ldebug_ranges0+0
  159 001d 00000000 		.4byte	0
  160 0021 00000000 		.4byte	.Ldebug_line0
  161 0025 02       		.uleb128 0x2
  162 0026 01       		.byte	0x1
  163 0027 06       		.byte	0x6
- 164 0028 2B020000 		.4byte	.LASF0
+ 164 0028 12020000 		.4byte	.LASF0
  165 002c 02       		.uleb128 0x2
  166 002d 01       		.byte	0x1
  167 002e 08       		.byte	0x8
- 168 002f A5000000 		.4byte	.LASF1
+ 168 002f 8C000000 		.4byte	.LASF1
  169 0033 02       		.uleb128 0x2
  170 0034 02       		.byte	0x2
  171 0035 05       		.byte	0x5
- 172 0036 FE010000 		.4byte	.LASF2
+ 172 0036 E5010000 		.4byte	.LASF2
  173 003a 02       		.uleb128 0x2
  174 003b 02       		.byte	0x2
  175 003c 07       		.byte	0x7
- 176 003d C5000000 		.4byte	.LASF3
+ 176 003d AC000000 		.4byte	.LASF3
  177 0041 02       		.uleb128 0x2
  178 0042 04       		.byte	0x4
  179 0043 05       		.byte	0x5
- 180 0044 0E020000 		.4byte	.LASF4
+ 180 0044 F5010000 		.4byte	.LASF4
  181 0048 02       		.uleb128 0x2
  182 0049 04       		.byte	0x4
  183 004a 07       		.byte	0x7
- 184 004b B3000000 		.4byte	.LASF5
+ 184 004b 9A000000 		.4byte	.LASF5
  185 004f 02       		.uleb128 0x2
  186 0050 08       		.byte	0x8
  187 0051 05       		.byte	0x5
- 188 0052 EB010000 		.4byte	.LASF6
+ 188 0052 D2010000 		.4byte	.LASF6
  189 0056 02       		.uleb128 0x2
  190 0057 08       		.byte	0x8
  191 0058 07       		.byte	0x7
- 192 0059 2D010000 		.4byte	.LASF7
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 8
+ 192 0059 14010000 		.4byte	.LASF7
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 8
 
 
  193 005d 03       		.uleb128 0x3
@@ -428,34 +428,34 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  197 0064 02       		.uleb128 0x2
  198 0065 04       		.byte	0x4
  199 0066 07       		.byte	0x7
- 200 0067 20010000 		.4byte	.LASF8
+ 200 0067 07010000 		.4byte	.LASF8
  201 006b 04       		.uleb128 0x4
- 202 006c 08020000 		.4byte	.LASF9
+ 202 006c EF010000 		.4byte	.LASF9
  203 0070 02       		.byte	0x2
  204 0071 B3       		.byte	0xb3
  205 0072 2C000000 		.4byte	0x2c
  206 0076 04       		.uleb128 0x4
- 207 0077 FF000000 		.4byte	.LASF10
+ 207 0077 E6000000 		.4byte	.LASF10
  208 007b 02       		.byte	0x2
  209 007c B4       		.byte	0xb4
  210 007d 3A000000 		.4byte	0x3a
  211 0081 04       		.uleb128 0x4
- 212 0082 06010000 		.4byte	.LASF11
+ 212 0082 ED000000 		.4byte	.LASF11
  213 0086 02       		.byte	0x2
  214 0087 B5       		.byte	0xb5
  215 0088 48000000 		.4byte	0x48
  216 008c 02       		.uleb128 0x2
  217 008d 04       		.byte	0x4
  218 008e 04       		.byte	0x4
- 219 008f 9F000000 		.4byte	.LASF12
+ 219 008f 86000000 		.4byte	.LASF12
  220 0093 02       		.uleb128 0x2
  221 0094 08       		.byte	0x8
  222 0095 04       		.byte	0x4
- 223 0096 E3000000 		.4byte	.LASF13
+ 223 0096 CA000000 		.4byte	.LASF13
  224 009a 02       		.uleb128 0x2
  225 009b 01       		.byte	0x1
  226 009c 08       		.byte	0x8
- 227 009d F9010000 		.4byte	.LASF14
+ 227 009d E0010000 		.4byte	.LASF14
  228 00a1 05       		.uleb128 0x5
  229 00a2 00000000 		.4byte	.LASF15
  230 00a6 02       		.byte	0x2
@@ -464,7 +464,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  233 00ad 06       		.uleb128 0x6
  234 00ae 81000000 		.4byte	0x81
  235 00b2 07       		.uleb128 0x7
- 236 00b3 17020000 		.4byte	.LASF16
+ 236 00b3 FE010000 		.4byte	.LASF16
  237 00b7 01       		.byte	0x1
  238 00b8 46       		.byte	0x46
  239 00b9 00000000 		.4byte	.LFB0
@@ -472,18 +472,18 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  241 00c1 01       		.uleb128 0x1
  242 00c2 9C       		.byte	0x9c
  243 00c3 07       		.uleb128 0x7
- 244 00c4 0D010000 		.4byte	.LASF17
+ 244 00c4 F4000000 		.4byte	.LASF17
  245 00c8 01       		.byte	0x1
  246 00c9 5F       		.byte	0x5f
  247 00ca 00000000 		.4byte	.LFB1
  248 00ce 10000000 		.4byte	.LFE1-.LFB1
  249 00d2 01       		.uleb128 0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 9
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 9
 
 
  250 00d3 9C       		.byte	0x9c
  251 00d4 08       		.uleb128 0x8
- 252 00d5 60020000 		.4byte	.LASF27
+ 252 00d5 47020000 		.4byte	.LASF27
  253 00d9 01       		.byte	0x1
  254 00da 86       		.byte	0x86
  255 00db 00000000 		.4byte	.LFB2
@@ -492,27 +492,27 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  258 00e4 9C       		.byte	0x9c
  259 00e5 20010000 		.4byte	0x120
  260 00e9 09       		.uleb128 0x9
- 261 00ea D8000000 		.4byte	.LASF18
+ 261 00ea BF000000 		.4byte	.LASF18
  262 00ee 01       		.byte	0x1
  263 00ef 86       		.byte	0x86
  264 00f0 76000000 		.4byte	0x76
  265 00f4 00000000 		.4byte	.LLST0
  266 00f8 0A       		.uleb128 0xa
- 267 00f9 F1000000 		.4byte	.LASF19
+ 267 00f9 D8000000 		.4byte	.LASF19
  268 00fd 01       		.byte	0x1
  269 00fe 86       		.byte	0x86
  270 00ff 6B000000 		.4byte	0x6b
  271 0103 01       		.uleb128 0x1
  272 0104 51       		.byte	0x51
  273 0105 0B       		.uleb128 0xb
- 274 0106 76000000 		.4byte	.LASF20
+ 274 0106 06000000 		.4byte	.LASF20
  275 010a 01       		.byte	0x1
  276 010b 88       		.byte	0x88
  277 010c 81000000 		.4byte	0x81
  278 0110 01       		.uleb128 0x1
  279 0111 52       		.byte	0x52
  280 0112 0B       		.uleb128 0xb
- 281 0113 EA000000 		.4byte	.LASF21
+ 281 0113 D1000000 		.4byte	.LASF21
  282 0117 01       		.byte	0x1
  283 0118 89       		.byte	0x89
  284 0119 81000000 		.4byte	0x81
@@ -520,7 +520,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  286 011e 50       		.byte	0x50
  287 011f 00       		.byte	0
  288 0120 0C       		.uleb128 0xc
- 289 0121 7E000000 		.4byte	.LASF22
+ 289 0121 65000000 		.4byte	.LASF22
  290 0125 01       		.byte	0x1
  291 0126 B0       		.byte	0xb0
  292 0127 76000000 		.4byte	0x76
@@ -529,7 +529,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  295 0133 01       		.uleb128 0x1
  296 0134 9C       		.byte	0x9c
  297 0135 0C       		.uleb128 0xc
- 298 0136 C0010000 		.4byte	.LASF23
+ 298 0136 A7010000 		.4byte	.LASF23
  299 013a 01       		.byte	0x1
  300 013b C6       		.byte	0xc6
  301 013c 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  304 0148 01       		.uleb128 0x1
  305 0149 9C       		.byte	0x9c
  306 014a 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 10
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 10
 
 
  307              		.section	.debug_abbrev,"",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  361 0034 00       		.byte	0
  362 0035 00       		.byte	0
  363 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 11
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 11
 
 
  364 0037 16       		.uleb128 0x16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  418 006e 19       		.uleb128 0x19
  419 006f 11       		.uleb128 0x11
  420 0070 01       		.uleb128 0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 12
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 12
 
 
  421 0071 12       		.uleb128 0x12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  475 00a8 00       		.byte	0
  476 00a9 0C       		.uleb128 0xc
  477 00aa 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 13
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 13
 
 
  478 00ab 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  532 0028 00000000 		.4byte	.LFB3
  533 002c 0C000000 		.4byte	.LFE3-.LFB3
  534 0030 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 14
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 14
 
 
  535 0034 04000000 		.4byte	.LFE4-.LFB4
@@ -808,159 +808,151 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 1
  555              	.LASF15:
  556 0000 72656733 		.ascii	"reg32\000"
  556      3200
- 557              	.LASF26:
- 558 0006 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
- 558      73657273 
- 558      5C4D6172 
- 558      63656C6F 
- 558      5C446F63 
- 559 0034 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
- 559      686F6761 
- 559      725C5073 
- 559      6F635F43 
- 559      72656174 
- 560 0064 66616365 		.ascii	"face_driver.cydsn\000"
- 560      5F647269 
- 560      7665722E 
- 560      63796473 
- 560      6E00
- 561              	.LASF20:
- 562 0076 6D61736B 		.ascii	"maskVal\000"
- 562      56616C00 
- 563              	.LASF22:
- 564 007e 55415254 		.ascii	"UART_2_SCBCLK_GetDividerRegister\000"
- 564      5F325F53 
- 564      4342434C 
- 564      4B5F4765 
- 564      74446976 
- 565              	.LASF12:
- 566 009f 666C6F61 		.ascii	"float\000"
- 566      7400
- 567              	.LASF1:
- 568 00a5 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 15
+ 557              	.LASF20:
+ 558 0006 6D61736B 		.ascii	"maskVal\000"
+ 558      56616C00 
+ 559              	.LASF26:
+ 560 000e 433A5C55 		.ascii	"C:\\Users\\marce\\Documents\\Tesis\\Psoc_Creator\\D"
+ 560      73657273 
+ 560      5C6D6172 
+ 560      63655C44 
+ 560      6F63756D 
+ 561 003b 61746120 		.ascii	"ata Exchange MT174\\Interface_driver.cydsn\000"
+ 561      45786368 
+ 561      616E6765 
+ 561      204D5431 
+ 561      37345C49 
+ 562              	.LASF22:
+ 563 0065 55415254 		.ascii	"UART_2_SCBCLK_GetDividerRegister\000"
+ 563      5F325F53 
+ 563      4342434C 
+ 563      4B5F4765 
+ 563      74446976 
+ 564              	.LASF12:
+ 565 0086 666C6F61 		.ascii	"float\000"
+ 565      7400
+ 566              	.LASF1:
+ 567 008c 756E7369 		.ascii	"unsigned char\000"
+ 567      676E6564 
+ 567      20636861 
+ 567      7200
+ 568              	.LASF5:
+ 569 009a 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 15
 
 
- 568      676E6564 
- 568      20636861 
- 568      7200
- 569              	.LASF5:
- 570 00b3 6C6F6E67 		.ascii	"long unsigned int\000"
- 570      20756E73 
- 570      69676E65 
- 570      6420696E 
- 570      7400
- 571              	.LASF3:
- 572 00c5 73686F72 		.ascii	"short unsigned int\000"
- 572      7420756E 
- 572      7369676E 
- 572      65642069 
- 572      6E7400
- 573              	.LASF18:
- 574 00d8 636C6B44 		.ascii	"clkDivider\000"
- 574      69766964 
- 574      657200
- 575              	.LASF13:
- 576 00e3 646F7562 		.ascii	"double\000"
- 576      6C6500
- 577              	.LASF21:
- 578 00ea 72656756 		.ascii	"regVal\000"
- 578      616C00
- 579              	.LASF19:
- 580 00f1 636C6B46 		.ascii	"clkFractional\000"
- 580      72616374 
- 580      696F6E61 
- 580      6C00
- 581              	.LASF10:
- 582 00ff 75696E74 		.ascii	"uint16\000"
- 582      313600
- 583              	.LASF11:
- 584 0106 75696E74 		.ascii	"uint32\000"
- 584      333200
- 585              	.LASF17:
- 586 010d 55415254 		.ascii	"UART_2_SCBCLK_Stop\000"
- 586      5F325F53 
- 586      4342434C 
- 586      4B5F5374 
- 586      6F7000
- 587              	.LASF8:
- 588 0120 756E7369 		.ascii	"unsigned int\000"
- 588      676E6564 
- 588      20696E74 
- 588      00
- 589              	.LASF7:
- 590 012d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 590      206C6F6E 
- 590      6720756E 
- 590      7369676E 
- 590      65642069 
- 591              	.LASF24:
- 592 0144 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 592      4320342E 
- 592      382E3420 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 16
+ 569      20756E73 
+ 569      69676E65 
+ 569      6420696E 
+ 569      7400
+ 570              	.LASF3:
+ 571 00ac 73686F72 		.ascii	"short unsigned int\000"
+ 571      7420756E 
+ 571      7369676E 
+ 571      65642069 
+ 571      6E7400
+ 572              	.LASF18:
+ 573 00bf 636C6B44 		.ascii	"clkDivider\000"
+ 573      69766964 
+ 573      657200
+ 574              	.LASF13:
+ 575 00ca 646F7562 		.ascii	"double\000"
+ 575      6C6500
+ 576              	.LASF21:
+ 577 00d1 72656756 		.ascii	"regVal\000"
+ 577      616C00
+ 578              	.LASF19:
+ 579 00d8 636C6B46 		.ascii	"clkFractional\000"
+ 579      72616374 
+ 579      696F6E61 
+ 579      6C00
+ 580              	.LASF10:
+ 581 00e6 75696E74 		.ascii	"uint16\000"
+ 581      313600
+ 582              	.LASF11:
+ 583 00ed 75696E74 		.ascii	"uint32\000"
+ 583      333200
+ 584              	.LASF17:
+ 585 00f4 55415254 		.ascii	"UART_2_SCBCLK_Stop\000"
+ 585      5F325F53 
+ 585      4342434C 
+ 585      4B5F5374 
+ 585      6F7000
+ 586              	.LASF8:
+ 587 0107 756E7369 		.ascii	"unsigned int\000"
+ 587      676E6564 
+ 587      20696E74 
+ 587      00
+ 588              	.LASF7:
+ 589 0114 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 589      206C6F6E 
+ 589      6720756E 
+ 589      7369676E 
+ 589      65642069 
+ 590              	.LASF24:
+ 591 012b 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 591      4320342E 
+ 591      382E3420 
+ 591      32303134 
+ 591      30353236 
+ 592 015e 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 592      20726576 
+ 592      6973696F 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccmVfE2d.s 			page 16
 
 
- 592      32303134 
- 592      30353236 
- 593 0177 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 593      20726576 
- 593      6973696F 
- 593      6E203231 
- 593      31333538 
- 594 01aa 67202D66 		.ascii	"g -ffunction-sections\000"
- 594      66756E63 
- 594      74696F6E 
- 594      2D736563 
- 594      74696F6E 
- 595              	.LASF23:
- 596 01c0 55415254 		.ascii	"UART_2_SCBCLK_GetFractionalDividerRegister\000"
- 596      5F325F53 
- 596      4342434C 
- 596      4B5F4765 
- 596      74467261 
- 597              	.LASF6:
- 598 01eb 6C6F6E67 		.ascii	"long long int\000"
- 598      206C6F6E 
- 598      6720696E 
- 598      7400
- 599              	.LASF14:
- 600 01f9 63686172 		.ascii	"char\000"
- 600      00
- 601              	.LASF2:
- 602 01fe 73686F72 		.ascii	"short int\000"
- 602      7420696E 
- 602      7400
- 603              	.LASF9:
- 604 0208 75696E74 		.ascii	"uint8\000"
- 604      3800
- 605              	.LASF4:
- 606 020e 6C6F6E67 		.ascii	"long int\000"
- 606      20696E74 
- 606      00
- 607              	.LASF16:
- 608 0217 55415254 		.ascii	"UART_2_SCBCLK_Start\000"
- 608      5F325F53 
- 608      4342434C 
- 608      4B5F5374 
- 608      61727400 
- 609              	.LASF0:
- 610 022b 7369676E 		.ascii	"signed char\000"
- 610      65642063 
- 610      68617200 
- 611              	.LASF25:
- 612 0237 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_2_SCBCLK.c\000"
- 612      6E657261 
- 612      7465645F 
- 612      536F7572 
- 612      63655C50 
- 613              	.LASF27:
- 614 0260 55415254 		.ascii	"UART_2_SCBCLK_SetFractionalDividerRegister\000"
- 614      5F325F53 
- 614      4342434C 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccwjp3j5.s 			page 17
-
-
- 614      4B5F5365 
- 614      74467261 
- 615              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 592      6E203231 
+ 592      31333538 
+ 593 0191 67202D66 		.ascii	"g -ffunction-sections\000"
+ 593      66756E63 
+ 593      74696F6E 
+ 593      2D736563 
+ 593      74696F6E 
+ 594              	.LASF23:
+ 595 01a7 55415254 		.ascii	"UART_2_SCBCLK_GetFractionalDividerRegister\000"
+ 595      5F325F53 
+ 595      4342434C 
+ 595      4B5F4765 
+ 595      74467261 
+ 596              	.LASF6:
+ 597 01d2 6C6F6E67 		.ascii	"long long int\000"
+ 597      206C6F6E 
+ 597      6720696E 
+ 597      7400
+ 598              	.LASF14:
+ 599 01e0 63686172 		.ascii	"char\000"
+ 599      00
+ 600              	.LASF2:
+ 601 01e5 73686F72 		.ascii	"short int\000"
+ 601      7420696E 
+ 601      7400
+ 602              	.LASF9:
+ 603 01ef 75696E74 		.ascii	"uint8\000"
+ 603      3800
+ 604              	.LASF4:
+ 605 01f5 6C6F6E67 		.ascii	"long int\000"
+ 605      20696E74 
+ 605      00
+ 606              	.LASF16:
+ 607 01fe 55415254 		.ascii	"UART_2_SCBCLK_Start\000"
+ 607      5F325F53 
+ 607      4342434C 
+ 607      4B5F5374 
+ 607      61727400 
+ 608              	.LASF0:
+ 609 0212 7369676E 		.ascii	"signed char\000"
+ 609      65642063 
+ 609      68617200 
+ 610              	.LASF25:
+ 611 021e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_2_SCBCLK.c\000"
+ 611      6E657261 
+ 611      7465645F 
+ 611      536F7572 
+ 611      63655C50 
+ 612              	.LASF27:
+ 613 0247 55415254 		.ascii	"UART_2_SCBCLK_SetFractionalDividerRegister\000"
+ 613      5F325F53 
+ 613      4342434C 
+ 613      4B5F5365 
+ 613      74467261 
+ 614              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

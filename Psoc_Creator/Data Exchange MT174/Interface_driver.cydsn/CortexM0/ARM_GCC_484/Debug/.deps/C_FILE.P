@@ -1,90 +1,92 @@
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/CortexM0/ARM_GCC_484/Debug/main.o : C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/Bootloadable_1.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_BOOT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C_PVT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C_PVT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PINS.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PVT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SCB_IRQ.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART_PVT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi_aliases.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso_aliases.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_BOOT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PINS.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PVT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SCBCLK.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART_PVT.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx_aliases.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx_aliases.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_CLK.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmFunc.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmInstr.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/project.h C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/main.c 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/CortexM0/ARM_GCC_484/Debug/main.o : C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/Bootloadable_1.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_BOOT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C_PVT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C_PVT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PINS.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PVT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SCB_IRQ.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART_PVT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi_aliases.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso_aliases.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_BOOT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PINS.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PVT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SCBCLK.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART_PVT.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx_aliases.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx_aliases.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_CLK.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmFunc.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmInstr.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/project.h C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/main.c C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/str.h 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/Bootloadable_1.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/Bootloadable_1.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyFlash.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLib.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/CyLib.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_BOOT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_BOOT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C_PVT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_EZI2C_PVT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C_PVT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_I2C_PVT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PINS.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PINS.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PVT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_PVT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SCB_IRQ.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SCB_IRQ.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART_PVT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_SPI_UART_PVT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi_aliases.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_rx_i2c_scl_spi_mosi_aliases.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso_aliases.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_1_uart_tx_i2c_sda_spi_miso_aliases.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_BOOT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_BOOT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PINS.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PINS.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PVT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_PVT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SCBCLK.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SCBCLK.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART_PVT.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_SPI_UART_PVT.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx_aliases.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_rx_aliases.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx_aliases.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_2_tx_aliases.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_CLK.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/UART_CLK.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyPm.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyPm.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cypins.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cypins.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cytypes.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/cytypes.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/project.h : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/Generated_Source/PSoC4/project.h : 
 
-C:/Users/Marcelo/Documents/Proyecto_Tesis/tablero_hogar/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/main.c : 
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/main.c : 
+
+C:/Users/marce/Documents/Tesis/Psoc_Creator/Data\ Exchange\ MT174/Interface_driver.cydsn/str.h : 
 

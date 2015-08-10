@@ -2,7 +2,7 @@
 --	Conversion of Interface_driver.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Jul 27 21:17:42 2015
+--	Mon Aug 10 15:12:11 2015
 --
 
 USE cypress.cypress.all;

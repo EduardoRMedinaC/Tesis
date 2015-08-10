@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
   30:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
   31:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** #if(UART_2_INTERNAL_TX_SW_BUFFER_CONST)
   32:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     volatile uint32 UART_2_txBufferHead;
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 2
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     volatile uint32 UART_2_txBufferTail;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
   84:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 locTail = (UART_2_rxBufferTail + 1u);
   85:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
   86:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 if (UART_2_INTERNAL_RX_BUFFER_SIZE == locTail)
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 3
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 3
 
 
   87:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
   49              	UART_2_SpiUartGetRxBufferSize:
   50              	.LFB1:
  121:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 4
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 4
 
 
  122:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  168:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     }
   59              		.loc 1 168 0
   60              		@ sp needed
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 5
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 5
 
 
   61 0008 7047     		bx	lr
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  205:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             }
  206:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             #endif
  207:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 6
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 6
 
 
  208:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             /* Release lock */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  232:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     * Parameters:
  233:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     *  txDataByte: the data to be transmitted.
  234:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 7
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 7
 
 
  235:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     * Return:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  286:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             }
  287:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****         }
  288:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****         #else
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 8
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 8
 
 
  289:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****         {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  312:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     *  wrBuf:  pointer to an array with data to be placed in transmit buffer.
  313:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     *  count:  number of data elements to be placed in the transmit buffer.
  314:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 9
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 9
 
 
  315:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     * Return:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  182              		.global	UART_2_SpiUartGetTxBufferSize
  183              		.code	16
  184              		.thumb_func
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 10
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 10
 
 
  185              		.type	UART_2_SpiUartGetTxBufferSize, %function
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  193 0004 0F20     		mov	r0, #15
  194 0006 1840     		and	r0, r3
  195              	.LVL12:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 11
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 11
 
 
  374:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****         }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  408:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
  409:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             /* Release lock */
  410:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             UART_2_EnableInt();
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 12
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 12
 
 
  411:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****         }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  435:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** *******************************************************************************/
  436:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** uint32 UART_2_SpiUartDisableIntRx(void)
  437:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** {
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 13
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 13
 
 
  246              		.loc 1 437 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  274              		.cfi_startproc
  464:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     uint32 intSourceMask;
  465:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 14
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 14
 
 
  466:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     intSourceMask = UART_2_GetTxInterruptMode();
@@ -814,48 +814,48 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  299 0006 00000000 		.4byte	.Ldebug_abbrev0
  300 000a 04       		.byte	0x4
  301 000b 01       		.uleb128 0x1
- 302 000c F5010000 		.4byte	.LASF32
+ 302 000c DC010000 		.4byte	.LASF32
  303 0010 01       		.byte	0x1
- 304 0011 17010000 		.4byte	.LASF33
- 305 0015 00000000 		.4byte	.LASF34
+ 304 0011 FE000000 		.4byte	.LASF33
+ 305 0015 8C000000 		.4byte	.LASF34
  306 0019 00000000 		.4byte	.Ldebug_ranges0+0
  307 001d 00000000 		.4byte	0
  308 0021 00000000 		.4byte	.Ldebug_line0
  309 0025 02       		.uleb128 0x2
  310 0026 01       		.byte	0x1
  311 0027 06       		.byte	0x6
- 312 0028 D5020000 		.4byte	.LASF0
+ 312 0028 BC020000 		.4byte	.LASF0
  313 002c 02       		.uleb128 0x2
  314 002d 01       		.byte	0x1
  315 002e 08       		.byte	0x8
- 316 002f B8010000 		.4byte	.LASF1
+ 316 002f 9F010000 		.4byte	.LASF1
  317 0033 02       		.uleb128 0x2
  318 0034 02       		.byte	0x2
  319 0035 05       		.byte	0x5
- 320 0036 C2020000 		.4byte	.LASF2
+ 320 0036 A9020000 		.4byte	.LASF2
  321 003a 02       		.uleb128 0x2
  322 003b 02       		.byte	0x2
  323 003c 07       		.byte	0x7
- 324 003d E1020000 		.4byte	.LASF3
+ 324 003d C8020000 		.4byte	.LASF3
  325 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 15
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 15
 
 
  326 0042 04       		.byte	0x4
  327 0043 05       		.byte	0x5
- 328 0044 CC020000 		.4byte	.LASF4
+ 328 0044 B3020000 		.4byte	.LASF4
  329 0048 02       		.uleb128 0x2
  330 0049 04       		.byte	0x4
  331 004a 07       		.byte	0x7
- 332 004b 4D010000 		.4byte	.LASF5
+ 332 004b 34010000 		.4byte	.LASF5
  333 004f 02       		.uleb128 0x2
  334 0050 08       		.byte	0x8
  335 0051 05       		.byte	0x5
- 336 0052 AF020000 		.4byte	.LASF6
+ 336 0052 96020000 		.4byte	.LASF6
  337 0056 02       		.uleb128 0x2
  338 0057 08       		.byte	0x8
  339 0058 07       		.byte	0x7
- 340 0059 DE010000 		.4byte	.LASF7
+ 340 0059 C5010000 		.4byte	.LASF7
  341 005d 03       		.uleb128 0x3
  342 005e 04       		.byte	0x4
  343 005f 05       		.byte	0x5
@@ -863,31 +863,31 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  345 0064 02       		.uleb128 0x2
  346 0065 04       		.byte	0x4
  347 0066 07       		.byte	0x7
- 348 0067 D4000000 		.4byte	.LASF8
+ 348 0067 64000000 		.4byte	.LASF8
  349 006b 04       		.uleb128 0x4
- 350 006c 5F010000 		.4byte	.LASF9
+ 350 006c 46010000 		.4byte	.LASF9
  351 0070 02       		.byte	0x2
  352 0071 B3       		.byte	0xb3
  353 0072 2C000000 		.4byte	0x2c
  354 0076 04       		.uleb128 0x4
- 355 0077 B1010000 		.4byte	.LASF10
+ 355 0077 98010000 		.4byte	.LASF10
  356 007b 02       		.byte	0x2
  357 007c B5       		.byte	0xb5
  358 007d 48000000 		.4byte	0x48
  359 0081 02       		.uleb128 0x2
  360 0082 04       		.byte	0x4
  361 0083 04       		.byte	0x4
- 362 0084 42010000 		.4byte	.LASF11
+ 362 0084 29010000 		.4byte	.LASF11
  363 0088 02       		.uleb128 0x2
  364 0089 08       		.byte	0x8
  365 008a 04       		.byte	0x4
- 366 008b AA010000 		.4byte	.LASF12
+ 366 008b 91010000 		.4byte	.LASF12
  367 008f 02       		.uleb128 0x2
  368 0090 01       		.byte	0x1
  369 0091 08       		.byte	0x8
- 370 0092 BD020000 		.4byte	.LASF13
+ 370 0092 A4020000 		.4byte	.LASF13
  371 0096 05       		.uleb128 0x5
- 372 0097 70000000 		.4byte	.LASF14
+ 372 0097 00000000 		.4byte	.LASF14
  373 009b 02       		.byte	0x2
  374 009c 5F01     		.2byte	0x15f
  375 009e A2000000 		.4byte	0xa2
@@ -896,12 +896,12 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  378 00a7 02       		.uleb128 0x2
  379 00a8 04       		.byte	0x4
  380 00a9 07       		.byte	0x7
- 381 00aa 8D020000 		.4byte	.LASF15
+ 381 00aa 74020000 		.4byte	.LASF15
  382 00ae 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 16
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 16
 
 
- 383 00af 96020000 		.4byte	.LASF16
+ 383 00af 7D020000 		.4byte	.LASF16
  384 00b3 01       		.byte	0x1
  385 00b4 45       		.byte	0x45
  386 00b5 76000000 		.4byte	0x76
@@ -911,14 +911,14 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  390 00c2 9C       		.byte	0x9c
  391 00c3 D7000000 		.4byte	0xd7
  392 00c7 08       		.uleb128 0x8
- 393 00c8 7F010000 		.4byte	.LASF18
+ 393 00c8 66010000 		.4byte	.LASF18
  394 00cc 01       		.byte	0x1
  395 00cd 47       		.byte	0x47
  396 00ce 76000000 		.4byte	0x76
  397 00d2 00000000 		.4byte	.LLST0
  398 00d6 00       		.byte	0
  399 00d7 07       		.uleb128 0x7
- 400 00d8 9A000000 		.4byte	.LASF17
+ 400 00d8 2A000000 		.4byte	.LASF17
  401 00dc 01       		.byte	0x1
  402 00dd 8D       		.byte	0x8d
  403 00de 76000000 		.4byte	0x76
@@ -928,7 +928,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  407 00eb 9C       		.byte	0x9c
  408 00ec FE000000 		.4byte	0xfe
  409 00f0 09       		.uleb128 0x9
- 410 00f1 48010000 		.4byte	.LASF19
+ 410 00f1 2F010000 		.4byte	.LASF19
  411 00f5 01       		.byte	0x1
  412 00f6 8F       		.byte	0x8f
  413 00f7 76000000 		.4byte	0x76
@@ -936,7 +936,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  415 00fc 50       		.byte	0x50
  416 00fd 00       		.byte	0
  417 00fe 0A       		.uleb128 0xa
- 418 00ff B8000000 		.4byte	.LASF26
+ 418 00ff 48000000 		.4byte	.LASF26
  419 0103 01       		.byte	0x1
  420 0104 B9       		.byte	0xb9
  421 0105 00000000 		.4byte	.LFB2
@@ -944,7 +944,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  423 010d 01       		.uleb128 0x1
  424 010e 9C       		.byte	0x9c
  425 010f 0B       		.uleb128 0xb
- 426 0110 65010000 		.4byte	.LASF20
+ 426 0110 4C010000 		.4byte	.LASF20
  427 0114 01       		.byte	0x1
  428 0115 EF       		.byte	0xef
  429 0116 00000000 		.4byte	.LFB3
@@ -953,18 +953,18 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  432 011f 9C       		.byte	0x9c
  433 0120 32010000 		.4byte	0x132
  434 0124 0C       		.uleb128 0xc
- 435 0125 93000000 		.4byte	.LASF22
+ 435 0125 23000000 		.4byte	.LASF22
  436 0129 01       		.byte	0x1
  437 012a EF       		.byte	0xef
  438 012b 76000000 		.4byte	0x76
  439 012f 01       		.uleb128 0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 17
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 17
 
 
  440 0130 50       		.byte	0x50
  441 0131 00       		.byte	0
  442 0132 0D       		.uleb128 0xd
- 443 0133 76000000 		.4byte	.LASF21
+ 443 0133 06000000 		.4byte	.LASF21
  444 0137 01       		.byte	0x1
  445 0138 3F01     		.2byte	0x13f
  446 013a 00000000 		.4byte	.LFB4
@@ -973,13 +973,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  449 0143 9C       		.byte	0x9c
  450 0144 80010000 		.4byte	0x180
  451 0148 0E       		.uleb128 0xe
- 452 0149 86010000 		.4byte	.LASF23
+ 452 0149 6D010000 		.4byte	.LASF23
  453 014d 01       		.byte	0x1
  454 014e 3F01     		.2byte	0x13f
  455 0150 80010000 		.4byte	0x180
  456 0154 1F000000 		.4byte	.LLST1
  457 0158 0E       		.uleb128 0xe
- 458 0159 8D000000 		.4byte	.LASF24
+ 458 0159 1D000000 		.4byte	.LASF24
  459 015d 01       		.byte	0x1
  460 015e 3F01     		.2byte	0x13f
  461 0160 76000000 		.4byte	0x76
@@ -1000,7 +1000,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  476 0186 12       		.uleb128 0x12
  477 0187 6B000000 		.4byte	0x6b
  478 018b 13       		.uleb128 0x13
- 479 018c 8C010000 		.4byte	.LASF25
+ 479 018c 73010000 		.4byte	.LASF25
  480 0190 01       		.byte	0x1
  481 0191 5E01     		.2byte	0x15e
  482 0193 76000000 		.4byte	0x76
@@ -1010,7 +1010,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  486 01a0 9C       		.byte	0x9c
  487 01a1 B4010000 		.4byte	0x1b4
  488 01a5 14       		.uleb128 0x14
- 489 01a6 48010000 		.4byte	.LASF19
+ 489 01a6 2F010000 		.4byte	.LASF19
  490 01aa 01       		.byte	0x1
  491 01ab 6001     		.2byte	0x160
  492 01ad 76000000 		.4byte	0x76
@@ -1018,10 +1018,10 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  494 01b2 50       		.byte	0x50
  495 01b3 00       		.byte	0
  496 01b4 15       		.uleb128 0x15
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 18
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 18
 
 
- 497 01b5 71020000 		.4byte	.LASF27
+ 497 01b5 58020000 		.4byte	.LASF27
  498 01b9 01       		.byte	0x1
  499 01ba 8B01     		.2byte	0x18b
  500 01bc 00000000 		.4byte	.LFB6
@@ -1029,7 +1029,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  502 01c4 01       		.uleb128 0x1
  503 01c5 9C       		.byte	0x9c
  504 01c6 13       		.uleb128 0x13
- 505 01c7 E1000000 		.4byte	.LASF28
+ 505 01c7 71000000 		.4byte	.LASF28
  506 01cb 01       		.byte	0x1
  507 01cc B401     		.2byte	0x1b4
  508 01ce 76000000 		.4byte	0x76
@@ -1039,7 +1039,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  512 01db 9C       		.byte	0x9c
  513 01dc EF010000 		.4byte	0x1ef
  514 01e0 14       		.uleb128 0x14
- 515 01e1 D4010000 		.4byte	.LASF29
+ 515 01e1 BB010000 		.4byte	.LASF29
  516 01e5 01       		.byte	0x1
  517 01e6 B601     		.2byte	0x1b6
  518 01e8 76000000 		.4byte	0x76
@@ -1047,7 +1047,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  520 01ed 50       		.byte	0x50
  521 01ee 00       		.byte	0
  522 01ef 16       		.uleb128 0x16
- 523 01f0 FC000000 		.4byte	.LASF30
+ 523 01f0 E3000000 		.4byte	.LASF30
  524 01f4 01       		.byte	0x1
  525 01f5 CE01     		.2byte	0x1ce
  526 01f7 76000000 		.4byte	0x76
@@ -1056,7 +1056,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  529 0203 01       		.uleb128 0x1
  530 0204 9C       		.byte	0x9c
  531 0205 14       		.uleb128 0x14
- 532 0206 C6010000 		.4byte	.LASF31
+ 532 0206 AD010000 		.4byte	.LASF31
  533 020a 01       		.byte	0x1
  534 020b D001     		.2byte	0x1d0
  535 020d 76000000 		.4byte	0x76
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  551 0009 1B       		.uleb128 0x1b
  552 000a 0E       		.uleb128 0xe
  553 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 19
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 19
 
 
  554 000c 17       		.uleb128 0x17
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  608 0042 00       		.byte	0
  609 0043 06       		.uleb128 0x6
  610 0044 35       		.uleb128 0x35
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 20
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 20
 
 
  611 0045 00       		.byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  665 007c 3B       		.uleb128 0x3b
  666 007d 0B       		.uleb128 0xb
  667 007e 49       		.uleb128 0x49
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 21
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 21
 
 
  668 007f 13       		.uleb128 0x13
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  722 00b7 05       		.uleb128 0x5
  723 00b8 00       		.byte	0
  724 00b9 03       		.uleb128 0x3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 22
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 22
 
 
  725 00ba 0E       		.uleb128 0xe
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  779 00f1 03       		.uleb128 0x3
  780 00f2 08       		.uleb128 0x8
  781 00f3 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 23
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 23
 
 
  782 00f4 0B       		.uleb128 0xb
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  836 012c 18       		.uleb128 0x18
  837 012d 9742     		.uleb128 0x2117
  838 012f 19       		.uleb128 0x19
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 24
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 24
 
 
  839 0130 01       		.uleb128 0x1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  893 0167 19       		.uleb128 0x19
  894 0168 49       		.uleb128 0x49
  895 0169 13       		.uleb128 0x13
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 25
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 25
 
 
  896 016a 11       		.uleb128 0x11
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  950 0069 0400     		.2byte	0x4
  951 006b F3       		.byte	0xf3
  952 006c 01       		.uleb128 0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 26
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 26
 
 
  953 006d 51       		.byte	0x51
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  1007 0020 00000000 		.4byte	.LFB4
  1008 0024 18000000 		.4byte	.LFE4
  1009 0028 00000000 		.4byte	.LFB5
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 27
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 27
 
 
  1010 002c 10000000 		.4byte	.LFE5
@@ -1577,196 +1577,191 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 1
  1021      00000201 
  1021      FB0E0D00 
  1021      01010101 
- 1022              	.LASF34:
- 1023 0000 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
- 1023      73657273 
- 1023      5C4D6172 
- 1023      63656C6F 
- 1023      5C446F63 
- 1024 002e 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
- 1024      686F6761 
- 1024      725C5073 
- 1024      6F635F43 
- 1024      72656174 
- 1025 005e 66616365 		.ascii	"face_driver.cydsn\000"
- 1025      5F647269 
- 1025      7665722E 
- 1025      63796473 
- 1025      6E00
- 1026              	.LASF14:
- 1027 0070 72656733 		.ascii	"reg32\000"
- 1027      3200
- 1028              	.LASF21:
- 1029 0076 55415254 		.ascii	"UART_2_SpiUartPutArray\000"
- 1029      5F325F53 
- 1029      70695561 
- 1029      72745075 
- 1029      74417272 
- 1030              	.LASF24:
- 1031 008d 636F756E 		.ascii	"count\000"
- 1031      7400
- 1032              	.LASF22:
- 1033 0093 74784461 		.ascii	"txData\000"
- 1033      746100
- 1034              	.LASF17:
- 1035 009a 55415254 		.ascii	"UART_2_SpiUartGetRxBufferSize\000"
- 1035      5F325F53 
- 1035      70695561 
- 1035      72744765 
- 1035      74527842 
- 1036              	.LASF26:
- 1037 00b8 55415254 		.ascii	"UART_2_SpiUartClearRxBuffer\000"
+ 1022              	.LASF14:
+ 1023 0000 72656733 		.ascii	"reg32\000"
+ 1023      3200
+ 1024              	.LASF21:
+ 1025 0006 55415254 		.ascii	"UART_2_SpiUartPutArray\000"
+ 1025      5F325F53 
+ 1025      70695561 
+ 1025      72745075 
+ 1025      74417272 
+ 1026              	.LASF24:
+ 1027 001d 636F756E 		.ascii	"count\000"
+ 1027      7400
+ 1028              	.LASF22:
+ 1029 0023 74784461 		.ascii	"txData\000"
+ 1029      746100
+ 1030              	.LASF17:
+ 1031 002a 55415254 		.ascii	"UART_2_SpiUartGetRxBufferSize\000"
+ 1031      5F325F53 
+ 1031      70695561 
+ 1031      72744765 
+ 1031      74527842 
+ 1032              	.LASF26:
+ 1033 0048 55415254 		.ascii	"UART_2_SpiUartClearRxBuffer\000"
+ 1033      5F325F53 
+ 1033      70695561 
+ 1033      7274436C 
+ 1033      65617252 
+ 1034              	.LASF8:
+ 1035 0064 756E7369 		.ascii	"unsigned int\000"
+ 1035      676E6564 
+ 1035      20696E74 
+ 1035      00
+ 1036              	.LASF28:
+ 1037 0071 55415254 		.ascii	"UART_2_SpiUartDisableIntRx\000"
  1037      5F325F53 
  1037      70695561 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 28
+ 1037      72744469 
+ 1037      7361626C 
+ 1038              	.LASF34:
+ 1039 008c 433A5C55 		.ascii	"C:\\Users\\marce\\Documents\\Tesis\\Psoc_Creator\\D"
+ 1039      73657273 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 28
 
 
- 1037      7274436C 
- 1037      65617252 
- 1038              	.LASF8:
- 1039 00d4 756E7369 		.ascii	"unsigned int\000"
- 1039      676E6564 
- 1039      20696E74 
- 1039      00
- 1040              	.LASF28:
- 1041 00e1 55415254 		.ascii	"UART_2_SpiUartDisableIntRx\000"
- 1041      5F325F53 
- 1041      70695561 
- 1041      72744469 
- 1041      7361626C 
- 1042              	.LASF30:
- 1043 00fc 55415254 		.ascii	"UART_2_SpiUartDisableIntTx\000"
- 1043      5F325F53 
- 1043      70695561 
- 1043      72744469 
- 1043      7361626C 
- 1044              	.LASF33:
- 1045 0117 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_2_SPI_UART.c\000"
- 1045      6E657261 
- 1045      7465645F 
- 1045      536F7572 
- 1045      63655C50 
- 1046              	.LASF11:
- 1047 0142 666C6F61 		.ascii	"float\000"
- 1047      7400
- 1048              	.LASF19:
- 1049 0148 73697A65 		.ascii	"size\000"
- 1049      00
- 1050              	.LASF5:
- 1051 014d 6C6F6E67 		.ascii	"long unsigned int\000"
- 1051      20756E73 
- 1051      69676E65 
- 1051      6420696E 
- 1051      7400
- 1052              	.LASF9:
- 1053 015f 75696E74 		.ascii	"uint8\000"
- 1053      3800
- 1054              	.LASF20:
- 1055 0165 55415254 		.ascii	"UART_2_SpiUartWriteTxData\000"
- 1055      5F325F53 
- 1055      70695561 
- 1055      72745772 
- 1055      69746554 
- 1056              	.LASF18:
- 1057 017f 72784461 		.ascii	"rxData\000"
- 1057      746100
- 1058              	.LASF23:
- 1059 0186 77724275 		.ascii	"wrBuf\000"
- 1059      6600
- 1060              	.LASF25:
- 1061 018c 55415254 		.ascii	"UART_2_SpiUartGetTxBufferSize\000"
- 1061      5F325F53 
- 1061      70695561 
- 1061      72744765 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 29
+ 1039      5C6D6172 
+ 1039      63655C44 
+ 1039      6F63756D 
+ 1040 00b9 61746120 		.ascii	"ata Exchange MT174\\Interface_driver.cydsn\000"
+ 1040      45786368 
+ 1040      616E6765 
+ 1040      204D5431 
+ 1040      37345C49 
+ 1041              	.LASF30:
+ 1042 00e3 55415254 		.ascii	"UART_2_SpiUartDisableIntTx\000"
+ 1042      5F325F53 
+ 1042      70695561 
+ 1042      72744469 
+ 1042      7361626C 
+ 1043              	.LASF33:
+ 1044 00fe 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_2_SPI_UART.c\000"
+ 1044      6E657261 
+ 1044      7465645F 
+ 1044      536F7572 
+ 1044      63655C50 
+ 1045              	.LASF11:
+ 1046 0129 666C6F61 		.ascii	"float\000"
+ 1046      7400
+ 1047              	.LASF19:
+ 1048 012f 73697A65 		.ascii	"size\000"
+ 1048      00
+ 1049              	.LASF5:
+ 1050 0134 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1050      20756E73 
+ 1050      69676E65 
+ 1050      6420696E 
+ 1050      7400
+ 1051              	.LASF9:
+ 1052 0146 75696E74 		.ascii	"uint8\000"
+ 1052      3800
+ 1053              	.LASF20:
+ 1054 014c 55415254 		.ascii	"UART_2_SpiUartWriteTxData\000"
+ 1054      5F325F53 
+ 1054      70695561 
+ 1054      72745772 
+ 1054      69746554 
+ 1055              	.LASF18:
+ 1056 0166 72784461 		.ascii	"rxData\000"
+ 1056      746100
+ 1057              	.LASF23:
+ 1058 016d 77724275 		.ascii	"wrBuf\000"
+ 1058      6600
+ 1059              	.LASF25:
+ 1060 0173 55415254 		.ascii	"UART_2_SpiUartGetTxBufferSize\000"
+ 1060      5F325F53 
+ 1060      70695561 
+ 1060      72744765 
+ 1060      74547842 
+ 1061              	.LASF12:
+ 1062 0191 646F7562 		.ascii	"double\000"
+ 1062      6C6500
+ 1063              	.LASF10:
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 29
 
 
- 1061      74547842 
- 1062              	.LASF12:
- 1063 01aa 646F7562 		.ascii	"double\000"
- 1063      6C6500
- 1064              	.LASF10:
- 1065 01b1 75696E74 		.ascii	"uint32\000"
- 1065      333200
- 1066              	.LASF1:
- 1067 01b8 756E7369 		.ascii	"unsigned char\000"
- 1067      676E6564 
- 1067      20636861 
- 1067      7200
- 1068              	.LASF31:
- 1069 01c6 696E7453 		.ascii	"intSourceMask\000"
- 1069      6F757263 
- 1069      654D6173 
- 1069      6B00
- 1070              	.LASF29:
- 1071 01d4 696E7453 		.ascii	"intSource\000"
- 1071      6F757263 
- 1071      6500
- 1072              	.LASF7:
- 1073 01de 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1073      206C6F6E 
- 1073      6720756E 
- 1073      7369676E 
- 1073      65642069 
- 1074              	.LASF32:
- 1075 01f5 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 1075      4320342E 
- 1075      382E3420 
- 1075      32303134 
- 1075      30353236 
- 1076 0228 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 1076      20726576 
- 1076      6973696F 
- 1076      6E203231 
- 1076      31333538 
- 1077 025b 67202D66 		.ascii	"g -ffunction-sections\000"
- 1077      66756E63 
- 1077      74696F6E 
- 1077      2D736563 
- 1077      74696F6E 
- 1078              	.LASF27:
- 1079 0271 55415254 		.ascii	"UART_2_SpiUartClearTxBuffer\000"
- 1079      5F325F53 
- 1079      70695561 
- 1079      7274436C 
- 1079      65617254 
- 1080              	.LASF15:
- 1081 028d 73697A65 		.ascii	"sizetype\000"
- 1081      74797065 
- 1081      00
- 1082              	.LASF16:
- 1083 0296 55415254 		.ascii	"UART_2_SpiUartReadRxData\000"
- 1083      5F325F53 
- 1083      70695561 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\ccfHYE5K.s 			page 30
+ 1064 0198 75696E74 		.ascii	"uint32\000"
+ 1064      333200
+ 1065              	.LASF1:
+ 1066 019f 756E7369 		.ascii	"unsigned char\000"
+ 1066      676E6564 
+ 1066      20636861 
+ 1066      7200
+ 1067              	.LASF31:
+ 1068 01ad 696E7453 		.ascii	"intSourceMask\000"
+ 1068      6F757263 
+ 1068      654D6173 
+ 1068      6B00
+ 1069              	.LASF29:
+ 1070 01bb 696E7453 		.ascii	"intSource\000"
+ 1070      6F757263 
+ 1070      6500
+ 1071              	.LASF7:
+ 1072 01c5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1072      206C6F6E 
+ 1072      6720756E 
+ 1072      7369676E 
+ 1072      65642069 
+ 1073              	.LASF32:
+ 1074 01dc 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1074      4320342E 
+ 1074      382E3420 
+ 1074      32303134 
+ 1074      30353236 
+ 1075 020f 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1075      20726576 
+ 1075      6973696F 
+ 1075      6E203231 
+ 1075      31333538 
+ 1076 0242 67202D66 		.ascii	"g -ffunction-sections\000"
+ 1076      66756E63 
+ 1076      74696F6E 
+ 1076      2D736563 
+ 1076      74696F6E 
+ 1077              	.LASF27:
+ 1078 0258 55415254 		.ascii	"UART_2_SpiUartClearTxBuffer\000"
+ 1078      5F325F53 
+ 1078      70695561 
+ 1078      7274436C 
+ 1078      65617254 
+ 1079              	.LASF15:
+ 1080 0274 73697A65 		.ascii	"sizetype\000"
+ 1080      74797065 
+ 1080      00
+ 1081              	.LASF16:
+ 1082 027d 55415254 		.ascii	"UART_2_SpiUartReadRxData\000"
+ 1082      5F325F53 
+ 1082      70695561 
+ 1082      72745265 
+ 1082      61645278 
+ 1083              	.LASF6:
+ 1084 0296 6C6F6E67 		.ascii	"long long int\000"
+ 1084      206C6F6E 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\cc4s2eU7.s 			page 30
 
 
- 1083      72745265 
- 1083      61645278 
- 1084              	.LASF6:
- 1085 02af 6C6F6E67 		.ascii	"long long int\000"
- 1085      206C6F6E 
- 1085      6720696E 
- 1085      7400
- 1086              	.LASF13:
- 1087 02bd 63686172 		.ascii	"char\000"
- 1087      00
- 1088              	.LASF2:
- 1089 02c2 73686F72 		.ascii	"short int\000"
- 1089      7420696E 
- 1089      7400
- 1090              	.LASF4:
- 1091 02cc 6C6F6E67 		.ascii	"long int\000"
- 1091      20696E74 
- 1091      00
- 1092              	.LASF0:
- 1093 02d5 7369676E 		.ascii	"signed char\000"
- 1093      65642063 
- 1093      68617200 
- 1094              	.LASF3:
- 1095 02e1 73686F72 		.ascii	"short unsigned int\000"
- 1095      7420756E 
- 1095      7369676E 
- 1095      65642069 
- 1095      6E7400
- 1096              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 1084      6720696E 
+ 1084      7400
+ 1085              	.LASF13:
+ 1086 02a4 63686172 		.ascii	"char\000"
+ 1086      00
+ 1087              	.LASF2:
+ 1088 02a9 73686F72 		.ascii	"short int\000"
+ 1088      7420696E 
+ 1088      7400
+ 1089              	.LASF4:
+ 1090 02b3 6C6F6E67 		.ascii	"long int\000"
+ 1090      20696E74 
+ 1090      00
+ 1091              	.LASF0:
+ 1092 02bc 7369676E 		.ascii	"signed char\000"
+ 1092      65642063 
+ 1092      68617200 
+ 1093              	.LASF3:
+ 1094 02c8 73686F72 		.ascii	"short unsigned int\000"
+ 1094      7420756E 
+ 1094      7369676E 
+ 1094      65642069 
+ 1094      6E7400
+ 1095              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

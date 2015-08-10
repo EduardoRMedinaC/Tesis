@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
   30:.\Generated_Source\PSoC4/cyPm.c **** *  its main clock can be removed. It is identical to Active from a peripheral
   31:.\Generated_Source\PSoC4/cyPm.c **** *  point of view. Any enabled interrupts can cause wakeup from the  Sleep mode.
   32:.\Generated_Source\PSoC4/cyPm.c **** *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 2
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/cyPm.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
   59              		.size	CySysPmSleep, .-CySysPmSleep
   60              		.section	.text.CySysPmDeepSleep,"ax",%progbits
   61              		.align	2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 3
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 3
 
 
   62              		.global	CySysPmDeepSleep
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
   86:.\Generated_Source\PSoC4/cyPm.c **** 
   87:.\Generated_Source\PSoC4/cyPm.c ****     #if(CY_IP_SRSSV2)
   88:.\Generated_Source\PSoC4/cyPm.c ****         /* Device enters DeepSleep mode when CPU asserts SLEEPDEEP signal */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 4
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 4
 
 
   89:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_CONTROL_REG &= (uint32) (~CY_PM_PWR_CONTROL_HIBERNATE);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  109:.\Generated_Source\PSoC4/cyPm.c **** 
  110:.\Generated_Source\PSoC4/cyPm.c ****     /* Sleep and wait for interrupt */
  111:.\Generated_Source\PSoC4/cyPm.c ****     CY_PM_WFI;
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 5
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 5
 
 
  118              		.loc 1 111 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  125:.\Generated_Source\PSoC4/cyPm.c **** 
  126:.\Generated_Source\PSoC4/cyPm.c **** #if(CY_IP_SRSSV2)
  127:.\Generated_Source\PSoC4/cyPm.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 6
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 6
 
 
  128:.\Generated_Source\PSoC4/cyPm.c ****     /*******************************************************************************
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  173 000e 0A43     		orr	r2, r1
  174 0010 1A60     		str	r2, [r3]
  168:.\Generated_Source\PSoC4/cyPm.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 7
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 7
 
 
  169:.\Generated_Source\PSoC4/cyPm.c ****         /* Adjust delay to wait for references to settle on wakeup from hibernate */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  208              		.align	2
  209              	.L8:
  210 003c 00000B40 		.word	1074462720
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 8
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 8
 
 
  211 0040 50F1FF0F 		.word	268431696
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  229:.\Generated_Source\PSoC4/cyPm.c ****         CySysPmFreezeIo();
  230:.\Generated_Source\PSoC4/cyPm.c **** 
  231:.\Generated_Source\PSoC4/cyPm.c ****         /* Initiates transition to Stop state */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 9
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 9
 
 
  232:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_STOP_REG = CY_PM_PWR_STOP_REG | CY_PM_PWR_STOP_STOP;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  235 0004 FFF7FEFF 		bl	CyEnterCriticalSection
  236              	.LVL11:
  277:.\Generated_Source\PSoC4/cyPm.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 10
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 10
 
 
  278:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_STOP_REG = (CY_PM_STOP_WAKEUP_ACTIVE_LOW != polarity) ?
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  286:.\Generated_Source\PSoC4/cyPm.c ****     /*******************************************************************************
  287:.\Generated_Source\PSoC4/cyPm.c ****     * Function Name: CySysPmGetResetReason
  288:.\Generated_Source\PSoC4/cyPm.c ****     ********************************************************************************
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 11
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 11
 
 
  289:.\Generated_Source\PSoC4/cyPm.c ****     *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  302              		.loc 1 320 0
  303 001a 02E0     		b	.L19
  304              	.LVL16:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 12
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 12
 
 
  305              	.L18:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  345:.\Generated_Source\PSoC4/cyPm.c ****     *
  346:.\Generated_Source\PSoC4/cyPm.c ****     * Parameters:
  347:.\Generated_Source\PSoC4/cyPm.c ****     *  None
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 13
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 13
 
 
  348:.\Generated_Source\PSoC4/cyPm.c ****     *
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  359              		.loc 1 375 0
  360 001e 1A68     		ldr	r2, [r3]
  376:.\Generated_Source\PSoC4/cyPm.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 14
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 14
 
 
  377:.\Generated_Source\PSoC4/cyPm.c ****             /* Second write causes the freeze of IO-Cells to save IO-Cell state */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  229:.\Generated_Source\PSoC4/cyPm.c ****         CySysPmFreezeIo();
  406              		.loc 1 229 0
  407 0016 FFF7FEFF 		bl	CySysPmFreezeIo
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 15
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 15
 
 
  408              	.LVL22:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  391:.\Generated_Source\PSoC4/cyPm.c ****     *  the firmware unfreezes them after booting. The call of this function
  392:.\Generated_Source\PSoC4/cyPm.c ****     *  unfreezes IO-Cells explicitly.
  393:.\Generated_Source\PSoC4/cyPm.c ****     *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 16
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 16
 
 
  394:.\Generated_Source\PSoC4/cyPm.c ****     *  If the firmware intent is to retain the data value on the port, then the
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  471 0018 1968     		ldr	r1, [r3]
  425:.\Generated_Source\PSoC4/cyPm.c **** 
  426:.\Generated_Source\PSoC4/cyPm.c ****         /* Lock STOP mode: write PWR_STOP.FREEZE=0, UNLOCK=0x00, STOP=0, .TOKEN */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 17
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 17
 
 
  427:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_STOP_REG &= (CY_PM_PWR_STOP_TOKEN_MASK | CY_PM_PWR_STOP_POLARITY);
@@ -994,48 +994,48 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  498 0006 00000000 		.4byte	.Ldebug_abbrev0
  499 000a 04       		.byte	0x4
  500 000b 01       		.uleb128 0x1
- 501 000c 9C010000 		.4byte	.LASF28
+ 501 000c 83010000 		.4byte	.LASF28
  502 0010 01       		.byte	0x1
- 503 0011 67020000 		.4byte	.LASF29
- 504 0015 25000000 		.4byte	.LASF30
+ 503 0011 4E020000 		.4byte	.LASF29
+ 504 0015 56000000 		.4byte	.LASF30
  505 0019 00000000 		.4byte	.Ldebug_ranges0+0
  506 001d 00000000 		.4byte	0
  507 0021 00000000 		.4byte	.Ldebug_line0
  508 0025 02       		.uleb128 0x2
  509 0026 01       		.byte	0x1
  510 0027 06       		.byte	0x6
- 511 0028 AB020000 		.4byte	.LASF0
+ 511 0028 92020000 		.4byte	.LASF0
  512 002c 02       		.uleb128 0x2
  513 002d 01       		.byte	0x1
  514 002e 08       		.byte	0x8
- 515 002f E3000000 		.4byte	.LASF1
+ 515 002f CA000000 		.4byte	.LASF1
  516 0033 02       		.uleb128 0x2
  517 0034 02       		.byte	0x2
  518 0035 05       		.byte	0x5
- 519 0036 87020000 		.4byte	.LASF2
+ 519 0036 6E020000 		.4byte	.LASF2
  520 003a 02       		.uleb128 0x2
  521 003b 02       		.byte	0x2
  522 003c 07       		.byte	0x7
- 523 003d A2000000 		.4byte	.LASF3
+ 523 003d 43000000 		.4byte	.LASF3
  524 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 18
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 18
 
 
  525 0042 04       		.byte	0x4
  526 0043 05       		.byte	0x5
- 527 0044 A2020000 		.4byte	.LASF4
+ 527 0044 89020000 		.4byte	.LASF4
  528 0048 02       		.uleb128 0x2
  529 0049 04       		.byte	0x4
  530 004a 07       		.byte	0x7
- 531 004b 00010000 		.4byte	.LASF5
+ 531 004b E7000000 		.4byte	.LASF5
  532 004f 02       		.uleb128 0x2
  533 0050 08       		.byte	0x8
  534 0051 05       		.byte	0x5
- 535 0052 47020000 		.4byte	.LASF6
+ 535 0052 2E020000 		.4byte	.LASF6
  536 0056 02       		.uleb128 0x2
  537 0057 08       		.byte	0x8
  538 0058 07       		.byte	0x7
- 539 0059 CC000000 		.4byte	.LASF7
+ 539 0059 B3000000 		.4byte	.LASF7
  540 005d 03       		.uleb128 0x3
  541 005e 04       		.byte	0x4
  542 005f 05       		.byte	0x5
@@ -1043,34 +1043,34 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  544 0064 02       		.uleb128 0x2
  545 0065 04       		.byte	0x4
  546 0066 07       		.byte	0x7
- 547 0067 62010000 		.4byte	.LASF8
+ 547 0067 49010000 		.4byte	.LASF8
  548 006b 04       		.uleb128 0x4
- 549 006c 12010000 		.4byte	.LASF9
+ 549 006c F9000000 		.4byte	.LASF9
  550 0070 02       		.byte	0x2
  551 0071 B3       		.byte	0xb3
  552 0072 2C000000 		.4byte	0x2c
  553 0076 04       		.uleb128 0x4
- 554 0077 3D010000 		.4byte	.LASF10
+ 554 0077 24010000 		.4byte	.LASF10
  555 007b 02       		.byte	0x2
  556 007c B4       		.byte	0xb4
  557 007d 3A000000 		.4byte	0x3a
  558 0081 04       		.uleb128 0x4
- 559 0082 44010000 		.4byte	.LASF11
+ 559 0082 2B010000 		.4byte	.LASF11
  560 0086 02       		.byte	0x2
  561 0087 B5       		.byte	0xb5
  562 0088 48000000 		.4byte	0x48
  563 008c 02       		.uleb128 0x2
  564 008d 04       		.byte	0x4
  565 008e 04       		.byte	0x4
- 566 008f C6000000 		.4byte	.LASF12
+ 566 008f AD000000 		.4byte	.LASF12
  567 0093 02       		.uleb128 0x2
  568 0094 08       		.byte	0x8
  569 0095 04       		.byte	0x4
- 570 0096 24010000 		.4byte	.LASF13
+ 570 0096 0B010000 		.4byte	.LASF13
  571 009a 02       		.uleb128 0x2
  572 009b 01       		.byte	0x1
  573 009c 08       		.byte	0x8
- 574 009d 55020000 		.4byte	.LASF14
+ 574 009d 3C020000 		.4byte	.LASF14
  575 00a1 05       		.uleb128 0x5
  576 00a2 00000000 		.4byte	.LASF15
  577 00a6 02       		.byte	0x2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  579 00a9 AD000000 		.4byte	0xad
  580 00ad 06       		.uleb128 0x6
  581 00ae 76000000 		.4byte	0x76
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 19
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 19
 
 
  582 00b2 05       		.uleb128 0x5
@@ -1091,9 +1091,9 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  589 00c3 02       		.uleb128 0x2
  590 00c4 04       		.byte	0x4
  591 00c5 07       		.byte	0x7
- 592 00c6 3E020000 		.4byte	.LASF17
+ 592 00c6 25020000 		.4byte	.LASF17
  593 00ca 07       		.uleb128 0x7
- 594 00cb 95000000 		.4byte	.LASF18
+ 594 00cb 36000000 		.4byte	.LASF18
  595 00cf 01       		.byte	0x1
  596 00d0 28       		.byte	0x28
  597 00d1 00000000 		.4byte	.LFB0
@@ -1102,7 +1102,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  600 00da 9C       		.byte	0x9c
  601 00db 01010000 		.4byte	0x101
  602 00df 08       		.uleb128 0x8
- 603 00e0 F1000000 		.4byte	.LASF20
+ 603 00e0 D8000000 		.4byte	.LASF20
  604 00e4 01       		.byte	0x1
  605 00e5 2A       		.byte	0x2a
  606 00e6 6B000000 		.4byte	0x6b
@@ -1115,7 +1115,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  613 00fc B1020000 		.4byte	0x2b1
  614 0100 00       		.byte	0
  615 0101 07       		.uleb128 0x7
- 616 0102 91020000 		.4byte	.LASF19
+ 616 0102 78020000 		.4byte	.LASF19
  617 0106 01       		.byte	0x1
  618 0107 4E       		.byte	0x4e
  619 0108 00000000 		.4byte	.LFB1
@@ -1124,13 +1124,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  622 0111 9C       		.byte	0x9c
  623 0112 61010000 		.4byte	0x161
  624 0116 08       		.uleb128 0x8
- 625 0117 F1000000 		.4byte	.LASF20
+ 625 0117 D8000000 		.4byte	.LASF20
  626 011b 01       		.byte	0x1
  627 011c 50       		.byte	0x50
  628 011d 6B000000 		.4byte	0x6b
  629 0121 13000000 		.4byte	.LLST1
  630 0125 0A       		.uleb128 0xa
- 631 0126 5A020000 		.4byte	.LASF21
+ 631 0126 41020000 		.4byte	.LASF21
  632 012a 01       		.byte	0x1
  633 012b 52       		.byte	0x52
  634 012c BE000000 		.4byte	0xbe
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  636 0131 91       		.byte	0x91
  637 0132 64       		.sleb128 -28
  638 0133 09       		.uleb128 0x9
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 20
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 20
 
 
  639 0134 08000000 		.4byte	.LVL2
@@ -1166,7 +1166,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  661 015f 00       		.byte	0
  662 0160 00       		.byte	0
  663 0161 07       		.uleb128 0x7
- 664 0162 B5000000 		.4byte	.LASF22
+ 664 0162 25000000 		.4byte	.LASF22
  665 0166 01       		.byte	0x1
  666 0167 A0       		.byte	0xa0
  667 0168 00000000 		.4byte	.LFB2
@@ -1175,7 +1175,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  670 0171 9C       		.byte	0x9c
  671 0172 98010000 		.4byte	0x198
  672 0176 08       		.uleb128 0x8
- 673 0177 F1000000 		.4byte	.LASF20
+ 673 0177 D8000000 		.4byte	.LASF20
  674 017b 01       		.byte	0x1
  675 017c A2       		.byte	0xa2
  676 017d 6B000000 		.4byte	0x6b
@@ -1197,8 +1197,8 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  692 01a9 9C       		.byte	0x9c
  693 01aa E1010000 		.4byte	0x1e1
  694 01ae 0F       		.uleb128 0xf
- 695 01af 1F020000 		.4byte	.LASF31
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 21
+ 695 01af 06020000 		.4byte	.LASF31
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 21
 
 
  696 01b3 01       		.byte	0x1
@@ -1206,7 +1206,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  698 01b6 81000000 		.4byte	0x81
  699 01ba 44000000 		.4byte	.LLST3
  700 01be 10       		.uleb128 0x10
- 701 01bf F1000000 		.4byte	.LASF20
+ 701 01bf D8000000 		.4byte	.LASF20
  702 01c3 01       		.byte	0x1
  703 01c4 1201     		.2byte	0x112
  704 01c6 6B000000 		.4byte	0x6b
@@ -1219,7 +1219,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  711 01dc B1020000 		.4byte	0x2b1
  712 01e0 00       		.byte	0
  713 01e1 11       		.uleb128 0x11
- 714 01e2 28020000 		.4byte	.LASF32
+ 714 01e2 0F020000 		.4byte	.LASF32
  715 01e6 01       		.byte	0x1
  716 01e7 3201     		.2byte	0x132
  717 01e9 81000000 		.4byte	0x81
@@ -1229,14 +1229,14 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  721 01f6 9C       		.byte	0x9c
  722 01f7 0C020000 		.4byte	0x20c
  723 01fb 10       		.uleb128 0x10
- 724 01fc 18020000 		.4byte	.LASF24
+ 724 01fc FF010000 		.4byte	.LASF24
  725 0200 01       		.byte	0x1
  726 0201 3401     		.2byte	0x134
  727 0203 81000000 		.4byte	0x81
  728 0207 83000000 		.4byte	.LLST5
  729 020b 00       		.byte	0
  730 020c 0E       		.uleb128 0xe
- 731 020d B7020000 		.4byte	.LASF25
+ 731 020d 9E020000 		.4byte	.LASF25
  732 0211 01       		.byte	0x1
  733 0212 6101     		.2byte	0x161
  734 0214 00000000 		.4byte	.LFB6
@@ -1245,7 +1245,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  737 021d 9C       		.byte	0x9c
  738 021e 45020000 		.4byte	0x245
  739 0222 10       		.uleb128 0x10
- 740 0223 F1000000 		.4byte	.LASF20
+ 740 0223 D8000000 		.4byte	.LASF20
  741 0227 01       		.byte	0x1
  742 0228 6301     		.2byte	0x163
  743 022a 6B000000 		.4byte	0x6b
@@ -1258,10 +1258,10 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  750 0240 B1020000 		.4byte	0x2b1
  751 0244 00       		.byte	0
  752 0245 07       		.uleb128 0x7
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 22
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 22
 
 
- 753 0246 18010000 		.4byte	.LASF26
+ 753 0246 FF000000 		.4byte	.LASF26
  754 024a 01       		.byte	0x1
  755 024b DD       		.byte	0xdd
  756 024c 00000000 		.4byte	.LFB3
@@ -1277,7 +1277,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  766 0268 0C020000 		.4byte	0x20c
  767 026c 00       		.byte	0
  768 026d 0E       		.uleb128 0xe
- 769 026e 2B010000 		.4byte	.LASF27
+ 769 026e 12010000 		.4byte	.LASF27
  770 0272 01       		.byte	0x1
  771 0273 9801     		.2byte	0x198
  772 0275 00000000 		.4byte	.LFB7
@@ -1286,7 +1286,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  775 027e 9C       		.byte	0x9c
  776 027f A6020000 		.4byte	0x2a6
  777 0283 10       		.uleb128 0x10
- 778 0284 F1000000 		.4byte	.LASF20
+ 778 0284 D8000000 		.4byte	.LASF20
  779 0288 01       		.byte	0x1
  780 0289 9A01     		.2byte	0x19a
  781 028b 6B000000 		.4byte	0x6b
@@ -1299,12 +1299,12 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  788 02a1 B1020000 		.4byte	0x2b1
  789 02a5 00       		.byte	0
  790 02a6 12       		.uleb128 0x12
- 791 02a7 4B010000 		.4byte	.LASF33
+ 791 02a7 32010000 		.4byte	.LASF33
  792 02ab 03       		.byte	0x3
  793 02ac 5E       		.byte	0x5e
  794 02ad 6B000000 		.4byte	0x6b
  795 02b1 13       		.uleb128 0x13
- 796 02b2 6F010000 		.4byte	.LASF34
+ 796 02b2 56010000 		.4byte	.LASF34
  797 02b6 03       		.byte	0x3
  798 02b7 5F       		.byte	0x5f
  799 02b8 C2020000 		.4byte	0x2c2
@@ -1312,13 +1312,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  801 02bd 6B000000 		.4byte	0x6b
  802 02c1 00       		.byte	0
  803 02c2 15       		.uleb128 0x15
- 804 02c3 85010000 		.4byte	.LASF35
+ 804 02c3 6C010000 		.4byte	.LASF35
  805 02c7 03       		.byte	0x3
  806 02c8 30       		.byte	0x30
  807 02c9 14       		.uleb128 0x14
  808 02ca 81000000 		.4byte	0x81
  809 02ce 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 23
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 23
 
 
  810 02cf 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  864 0033 13       		.uleb128 0x13
  865 0034 00       		.byte	0
  866 0035 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 24
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 24
 
 
  867 0036 05       		.uleb128 0x5
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  921 006d 49       		.uleb128 0x49
  922 006e 13       		.uleb128 0x13
  923 006f 02       		.uleb128 0x2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 25
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 25
 
 
  924 0070 17       		.uleb128 0x17
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  978 00af 00       		.byte	0
  979 00b0 00       		.byte	0
  980 00b1 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 26
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 26
 
 
  981 00b2 2E       		.uleb128 0x2e
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  1035 00e9 11       		.uleb128 0x11
  1036 00ea 2E       		.uleb128 0x2e
  1037 00eb 01       		.byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 27
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 27
 
 
  1038 00ec 3F       		.uleb128 0x3f
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  1092 0123 27       		.uleb128 0x27
  1093 0124 19       		.uleb128 0x19
  1094 0125 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 28
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 28
 
 
  1095 0126 19       		.uleb128 0x19
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  1149 003b 50       		.byte	0x50
  1150 003c 00000000 		.4byte	0
  1151 0040 00000000 		.4byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 29
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 29
 
 
  1152              	.LLST3:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  1206 00ca 27000000 		.4byte	.LVL20-1
  1207 00ce 0100     		.2byte	0x1
  1208 00d0 50       		.byte	0x50
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 30
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 30
 
 
  1209 00d1 00000000 		.4byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  1263 0044 00000000 		.4byte	0
  1264              		.section	.debug_line,"",%progbits
  1265              	.Ldebug_line0:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 31
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 31
 
 
  1266 0000 29010000 		.section	.debug_str,"MS",%progbits,1
@@ -1818,191 +1818,186 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 1
  1272      65745761 
  1272      6B657570 
  1272      506F6C61 
- 1273              	.LASF30:
- 1274 0025 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
- 1274      73657273 
- 1274      5C4D6172 
- 1274      63656C6F 
- 1274      5C446F63 
- 1275 0053 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
- 1275      686F6761 
- 1275      725C5073 
- 1275      6F635F43 
- 1275      72656174 
- 1276 0083 66616365 		.ascii	"face_driver.cydsn\000"
- 1276      5F647269 
- 1276      7665722E 
- 1276      63796473 
- 1276      6E00
- 1277              	.LASF18:
- 1278 0095 43795379 		.ascii	"CySysPmSleep\000"
- 1278      73506D53 
- 1278      6C656570 
- 1278      00
- 1279              	.LASF3:
- 1280 00a2 73686F72 		.ascii	"short unsigned int\000"
- 1280      7420756E 
- 1280      7369676E 
- 1280      65642069 
- 1280      6E7400
- 1281              	.LASF22:
- 1282 00b5 43795379 		.ascii	"CySysPmHibernate\000"
- 1282      73506D48 
- 1282      69626572 
- 1282      6E617465 
- 1282      00
- 1283              	.LASF12:
- 1284 00c6 666C6F61 		.ascii	"float\000"
- 1284      7400
- 1285              	.LASF7:
- 1286 00cc 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1286      206C6F6E 
- 1286      6720756E 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 32
+ 1273              	.LASF22:
+ 1274 0025 43795379 		.ascii	"CySysPmHibernate\000"
+ 1274      73506D48 
+ 1274      69626572 
+ 1274      6E617465 
+ 1274      00
+ 1275              	.LASF18:
+ 1276 0036 43795379 		.ascii	"CySysPmSleep\000"
+ 1276      73506D53 
+ 1276      6C656570 
+ 1276      00
+ 1277              	.LASF3:
+ 1278 0043 73686F72 		.ascii	"short unsigned int\000"
+ 1278      7420756E 
+ 1278      7369676E 
+ 1278      65642069 
+ 1278      6E7400
+ 1279              	.LASF30:
+ 1280 0056 433A5C55 		.ascii	"C:\\Users\\marce\\Documents\\Tesis\\Psoc_Creator\\D"
+ 1280      73657273 
+ 1280      5C6D6172 
+ 1280      63655C44 
+ 1280      6F63756D 
+ 1281 0083 61746120 		.ascii	"ata Exchange MT174\\Interface_driver.cydsn\000"
+ 1281      45786368 
+ 1281      616E6765 
+ 1281      204D5431 
+ 1281      37345C49 
+ 1282              	.LASF12:
+ 1283 00ad 666C6F61 		.ascii	"float\000"
+ 1283      7400
+ 1284              	.LASF7:
+ 1285 00b3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1285      206C6F6E 
+ 1285      6720756E 
+ 1285      7369676E 
+ 1285      65642069 
+ 1286              	.LASF1:
+ 1287 00ca 756E7369 		.ascii	"unsigned char\000"
+ 1287      676E6564 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 32
 
 
- 1286      7369676E 
- 1286      65642069 
- 1287              	.LASF1:
- 1288 00e3 756E7369 		.ascii	"unsigned char\000"
- 1288      676E6564 
- 1288      20636861 
- 1288      7200
- 1289              	.LASF20:
- 1290 00f1 696E7465 		.ascii	"interruptState\000"
- 1290      72727570 
- 1290      74537461 
- 1290      746500
- 1291              	.LASF5:
- 1292 0100 6C6F6E67 		.ascii	"long unsigned int\000"
- 1292      20756E73 
- 1292      69676E65 
- 1292      6420696E 
- 1292      7400
- 1293              	.LASF9:
- 1294 0112 75696E74 		.ascii	"uint8\000"
- 1294      3800
- 1295              	.LASF26:
- 1296 0118 43795379 		.ascii	"CySysPmStop\000"
- 1296      73506D53 
- 1296      746F7000 
- 1297              	.LASF13:
- 1298 0124 646F7562 		.ascii	"double\000"
- 1298      6C6500
- 1299              	.LASF27:
- 1300 012b 43795379 		.ascii	"CySysPmUnfreezeIo\000"
- 1300      73506D55 
- 1300      6E667265 
- 1300      657A6549 
- 1300      6F00
- 1301              	.LASF10:
- 1302 013d 75696E74 		.ascii	"uint16\000"
- 1302      313600
- 1303              	.LASF11:
- 1304 0144 75696E74 		.ascii	"uint32\000"
- 1304      333200
- 1305              	.LASF33:
- 1306 014b 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1306      74657243 
- 1306      72697469 
- 1306      63616C53 
- 1306      65637469 
- 1307              	.LASF8:
- 1308 0162 756E7369 		.ascii	"unsigned int\000"
- 1308      676E6564 
- 1308      20696E74 
- 1308      00
- 1309              	.LASF34:
- 1310 016f 43794578 		.ascii	"CyExitCriticalSection\000"
- 1310      69744372 
- 1310      69746963 
- 1310      616C5365 
- 1310      6374696F 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 33
+ 1287      20636861 
+ 1287      7200
+ 1288              	.LASF20:
+ 1289 00d8 696E7465 		.ascii	"interruptState\000"
+ 1289      72727570 
+ 1289      74537461 
+ 1289      746500
+ 1290              	.LASF5:
+ 1291 00e7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1291      20756E73 
+ 1291      69676E65 
+ 1291      6420696E 
+ 1291      7400
+ 1292              	.LASF9:
+ 1293 00f9 75696E74 		.ascii	"uint8\000"
+ 1293      3800
+ 1294              	.LASF26:
+ 1295 00ff 43795379 		.ascii	"CySysPmStop\000"
+ 1295      73506D53 
+ 1295      746F7000 
+ 1296              	.LASF13:
+ 1297 010b 646F7562 		.ascii	"double\000"
+ 1297      6C6500
+ 1298              	.LASF27:
+ 1299 0112 43795379 		.ascii	"CySysPmUnfreezeIo\000"
+ 1299      73506D55 
+ 1299      6E667265 
+ 1299      657A6549 
+ 1299      6F00
+ 1300              	.LASF10:
+ 1301 0124 75696E74 		.ascii	"uint16\000"
+ 1301      313600
+ 1302              	.LASF11:
+ 1303 012b 75696E74 		.ascii	"uint32\000"
+ 1303      333200
+ 1304              	.LASF33:
+ 1305 0132 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1305      74657243 
+ 1305      72697469 
+ 1305      63616C53 
+ 1305      65637469 
+ 1306              	.LASF8:
+ 1307 0149 756E7369 		.ascii	"unsigned int\000"
+ 1307      676E6564 
+ 1307      20696E74 
+ 1307      00
+ 1308              	.LASF34:
+ 1309 0156 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1309      69744372 
+ 1309      69746963 
+ 1309      616C5365 
+ 1309      6374696F 
+ 1310              	.LASF35:
+ 1311 016c 43795379 		.ascii	"CySysClkWriteSysclkDiv\000"
+ 1311      73436C6B 
+ 1311      57726974 
+ 1311      65537973 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 33
 
 
- 1311              	.LASF35:
- 1312 0185 43795379 		.ascii	"CySysClkWriteSysclkDiv\000"
- 1312      73436C6B 
- 1312      57726974 
- 1312      65537973 
- 1312      636C6B44 
- 1313              	.LASF28:
- 1314 019c 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 1314      4320342E 
- 1314      382E3420 
- 1314      32303134 
- 1314      30353236 
- 1315 01cf 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 1315      20726576 
- 1315      6973696F 
- 1315      6E203231 
- 1315      31333538 
- 1316 0202 67202D66 		.ascii	"g -ffunction-sections\000"
- 1316      66756E63 
- 1316      74696F6E 
- 1316      2D736563 
- 1316      74696F6E 
- 1317              	.LASF24:
- 1318 0218 72656173 		.ascii	"reason\000"
- 1318      6F6E00
- 1319              	.LASF31:
- 1320 021f 706F6C61 		.ascii	"polarity\000"
- 1320      72697479 
- 1320      00
- 1321              	.LASF32:
- 1322 0228 43795379 		.ascii	"CySysPmGetResetReason\000"
- 1322      73506D47 
- 1322      65745265 
- 1322      73657452 
- 1322      6561736F 
- 1323              	.LASF17:
- 1324 023e 73697A65 		.ascii	"sizetype\000"
- 1324      74797065 
- 1324      00
- 1325              	.LASF6:
- 1326 0247 6C6F6E67 		.ascii	"long long int\000"
- 1326      206C6F6E 
- 1326      6720696E 
- 1326      7400
- 1327              	.LASF14:
- 1328 0255 63686172 		.ascii	"char\000"
- 1328      00
- 1329              	.LASF21:
- 1330 025a 636C6B53 		.ascii	"clkSelectReg\000"
- 1330      656C6563 
- 1330      74526567 
- 1330      00
- 1331              	.LASF29:
- 1332 0267 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\cyPm.c\000"
- 1332      6E657261 
- 1332      7465645F 
- 1332      536F7572 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cc31cy3h.s 			page 34
+ 1311      636C6B44 
+ 1312              	.LASF28:
+ 1313 0183 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1313      4320342E 
+ 1313      382E3420 
+ 1313      32303134 
+ 1313      30353236 
+ 1314 01b6 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1314      20726576 
+ 1314      6973696F 
+ 1314      6E203231 
+ 1314      31333538 
+ 1315 01e9 67202D66 		.ascii	"g -ffunction-sections\000"
+ 1315      66756E63 
+ 1315      74696F6E 
+ 1315      2D736563 
+ 1315      74696F6E 
+ 1316              	.LASF24:
+ 1317 01ff 72656173 		.ascii	"reason\000"
+ 1317      6F6E00
+ 1318              	.LASF31:
+ 1319 0206 706F6C61 		.ascii	"polarity\000"
+ 1319      72697479 
+ 1319      00
+ 1320              	.LASF32:
+ 1321 020f 43795379 		.ascii	"CySysPmGetResetReason\000"
+ 1321      73506D47 
+ 1321      65745265 
+ 1321      73657452 
+ 1321      6561736F 
+ 1322              	.LASF17:
+ 1323 0225 73697A65 		.ascii	"sizetype\000"
+ 1323      74797065 
+ 1323      00
+ 1324              	.LASF6:
+ 1325 022e 6C6F6E67 		.ascii	"long long int\000"
+ 1325      206C6F6E 
+ 1325      6720696E 
+ 1325      7400
+ 1326              	.LASF14:
+ 1327 023c 63686172 		.ascii	"char\000"
+ 1327      00
+ 1328              	.LASF21:
+ 1329 0241 636C6B53 		.ascii	"clkSelectReg\000"
+ 1329      656C6563 
+ 1329      74526567 
+ 1329      00
+ 1330              	.LASF29:
+ 1331 024e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\cyPm.c\000"
+ 1331      6E657261 
+ 1331      7465645F 
+ 1331      536F7572 
+ 1331      63655C50 
+ 1332              	.LASF2:
+ 1333 026e 73686F72 		.ascii	"short int\000"
+ 1333      7420696E 
+ 1333      7400
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccPtI9ep.s 			page 34
 
 
- 1332      63655C50 
- 1333              	.LASF2:
- 1334 0287 73686F72 		.ascii	"short int\000"
- 1334      7420696E 
- 1334      7400
- 1335              	.LASF19:
- 1336 0291 43795379 		.ascii	"CySysPmDeepSleep\000"
- 1336      73506D44 
- 1336      65657053 
- 1336      6C656570 
- 1336      00
- 1337              	.LASF4:
- 1338 02a2 6C6F6E67 		.ascii	"long int\000"
- 1338      20696E74 
- 1338      00
- 1339              	.LASF0:
- 1340 02ab 7369676E 		.ascii	"signed char\000"
- 1340      65642063 
- 1340      68617200 
- 1341              	.LASF25:
- 1342 02b7 43795379 		.ascii	"CySysPmFreezeIo\000"
- 1342      73506D46 
- 1342      7265657A 
- 1342      65496F00 
- 1343              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 1334              	.LASF19:
+ 1335 0278 43795379 		.ascii	"CySysPmDeepSleep\000"
+ 1335      73506D44 
+ 1335      65657053 
+ 1335      6C656570 
+ 1335      00
+ 1336              	.LASF4:
+ 1337 0289 6C6F6E67 		.ascii	"long int\000"
+ 1337      20696E74 
+ 1337      00
+ 1338              	.LASF0:
+ 1339 0292 7369676E 		.ascii	"signed char\000"
+ 1339      65642063 
+ 1339      68617200 
+ 1340              	.LASF25:
+ 1341 029e 43795379 		.ascii	"CySysPmFreezeIo\000"
+ 1341      73506D46 
+ 1341      7265657A 
+ 1341      65496F00 
+ 1342              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

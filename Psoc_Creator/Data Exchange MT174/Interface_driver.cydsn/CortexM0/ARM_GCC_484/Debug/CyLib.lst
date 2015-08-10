@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
   30:.\Generated_Source\PSoC4/CyLib.c **** uint32 cydelay32kMs   = CY_DELAY_MS_OVERFLOW * ((CYDEV_BCLK__SYSCLK__HZ + CY_DELAY_1K_MINUS_1_THRES
   31:.\Generated_Source\PSoC4/CyLib.c ****                         CY_DELAY_1K_THRESHOLD);
   32:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 2
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/CyLib.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
   87:.\Generated_Source\PSoC4/CyLib.c **** *  None
   88:.\Generated_Source\PSoC4/CyLib.c **** *
   89:.\Generated_Source\PSoC4/CyLib.c **** *******************************************************************************/
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 3
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/CyLib.c **** void CySysClkImoStart(void)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  117:.\Generated_Source\PSoC4/CyLib.c **** *  None
  118:.\Generated_Source\PSoC4/CyLib.c **** *
  119:.\Generated_Source\PSoC4/CyLib.c **** *******************************************************************************/
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 4
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 4
 
 
  120:.\Generated_Source\PSoC4/CyLib.c **** void CySysClkImoStop(void)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  148:.\Generated_Source\PSoC4/CyLib.c ****     *******************************************************************************/
  149:.\Generated_Source\PSoC4/CyLib.c ****     void CySysClkImoEnableWcoLock(void)
  150:.\Generated_Source\PSoC4/CyLib.c ****     {
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 5
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 5
 
 
  151:.\Generated_Source\PSoC4/CyLib.c ****         uint32 i;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  205:.\Generated_Source\PSoC4/CyLib.c ****     *  Disables the IMO to WCO lock feature.
  206:.\Generated_Source\PSoC4/CyLib.c ****     *
  207:.\Generated_Source\PSoC4/CyLib.c ****     *  This function is applicable for PSoC 4100M/PSoC 4200M devices only.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 6
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 6
 
 
  208:.\Generated_Source\PSoC4/CyLib.c ****     *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  262:.\Generated_Source\PSoC4/CyLib.c **** *
  263:.\Generated_Source\PSoC4/CyLib.c **** * Return:
  264:.\Generated_Source\PSoC4/CyLib.c **** *  None
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 7
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 7
 
 
  265:.\Generated_Source\PSoC4/CyLib.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  105              		.loc 1 291 0
  106              		@ sp needed
  107 001c 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 8
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 8
 
 
  108              	.L9:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  331:.\Generated_Source\PSoC4/CyLib.c **** {
  123              		.loc 1 331 0
  124              		.cfi_startproc
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 9
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 9
 
 
  125              	.LVL4:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  166              		.thumb_func
  167              		.type	CySysLvdDisable, %function
  168              	CySysLvdDisable:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 10
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 10
 
 
  169              	.LFB6:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  396:.\Generated_Source\PSoC4/CyLib.c ****             uint8  bgTrim4;
  397:.\Generated_Source\PSoC4/CyLib.c ****             uint8  bgTrim5;
  398:.\Generated_Source\PSoC4/CyLib.c ****             uint8  newImoTrim2Value;
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 11
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 11
 
 
  399:.\Generated_Source\PSoC4/CyLib.c ****             uint8  currentImoTrim2Value;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  453:.\Generated_Source\PSoC4/CyLib.c ****                 bgTrim5 = CY_SFLASH_IMO_TMPCO2_REG;
  454:.\Generated_Source\PSoC4/CyLib.c ****             }
  455:.\Generated_Source\PSoC4/CyLib.c ****             else if(freq <= CY_SFLASH_IMO_MAXF3_REG)
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 12
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 12
 
 
  456:.\Generated_Source\PSoC4/CyLib.c ****             {
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  510:.\Generated_Source\PSoC4/CyLib.c ****             /* Set trims for the new IMO frequency */
  511:.\Generated_Source\PSoC4/CyLib.c ****             CY_SYS_CLK_IMO_TRIM1_REG = (uint32) CY_SFLASH_IMO_TRIM_REG(freq - CY_SYS_CLK_IMO_FREQ_T
  512:.\Generated_Source\PSoC4/CyLib.c ****             CY_PWR_BG_TRIM4_REG  = bgTrim4;
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 13
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 13
 
 
  513:.\Generated_Source\PSoC4/CyLib.c ****             CY_PWR_BG_TRIM5_REG  = bgTrim5;
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  567:.\Generated_Source\PSoC4/CyLib.c ****             if (freq > CY_SYS_CLK_IMO_MIN_FREQ_MHZ)
  568:.\Generated_Source\PSoC4/CyLib.c ****             {
  569:.\Generated_Source\PSoC4/CyLib.c ****                 /* Select nearby intermediate frequency */
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 14
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 14
 
 
  570:.\Generated_Source\PSoC4/CyLib.c ****                 CY_SYS_CLK_IMO_SELECT_REG = (CY_SYS_CLK_IMO_SELECT_REG & ((uint32) ~CY_SYS_CLK_IMO_
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  624:.\Generated_Source\PSoC4/CyLib.c ****     *  Flash. If the SYSCLK clock frequency decreases, you can call
  625:.\Generated_Source\PSoC4/CyLib.c ****     *  CySysFlashSetWaitCycles() to improve the CPU performance. See
  626:.\Generated_Source\PSoC4/CyLib.c ****     *  CySysFlashSetWaitCycles() description for more information.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 15
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 15
 
 
  627:.\Generated_Source\PSoC4/CyLib.c ****     *
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  681:.\Generated_Source\PSoC4/CyLib.c ****         /* Update trimming register */
  682:.\Generated_Source\PSoC4/CyLib.c ****         CY_SYS_XTAL_BLERD_BB_XO_REG = CY_SYS_XTAL_BLERD_BB_XO_TRIM;
  683:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 16
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 16
 
 
  684:.\Generated_Source\PSoC4/CyLib.c ****         /* Enable the Crystal */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  738:.\Generated_Source\PSoC4/CyLib.c ****     *
  739:.\Generated_Source\PSoC4/CyLib.c ****     * Parameters:
  740:.\Generated_Source\PSoC4/CyLib.c ****     *  None
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 17
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 17
 
 
  741:.\Generated_Source\PSoC4/CyLib.c ****     *
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  795:.\Generated_Source\PSoC4/CyLib.c ****                                                   (CY_SYS_CLK_XTAL_CLK_DIV_CONFIG_REG & ((uint32) ~
  796:.\Generated_Source\PSoC4/CyLib.c **** 
  797:.\Generated_Source\PSoC4/CyLib.c ****             CyExitCriticalSection(interruptState);
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 18
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 18
 
 
  798:.\Generated_Source\PSoC4/CyLib.c ****         }
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  852:.\Generated_Source\PSoC4/CyLib.c **** 
  853:.\Generated_Source\PSoC4/CyLib.c ****         /* Set specified threshold */
  854:.\Generated_Source\PSoC4/CyLib.c ****         CY_LVD_PWR_VMON_CONFIG_REG = (CY_LVD_PWR_VMON_CONFIG_REG & ~CY_LVD_PWR_VMON_CONFIG_LVD_SEL_
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 19
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 19
 
 
  855:.\Generated_Source\PSoC4/CyLib.c ****                 ((threshold << CY_LVD_PWR_VMON_CONFIG_LVD_SEL_SHIFT) & CY_LVD_PWR_VMON_CONFIG_LVD_S
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  189              	.L14:
  190 0018 08000B40 		.word	1074462728
  191 001c 18000B40 		.word	1074462744
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 20
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 20
 
 
  192              		.cfi_endproc
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  225              		.type	CySysLvdClearInterrupt, %function
  226              	CySysLvdClearInterrupt:
  227              	.LFB8:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 21
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 21
 
 
  911:.\Generated_Source\PSoC4/CyLib.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  941:.\Generated_Source\PSoC4/CyLib.c **** *  the bits in the RES_CAUSE register assert when the corresponding reset cause
  942:.\Generated_Source\PSoC4/CyLib.c **** *  occurs and must be cleared by the firmware. These bits are cleared by the
  943:.\Generated_Source\PSoC4/CyLib.c **** *  hardware only during XRES, POR, or a detected brown-out.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 22
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 22
 
 
  944:.\Generated_Source\PSoC4/CyLib.c **** *
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  284              	.LFB10:
  966:.\Generated_Source\PSoC4/CyLib.c **** 
  967:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 23
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 23
 
 
  968:.\Generated_Source\PSoC4/CyLib.c **** /*******************************************************************************
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  994:.\Generated_Source\PSoC4/CyLib.c **** 
  995:.\Generated_Source\PSoC4/CyLib.c **** 
  996:.\Generated_Source\PSoC4/CyLib.c **** /*******************************************************************************
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 24
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 24
 
 
  997:.\Generated_Source\PSoC4/CyLib.c **** * Function Name: CyEnableInts
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1027:.\Generated_Source\PSoC4/CyLib.c **** *    CY_INT_HARD_FAULT_IRQN - Hard Fault Interrupt
 1028:.\Generated_Source\PSoC4/CyLib.c **** *    CY_INT_SVCALL_IRQN     - SV Call Interrupt
 1029:.\Generated_Source\PSoC4/CyLib.c **** *    CY_INT_PEND_SV_IRQN    - Pend SV Interrupt
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 25
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 25
 
 
 1030:.\Generated_Source\PSoC4/CyLib.c **** *    CY_INT_SYSTICK_IRQN    - System Tick Interrupt
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1084:.\Generated_Source\PSoC4/CyLib.c **** 
 1085:.\Generated_Source\PSoC4/CyLib.c **** /*******************************************************************************
 1086:.\Generated_Source\PSoC4/CyLib.c **** * Function Name: CyIntSetVector
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 26
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 26
 
 
 1087:.\Generated_Source\PSoC4/CyLib.c **** ********************************************************************************
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1141:.\Generated_Source\PSoC4/CyLib.c **** * Function Name: CyIntSetPriority
 1142:.\Generated_Source\PSoC4/CyLib.c **** ********************************************************************************
 1143:.\Generated_Source\PSoC4/CyLib.c **** *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 27
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 27
 
 
 1144:.\Generated_Source\PSoC4/CyLib.c **** * Summary:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1198:.\Generated_Source\PSoC4/CyLib.c **** 
 1199:.\Generated_Source\PSoC4/CyLib.c ****     return (priority & (uint8) CY_INT_PRIORITY_MASK);
 1200:.\Generated_Source\PSoC4/CyLib.c **** }
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 28
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 28
 
 
 1201:.\Generated_Source\PSoC4/CyLib.c **** 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1225:.\Generated_Source\PSoC4/CyLib.c **** ********************************************************************************
 1226:.\Generated_Source\PSoC4/CyLib.c **** *
 1227:.\Generated_Source\PSoC4/CyLib.c **** * Summary:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 29
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 29
 
 
 1228:.\Generated_Source\PSoC4/CyLib.c **** *  Gets the enable state of the specified interrupt number.
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1251:.\Generated_Source\PSoC4/CyLib.c **** * Parameters:
 1252:.\Generated_Source\PSoC4/CyLib.c **** *   number: Valid range [0-31].  Interrupt number.
 1253:.\Generated_Source\PSoC4/CyLib.c **** *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 30
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 30
 
 
 1254:.\Generated_Source\PSoC4/CyLib.c **** * Return:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1278:.\Generated_Source\PSoC4/CyLib.c **** {
  428              		.loc 1 1278 0
  429              		.cfi_startproc
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 31
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 31
 
 
  430              	.LVL19:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  463 0002 1840     		and	r0, r3
  464              	.LVL22:
  465 0004 0123     		mov	r3, #1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 32
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 32
 
 
  466 0006 8340     		lsl	r3, r3, r0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  492              	@ 1327 ".\Generated_Source\PSoC4\CyLib.c" 1
  493 0000 01BE     		    bkpt    1
  494              	@ 0 "" 2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 33
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 33
 
 
 1328:.\Generated_Source\PSoC4/CyLib.c ****     #elif defined(__C51__)
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1052:.\Generated_Source\PSoC4/CyLib.c **** }
  540              		.loc 1 1052 0
  541              		@ sp needed
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 34
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 34
 
 
  542              	.LVL29:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  591              	CyIntSetVector:
  592              	.LFB14:
 1101:.\Generated_Source\PSoC4/CyLib.c **** {
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 35
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 35
 
 
  593              		.loc 1 1101 0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  641              		.loc 1 1132 0
  642              		.cfi_startproc
  643              	.LVL40:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 36
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 36
 
 
  644 0000 10B5     		push	{r4, lr}
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1161:.\Generated_Source\PSoC4/CyLib.c ****     CYASSERT(priority <= CY_MIN_PRIORITY);
  693              		.loc 1 1161 0
  694 0006 032E     		cmp	r6, #3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 37
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 37
 
 
  695 0008 02D9     		bls	.L60
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  739              		.loc 1 1173 0
  740 003e FFF7FEFF 		bl	CyExitCriticalSection
  741              	.LVL54:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 38
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 38
 
 
 1174:.\Generated_Source\PSoC4/CyLib.c **** }
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  790              		.loc 1 1199 0
  791 0022 1840     		and	r0, r3
  792              	.LVL60:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 39
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 39
 
 
 1200:.\Generated_Source\PSoC4/CyLib.c **** }
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  821              		.loc 1 1354 0
  822 000c 1A60     		str	r2, [r3]
 1356:.\Generated_Source\PSoC4/CyLib.c **** }
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 40
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 40
 
 
  823              		.loc 1 1356 0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1379:.\Generated_Source\PSoC4/CyLib.c ****          */
 1380:.\Generated_Source\PSoC4/CyLib.c ****         CyDelayCycles(cydelay32kMs);
  855              		.loc 1 1380 0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 41
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 41
 
 
  856 0008 074E     		ldr	r6, .L74
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1390:.\Generated_Source\PSoC4/CyLib.c **** ********************************************************************************
 1391:.\Generated_Source\PSoC4/CyLib.c **** * Summary:
 1392:.\Generated_Source\PSoC4/CyLib.c **** *  Blocks for microseconds.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 42
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 42
 
 
 1393:.\Generated_Source\PSoC4/CyLib.c **** *
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  940              		.cfi_offset 14, -4
  941 0002 5746     		mov	r7, r10
  942 0004 4E46     		mov	r6, r9
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 43
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 43
 
 
  943 0006 4546     		mov	r5, r8
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  990 0042 DBB2     		uxtb	r3, r3
  991 0044 9A46     		mov	r10, r3
  992              	.LVL77:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 44
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 44
 
 
  448:.\Generated_Source\PSoC4/CyLib.c ****                 bgTrim5 = CY_SFLASH_IMO_TMPCO1_REG;
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1040 0080 1B78     		ldrb	r3, [r3]
  1041 0082 DBB2     		uxtb	r3, r3
  1042 0084 9946     		mov	r9, r3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 45
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 45
 
 
  1043              	.LVL87:
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1088              	.LVL97:
  1089 00b6 1F68     		ldr	r7, [r3]
  1090 00b8 3F23     		mov	r3, #63
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 46
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 46
 
 
  1091 00ba 1F40     		and	r7, r3
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1136 00f4 174B     		ldr	r3, .L90+60
  1137              	.LVL105:
  1138 00f6 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 47
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 47
 
 
  520:.\Generated_Source\PSoC4/CyLib.c ****                 CyDelayCycles(CY_SYS_CLK_IMO_FREQ_TIMEOUT_CYCLES);
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1189              		.size	CySysClkWriteImoFreq, .-CySysClkWriteImoFreq
  1190              		.section	.text.CySysLvdEnable,"ax",%progbits
  1191              		.align	2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 48
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 48
 
 
  1192              		.global	CySysLvdEnable
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  867:.\Generated_Source\PSoC4/CyLib.c ****         CY_LVD_PWR_INTR_MASK_REG   |= CY_LVD_PROPAGATE_INT_TO_CPU;
  1238              		.loc 1 867 0
  1239 0030 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 49
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 49
 
 
  1240 0032 1D43     		orr	r5, r3
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1424:.\Generated_Source\PSoC4/CyLib.c ****         cydelayFreqHz = freq;
  1274              		.loc 1 1424 0
  1275 0006 0C4B     		ldr	r3, .L98
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 50
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 50
 
 
  1276 0008 D860     		str	r0, [r3, #12]
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1320              		.align	2
  1321              		.global	CySysTickStop
  1322              		.code	16
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 51
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 51
 
 
  1323              		.thumb_func
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1485:.\Generated_Source\PSoC4/CyLib.c **** * Side Effects:
 1486:.\Generated_Source\PSoC4/CyLib.c **** *  Clears SysTick count flag if it was set
 1487:.\Generated_Source\PSoC4/CyLib.c **** *
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 52
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 52
 
 
 1488:.\Generated_Source\PSoC4/CyLib.c **** *******************************************************************************/
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1542:.\Generated_Source\PSoC4/CyLib.c **** *  None
 1543:.\Generated_Source\PSoC4/CyLib.c **** *
 1544:.\Generated_Source\PSoC4/CyLib.c **** * Return:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 53
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 53
 
 
 1545:.\Generated_Source\PSoC4/CyLib.c **** *  None
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1573:.\Generated_Source\PSoC4/CyLib.c **** *******************************************************************************/
 1574:.\Generated_Source\PSoC4/CyLib.c **** void CySysTickEnableInterrupt(void)
 1575:.\Generated_Source\PSoC4/CyLib.c **** {
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 54
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 54
 
 
  1353              		.loc 1 1575 0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1401              		.cfi_endproc
  1402              	.LFE30:
  1403              		.size	CySysTickEnable, .-CySysTickEnable
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 55
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 55
 
 
  1404              		.section	.text.CySysTickDisableInterrupt,"ax",%progbits
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1435              		.type	CySysTickSetReload, %function
  1436              	CySysTickSetReload:
  1437              	.LFB34:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 56
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 56
 
 
 1601:.\Generated_Source\PSoC4/CyLib.c **** 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1628:.\Generated_Source\PSoC4/CyLib.c **** *
 1629:.\Generated_Source\PSoC4/CyLib.c **** * Summary:
 1630:.\Generated_Source\PSoC4/CyLib.c **** *  Sets value the counter is set to on startup and after it reaches zero.
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 57
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 57
 
 
 1631:.\Generated_Source\PSoC4/CyLib.c **** *
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1660:.\Generated_Source\PSoC4/CyLib.c **** {
  1490              		.loc 1 1660 0
  1491              		.cfi_startproc
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 58
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 58
 
 
 1661:.\Generated_Source\PSoC4/CyLib.c ****     return(CY_SYS_SYST_CVR_REG & CY_SYS_SYST_CVR_CNT_MASK);
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1692:.\Generated_Source\PSoC4/CyLib.c ****     {
 1693:.\Generated_Source\PSoC4/CyLib.c ****         if (clockSource == CY_SYS_SYST_CSR_CLK_SRC_SYSCLK)
 1694:.\Generated_Source\PSoC4/CyLib.c ****         {
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 59
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 59
 
 
 1695:.\Generated_Source\PSoC4/CyLib.c ****             CY_SYS_SYST_CSR_REG |= (uint32)(CY_SYS_SYST_CSR_CLK_SRC_SYSCLK << CY_SYS_SYST_CSR_CLK_S
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1536              		.type	CySysTickServiceCallbacks, %function
  1537              	CySysTickServiceCallbacks:
  1538              	.LFB41:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 60
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 60
 
 
 1728:.\Generated_Source\PSoC4/CyLib.c **** 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1782:.\Generated_Source\PSoC4/CyLib.c **** {
 1783:.\Generated_Source\PSoC4/CyLib.c ****     cySysTickCallback retVal;
 1784:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 61
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 61
 
 
 1785:.\Generated_Source\PSoC4/CyLib.c ****     retVal = CySysTickCallbacks[number];
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1831:.\Generated_Source\PSoC4/CyLib.c ****     /* Verify that tick timer flag was set */
 1832:.\Generated_Source\PSoC4/CyLib.c ****     if (1u == CySysTickGetCountFlag())
  1547              		.loc 1 1832 0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 62
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 62
 
 
  1548 0002 FFF7FEFF 		bl	CySysTickGetCountFlag
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1589              		.size	CySysTickServiceCallbacks, .-CySysTickServiceCallbacks
  1590              		.section	.text.CySysTickClear,"ax",%progbits
  1591              		.align	2
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 63
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 63
 
 
  1592              		.global	CySysTickClear
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1638              		.loc 1 1495 0 discriminator 2
  1639 000a 9A00     		lsl	r2, r3, #2
  1640 000c 1150     		str	r1, [r2, r0]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 64
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 64
 
 
 1493:.\Generated_Source\PSoC4/CyLib.c ****     for (i = 0u; i<CY_SYS_SYST_NUM_OF_CALLBACKS; i++)
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1688              	.LFB28:
 1456:.\Generated_Source\PSoC4/CyLib.c **** {
  1689              		.loc 1 1456 0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 65
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 65
 
 
  1690              		.cfi_startproc
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1786:.\Generated_Source\PSoC4/CyLib.c ****     CySysTickCallbacks[number] = function;
  1737              		.loc 1 1786 0
  1738 0006 D150     		str	r1, [r2, r3]
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 66
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 66
 
 
 1788:.\Generated_Source\PSoC4/CyLib.c **** }
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
 1849:.\Generated_Source\PSoC4/CyLib.c **** * Summary:
 1850:.\Generated_Source\PSoC4/CyLib.c **** *  Returns the 64-bit unique ID of the device. The uniqueness of the number is
 1851:.\Generated_Source\PSoC4/CyLib.c **** *  guaranteed for 10 years due to the die lot number having a cycle life of 10
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 67
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 67
 
 
 1852:.\Generated_Source\PSoC4/CyLib.c **** *  years and even after 10 years, the probability of getting two identical
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1815 002e 0D4B     		ldr	r3, .L151+20
  1816 0030 1B78     		ldrb	r3, [r3]
  1817 0032 1B02     		lsl	r3, r3, #8
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 68
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 68
 
 
  1818 0034 1343     		orr	r3, r2
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1858              		.type	cyImoFreqMhz2Reg, %object
  1859              		.size	cyImoFreqMhz2Reg, 46
  1860              	cyImoFreqMhz2Reg:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 69
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 69
 
 
  1861 0000 03       		.byte	3
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1915              		.size	cydelayFreqKhz, 4
  1916              	cydelayFreqKhz:
  1917 0004 C05D0000 		.word	24000
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 70
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 70
 
 
  1918              		.type	cydelayFreqMhz, %object
@@ -4179,7 +4179,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1949 000c 6A000000 		.4byte	.LASF94
  1950 0010 01       		.byte	0x1
  1951 0011 3B030000 		.4byte	.LASF95
- 1952 0015 45050000 		.4byte	.LASF96
+ 1952 0015 C4030000 		.4byte	.LASF96
  1953 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1954 001d 00000000 		.4byte	0
  1955 0021 00000000 		.4byte	.Ldebug_line0
@@ -4190,15 +4190,15 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  1960 002c 02       		.uleb128 0x2
  1961 002d 01       		.byte	0x1
  1962 002e 08       		.byte	0x8
- 1963 002f 8C040000 		.4byte	.LASF1
+ 1963 002f E3040000 		.4byte	.LASF1
  1964 0033 02       		.uleb128 0x2
  1965 0034 02       		.byte	0x2
  1966 0035 05       		.byte	0x5
- 1967 0036 9A040000 		.4byte	.LASF2
+ 1967 0036 F1040000 		.4byte	.LASF2
  1968 003a 02       		.uleb128 0x2
  1969 003b 02       		.byte	0x2
  1970 003c 07       		.byte	0x7
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 71
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 71
 
 
  1971 003d 19030000 		.4byte	.LASF3
@@ -4244,7 +4244,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2011 008c 02       		.uleb128 0x2
  2012 008d 04       		.byte	0x4
  2013 008e 04       		.byte	0x4
- 2014 008f 1E040000 		.4byte	.LASF12
+ 2014 008f 75040000 		.4byte	.LASF12
  2015 0093 02       		.uleb128 0x2
  2016 0094 08       		.byte	0x8
  2017 0095 04       		.byte	0x4
@@ -4252,13 +4252,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2019 009a 02       		.uleb128 0x2
  2020 009b 01       		.byte	0x1
  2021 009c 08       		.byte	0x8
- 2022 009d D3040000 		.4byte	.LASF14
+ 2022 009d 2A050000 		.4byte	.LASF14
  2023 00a1 05       		.uleb128 0x5
- 2024 00a2 76040000 		.4byte	.LASF15
+ 2024 00a2 CD040000 		.4byte	.LASF15
  2025 00a6 02       		.byte	0x2
  2026 00a7 5D01     		.2byte	0x15d
  2027 00a9 AD000000 		.4byte	0xad
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 72
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 72
 
 
  2028 00ad 06       		.uleb128 0x6
@@ -4271,7 +4271,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2035 00be 06       		.uleb128 0x6
  2036 00bf 81000000 		.4byte	0x81
  2037 00c3 05       		.uleb128 0x5
- 2038 00c4 D8040000 		.4byte	.LASF17
+ 2038 00c4 2F050000 		.4byte	.LASF17
  2039 00c8 02       		.byte	0x2
  2040 00c9 6F01     		.2byte	0x16f
  2041 00cb CF000000 		.4byte	0xcf
@@ -4284,12 +4284,12 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2048 00d8 07       		.byte	0x7
  2049 00d9 A1030000 		.4byte	.LASF18
  2050 00dd 04       		.uleb128 0x4
- 2051 00de 3A040000 		.4byte	.LASF19
+ 2051 00de 91040000 		.4byte	.LASF19
  2052 00e2 03       		.byte	0x3
  2053 00e3 67       		.byte	0x67
  2054 00e4 CF000000 		.4byte	0xcf
  2055 00e8 09       		.uleb128 0x9
- 2056 00e9 0B060000 		.4byte	.LASF20
+ 2056 00e9 F2050000 		.4byte	.LASF20
  2057 00ed 01       		.byte	0x1
  2058 00ee 5A       		.byte	0x5a
  2059 00ef 00000000 		.4byte	.LFB0
@@ -4314,11 +4314,11 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2078 011b 9C       		.byte	0x9c
  2079 011c 53010000 		.4byte	0x153
  2080 0120 0B       		.uleb128 0xb
- 2081 0121 C2040000 		.4byte	.LASF24
+ 2081 0121 19050000 		.4byte	.LASF24
  2082 0125 01       		.byte	0x1
  2083 0126 1901     		.2byte	0x119
  2084 0128 81000000 		.4byte	0x81
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 73
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 73
 
 
  2085 012c 00000000 		.4byte	.LLST0
@@ -4336,7 +4336,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2097 014e 400A0000 		.4byte	0xa40
  2098 0152 00       		.byte	0
  2099 0153 0A       		.uleb128 0xa
- 2100 0154 F5040000 		.4byte	.LASF23
+ 2100 0154 4C050000 		.4byte	.LASF23
  2101 0158 01       		.byte	0x1
  2102 0159 4A01     		.2byte	0x14a
  2103 015b 00000000 		.4byte	.LFB3
@@ -4345,7 +4345,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2106 0164 9C       		.byte	0x9c
  2107 0165 9C010000 		.4byte	0x19c
  2108 0169 0B       		.uleb128 0xb
- 2109 016a 03060000 		.4byte	.LASF25
+ 2109 016a EA050000 		.4byte	.LASF25
  2110 016e 01       		.byte	0x1
  2111 016f 4A01     		.2byte	0x14a
  2112 0171 81000000 		.4byte	0x81
@@ -4364,7 +4364,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2125 0197 400A0000 		.4byte	0xa40
  2126 019b 00       		.byte	0
  2127 019c 0E       		.uleb128 0xe
- 2128 019d CF050000 		.4byte	.LASF27
+ 2128 019d B6050000 		.4byte	.LASF27
  2129 01a1 01       		.byte	0x1
  2130 01a2 7503     		.2byte	0x375
  2131 01a4 00000000 		.4byte	.LFB6
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2139 01b6 81000000 		.4byte	0x81
  2140 01ba 00000000 		.4byte	.LFB7
  2141 01be 10000000 		.4byte	.LFE7-.LFB7
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 74
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 74
 
 
  2142 01c2 01       		.uleb128 0x1
@@ -4402,13 +4402,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2160 01eb 9C       		.byte	0x9c
  2161 01ec 0F020000 		.4byte	0x20f
  2162 01f0 0B       		.uleb128 0xb
- 2163 01f1 CC040000 		.4byte	.LASF29
+ 2163 01f1 23050000 		.4byte	.LASF29
  2164 01f5 01       		.byte	0x1
  2165 01f6 BB03     		.2byte	0x3bb
  2166 01f8 81000000 		.4byte	0x81
  2167 01fc 7E000000 		.4byte	.LLST4
  2168 0200 11       		.uleb128 0x11
- 2169 0201 EE050000 		.4byte	.LASF30
+ 2169 0201 D5050000 		.4byte	.LASF30
  2170 0205 01       		.byte	0x1
  2171 0206 BD03     		.2byte	0x3bd
  2172 0208 81000000 		.4byte	0x81
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2196 023d 01       		.byte	0x1
  2197 023e F203     		.2byte	0x3f2
  2198 0240 00000000 		.4byte	.LFB11
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 75
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 75
 
 
  2199 0244 0C000000 		.4byte	.LFE11-.LFB11
@@ -4454,7 +4454,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2209 025b 50       		.byte	0x50
  2210 025c 00       		.byte	0
  2211 025d 0A       		.uleb128 0xa
- 2212 025e A4040000 		.4byte	.LASF36
+ 2212 025e FB040000 		.4byte	.LASF36
  2213 0262 01       		.byte	0x1
  2214 0263 C104     		.2byte	0x4c1
  2215 0265 00000000 		.4byte	.LFB18
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2253 02c5 0B       		.uleb128 0xb
  2254 02c6 14020000 		.4byte	.LASF37
  2255 02ca 01       		.byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 76
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 76
 
 
  2256 02cb EA04     		.2byte	0x4ea
@@ -4538,7 +4538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2290 031f 20010000 		.4byte	.LLST9
  2291 0323 00       		.byte	0
  2292 0324 0A       		.uleb128 0xa
- 2293 0325 85040000 		.4byte	.LASF42
+ 2293 0325 DC040000 		.4byte	.LASF42
  2294 0329 01       		.byte	0x1
  2295 032a 2505     		.2byte	0x525
  2296 032c 00000000 		.4byte	.LFB23
@@ -4547,7 +4547,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2299 0335 9C       		.byte	0x9c
  2300 0336 49030000 		.4byte	0x349
  2301 033a 12       		.uleb128 0x12
- 2302 033b CC040000 		.4byte	.LASF29
+ 2302 033b 23050000 		.4byte	.LASF29
  2303 033f 01       		.byte	0x1
  2304 0340 2505     		.2byte	0x525
  2305 0342 6B000000 		.4byte	0x6b
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2310 034a 7A030000 		.4byte	.LASF43
  2311 034e 01       		.byte	0x1
  2312 034f 0E04     		.2byte	0x40e
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 77
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 77
 
 
  2313 0351 C3000000 		.4byte	0xc3
@@ -4606,7 +4606,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2355 03b2 04       		.byte	0x4
  2356 03b3 C3000000 		.4byte	0xc3
  2357 03b7 10       		.uleb128 0x10
- 2358 03b8 B0040000 		.4byte	.LASF47
+ 2358 03b8 07050000 		.4byte	.LASF47
  2359 03bc 01       		.byte	0x1
  2360 03bd 3304     		.2byte	0x433
  2361 03bf C3000000 		.4byte	0xc3
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2367 03d1 0B       		.uleb128 0xb
  2368 03d2 14020000 		.4byte	.LASF37
  2369 03d6 01       		.byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 78
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 78
 
 
  2370 03d7 3304     		.2byte	0x433
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2424 0459 14       		.uleb128 0x14
  2425 045a 10000000 		.4byte	.LVL37
  2426 045e 24030000 		.4byte	0x324
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 79
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 79
 
 
  2427 0462 15       		.uleb128 0x15
@@ -4689,7 +4689,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2432 0467 00       		.byte	0
  2433 0468 00       		.byte	0
  2434 0469 10       		.uleb128 0x10
- 2435 046a 4C040000 		.4byte	.LASF49
+ 2435 046a A3040000 		.4byte	.LASF49
  2436 046e 01       		.byte	0x1
  2437 046f 6B04     		.2byte	0x46b
  2438 0471 C3000000 		.4byte	0xc3
@@ -4721,7 +4721,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2464 04b1 00       		.byte	0
  2465 04b2 00       		.byte	0
  2466 04b3 0A       		.uleb128 0xa
- 2467 04b4 0D040000 		.4byte	.LASF50
+ 2467 04b4 64040000 		.4byte	.LASF50
  2468 04b8 01       		.byte	0x1
  2469 04b9 8304     		.2byte	0x483
  2470 04bb 00000000 		.4byte	.LFB16
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2481 04d9 0B       		.uleb128 0xb
  2482 04da 5C030000 		.4byte	.LASF51
  2483 04de 01       		.byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 80
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 80
 
 
  2484 04df 8304     		.2byte	0x483
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2538 0562 2C000000 		.4byte	.LFE17-.LFB17
  2539 0566 01       		.uleb128 0x1
  2540 0567 9C       		.byte	0x9c
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 81
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 81
 
 
  2541 0568 9C050000 		.4byte	0x59c
@@ -4833,7 +4833,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2570 05ac 01       		.uleb128 0x1
  2571 05ad 9C       		.byte	0x9c
  2572 05ae 0A       		.uleb128 0xa
- 2573 05af 3D050000 		.4byte	.LASF56
+ 2573 05af 94050000 		.4byte	.LASF56
  2574 05b3 01       		.byte	0x1
  2575 05b4 5D05     		.2byte	0x55d
  2576 05b6 00000000 		.4byte	.LFB25
@@ -4842,7 +4842,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2579 05bf 9C       		.byte	0x9c
  2580 05c0 E7050000 		.4byte	0x5e7
  2581 05c4 0B       		.uleb128 0xb
- 2582 05c5 5B040000 		.4byte	.LASF57
+ 2582 05c5 B2040000 		.4byte	.LASF57
  2583 05c9 01       		.byte	0x1
  2584 05ca 5D05     		.2byte	0x55d
  2585 05cc 81000000 		.4byte	0x81
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2595 05e8 DF010000 		.4byte	.LASF58
  2596 05ec 01       		.byte	0x1
  2597 05ed 7905     		.2byte	0x579
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 82
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 82
 
 
  2598 05ef 00000000 		.4byte	.LFB26
@@ -4867,7 +4867,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2601 05f8 9C       		.byte	0x9c
  2602 05f9 17060000 		.4byte	0x617
  2603 05fd 0B       		.uleb128 0xb
- 2604 05fe 2D060000 		.4byte	.LASF59
+ 2604 05fe 14060000 		.4byte	.LASF59
  2605 0602 01       		.byte	0x1
  2606 0603 7905     		.2byte	0x579
  2607 0605 76000000 		.4byte	0x76
@@ -4898,13 +4898,13 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2632 0645 6B000000 		.4byte	0x6b
  2633 0649 6B030000 		.4byte	.LLST26
  2634 064d 0C       		.uleb128 0xc
- 2635 064e C4030000 		.4byte	.LASF63
+ 2635 064e 1B040000 		.4byte	.LASF63
  2636 0652 01       		.byte	0x1
  2637 0653 8D01     		.2byte	0x18d
  2638 0655 6B000000 		.4byte	0x6b
  2639 0659 E1030000 		.4byte	.LLST27
  2640 065d 0C       		.uleb128 0xc
- 2641 065e 1C060000 		.4byte	.LASF64
+ 2641 065e 03060000 		.4byte	.LASF64
  2642 0662 01       		.byte	0x1
  2643 0663 8E01     		.2byte	0x18e
  2644 0665 6B000000 		.4byte	0x6b
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2652 067d 0C       		.uleb128 0xc
  2653 067e 7D010000 		.4byte	.LASF26
  2654 0682 01       		.byte	0x1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 83
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 83
 
 
  2655 0683 9601     		.2byte	0x196
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2709 06f3 30       		.byte	0x30
  2710 06f4 00       		.byte	0
  2711 06f5 14       		.uleb128 0x14
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 84
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 84
 
 
  2712 06f6 0C010000 		.4byte	.LVL110
@@ -5001,7 +5001,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2729 0717 9C       		.byte	0x9c
  2730 0718 4B070000 		.4byte	0x74b
  2731 071c 0B       		.uleb128 0xb
- 2732 071d 7B040000 		.4byte	.LASF67
+ 2732 071d D2040000 		.4byte	.LASF67
  2733 0721 01       		.byte	0x1
  2734 0722 5003     		.2byte	0x350
  2735 0724 81000000 		.4byte	0x81
@@ -5038,10 +5038,10 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2766 076d 36050000 		.4byte	.LLST32
  2767 0771 00       		.byte	0
  2768 0772 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 85
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 85
 
 
- 2769 0773 F5050000 		.4byte	.LASF69
+ 2769 0773 DC050000 		.4byte	.LASF69
  2770 0777 01       		.byte	0x1
  2771 0778 0F06     		.2byte	0x60f
  2772 077a 00000000 		.4byte	.LFB31
@@ -5057,7 +5057,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2782 0794 01       		.uleb128 0x1
  2783 0795 9C       		.byte	0x9c
  2784 0796 0A       		.uleb128 0xa
- 2785 0797 E5040000 		.4byte	.LASF71
+ 2785 0797 3C050000 		.4byte	.LASF71
  2786 079b 01       		.byte	0x1
  2787 079c F705     		.2byte	0x5f7
  2788 079e 00000000 		.4byte	.LFB30
@@ -5070,7 +5070,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2795 07b1 84070000 		.4byte	0x784
  2796 07b5 00       		.byte	0
  2797 07b6 0E       		.uleb128 0xe
- 2798 07b7 B5050000 		.4byte	.LASF72
+ 2798 07b7 9C050000 		.4byte	.LASF72
  2799 07bb 01       		.byte	0x1
  2800 07bc 3D06     		.2byte	0x63d
  2801 07be 00000000 		.4byte	.LFB33
@@ -5078,7 +5078,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2803 07c6 01       		.uleb128 0x1
  2804 07c7 9C       		.byte	0x9c
  2805 07c8 0A       		.uleb128 0xa
- 2806 07c9 3A060000 		.4byte	.LASF73
+ 2806 07c9 21060000 		.4byte	.LASF73
  2807 07cd 01       		.byte	0x1
  2808 07ce 5306     		.2byte	0x653
  2809 07d0 00000000 		.4byte	.LFB34
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2823 07f4 01       		.byte	0x1
  2824 07f5 6706     		.2byte	0x667
  2825 07f7 81000000 		.4byte	0x81
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 86
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 86
 
 
  2826 07fb 00000000 		.4byte	.LFB35
@@ -5106,7 +5106,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2828 0803 01       		.uleb128 0x1
  2829 0804 9C       		.byte	0x9c
  2830 0805 0F       		.uleb128 0xf
- 2831 0806 ED030000 		.4byte	.LASF76
+ 2831 0806 44040000 		.4byte	.LASF76
  2832 080a 01       		.byte	0x1
  2833 080b 7B06     		.2byte	0x67b
  2834 080d 81000000 		.4byte	0x81
@@ -5124,7 +5124,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2846 082f 01       		.uleb128 0x1
  2847 0830 9C       		.byte	0x9c
  2848 0831 18       		.uleb128 0x18
- 2849 0832 4D060000 		.4byte	.LASF97
+ 2849 0832 34060000 		.4byte	.LASF97
  2850 0836 01       		.byte	0x1
  2851 0837 2307     		.2byte	0x723
  2852 0839 00000000 		.4byte	.LFB41
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2880 087d 44000000 		.4byte	.LFE29-.LFB29
  2881 0881 01       		.uleb128 0x1
  2882 0882 9C       		.byte	0x9c
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 87
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 87
 
 
  2883 0883 D3080000 		.4byte	0x8d3
@@ -5217,8 +5217,8 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2936 08f7 96070000 		.4byte	0x796
  2937 08fb 00       		.byte	0
  2938 08fc 10       		.uleb128 0x10
- 2939 08fd 0C050000 		.4byte	.LASF81
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 88
+ 2939 08fd 63050000 		.4byte	.LASF81
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 88
 
 
  2940 0901 01       		.byte	0x1
@@ -5236,14 +5236,14 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2952 091e 81000000 		.4byte	0x81
  2953 0922 B5050000 		.4byte	.LLST36
  2954 0926 12       		.uleb128 0x12
- 2955 0927 D3030000 		.4byte	.LASF82
+ 2955 0927 2A040000 		.4byte	.LASF82
  2956 092b 01       		.byte	0x1
  2957 092c F506     		.2byte	0x6f5
  2958 092e DD000000 		.4byte	0xdd
  2959 0932 01       		.uleb128 0x1
  2960 0933 51       		.byte	0x51
  2961 0934 11       		.uleb128 0x11
- 2962 0935 CC030000 		.4byte	.LASF83
+ 2962 0935 23040000 		.4byte	.LASF83
  2963 0939 01       		.byte	0x1
  2964 093a F706     		.2byte	0x6f7
  2965 093c DD000000 		.4byte	0xdd
@@ -5277,8 +5277,8 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  2993 097f 9C       		.byte	0x9c
  2994 0980 93090000 		.4byte	0x993
  2995 0984 12       		.uleb128 0x12
- 2996 0985 34050000 		.4byte	.LASF86
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 89
+ 2996 0985 8B050000 		.4byte	.LASF86
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 89
 
 
  2997 0989 01       		.byte	0x1
@@ -5298,7 +5298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3011 09a7 04       		.byte	0x4
  3012 09a8 00       		.byte	0
  3013 09a9 1C       		.uleb128 0x1c
- 3014 09aa 21050000 		.4byte	.LASF87
+ 3014 09aa 78050000 		.4byte	.LASF87
  3015 09ae 01       		.byte	0x1
  3016 09af 22       		.byte	0x22
  3017 09b0 99090000 		.4byte	0x999
@@ -5314,7 +5314,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3027 09c6 03       		.byte	0x3
  3028 09c7 00000000 		.4byte	CySysTickInitVar
  3029 09cb 1D       		.uleb128 0x1d
- 3030 09cc FF030000 		.4byte	.LASF89
+ 3030 09cc 56040000 		.4byte	.LASF89
  3031 09d0 01       		.byte	0x1
  3032 09d1 1B       		.byte	0x1b
  3033 09d2 81000000 		.4byte	0x81
@@ -5330,7 +5330,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3043 09e8 03       		.byte	0x3
  3044 09e9 00000000 		.4byte	cydelayFreqKhz
  3045 09ed 1D       		.uleb128 0x1d
- 3046 09ee DF050000 		.4byte	.LASF91
+ 3046 09ee C6050000 		.4byte	.LASF91
  3047 09f2 01       		.byte	0x1
  3048 09f3 1D       		.byte	0x1d
  3049 09f4 6B000000 		.4byte	0x6b
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3051 09f9 03       		.byte	0x3
  3052 09fa 00000000 		.4byte	cydelayFreqMhz
  3053 09fe 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 90
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 90
 
 
  3054 09ff 40020000 		.4byte	.LASF92
@@ -5356,7 +5356,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3066 0a1d 2D       		.byte	0x2d
  3067 0a1e 00       		.byte	0
  3068 0a1f 1D       		.uleb128 0x1d
- 3069 0a20 DC030000 		.4byte	.LASF93
+ 3069 0a20 33040000 		.4byte	.LASF93
  3070 0a24 01       		.byte	0x1
  3071 0a25 39       		.byte	0x39
  3072 0a26 300A0000 		.4byte	0xa30
@@ -5371,7 +5371,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3081 0a3b 5E       		.byte	0x5e
  3082 0a3c 6B000000 		.4byte	0x6b
  3083 0a40 20       		.uleb128 0x20
- 3084 0a41 24040000 		.4byte	.LASF99
+ 3084 0a41 7B040000 		.4byte	.LASF99
  3085 0a45 03       		.byte	0x3
  3086 0a46 5F       		.byte	0x5f
  3087 0a47 510A0000 		.4byte	0xa51
@@ -5379,7 +5379,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3089 0a4c 6B000000 		.4byte	0x6b
  3090 0a50 00       		.byte	0
  3091 0a51 22       		.uleb128 0x22
- 3092 0a52 68040000 		.4byte	.LASF100
+ 3092 0a52 BF040000 		.4byte	.LASF100
  3093 0a56 03       		.byte	0x3
  3094 0a57 5A       		.byte	0x5a
  3095 0a58 21       		.uleb128 0x21
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3108 0007 03       		.uleb128 0x3
  3109 0008 0E       		.uleb128 0xe
  3110 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 91
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 91
 
 
  3111 000a 0E       		.uleb128 0xe
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3165 0040 13       		.uleb128 0x13
  3166 0041 00       		.byte	0
  3167 0042 00       		.byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 92
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 92
 
 
  3168 0043 06       		.uleb128 0x6
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3222 007a 0B       		.uleb128 0xb
  3223 007b 3B       		.uleb128 0x3b
  3224 007c 05       		.uleb128 0x5
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 93
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 93
 
 
  3225 007d 27       		.uleb128 0x27
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3279 00b6 2E       		.uleb128 0x2e
  3280 00b7 00       		.byte	0
  3281 00b8 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 94
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 94
 
 
  3282 00b9 19       		.uleb128 0x19
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3336 00f1 05       		.uleb128 0x5
  3337 00f2 27       		.uleb128 0x27
  3338 00f3 19       		.uleb128 0x19
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 95
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 95
 
 
  3339 00f4 49       		.uleb128 0x49
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3393 012b 13       		.uleb128 0x13
  3394 012c 1C       		.uleb128 0x1c
  3395 012d 06       		.uleb128 0x6
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 96
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 96
 
 
  3396 012e 00       		.byte	0
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3450 016c 00       		.byte	0
  3451 016d 00       		.byte	0
  3452 016e 18       		.uleb128 0x18
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 97
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 97
 
 
  3453 016f 2E       		.uleb128 0x2e
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3507 01a6 00       		.byte	0
  3508 01a7 1C       		.uleb128 0x1c
  3509 01a8 34       		.uleb128 0x34
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 98
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 98
 
 
  3510 01a9 00       		.byte	0
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3564 01df 00       		.byte	0
  3565 01e0 00       		.byte	0
  3566 01e1 20       		.uleb128 0x20
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 99
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 99
 
 
  3567 01e2 2E       		.uleb128 0x2e
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3621 0016 14000000 		.4byte	.LVL2
  3622 001a 24000000 		.4byte	.LFE2
  3623 001e 0400     		.2byte	0x4
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 100
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 100
 
 
  3624 0020 F3       		.byte	0xf3
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3678 00a7 04000000 		.4byte	.LVL14
  3679 00ab 14000000 		.4byte	.LFE18
  3680 00af 0400     		.2byte	0x4
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 101
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 101
 
 
  3681 00b1 F3       		.byte	0xf3
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3735 012f 14000000 		.4byte	.LFE22
  3736 0133 0400     		.2byte	0x4
  3737 0135 F3       		.byte	0xf3
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 102
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 102
 
 
  3738 0136 01       		.uleb128 0x1
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3792 01b7 0100     		.2byte	0x1
  3793 01b9 50       		.byte	0x50
  3794 01ba 0C000000 		.4byte	.LVL36
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 103
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 103
 
 
  3795 01be 20000000 		.4byte	.LFE14
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3849              	.LLST17:
  3850 023e 00000000 		.4byte	.LVL44
  3851 0242 0F000000 		.4byte	.LVL46-1
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 104
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 104
 
 
  3852 0246 0100     		.2byte	0x1
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3906 02ce 50       		.byte	0x50
  3907 02cf 00000000 		.4byte	0
  3908 02d3 00000000 		.4byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 105
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 105
 
 
  3909              	.LLST23:
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  3962 035f F3       		.byte	0xf3
  3963 0360 01       		.uleb128 0x1
  3964 0361 50       		.byte	0x50
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 106
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 106
 
 
  3965 0362 9F       		.byte	0x9f
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4019 03f6 53       		.byte	0x53
  4020 03f7 6A000000 		.4byte	.LVL83
  4021 03fb 6C000000 		.4byte	.LVL84
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 107
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 107
 
 
  4022 03ff 0100     		.2byte	0x1
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4076 0475 F2000000 		.4byte	.LVL104
  4077 0479 0800     		.2byte	0x8
  4078 047b 75       		.byte	0x75
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 108
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 108
 
 
  4079 047c 00       		.sleb128 0
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4133 0501 50       		.byte	0x50
  4134 0502 02010000 		.4byte	.LVL108
  4135 0506 0C010000 		.4byte	.LVL112
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 109
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 109
 
 
  4136 050a 0100     		.2byte	0x1
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4190 058d 54       		.byte	0x54
  4191 058e 00000000 		.4byte	0
  4192 0592 00000000 		.4byte	0
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 110
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 110
 
 
  4193              	.LLST35:
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4247 0028 00000000 		.4byte	.LFB3
  4248 002c 28000000 		.4byte	.LFE3-.LFB3
  4249 0030 00000000 		.4byte	.LFB6
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 111
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 111
 
 
  4250 0034 20000000 		.4byte	.LFE6-.LFB6
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4304 010c 10000000 		.4byte	.LFE33-.LFB33
  4305 0110 00000000 		.4byte	.LFB34
  4306 0114 10000000 		.4byte	.LFE34-.LFB34
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 112
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 112
 
 
  4307 0118 00000000 		.4byte	.LFB35
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4361 0078 00000000 		.4byte	.LFB23
  4362 007c 04000000 		.4byte	.LFE23
  4363 0080 00000000 		.4byte	.LFB12
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 113
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 113
 
 
  4364 0084 1E000000 		.4byte	.LFE12
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4418 015c 00000000 		.4byte	0
  4419              		.section	.debug_line,"",%progbits
  4420              	.Ldebug_line0:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 114
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 114
 
 
  4421 0000 2B040000 		.section	.debug_str,"MS",%progbits,1
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4441      2D736563 
  4441      74696F6E 
  4442              	.LASF7:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 115
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 115
 
 
  4443 00e6 6C6F6E67 		.ascii	"long long unsigned int\000"
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4465 018c 43795379 		.ascii	"CySysTickGetReload\000"
  4465      73546963 
  4465      6B476574 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 116
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 116
 
 
  4465      52656C6F 
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4491      6C6500
  4492              	.LASF54:
  4493 022f 4379496E 		.ascii	"CyIntGetPriority\000"
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 117
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 117
 
 
  4493      74476574 
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4513      746F7000 
  4514              	.LASF98:
  4515 02de 4379456E 		.ascii	"CyEnterCriticalSection\000"
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 118
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 118
 
 
  4515      74657243 
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4535      6B537461 
  4535      727400
  4536              	.LASF18:
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 119
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 119
 
 
  4537 03a1 73697A65 		.ascii	"sizetype\000"
@@ -7093,222 +7093,217 @@ ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 1
  4540              	.LASF44:
  4541 03bc 61646472 		.ascii	"address\000"
  4541      65737300 
- 4542              	.LASF63:
- 4543 03c4 62675472 		.ascii	"bgTrim5\000"
- 4543      696D3500 
- 4544              	.LASF83:
- 4545 03cc 72657456 		.ascii	"retVal\000"
- 4545      616C00
- 4546              	.LASF82:
- 4547 03d3 66756E63 		.ascii	"function\000"
- 4547      74696F6E 
- 4547      00
- 4548              	.LASF93:
- 4549 03dc 6379496D 		.ascii	"cyImoFreqMhz2Reg\000"
- 4549      6F467265 
- 4549      714D687A 
- 4549      32526567 
- 4549      00
- 4550              	.LASF76:
- 4551 03ed 43795379 		.ascii	"CySysTickGetValue\000"
- 4551      73546963 
- 4551      6B476574 
- 4551      56616C75 
- 4551      6500
- 4552              	.LASF89:
- 4553 03ff 63796465 		.ascii	"cydelayFreqHz\000"
- 4553      6C617946 
- 4553      72657148 
- 4553      7A00
- 4554              	.LASF50:
- 4555 040d 4379496E 		.ascii	"CyIntSetPriority\000"
- 4555      74536574 
- 4555      5072696F 
- 4555      72697479 
- 4555      00
- 4556              	.LASF12:
- 4557 041e 666C6F61 		.ascii	"float\000"
- 4557      7400
- 4558              	.LASF99:
- 4559 0424 43794578 		.ascii	"CyExitCriticalSection\000"
- 4559      69744372 
- 4559      69746963 
- 4559      616C5365 
- 4559      6374696F 
- 4560              	.LASF19:
- 4561 043a 63795379 		.ascii	"cySysTickCallback\000"
- 4561      73546963 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 120
+ 4542              	.LASF96:
+ 4543 03c4 433A5C55 		.ascii	"C:\\Users\\marce\\Documents\\Tesis\\Psoc_Creator\\D"
+ 4543      73657273 
+ 4543      5C6D6172 
+ 4543      63655C44 
+ 4543      6F63756D 
+ 4544 03f1 61746120 		.ascii	"ata Exchange MT174\\Interface_driver.cydsn\000"
+ 4544      45786368 
+ 4544      616E6765 
+ 4544      204D5431 
+ 4544      37345C49 
+ 4545              	.LASF63:
+ 4546 041b 62675472 		.ascii	"bgTrim5\000"
+ 4546      696D3500 
+ 4547              	.LASF83:
+ 4548 0423 72657456 		.ascii	"retVal\000"
+ 4548      616C00
+ 4549              	.LASF82:
+ 4550 042a 66756E63 		.ascii	"function\000"
+ 4550      74696F6E 
+ 4550      00
+ 4551              	.LASF93:
+ 4552 0433 6379496D 		.ascii	"cyImoFreqMhz2Reg\000"
+ 4552      6F467265 
+ 4552      714D687A 
+ 4552      32526567 
+ 4552      00
+ 4553              	.LASF76:
+ 4554 0444 43795379 		.ascii	"CySysTickGetValue\000"
+ 4554      73546963 
+ 4554      6B476574 
+ 4554      56616C75 
+ 4554      6500
+ 4555              	.LASF89:
+ 4556 0456 63796465 		.ascii	"cydelayFreqHz\000"
+ 4556      6C617946 
+ 4556      72657148 
+ 4556      7A00
+ 4557              	.LASF50:
+ 4558 0464 4379496E 		.ascii	"CyIntSetPriority\000"
+ 4558      74536574 
+ 4558      5072696F 
+ 4558      72697479 
+ 4558      00
+ 4559              	.LASF12:
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 120
 
 
- 4561      6B43616C 
- 4561      6C626163 
- 4561      6B00
- 4562              	.LASF49:
- 4563 044c 4379496E 		.ascii	"CyIntGetVector\000"
- 4563      74476574 
- 4563      56656374 
- 4563      6F7200
- 4564              	.LASF57:
- 4565 045b 6D696C6C 		.ascii	"milliseconds\000"
- 4565      69736563 
- 4565      6F6E6473 
- 4565      00
- 4566              	.LASF100:
- 4567 0468 43794465 		.ascii	"CyDelayCycles\000"
- 4567      6C617943 
- 4567      79636C65 
- 4567      7300
- 4568              	.LASF15:
- 4569 0476 72656738 		.ascii	"reg8\000"
- 4569      00
- 4570              	.LASF67:
- 4571 047b 74687265 		.ascii	"threshold\000"
- 4571      73686F6C 
- 4571      6400
- 4572              	.LASF42:
- 4573 0485 43794861 		.ascii	"CyHalt\000"
- 4573      6C7400
- 4574              	.LASF1:
- 4575 048c 756E7369 		.ascii	"unsigned char\000"
- 4575      676E6564 
- 4575      20636861 
- 4575      7200
- 4576              	.LASF2:
- 4577 049a 73686F72 		.ascii	"short int\000"
- 4577      7420696E 
- 4577      7400
- 4578              	.LASF36:
- 4579 04a4 4379496E 		.ascii	"CyIntEnable\000"
- 4579      74456E61 
- 4579      626C6500 
- 4580              	.LASF47:
- 4581 04b0 4379496E 		.ascii	"CyIntGetSysVector\000"
- 4581      74476574 
- 4581      53797356 
- 4581      6563746F 
- 4581      7200
- 4582              	.LASF24:
- 4583 04c2 636C6B53 		.ascii	"clkSelect\000"
- 4583      656C6563 
- 4583      7400
- 4584              	.LASF29:
- 4585 04cc 72656173 		.ascii	"reason\000"
- 4585      6F6E00
- 4586              	.LASF14:
- 4587 04d3 63686172 		.ascii	"char\000"
- 4587      00
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 121
+ 4560 0475 666C6F61 		.ascii	"float\000"
+ 4560      7400
+ 4561              	.LASF99:
+ 4562 047b 43794578 		.ascii	"CyExitCriticalSection\000"
+ 4562      69744372 
+ 4562      69746963 
+ 4562      616C5365 
+ 4562      6374696F 
+ 4563              	.LASF19:
+ 4564 0491 63795379 		.ascii	"cySysTickCallback\000"
+ 4564      73546963 
+ 4564      6B43616C 
+ 4564      6C626163 
+ 4564      6B00
+ 4565              	.LASF49:
+ 4566 04a3 4379496E 		.ascii	"CyIntGetVector\000"
+ 4566      74476574 
+ 4566      56656374 
+ 4566      6F7200
+ 4567              	.LASF57:
+ 4568 04b2 6D696C6C 		.ascii	"milliseconds\000"
+ 4568      69736563 
+ 4568      6F6E6473 
+ 4568      00
+ 4569              	.LASF100:
+ 4570 04bf 43794465 		.ascii	"CyDelayCycles\000"
+ 4570      6C617943 
+ 4570      79636C65 
+ 4570      7300
+ 4571              	.LASF15:
+ 4572 04cd 72656738 		.ascii	"reg8\000"
+ 4572      00
+ 4573              	.LASF67:
+ 4574 04d2 74687265 		.ascii	"threshold\000"
+ 4574      73686F6C 
+ 4574      6400
+ 4575              	.LASF42:
+ 4576 04dc 43794861 		.ascii	"CyHalt\000"
+ 4576      6C7400
+ 4577              	.LASF1:
+ 4578 04e3 756E7369 		.ascii	"unsigned char\000"
+ 4578      676E6564 
+ 4578      20636861 
+ 4578      7200
+ 4579              	.LASF2:
+ 4580 04f1 73686F72 		.ascii	"short int\000"
+ 4580      7420696E 
+ 4580      7400
+ 4581              	.LASF36:
+ 4582 04fb 4379496E 		.ascii	"CyIntEnable\000"
+ 4582      74456E61 
+ 4582      626C6500 
+ 4583              	.LASF47:
+ 4584 0507 4379496E 		.ascii	"CyIntGetSysVector\000"
+ 4584      74476574 
+ 4584      53797356 
+ 4584      6563746F 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 121
 
 
- 4588              	.LASF17:
- 4589 04d8 63796973 		.ascii	"cyisraddress\000"
- 4589      72616464 
- 4589      72657373 
- 4589      00
- 4590              	.LASF71:
- 4591 04e5 43795379 		.ascii	"CySysTickEnable\000"
- 4591      73546963 
- 4591      6B456E61 
- 4591      626C6500 
- 4592              	.LASF23:
- 4593 04f5 43795379 		.ascii	"CySysClkWriteSysclkDiv\000"
- 4593      73436C6B 
- 4593      57726974 
- 4593      65537973 
- 4593      636C6B44 
- 4594              	.LASF81:
- 4595 050c 43795379 		.ascii	"CySysTickSetCallback\000"
- 4595      73546963 
- 4595      6B536574 
- 4595      43616C6C 
- 4595      6261636B 
- 4596              	.LASF87:
- 4597 0521 43795379 		.ascii	"CySysTickCallbacks\000"
- 4597      73546963 
- 4597      6B43616C 
- 4597      6C626163 
- 4597      6B7300
- 4598              	.LASF86:
- 4599 0534 756E6971 		.ascii	"uniqueId\000"
- 4599      75654964 
- 4599      00
- 4600              	.LASF56:
- 4601 053d 43794465 		.ascii	"CyDelay\000"
- 4601      6C617900 
- 4602              	.LASF96:
- 4603 0545 433A5C55 		.ascii	"C:\\Users\\Marcelo\\Documents\\Proyecto_Tesis\\tabl"
- 4603      73657273 
- 4603      5C4D6172 
- 4603      63656C6F 
- 4603      5C446F63 
- 4604 0573 65726F5F 		.ascii	"ero_hogar\\Psoc_Creator\\Data Exchange MT174\\Inter"
- 4604      686F6761 
- 4604      725C5073 
- 4604      6F635F43 
- 4604      72656174 
- 4605 05a3 66616365 		.ascii	"face_driver.cydsn\000"
- 4605      5F647269 
- 4605      7665722E 
- 4605      63796473 
- 4605      6E00
- 4606              	.LASF72:
- 4607 05b5 43795379 		.ascii	"CySysTickDisableInterrupt\000"
- 4607      73546963 
- 4607      6B446973 
- 4607      61626C65 
- 4607      496E7465 
-ARM GAS  C:\Users\Marcelo\AppData\Local\Temp\cclR9NSI.s 			page 122
+ 4584      7200
+ 4585              	.LASF24:
+ 4586 0519 636C6B53 		.ascii	"clkSelect\000"
+ 4586      656C6563 
+ 4586      7400
+ 4587              	.LASF29:
+ 4588 0523 72656173 		.ascii	"reason\000"
+ 4588      6F6E00
+ 4589              	.LASF14:
+ 4590 052a 63686172 		.ascii	"char\000"
+ 4590      00
+ 4591              	.LASF17:
+ 4592 052f 63796973 		.ascii	"cyisraddress\000"
+ 4592      72616464 
+ 4592      72657373 
+ 4592      00
+ 4593              	.LASF71:
+ 4594 053c 43795379 		.ascii	"CySysTickEnable\000"
+ 4594      73546963 
+ 4594      6B456E61 
+ 4594      626C6500 
+ 4595              	.LASF23:
+ 4596 054c 43795379 		.ascii	"CySysClkWriteSysclkDiv\000"
+ 4596      73436C6B 
+ 4596      57726974 
+ 4596      65537973 
+ 4596      636C6B44 
+ 4597              	.LASF81:
+ 4598 0563 43795379 		.ascii	"CySysTickSetCallback\000"
+ 4598      73546963 
+ 4598      6B536574 
+ 4598      43616C6C 
+ 4598      6261636B 
+ 4599              	.LASF87:
+ 4600 0578 43795379 		.ascii	"CySysTickCallbacks\000"
+ 4600      73546963 
+ 4600      6B43616C 
+ 4600      6C626163 
+ 4600      6B7300
+ 4601              	.LASF86:
+ 4602 058b 756E6971 		.ascii	"uniqueId\000"
+ 4602      75654964 
+ 4602      00
+ 4603              	.LASF56:
+ 4604 0594 43794465 		.ascii	"CyDelay\000"
+ 4604      6C617900 
+ 4605              	.LASF72:
+ 4606 059c 43795379 		.ascii	"CySysTickDisableInterrupt\000"
+ 4606      73546963 
+ 4606      6B446973 
+ 4606      61626C65 
+ 4606      496E7465 
+ 4607              	.LASF27:
+ 4608 05b6 43795379 		.ascii	"CySysLvdDisable\000"
+ 4608      734C7664 
+ 4608      44697361 
+ 4608      626C6500 
+ARM GAS  C:\Users\marce\AppData\Local\Temp\ccWPKaKX.s 			page 122
 
 
- 4608              	.LASF27:
- 4609 05cf 43795379 		.ascii	"CySysLvdDisable\000"
- 4609      734C7664 
- 4609      44697361 
- 4609      626C6500 
- 4610              	.LASF91:
- 4611 05df 63796465 		.ascii	"cydelayFreqMhz\000"
- 4611      6C617946 
- 4611      7265714D 
- 4611      687A00
- 4612              	.LASF30:
- 4613 05ee 73746174 		.ascii	"status\000"
- 4613      757300
- 4614              	.LASF69:
- 4615 05f5 43795379 		.ascii	"CySysTickStop\000"
- 4615      73546963 
- 4615      6B53746F 
- 4615      7000
- 4616              	.LASF25:
- 4617 0603 64697669 		.ascii	"divider\000"
- 4617      64657200 
- 4618              	.LASF20:
- 4619 060b 43795379 		.ascii	"CySysClkImoStart\000"
- 4619      73436C6B 
- 4619      496D6F53 
- 4619      74617274 
- 4619      00
- 4620              	.LASF64:
- 4621 061c 6E657749 		.ascii	"newImoTrim2Value\000"
- 4621      6D6F5472 
- 4621      696D3256 
- 4621      616C7565 
- 4621      00
- 4622              	.LASF59:
- 4623 062d 6D696372 		.ascii	"microseconds\000"
- 4623      6F736563 
- 4623      6F6E6473 
- 4623      00
- 4624              	.LASF73:
- 4625 063a 43795379 		.ascii	"CySysTickSetReload\000"
- 4625      73546963 
- 4625      6B536574 
- 4625      52656C6F 
- 4625      616400
- 4626              	.LASF97:
- 4627 064d 43795379 		.ascii	"CySysTickServiceCallbacks\000"
- 4627      73546963 
- 4627      6B536572 
- 4627      76696365 
- 4627      43616C6C 
- 4628              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 4609              	.LASF91:
+ 4610 05c6 63796465 		.ascii	"cydelayFreqMhz\000"
+ 4610      6C617946 
+ 4610      7265714D 
+ 4610      687A00
+ 4611              	.LASF30:
+ 4612 05d5 73746174 		.ascii	"status\000"
+ 4612      757300
+ 4613              	.LASF69:
+ 4614 05dc 43795379 		.ascii	"CySysTickStop\000"
+ 4614      73546963 
+ 4614      6B53746F 
+ 4614      7000
+ 4615              	.LASF25:
+ 4616 05ea 64697669 		.ascii	"divider\000"
+ 4616      64657200 
+ 4617              	.LASF20:
+ 4618 05f2 43795379 		.ascii	"CySysClkImoStart\000"
+ 4618      73436C6B 
+ 4618      496D6F53 
+ 4618      74617274 
+ 4618      00
+ 4619              	.LASF64:
+ 4620 0603 6E657749 		.ascii	"newImoTrim2Value\000"
+ 4620      6D6F5472 
+ 4620      696D3256 
+ 4620      616C7565 
+ 4620      00
+ 4621              	.LASF59:
+ 4622 0614 6D696372 		.ascii	"microseconds\000"
+ 4622      6F736563 
+ 4622      6F6E6473 
+ 4622      00
+ 4623              	.LASF73:
+ 4624 0621 43795379 		.ascii	"CySysTickSetReload\000"
+ 4624      73546963 
+ 4624      6B536574 
+ 4624      52656C6F 
+ 4624      616400
+ 4625              	.LASF97:
+ 4626 0634 43795379 		.ascii	"CySysTickServiceCallbacks\000"
+ 4626      73546963 
+ 4626      6B536572 
+ 4626      76696365 
+ 4626      43616C6C 
+ 4627              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

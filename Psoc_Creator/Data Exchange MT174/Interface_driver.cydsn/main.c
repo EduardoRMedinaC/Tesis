@@ -12,18 +12,17 @@
 #include <project.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <str.h>
 
 /*******************************************************************************
 * Function Prototypes
 *******************************************************************************/
-static void BaudRate(char8 baudios);
-static void send(char8 bytes[], int tr);
-static int read_datablock(char8* data);
-cystatus readlineCR(char8* line, uint16 timeout);
-cystatus read (char8* buffer, uint16 size, uint16 timeOut);
-static void substr(char8* substring, char8* string, int start, int end);
-
-
+static void BaudRate(char baudios);
+static void send(char bytes[], int tr);
+static int read_datablock(char* data);
+cystatus readlineCR(char* line, uint16 timeout);
+cystatus read (char* buffer, uint16 size, uint16 timeOut);
 
 /* Constants */
 #define ENABLED         (1u)
@@ -133,7 +132,7 @@ int main()
     UART_1_UartInit(&configUart);
     UART_1_Start();
     UART_2_Start();
-    char8 data[10]="";
+    char data[10]="";
     int log;
 
     for(;;)
@@ -185,7 +184,7 @@ static void BaudRate(char8 baudios)
     }
 }
 
-static void send(char8 *bytes, int tr)
+static void send(char *bytes, int tr)
 {
     /*
     sends an command to serial and reads and checks the echo
@@ -193,9 +192,11 @@ static void send(char8 *bytes, int tr)
     bytes - the string to be send
     tr    - the responce time
     */
-    int len = strlen(bytes);
-    char8 echo[10] = "";
-    char8 mensaje[55] = "bytes vs echo no son iguales(";
+    int8 len = strlen(bytes);
+    char *echo = (char*)malloc(sizeof(char)*10);
+    strcpy(echo,"");
+    char *mensaje = (char*)malloc(sizeof(char)*55);
+    strcpy(mensaje,"bytes vs echo no son iguales(");
     UART_1_SpiUartClearRxBuffer();
     UART_1_SpiUartClearTxBuffer();
     
@@ -211,44 +212,15 @@ static void send(char8 *bytes, int tr)
         strcat(mensaje, ")\r\n");
         UART_2_UartPutString(mensaje);
     }
-    if(bytes[0] != echo[0])
-    {
-        UART_2_UartPutChar(echo[0]+'0');
-    }
+    free(echo);
+    free(mensaje);
 }
 
-static void substr(char8* substring , char8 *string, int start, int end)
-{
-    strcpy(substring,"");
-    int large = strlen(string) -1;
-    int init, last;
-    char8 c[2]="";
-    
-    if(end > 0 && end <= large)
-    {
-        last = end;
-    }
-    else if(end < 0)
-    {
-        last = large + end;
-    }
-    else
-    {
-        last = large;
-    }
-    
-    for(init = start; init <= last; init++)
-    {
-        c[0] = string[init];
-        strcat(substring, c);
-    }
-}
-
-cystatus readlineCR(char8* line, uint16 timeout)
+cystatus readlineCR(char* line, uint16 timeout)
 {
     int timeoutUs = timeout * 1000;
     cystatus status = CYRET_TIMEOUT;
-    char8 ch[2]="";
+    char ch[2]="";
     strcpy(line,"");
     do
     {
@@ -268,7 +240,7 @@ cystatus readlineCR(char8* line, uint16 timeout)
     return status;
 }
 
-cystatus read (char8* buffer, uint16 size, uint16 timeOut) {
+cystatus read (char* buffer, uint16 size, uint16 timeOut) {
 	int timeoutUs = timeOut * 1000;
 	cystatus status = CYRET_TIMEOUT;
 	
@@ -287,15 +259,18 @@ cystatus read (char8* buffer, uint16 size, uint16 timeOut) {
 	return status;
 }
 
-static int read_datablock(char8 *data)
+static int read_datablock(char *data)
 {
     int16 tr = 200;
-    char8 identification_message[32]="";
-    char8 manufactures_id[6]="";
-    char8 identification[20]="";              // meassure id
-    char8 speed;
-    char8 acknowledgement_message[7]={ACK,'0','0','0','\r','\n','\0'};
-    char8 ch[2]="";                         // received character
+    char *identification_message = (char*)malloc(sizeof(char)* 32);
+    strcpy(identification_message,"");
+    char *manufactures_id;
+    char *identification;              // meassure id
+    char speed;
+    char *acknowledgement_message = (char*)malloc(sizeof(char)*7);
+    strcpy(acknowledgement_message,"0000\r\n");
+    *acknowledgement_message = ACK;
+    char ch[2]="";                         // received character
     int bcc;                                // block character controller
     
     UART_1_Stop();
@@ -320,16 +295,20 @@ static int read_datablock(char8 *data)
     }
     if(islower(identification_message[3]))
         tr = 20;
-    substr(manufactures_id, identification_message, 1, 4);
+    manufactures_id = substring(identification_message, 1, 4);
+    free(manufactures_id);
     if(identification_message[5] == '\\')
-        substr(identification, identification_message, 7, -2);
+        identification = substring(identification_message, 7, -2);
     else
-        substr(identification, identification_message, 5, -2);
+        identification = substring(identification_message, 5, -2);
+    free(identification);
     speed = identification_message[4];
+    free(identification_message);
     // 3 ->
     // IEC 62056-21:2002(E) 6.3.3
-    acknowledgement_message[2] = speed;
+    *(acknowledgement_message + 2) = speed;
     send(acknowledgement_message, tr);
+    free(acknowledgement_message);
     
     UART_1_Stop();
     BaudRate(speed);
