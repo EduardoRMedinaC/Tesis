@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Data Exchange MT174\Interface_driver\Header Files\str.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Data Exchange MT174\Interface_driver\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Data Exchange MT174</v>
 <v>Data Exchange MT174\Interface_driver</v>
@@ -305,6 +305,7 @@
 <name v=".\Interface_driver.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Interface_driver.cydsn\Interface_driver.cydwr" />
 <name v=".\Interface_driver.cydsn\main.c" />
+<name v=".\Interface_driver.cydsn\str.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

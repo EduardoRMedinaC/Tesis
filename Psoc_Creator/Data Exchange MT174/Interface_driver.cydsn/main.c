@@ -12,7 +12,6 @@
 #include <project.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 #include <str.h>
 
 /*******************************************************************************
@@ -21,7 +20,7 @@
 static void BaudRate(char baudios);
 static void send(char bytes[], int tr);
 static int read_datablock(char* data);
-void mapping(char*data, char**map[]);
+void mapping(char*data, char**map[],char *result);
 cystatus readlineCR(char* line, uint16 timeout);
 cystatus read (char* buffer, uint16 size, uint16 timeOut);
 
@@ -133,21 +132,8 @@ int main()
     UART_1_UartInit(&configUart);
     UART_1_Start();
     UART_2_Start();
-    char data[10]="";
+    char data[100]="";
     int log;
-    
-    /************************************************************************
-    * map contiene el OBIS y la etiqueta de los parametros relevantes para
-    ser filtrados del bloque de datos
-    ************************************************************************/
-    char *serial[] = {"1-0:0.0.1*255","serial",NULL};
-	char *energia_activa[] = {"1-0:15.8.0*255","Energia Activa",NULL};
-	char *demanda_maxima[] = {"1-0:15.6.0*255","Demana Maxima",NULL};
-	char *corriente_l1[] = {"1-0:31.7.0*255","Corriente L1",NULL};
-	char *corriente_l2[] = {"1-0:51.7.0*255","Corriente L2",NULL};
-	char *corriente_l3[] = {"1-0:71.7.0*255","Corriente L3",NULL};
-
-	char **map[] = {serial, energia_activa, demanda_maxima, corriente_l1, corriente_l2,corriente_l3, NULL};
 
     for(;;)
     {
@@ -164,46 +150,33 @@ int main()
             if(log == 1)
                 UART_2_UartPutString("No se ha encontrado el STX\r\n");
             if(log == 0)
-                mapping(data, map);
+                UART_2_UartPutString("La comunicacion fue un exito!");
         }
-        //UART_2_UartPutString(data);
     }
 }
 
-void mapping(char *data, char **map[])
+void mapping(char *data, char **map[], char *result)
 {
-	char **breakCRLF, **obisValue;
-	char *obis, *value;
-	char *filter = malloc(sizeof(char)*28);
+	char *breakCRLF[3];
+    char value[25]="";
     size_t index, idx;
 
-	strcpy(filter,"");
-	breakCRLF = split(data, "\n");
+	split(breakCRLF, data, "(\n");
 
-	for(index = 0; *(breakCRLF + index); index++) 
+	if(strcmp(*(breakCRLF + index),""))
 	{
-		if(strcmp(*(breakCRLF + index),""))
+		substring(value,*(breakCRLF + 1),0,-3);
+		for(idx=0; *(map + idx); idx++)
 		{
-			obisValue = split(*(breakCRLF + index),"(");
-			obis = *(obisValue);
-			value = substring(*(obisValue + 1),0,-2);
-			for(idx=0;*(map + idx);idx++)
+			if(!strcmp(**(map + idx), *(breakCRLF)))    // mapeamos el obis
 			{
-				if(!strcmp(**(map + idx),obis))
-				{
-					strcat(filter,*(*(map + idx) + 1));
-					strcat(filter,":");
-					strcat(filter,value);
-					UART_2_UartPutString(filter);
-					strcpy(filter,"");
-				}
+				strcat(result,*(*(map + idx) + 1));
+				strcat(result,":");
+				strcat(result,value);
+                break;
 			}
-			free(value);
 		}
-		free(obisValue);
 	}
-	free(filter);
-	free(breakCRLF);
 }
 
 static void BaudRate(char8 baudios)
@@ -243,10 +216,9 @@ static void send(char *bytes, int tr)
     tr    - the responce time
     */
     int8 len = strlen(bytes);
-    char *echo = (char*)malloc(sizeof(char)*10);
-    strcpy(echo,"");
-    char *mensaje = (char*)malloc(sizeof(char)*55);
-    strcpy(mensaje,"bytes vs echo no son iguales(");
+    char echo[10] = "";
+    char mensaje[50] = "bytes vs echo no son iguales(";
+    
     UART_1_SpiUartClearRxBuffer();
     UART_1_SpiUartClearTxBuffer();
     
@@ -262,8 +234,6 @@ static void send(char *bytes, int tr)
         strcat(mensaje, ")\r\n");
         UART_2_UartPutString(mensaje);
     }
-    free(echo);
-    free(mensaje);
 }
 
 cystatus readlineCR(char* line, uint16 timeout)
@@ -312,22 +282,34 @@ cystatus read (char* buffer, uint16 size, uint16 timeOut) {
 static int read_datablock(char *data)
 {
     int16 tr = 200;
-    char *identification_message = (char*)malloc(sizeof(char)* 32);
-    strcpy(identification_message,"");
-    char *manufactures_id;
-    char *identification;              // meassure id
+    char identification_message[32] = "";
+    char manufactures_id[6]="";
+    char identification[20]="";              // meassure id
     char speed;
-    char *acknowledgement_message = (char*)malloc(sizeof(char)*7);
-    strcpy(acknowledgement_message,"0000\r\n");
-    *acknowledgement_message = ACK;
-    char ch[2]="";                         // received character
+    char acknowledgement_message[7] = {ACK,'0','0','0','\r','\n','\0'};
+    char ch[2]="";                          // received character
     int bcc;                                // block character controller
+    char result[400]="";
+    
+     /************************************************************************
+    * map contiene el OBIS y la etiqueta de los parametros relevantes para
+    ser filtrados del bloque de datos
+    ************************************************************************/
+    char *serial[] = {"1-0:0.0.1*255","serial",NULL};
+	char *energia_activa[] = {"1-0:15.8.0*255","Energia Activa",NULL};
+	char *demanda_maxima[] = {"1-0:15.6.0*255","Demana Maxima",NULL};
+	char *corriente_l1[] = {"1-0:31.7.0*255","Corriente L1",NULL};
+	char *corriente_l2[] = {"1-0:51.7.0*255","Corriente L2",NULL};
+	char *corriente_l3[] = {"1-0:71.7.0*255","Corriente L3",NULL};
+
+	char **map[] = {serial, energia_activa, demanda_maxima, corriente_l1, corriente_l2,corriente_l3, NULL};
     
     UART_1_Stop();
     BaudRate(BD_300);
     UART_1_Enable();
     // 1 ->
     CyDelay(tr);
+    
     send("/?!\r\n", tr);     //IEC 62056-21:2002(E) 6.3.1
     //2 <-
     CyDelay(tr);
@@ -345,20 +327,16 @@ static int read_datablock(char *data)
     }
     if(islower(identification_message[3]))
         tr = 20;
-    manufactures_id = substring(identification_message, 1, 4);
-    free(manufactures_id);
+    substring(manufactures_id, identification_message, 1, 4);
     if(identification_message[5] == '\\')
-        identification = substring(identification_message, 7, -2);
+        substring(identification, identification_message, 7, -2);
     else
-        identification = substring(identification_message, 5, -2);
-    free(identification);
+        substring(identification, identification_message, 5, -2);
     speed = identification_message[4];
-    free(identification_message);
     // 3 ->
     // IEC 62056-21:2002(E) 6.3.3
-    *(acknowledgement_message + 2) = speed;
+    acknowledgement_message[2] = speed;
     send(acknowledgement_message, tr);
-    free(acknowledgement_message);
     
     UART_1_Stop();
     BaudRate(speed);
@@ -378,6 +356,11 @@ static int read_datablock(char *data)
             bcc = bcc ^ ch[0];
             read(ch,1,1500);
             strcat(data, ch);
+            if(!strcmp(ch,"\n"))
+            {
+                mapping(data, map, result);
+                stpcpy(data,"");
+            } 
             UART_2_UartPutString(ch);
         }
         while (ch[0] != ETX)
@@ -400,6 +383,8 @@ static int read_datablock(char *data)
         return 1;               // No se ha encontrado el STX
     }
     UART_1_Stop();
+    UART_2_UartPutString("Los datos mapeados son:\r\n");
+    UART_2_UartPutString(result);
     return 0;                   // La comunicacion fue un exito!
 }
 /* [] END OF FILE */
