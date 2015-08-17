@@ -1,3 +1,4 @@
+
 var express = require('express'),
 	router = express.Router(),
 	bodyParser = require('body-parser'),
@@ -6,7 +7,7 @@ var express = require('express'),
 	assert = require('assert'),
 	crud = require('../crud/mongo-crud');
 
-var url = 'mongodb://localhost:27017/data';
+var url = 'mongodb://localhost:27017/data/db';
 
 router.route('/')
 	.get(function(request, response){

@@ -7,7 +7,7 @@ var express = require('express'),
 	assert = require('assert');
 
 //mongodb url server
-var url = 'mongodb://localhost:27017/data';
+var url = 'mongodb://localhost:27017/data/db';
 var records = {};
 
 mongoClient.connect(url, {server: {poolSize: 3}}, function(err, db){
