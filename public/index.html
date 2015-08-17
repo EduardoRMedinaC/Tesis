@@ -10,16 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Twitter Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-switch.min.css">
 
-	 <!-- Material Design for Bootstrap -->
+	 <!-- Material Design for Bootstrap --> 
     <link href="bower_components/bootstrap-material-design/dist/css/roboto.min.css" rel="stylesheet">
     <link href="bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css" rel="stylesheet">
     <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
-
-    <!-- Eric Meyer’s reset-->
-    <!--<link rel="stylesheet" href="css/reset.css">-->
 
 	<!--own css-->
 	<link rel="stylesheet" href="css/custom.css">
@@ -31,7 +28,7 @@
 	<div class="container" ng-controller="restController as restCtrl">
 		<header id="header" class="">
 			<custom-nav></custom-nav>	
-		</header><!-- /header -->
+		</header> <!-- header -->
 
 		<main class="clear">
 			<google-map-view ng-model="gCtrl.circle.radius"></google-map-view>
@@ -55,10 +52,10 @@
    	<script src="http://maps.googleapis.com/maps/api/js"></script>
 
    	<!--jquery necesary for boostrap must load first to angular-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <!--angular-->
-	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 
 	<!--own source-->
 	<script type="text/javascript" src="js/api-rest.js"></script>
