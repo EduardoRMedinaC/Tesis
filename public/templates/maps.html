@@ -3,8 +3,8 @@
 ng-submit="restCtrl.POST(
 	restCtrl.form.name,
 	restCtrl.form.description,
-	gCtrl.circle.radius,
-	gCtrl.circle.center
+	circle.radius,
+	circle.center
 )">
 	<fieldset>
 		<legend>Perfil de la Zona</legend>
@@ -25,14 +25,14 @@ ng-submit="restCtrl.POST(
 			<div>
 				<label class="col-md-1">Radio</label>
 				<div class="col-md-3">
-					<input class="form-control" type="text" name="radio" placeholder="longitud en metros" ng-model="gCtrl.circle.radius">
+					<input class="form-control" type="text" name="radio" placeholder="longitud en metros" ng-model="circle.radius">
 				</div>
 				<label class="col-md-1">Centro</label>
 				<div class="col-md-3">
-					<input class="form-control" type="text" placeholder="latitud" ng-model="gCtrl.circle.center.k" readonly>
+					<input lat-lng coord="latitud" class="form-control" type="text" placeholder="latitud" ng-model="lat">
 				</div>
 				<div class="col-md-4">
-					<input class="form-control" type="text" placeholder="longitud" ng-model="gCtrl.circle.center.D" readonly>
+					<input lat-lng  coord="longitud" class="form-control" type="text" placeholder="longitud" ng-model="lng">
 				</div>
 			</div>
 		</div>
